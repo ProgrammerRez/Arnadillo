@@ -19,4 +19,10 @@ to their starbucks and arts n craft, but too much work, just for a prototype. Pl
 
 --- 
 
-So I'm guessing this'll be done over the weekend.
+So I'm guessing this'll be done over the weekend
+
+
+
+---
+
+**Update from `data_managment_backend` branch**: Starting with an API structure that loads the data and provides info via various endpoints. Using `golang` and `python`
