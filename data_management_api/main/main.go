@@ -1,35 +1,6 @@
 package main
 
-import(
-	"fmt"
-	"encoding/csv"
-	"os"
-	"log"
-)
-
-
-
-
-
-func main(){
-	file, err := os.Open("Data/customer_master.csv")
-
-	if err != nil {
-		log.Fatal("Can't load. Smth happened: ", err)
-	}
-
-	csv_reader := csv.NewReader(file)
-
-	records, err := csv_reader.ReadAll()
-	    // Checks for the error
-    if err != nil{
-        fmt.Println("Error reading records")
-    }
-
-	// for _, rec := range(records){
-	// 	fmt.Println(rec)
-	// }
-
-	fmt.Print("%T", records[1])
-}
-
+// This file would go like this
+// 1. This would be an API where all the endpoints are available
+// 2. The routers are coming from other dir structures but everything meets here
+// 3. Make it scalable with data
