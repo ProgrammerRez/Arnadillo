@@ -20,7 +20,8 @@ import (
 // Main CSV Object
 type CSV struct{
 	Data 		[][]string
-	ColumnList []string
+	ColumnList 	[]string
+	FileName 	string
 	FilePath  	string
 	FileShape	[2]int64
 	FileSize	int64
@@ -43,6 +44,7 @@ func LoadCSV(file_path string) (CSV, error){
 	// Then getting the file size
 	
 	file_info, err := os.Stat(file_path)
+
 
 	if err != nil{
 		log.Fatalf("Error Occurred during file info extraction: ", err)
@@ -71,6 +73,7 @@ func LoadCSV(file_path string) (CSV, error){
 		column_list := records[0]
 
 		new_csv_object = CSV{
+			FileName: file_info.Name(),
 			FilePath: file_path,
 			Data: data,
 			ColumnList: column_list,

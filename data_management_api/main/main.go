@@ -7,7 +7,6 @@ package main
 
 import (
 	"fmt"
-	"encoding/json"
 	// "log"
 	"net/http"
 	// utils "dmapi/server_utils"
@@ -23,20 +22,13 @@ func newDMS() DMService{
 	return DMService{}
 }
 
-// Outputs all the statistics provided by the getStats class method
-func (dms *DMService) outputStats(w http.ResponseWriter, r *http.Request){
-	bytes, err := json.Marshal(dms.Data.CSVS[0].GetStats())
-	if err != nil{
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
-	w.Write(bytes)
-} 
-
 func main(){
 	dms := newDMS()
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /upload", dms.storeUpload)
 	mux.HandleFunc("GET /stats", dms.outputStats)
+	mux.HandleFunc("GET /files", dms.outputFilesDetails)
+	mux.HandleFunc("POST /file", dms.specificFileDetails)
 	// mux.HandleFunc("GET /out", dms.showEM)
 
 	serv := http.Server{

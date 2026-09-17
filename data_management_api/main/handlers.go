@@ -2,6 +2,8 @@ package main
 
 import (
 	utils "dmapi/csv_utils"
+	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -23,6 +25,11 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 
 	// Getting the file data from media key in the POST request
 	uf, ufh, err := r.FormFile("media")
+
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
 
 	// Checks if file is CSV
 	if strings.HasSuffix(ufh.Filename, ".csv") == false{
@@ -65,6 +72,11 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 
 	// Appending to CSV Storage Object
 	csv_file, err := utils.LoadCSV(string(path))
+
+	// fmt.Println(ufh.Filename)
+	// fmt.Println(ufh.Filename)
+	fmt.Println(csv_file.FileName)
+
 	if err != nil{
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -74,7 +86,38 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 	return 
 }
 
-// This function is a utility for loading and returing the CSV file
+// Outputs all the statistics provided by the getStats class method
+func (dms *DMService) outputStats(w http.ResponseWriter, r *http.Request){
+	bytes, err := json.Marshal(dms.Data.CSVS[0].GetStats())
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	w.Write(bytes)
+} 
 
 
+// This function is a utility for getting a list of available CSV files 
+func (dms *DMService) outputFilesDetails(w http.ResponseWriter, r *http.Request){
+	bytes, err := json.Marshal(dms.Data.GetAll())
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	w.Write(bytes)
+}
 
+
+// This function outputs the specific file you're targetting
+func (dms *DMService) specificFileDetails(w http.ResponseWriter, r *http.Request){
+
+	name := r.FormValue("name")
+
+	if strings.TrimSpace(strings.ToLower(name)) == ""{
+		http.Error(w, "No file name was provided", http.StatusBadRequest)
+	}
+	bytes, err := json.Marshal(dms.Data.GetCSV(name))
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	w.Write(bytes)
+
+}
