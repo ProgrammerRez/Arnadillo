@@ -1,9 +1,10 @@
-package main
+package utils
 
 import (
 	"encoding/csv"
 	"errors"
-	"fmt"
+
+	// "fmt"
 	"log"
 	"os"
 	"strconv"
@@ -22,13 +23,13 @@ type CSV struct{
 	ColumnList []string
 	FilePath  	string
 	FileShape	[2]int64
-	FileSize	int32
+	FileSize	int64
 }
 
 
 // Now the loading mechanism
 
-func loadCSV(file_path string) (CSV, error){
+func LoadCSV(file_path string) (CSV, error){
 	
 	new_csv_object := CSV{}
 
@@ -39,8 +40,19 @@ func loadCSV(file_path string) (CSV, error){
 		log.Fatalf("Error Occurred during file opening: ", err)
 		return new_csv_object, errors.New(err.Error())
 	}
+	// Then getting the file size
+	
+	file_info, err := os.Stat(file_path)
+
+	if err != nil{
+		log.Fatalf("Error Occurred during file info extraction: ", err)
+		return new_csv_object, errors.New(err.Error())
+	}
+
+
 
 	defer file.Close()
+
 
 	// Now reading the data
 	csv_reader := csv.NewReader(file)
@@ -63,6 +75,7 @@ func loadCSV(file_path string) (CSV, error){
 			Data: data,
 			ColumnList: column_list,
 			FileShape: [2]int64{int64(len(data)), int64(len(column_list))}, 
+			FileSize: file_info.Size(),
 		}
 
 	}
@@ -213,25 +226,27 @@ func (csv CSV) getDupes() (dupeCount int64) {
 
 
 
-func main(){
+// func main(){
 
-	csv, err := loadCSV("/run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/Data/customer_master.csv")
+// 	csv, err := loadCSV("/run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/Data/customer_master.csv")
 
-	if err != nil{
-		fmt.Println(err)
-	}
+// 	if err != nil{
+// 		fmt.Println(err)
+// 	}
 
-	// fmt.Println(csv)
+// 	fmt.Println(csv)
 
-	stats := csv.GetStats()
 
-	fmt.Println(stats.DtypesMatrix)
-	fmt.Println(stats.Nulls)
-	fmt.Println(stats.NullsByCol)
-	fmt.Println(stats.Dupes)
-	fmt.Println(stats.UniqueValueMatrix)
 
-	for _, stat := range(stats.ColStats){	
-		fmt.Println(stat)
-	}
-}	
+// 	// stats := csv.GetStats()
+
+// 	// fmt.Println(stats.DtypesMatrix)
+// 	// fmt.Println(stats.Nulls)
+// 	// fmt.Println(stats.NullsByCol)
+// 	// fmt.Println(stats.Dupes)
+// 	// fmt.Println(stats.UniqueValueMatrix)
+
+// 	// for _, stat := range(stats.ColStats){	
+// 	// 	fmt.Println(stat)
+// 	// }
+// }	
