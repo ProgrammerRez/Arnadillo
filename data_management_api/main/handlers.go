@@ -2,6 +2,7 @@ package main
 
 import (
 	utils "dmapi/csv_utils"
+	log "dmapi/logging"
 	"encoding/json"
 	"io"
 	"net/http"
@@ -10,13 +11,18 @@ import (
 	"strings"
 )
 
+
 // This function handles file uploads and loading to the API
 func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
+
+	// Setting logger level to 1
+	log.SetLevel(log.InfoLevel)
 
 	// Handling Uploading File Logic with LIMITS
 	r.Body = http.MaxBytesReader(w, r.Body, 10 << 20)
 	if err := r.ParseMultipartForm(5 << 20); err != nil{
 		http.Error(w, err.Error(), http.StatusBadRequest)
+		log.Error(err.Error())
 		return
 	}
 	// Removing all temp files
@@ -27,6 +33,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 
 	if len(files) == 0{
 		http.Error(w, "No files provided", http.StatusBadRequest)
+		log.Error("No files provided")
 		return
 	}
 
@@ -34,6 +41,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 	file_path := "/run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/"	
 	if err := os.MkdirAll(filepath.Dir(file_path), os.ModePerm); err != nil{
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
 		return
 	}
 
@@ -44,6 +52,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 		// Checks if file is CSV
 		if strings.HasSuffix(file_header.Filename, ".csv") == false{
 			http.Error(w, "File format not supported", http.StatusBadRequest)
+			log.Error("File format not supported")
 			return 
 		}
 
@@ -51,6 +60,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 
 		if err != nil{
 			http.Error(w, err.Error(), http.StatusInternalServerError)
+			log.Error(err.Error())
 			return
 		}
 		
@@ -59,6 +69,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 		
 		if err != nil{
 			http.Error(w, err.Error(), http.StatusInternalServerError)
+			log.Error(err.Error())
 			file.Close()
 			return 
 		}
@@ -66,6 +77,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 		// Copying File Data Over 
 		if _, err := io.Copy(f, file); err != nil{
 			http.Error(w, err.Error(), http.StatusInternalServerError)
+			log.Error(err.Error())
 			return 
 		}
 		file.Close()
@@ -77,6 +89,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 		
 		if err != nil{
 			http.Error(w, err.Error(), http.StatusInternalServerError)
+			log.Error(err.Error())
 			return
 		}
 
@@ -88,11 +101,15 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 
 	if name == ""{
 		http.Error(w, "name for the session was not provided", http.StatusBadRequest)
+		log.Error("name for the session was not provided")
+		return
 	}
 	err := dms.Data.Add(name, loadedCSVs)
 
 	if err != nil{
 		http.Error(w, err.Error(), http.StatusBadRequest)
+		log.Error(err.Error())
+		return
 	}
 	w.Write([]byte("uploaded"))
 }
@@ -118,10 +135,14 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 // // This function is a utility for getting a list of available CSV files 
 func (dms *DMService) outputFilesDetails(w http.ResponseWriter, r *http.Request){
 
+	// Setting the log level to 1
+	log.SetLevel(log.InfoLevel)
+
 	name := r.FormValue("name")
 
 	if name == ""{
 		http.Error(w, "no session name was provided", http.StatusBadRequest)
+		log.Error("no session name was provided")
 		return
 	}
 	
@@ -129,12 +150,14 @@ func (dms *DMService) outputFilesDetails(w http.ResponseWriter, r *http.Request)
 
 	if err != nil{
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
 		return
 	}
 
 	bytes, err := json.Marshal(csv_list)
 	if err != nil{
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
 	}
 	w.Write(bytes)
 }
@@ -147,6 +170,7 @@ func (dms *DMService) getSession(w http.ResponseWriter, r *http.Request){
 
 	if name == ""{
 		http.Error(w, "no session name was provided", http.StatusBadRequest)
+		log.Error("no session name was provided")
 		return
 	}
 	
@@ -163,6 +187,7 @@ func (dms *DMService) specificFileDetails(w http.ResponseWriter, r *http.Request
 
 	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(strings.ToLower(csv_name)) == ""{
 		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
+		log.Error("Session or File does not exist")
 		return
 	}
 
@@ -170,11 +195,15 @@ func (dms *DMService) specificFileDetails(w http.ResponseWriter, r *http.Request
 
 	if err != nil{
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
+		return
 	}
 
 	bytes, err := json.Marshal(stats)
 	if err != nil{
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
+		return
 	}
 	w.Write(bytes)
 

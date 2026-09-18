@@ -1,0 +1,10 @@
+INFO: 2026/09/18 23:54:15.738147 logger.go:85: Starting the API
+INFO: 2026/09/18 23:54:15.738348 logger.go:85: New Data Management Service Created
+ERROR`: 2026/09/18 23:54:30.425574 logger.go:100: No files provided
+ERROR`: 2026/09/18 23:55:02.227424 logger.go:100: name for the session was not provided
+ERROR`: 2026/09/18 23:55:13.347568 logger.go:100: request Content-Type isn't multipart/form-data
+ERROR`: 2026/09/18 23:55:49.080408 logger.go:100: File format not supported
+ERROR`: 2026/09/18 23:56:59.639505 logger.go:100: no session name was provided
+ERROR`: 2026/09/18 23:57:18.592598 logger.go:100: Session or File does not exist
+
+
