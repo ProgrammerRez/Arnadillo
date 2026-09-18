@@ -1,33 +1,33 @@
 package main
 
-// This file would go like this
-// 1. This would be an API where all the endpoints are available
-// 2. The routers are coming from other dir structures but everything meets here
-// 3. Make it scalable with data
-
 import (
 	"fmt"
 	// "log"
 	"net/http"
 	// utils "dmapi/server_utils"
+	registry "dmapi/data_registry"
 )
 
 // This one is the main Object for handling all operations
 type DMService struct{
-	Data 	CSVStorage
+	Data 	registry.DataRegistry
 }
 
 // Creates new DM Service
-func newDMS() DMService{
-	return DMService{}
+func newDMS(name string) DMService{
+	new_registry := registry.CreateNewRegistry(name)
+	return DMService{
+		Data: *new_registry,
+	}
 }
 
 func main(){
-	dms := newDMS()
+	dms := newDMS("session1")
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /upload", dms.storeUpload)
-	mux.HandleFunc("GET /stats", dms.outputStats)
+	// mux.HandleFunc("GET /stats", dms.outputStats)
 	mux.HandleFunc("GET /files", dms.outputFilesDetails)
+	mux.HandleFunc("GET /session", dms.getSession)
 	mux.HandleFunc("POST /file", dms.specificFileDetails)
 	// mux.HandleFunc("GET /out", dms.showEM)
 

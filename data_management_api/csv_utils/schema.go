@@ -14,10 +14,10 @@ type ColumnStats struct{
 type DataFrameStats struct{
 	DtypesMatrix		map[string]string		`json:"dtype_matrix"`
 	ColStats			map[string]ColumnStats	`json:"col_stats"`
-	Dupes 				int64					`json:"dupes"`
-	Nulls				int64					`json:"nulls"`
 	NullsByCol			map[string]int64		`json:"null_matrix"`
 	UniqueValueMatrix 	map[string]int64		`json:"unique_value_matrix"`
+	Dupes 				int64					`json:"dupes"`
+	Nulls				int64					`json:"nulls"`
 }
 
 
