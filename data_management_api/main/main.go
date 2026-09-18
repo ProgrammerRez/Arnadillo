@@ -44,6 +44,7 @@ func main(){
 	mux.HandleFunc("GET /sessions", dms.listSessions)
 	mux.HandleFunc("POST /new_session", dms.createNewSession)
 	mux.HandleFunc("POST /delete_session", dms.deleteSpecificSession)
+	mux.HandleFunc("POST /delete_file", dms.deleteFile)
 
 	// mux.HandleFunc("GET /out", dms.showEM)
 

@@ -30,3 +30,9 @@ type GenericSliceOutput struct{
 	Items 	[]string	`json:"items"`
 	Count	int			`json:"count"`
 }
+
+// This type will provide easy API output for generic maps
+type GenericMapOutput struct{
+	Map		map[string]int	`json:"map"`
+	Count	int				`json:"count"`
+}

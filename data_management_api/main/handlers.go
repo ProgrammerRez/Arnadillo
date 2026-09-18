@@ -8,8 +8,11 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 )
+
+// File Handling Section
 
 // This function handles file uploads and loading to the API
 func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
@@ -111,6 +114,29 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 		return
 	}
 	w.Write([]byte("uploaded"))
+}
+
+// Function to delete CSV file from specified session
+func (dms *DMService) deleteFile(w http.ResponseWriter, r *http.Request){
+
+	// Get the name and csv_name value from form body
+	name := r.FormValue("name")
+	csv_name := r.FormValue("csv_name")
+	if name == "" || csv_name == ""{
+		http.Error(w, "Session or Filer name not Provided", http.StatusBadRequest)
+		log.Error("Session or Filer name not Provided")
+		return
+	}
+
+	csv_id, err := strconv.ParseInt(csv_name, 10, 64)
+
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		log.Error(err.Error())
+		return
+	}
+
+	dms.Data.Delete(name, int(csv_id))
 }
 
 // Outputs all the statistics provided by the getStats class method

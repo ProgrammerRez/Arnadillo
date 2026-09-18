@@ -12,3 +12,8 @@ INFO: 2026/09/19 00:54:49.239651 logger.go:85: New Data Management Service Creat
 INFO: 2026/09/19 00:55:49.777773 logger.go:85: Starting the API
 INFO: 2026/09/19 00:55:49.778037 logger.go:85: New Data Management Service Created
 ERROR`: 2026/09/19 00:56:52.345160 logger.go:100: No Active Sessions Found
+INFO: 2026/09/19 01:57:00.262953 logger.go:85: Starting the API
+INFO: 2026/09/19 01:57:00.263249 logger.go:85: New Data Management Service Created
+INFO: 2026/09/19 02:05:50.635575 logger.go:85: Starting the API
+INFO: 2026/09/19 02:05:50.635862 logger.go:85: New Data Management Service Created
+ERROR`: 2026/09/19 02:07:29.811672 logger.go:100: Session or Filer name not Provided

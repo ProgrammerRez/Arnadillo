@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"maps"
+	"os"
 	"slices"
 	"strings"
 
@@ -80,19 +81,48 @@ func (r *DataRegistry) Add(name string, data []utils.CSV) error{
 	return nil
 }
 
-
-// This function gets all the available csv object names
-func (r *DataRegistry) GetAll(name string) (GenericSliceOutput, error){
+func (r *DataRegistry) Delete(name string, csv_id int) error{
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
 
-	csv_list := []string{}
+	id, exists := r.SessionInfo[name]
+	if exists == false{
+		return errors.New("Session Info not Found")
+	}
+
+	registry, exists := r.SessionData[id]
+
+	if !exists || registry == nil{
+		return errors.New("Registry Not Found for session")
+	}
+
+	for i, csv := range(registry.Registry){
+		if csv.ID == csv_id{
+			err := os.Remove(csv.Data.FilePath)
+			if err != nil{
+				if os.IsNotExist(err){
+					return errors.New("File Doesn't Exist")
+				}
+				return errors.New("Failed to Delete File: " + err.Error())
+			}
+			registry.Registry = slices.Delete(registry.Registry,i,i+1)
+		}
+	}
+	return nil
+}
+
+// This function gets all the available csv object names
+func (r *DataRegistry) GetAll(name string) (GenericMapOutput, error){
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+
+	csv_map := make(map[string]int)
 
 	id, exists := r.SessionInfo[name]
 	if !exists{
-		return GenericSliceOutput{
-			Items: csv_list,
-			Count: len(csv_list),
+		return GenericMapOutput{
+			Map: csv_map,
+			Count: len(csv_map),
 			}, errors.New("Session Info not Found")
 		}
 
@@ -100,18 +130,18 @@ func (r *DataRegistry) GetAll(name string) (GenericSliceOutput, error){
 	registry, exists := r.SessionData[id]
 
 	if !exists{
-		return GenericSliceOutput{
-			Items: csv_list,
-			Count: len(csv_list),
+		return GenericMapOutput{
+			Map: csv_map,
+			Count: len(csv_map),
 			}, errors.New("Session Data not Found")
 		}
 
 	for _, csv := range(registry.Registry){
-		csv_list = append(csv_list, csv.Data.FileName)
+		csv_map[csv.Data.FileName] = int(csv.ID)
 	}
-	return GenericSliceOutput{
-			Items: csv_list,
-			Count: len(csv_list),
+	return GenericMapOutput{
+			Map: csv_map,
+			Count: len(csv_map),
 		}, nil
 }
 
