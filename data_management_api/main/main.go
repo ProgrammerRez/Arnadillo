@@ -18,7 +18,8 @@ type DMService struct{
 
 // Creates new DM Service
 func newDMS(name string) DMService{
-	new_registry := registry.CreateNewRegistry(name)
+	new_registry := registry.CreateNewRegistry()
+	new_registry.NewSession(name)
 	log.Info("New Data Management Service Created")
 	return DMService{
 		Data: *new_registry,
@@ -40,6 +41,10 @@ func main(){
 	mux.HandleFunc("GET /files", dms.outputFilesDetails)
 	mux.HandleFunc("GET /session", dms.getSession)
 	mux.HandleFunc("POST /file", dms.specificFileDetails)
+	mux.HandleFunc("GET /sessions", dms.listSessions)
+	mux.HandleFunc("POST /new_session", dms.createNewSession)
+	mux.HandleFunc("POST /delete_session", dms.deleteSpecificSession)
+
 	// mux.HandleFunc("GET /out", dms.showEM)
 
 	serv := http.Server{

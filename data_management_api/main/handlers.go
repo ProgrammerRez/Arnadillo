@@ -11,7 +11,6 @@ import (
 	"strings"
 )
 
-
 // This function handles file uploads and loading to the API
 func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 
@@ -163,19 +162,6 @@ func (dms *DMService) outputFilesDetails(w http.ResponseWriter, r *http.Request)
 }
 
 
-// DEBUG Handler: Checks on session Data structure
-func (dms *DMService) getSession(w http.ResponseWriter, r *http.Request){
-
-	name := r.FormValue("name")
-
-	if name == ""{
-		http.Error(w, "no session name was provided", http.StatusBadRequest)
-		log.Error("no session name was provided")
-		return
-	}
-	
-	dms.Data.GetSession(name)
-}
 
 
 
@@ -209,3 +195,69 @@ func (dms *DMService) specificFileDetails(w http.ResponseWriter, r *http.Request
 
 }
 
+// ----
+
+// Session Handlers
+
+// DEBUG Handler: Checks on session Data structure
+func (dms *DMService) getSession(w http.ResponseWriter, r *http.Request){
+
+	name := r.FormValue("name")
+
+	if name == ""{
+		http.Error(w, "no session name was provided", http.StatusBadRequest)
+		log.Error("no session name was provided")
+		return
+	}
+	
+	dms.Data.GetSession(name)
+}
+
+// This function will provide a list of all created sessions in the API
+func (dms *DMService) listSessions(w http.ResponseWriter, r *http.Request){
+	session_list, err := dms.Data.ListSession()
+
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
+		return
+	}
+
+	bytes, err := json.Marshal(session_list)
+
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
+		return
+	}
+
+	w.Write(bytes)
+}
+
+// This function creates a new session
+func (dms *DMService) createNewSession(w http.ResponseWriter, r *http.Request){
+
+	name := r.FormValue("name")
+
+	if name == ""{
+		http.Error(w, "no session name was provided", http.StatusBadRequest)
+		log.Error("no session name was provided")
+		return
+	}
+
+	dms.Data.NewSession(name)
+}
+
+// This function deletes the specified session
+func (dms *DMService) deleteSpecificSession(w http.ResponseWriter, r *http.Request){
+
+	name := r.FormValue("name")
+
+	if name == ""{
+		http.Error(w, "no session name was provided", http.StatusBadRequest)
+		log.Error("no session name was provided")
+		return
+	}
+
+	dms.Data.DeleteSession(name)
+}

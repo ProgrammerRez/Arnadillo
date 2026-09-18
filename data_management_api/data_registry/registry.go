@@ -4,29 +4,46 @@ import (
 	utils "dmapi/csv_utils"
 	"errors"
 	"fmt"
+	"maps"
+	"slices"
 	"strings"
 
 	"github.com/google/uuid"
 )
 
 // Creates New Session Registry
-func CreateNewRegistry(session_name string) *DataRegistry{
+func CreateNewRegistry() *DataRegistry{
 
-	// Creating New Session with random ID (will be stored in session_info map)
+	// Creating empty maps to avoid assignment to nil errors
 	session_info := make(map[string]string)
-	session_id := uuid.New().String()
-
-	session_info[session_name] = session_id
-
-	// Creating SessionData Map with key value being session_id
-
 	session_data := make(map[string]*DatasetRegistry)
-	session_data[session_id] = &DatasetRegistry{}
 
-	return &DataRegistry{
+	return &DataRegistry{	
 		SessionInfo: session_info,
 		SessionData: session_data,
 	}
+}
+
+// This function creates new session info 
+func (r *DataRegistry) NewSession(session_name string){
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+	// Creating New Session with random ID (will be stored in session_info map)
+	session_id := uuid.New().String()
+	// Finally setting as session data and info in the final object
+	r.SessionInfo[session_name] = session_id
+	r.SessionData[session_id] = &DatasetRegistry{}
+}
+
+// Deletes Session Data 
+func (r *DataRegistry) DeleteSession(session_name string){
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+	// Get the Id first
+	id := r.SessionInfo[session_name]
+	// Delete the Data
+	delete(r.SessionData, id)
+	delete(r.SessionInfo, session_name)
 }
 
 // Adds different documents to a particular session
@@ -63,20 +80,7 @@ func (r *DataRegistry) Add(name string, data []utils.CSV) error{
 	return nil
 }
 
-// DEBUG Method: Checking session data storage
 
-func (r *DataRegistry) GetSession(name string){
-	r.Mu.Lock()
-	defer r.Mu.Unlock()
-
-	fmt.Println(name)
-	id, exists := r.SessionInfo[name]
-	if exists == false{
-		return
-	}
-
-	fmt.Println(r.SessionData[id])
-}
 // This function gets all the available csv object names
 func (r *DataRegistry) GetAll(name string) (GenericSliceOutput, error){
 	r.Mu.Lock()
@@ -145,4 +149,41 @@ func (r *DataRegistry) GetStats(name string, csv_name string) (utils.DataFrameSt
 	}
 	
 	return selected_csv.Data.GetStats(), nil
+
 }
+// Session Functions
+
+// DEBUG Method: Checking session data storage
+
+func (r *DataRegistry) GetSession(name string){
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+
+	fmt.Println(name)
+	id, exists := r.SessionInfo[name]
+	if exists == false{
+		return
+	}
+
+	fmt.Println(r.SessionData[id])
+}
+
+// This function will list all the active sessions 
+func (r *DataRegistry) ListSession() (GenericSliceOutput, error){
+
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+
+	var session_list GenericSliceOutput
+
+	if len(r.SessionInfo) == 0{
+		return session_list, errors.New("No Active Sessions Found")
+	}
+
+	session_list.Items =slices.Collect(maps.Keys(r.SessionInfo))
+
+	session_list.Count = len(session_list.Items)
+
+	return session_list, nil
+}
+

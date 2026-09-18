@@ -8,14 +8,14 @@ import (
 // First High Level Object associated with DMS
 
 type DataRegistry struct{
-	SessionInfo 	map[string]string //Key would include the recongizable names while Value would have session ID
-	SessionData		map[string]*DatasetRegistry
-	Mu				sync.RWMutex
+	SessionInfo 	map[string]string 				`json:"session_info"`//Key would include the recongizable names while Value would have session ID
+	SessionData		map[string]*DatasetRegistry		`json:"session_data"`
+	Mu				sync.RWMutex					`json:"mutex (dont touch)"`
 }
 
 // Second Level Object controlling data for each individual session
 type DatasetRegistry struct{
-	Registry 	[]ManagedDataObjects
+	Registry 	[]ManagedDataObjects	`json:"registry"`
 }
 
 // Third Level Object communicating with csv_utils 
