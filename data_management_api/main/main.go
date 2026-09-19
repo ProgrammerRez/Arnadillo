@@ -45,7 +45,7 @@ func main(){
 	mux.HandleFunc("POST /new_session", dms.createNewSession)
 	mux.HandleFunc("POST /delete_session", dms.deleteSpecificSession)
 	mux.HandleFunc("POST /delete_file", dms.deleteFile)
-
+	mux.HandleFunc("POST /fill_na", dms.fillNulls)
 	// mux.HandleFunc("GET /out", dms.showEM)
 
 	serv := http.Server{

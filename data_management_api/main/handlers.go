@@ -4,6 +4,7 @@ import (
 	utils "dmapi/csv_utils"
 	log "dmapi/logging"
 	"encoding/json"
+	// "fmt"
 	"io"
 	"net/http"
 	"os"
@@ -137,6 +138,35 @@ func (dms *DMService) deleteFile(w http.ResponseWriter, r *http.Request){
 	}
 
 	dms.Data.Delete(name, int(csv_id))
+}
+
+// This function fills nulls in the stored data; Persists only with export option
+func (dms *DMService) fillNulls(w http.ResponseWriter, r *http.Request){
+	// Get the name and csv_name value from form body
+	log.Info("Filling NA Values: Handler")
+	name := r.FormValue("name")
+	csv_name := r.FormValue("csv_name")
+	column_name := r.FormValue("column_name")
+	replacement := r.FormValue("replacement")
+	if name == "" || csv_name == "" || column_name == "" || replacement == ""{
+		http.Error(w, "Session or File name not Provided", http.StatusBadRequest)
+		log.Error("Session or File name not Provided")
+		return
+	}
+
+	csv_id, err := strconv.ParseInt(csv_name, 10, 64)
+
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		log.Error(err.Error())
+		return
+	}
+
+	if err := dms.Data.FillNulls(int(csv_id), name, column_name, replacement); err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
+		return 
+	}
 }
 
 // Outputs all the statistics provided by the getStats class method

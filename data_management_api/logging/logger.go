@@ -45,7 +45,7 @@ func Init(){
 		Level: InfoLevel,
 		infoLogger: log.New(f, "INFO: ", flags),
 		warnLogger: log.New(f, "WARN: ", flags),
-		errorLogger: log.New(f, "ERROR`: ", flags),
+		errorLogger: log.New(f, "ERROR: ", flags),
 	}
 }
 
@@ -92,7 +92,6 @@ func Warn(message string){
 		logger.warnLogger.Println(message)
 	}
 }
-
 
 // Error Logging
 func Error(message string){

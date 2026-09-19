@@ -1,12 +1,20 @@
 package utils
-
+// package main
 
 
 // This will be the schema for representing data for each column
 type ColumnStats struct{
-	UniqueValues  	[]string	`json:"unique_values"`
-	DataType 		string		`json:"dtypes"`
-	NullsInCol		int64		`json:"nulls_in_col"`
+	UniqueValues  	[]string		`json:"unique_values"`
+	DataType 		string			`json:"dtype"`
+	NumStats		NumericalStats	`json:"num_stats"`
+	NullsInCol		int64			`json:"nulls_in_col"`
+}
+
+// This will be the schema for Numerical Stats for a Column
+type NumericalStats struct{
+	Mode	any			`json:"mode"`
+	Mean 	float64 	`json:"mean"`	
+	Median	float64		`json:"median"`
 }
 
 

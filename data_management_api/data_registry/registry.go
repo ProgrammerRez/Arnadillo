@@ -2,6 +2,7 @@ package dataregistry
 
 import (
 	utils "dmapi/csv_utils"
+	log "dmapi/logging"
 	"errors"
 	"fmt"
 	"maps"
@@ -15,6 +16,8 @@ import (
 // Creates New Session Registry
 func CreateNewRegistry() *DataRegistry{
 
+	log.SetLevel(log.InfoLevel)
+	log.Info("Creating New Registry")
 	// Creating empty maps to avoid assignment to nil errors
 	session_info := make(map[string]string)
 	session_data := make(map[string]*DatasetRegistry)
@@ -29,6 +32,8 @@ func CreateNewRegistry() *DataRegistry{
 func (r *DataRegistry) NewSession(session_name string){
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
+
+	log.Info("Creating New Session: " + session_name)
 	// Creating New Session with random ID (will be stored in session_info map)
 	session_id := uuid.New().String()
 	// Finally setting as session data and info in the final object
@@ -40,6 +45,8 @@ func (r *DataRegistry) NewSession(session_name string){
 func (r *DataRegistry) DeleteSession(session_name string){
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
+
+	log.Info("Deleting Existing Session: " + session_name)
 	// Get the Id first
 	id := r.SessionInfo[session_name]
 	// Delete the Data
@@ -52,32 +59,32 @@ func (r *DataRegistry) Add(name string, data []utils.CSV) error{
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
 
+	log.Info("Adding New Files")
+
 	id, exists := r.SessionInfo[name]
-	if exists == false{
+	if !exists{
 		return errors.New("Session Info not Found")
 	}
 
 	registry, exists := r.SessionData[id]
-
 	if !exists || registry == nil{
 		return errors.New("Registry Not Found for session")
 	}
 
+	log.Info("Creating New Registry")
+
 	for _, csv := range(data){
 		new_managed_csv_object := ManagedDataObjects{
-		ID: len(registry.Registry) + 1,
-		Data: csv,
-		TargetCol: "",
-	}
+			ID: len(registry.Registry) + 1,
+			Data: csv,
+			TargetCol: "",
+		}
+		
+		registry.Registry = append(registry.Registry, new_managed_csv_object)
+		}	
 
-	registry.Registry = append(registry.Registry, new_managed_csv_object)
-	}	
-	
-	// for _, csv := range(registry.Registry){
-	// 	fmt.Println(csv.ID)
-	// 	fmt.Println(csv.Data.FileName)
-	// 	fmt.Println(csv.Data.FilePath)
-	// }
+	log.Info("Added Files to the Registry")
+
 	return nil
 }
 
@@ -85,13 +92,14 @@ func (r *DataRegistry) Delete(name string, csv_id int) error{
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
 
+	log.Info("Deleting Existing Files")
+
 	id, exists := r.SessionInfo[name]
 	if exists == false{
 		return errors.New("Session Info not Found")
 	}
 
 	registry, exists := r.SessionData[id]
-
 	if !exists || registry == nil{
 		return errors.New("Registry Not Found for session")
 	}
@@ -108,13 +116,52 @@ func (r *DataRegistry) Delete(name string, csv_id int) error{
 			registry.Registry = slices.Delete(registry.Registry,i,i+1)
 		}
 	}
+
+	log.Info("Deleted Existing Files")
+
 	return nil
 }
 
+
+// This function fills the Null Values in the specified Columns
+func (r *DataRegistry) FillNulls(csv_id int, name, column_name, replacement string) error{
+
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+
+	log.Info("Filling in Null Values: Registry")
+
+	id, exists := r.SessionInfo[name]
+	if exists == false{
+		return errors.New("Session Info not Found")
+	}
+
+	registry, exists := r.SessionData[id]
+	if !exists || registry == nil{
+		return errors.New("Registry Not Found for session")
+	}
+
+	for _, csv := range(registry.Registry){
+		if csv.ID == csv_id{
+			err := csv.Data.FillNA(column_name, replacement)
+			if err !=  nil{
+				return errors.New(err.Error())
+			}
+		}
+	}
+
+	log.Info("Filled in Null Values")
+
+	return nil
+
+
+}
 // This function gets all the available csv object names
 func (r *DataRegistry) GetAll(name string) (GenericMapOutput, error){
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
+
+	log.Info("Getting Existing Files in a Session")
 
 	csv_map := make(map[string]int)
 
@@ -139,6 +186,9 @@ func (r *DataRegistry) GetAll(name string) (GenericMapOutput, error){
 	for _, csv := range(registry.Registry){
 		csv_map[csv.Data.FileName] = int(csv.ID)
 	}
+
+	log.Info("Completed Getting all Existing Files in a Session")
+
 	return GenericMapOutput{
 			Map: csv_map,
 			Count: len(csv_map),
@@ -150,6 +200,8 @@ func (r *DataRegistry) GetAll(name string) (GenericMapOutput, error){
 func (r *DataRegistry) GetStats(name string, csv_name string) (utils.DataFrameStats, error){
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
+
+	log.Info("Getting Stats for a Specific File in the Session")
 
 	var selected_csv ManagedDataObjects
 	
@@ -164,7 +216,7 @@ func (r *DataRegistry) GetStats(name string, csv_name string) (utils.DataFrameSt
 	registry, exists := r.SessionData[id]
 
 	if !exists{
-		return utils.DataFrameStats{}, errors.New("Session Data not Found")
+		return selected_csv.Data.GetStats(), errors.New("Session Data not Found")
 		}
 
 	for _, csv := range(registry.Registry){
@@ -177,25 +229,30 @@ func (r *DataRegistry) GetStats(name string, csv_name string) (utils.DataFrameSt
 	if !found{
 		return selected_csv.Data.GetStats(), errors.New("File Not Found")
 	}
-	
+
+	log.Info("Got Specfic Details about the Specific File in the Session")
+
 	return selected_csv.Data.GetStats(), nil
 
 }
-// Session Functions
 
+
+// Session Functions
 // DEBUG Method: Checking session data storage
 
-func (r *DataRegistry) GetSession(name string){
+func (r *DataRegistry) GetSession(name string) string{
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
+
+	log.Info("HELPER FUNCTION: Getting Session ID")
 
 	fmt.Println(name)
 	id, exists := r.SessionInfo[name]
 	if exists == false{
-		return
+		return ""
 	}
 
-	fmt.Println(r.SessionData[id])
+	return id
 }
 
 // This function will list all the active sessions 
@@ -203,6 +260,8 @@ func (r *DataRegistry) ListSession() (GenericSliceOutput, error){
 
 	r.Mu.Lock()
 	defer r.Mu.Unlock()
+
+	log.Info("Listing Active Sessions")
 
 	var session_list GenericSliceOutput
 
@@ -214,6 +273,7 @@ func (r *DataRegistry) ListSession() (GenericSliceOutput, error){
 
 	session_list.Count = len(session_list.Items)
 
+	log.Info("Got all the list details of the sessions")
+
 	return session_list, nil
 }
-
