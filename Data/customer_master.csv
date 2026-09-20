@@ -21,7 +21,7 @@ CUST-000019,Charles Ewing,49,Female,Premium,Aguilarside,Maharashtra,India,West,6
 CUST-000020,Sandra Kane,31,Male,VIP,Stephensstad,Karnataka,India,South,92465,30.31
 CUST-000021,Paula Herrera,48,Female,Business,North Kaylastad,Ohio,USA,Central,22303,6.89
 CUST-000022,Deborah Williams,48,Male,Consumer,Rasmussenmouth,Alberta,Canada,Central,56921,24.74
-CUST-000023,Daniel Garcia,30,Female,Consumer,New Julie,Wales,UK,West,73638,33.24
+CUST-000023,Daniel Garcia,30,Female,Consumer,New Julie,Wales,UK,West,,
 CUST-000024,Beverly Johnston,34,Male,Consumer,Brooksmouth,New York,USA,East,89571,12.03
 CUST-000025,Brianna Mason,25,Female,Consumer,Whitneyfort,Georgia,USA,South,14204,20.57
 CUST-000026,Kenneth Knapp,43,Female,Consumer,North Marieberg,Florida,USA,South,46157,62.94
@@ -24995,8 +24995,8 @@ CUST-024993,Jacob Cross,36,Male,Consumer,Port Roberthaven,Pennsylvania,USA,East,
 CUST-024994,Destiny Martinez,21,Female,Consumer,West Theresaport,North Rhine,Germany,West,86731,20.05
 CUST-024995,Michele Stuart,44,Male,Consumer,West Curtis,Pennsylvania,USA,East,75784,76.28
 CUST-024996,Nathan Porter,40,Male,Consumer,Kristineport,Texas,USA,South,62079,14.92
-CUST-024997,Heather Graham,19,Female,Consumer,Ruizside,North Rhine,Germany,West,16488,11.41
+1,Heather Graham,19,Female,Consumer,Ruizside,North Rhine,Germany,West,16488,11.41
 CUST-024998,John Smith,31,Female,Business,Jacksonside,North Carolina,USA,South,86726,66.95
-CUST-024999,Eric Castillo,52,Female,Consumer,West Brandonfort,Ontario,Canada,East,92053,24.97
+CUST-024999,Eric Castillo,52,Female,Consumer,West Brandonfort,,Canada,East,,24.97
 CUST-025000,Peter Everett,52,Male,Premium,Blankenshipburgh,Ohio,USA,Central,73417,52.38
 CUST-025000,Peter Everett,52,Male,Premium,Blankenshipburgh,Ohio,USA,Central,73417,52.38

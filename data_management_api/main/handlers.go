@@ -96,7 +96,7 @@ func (dms *DMService) storeUpload(w http.ResponseWriter, r *http.Request){
 			return
 		}
 
-		loadedCSVs = append(loadedCSVs, csv_file)
+		loadedCSVs = append(loadedCSVs, *csv_file)
 	}
 
 	// Get the name value from form body
@@ -217,6 +217,54 @@ func (dms *DMService) outputFilesDetails(w http.ResponseWriter, r *http.Request)
 	w.Write(bytes)
 }
 
+
+// This function will delete specified column from specified file
+func (dms *DMService) deleteColumn(w http.ResponseWriter, r *http.Request){
+
+	name := r.FormValue("name")
+	csv_id := r.FormValue("csv_id")
+	column_name := r.FormValue("column_name")
+
+	
+	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(strings.ToLower(csv_id)) == ""{
+		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
+		log.Error("Session or File does not exist")
+		return
+	}
+
+	id , err := strconv.ParseInt(csv_id, 10, 64)
+	
+	if err != nil{
+		http.Error(w, "Csv ID should be an Integer", http.StatusBadRequest)
+		log.Error("Csv ID should be an Integer")
+		return
+	}
+	
+	if strings.TrimSpace(strings.ToLower(column_name)) == ""{
+		http.Error(w, "Column Name Not Provided", http.StatusBadRequest)
+		log.Error("Column Name Not Provided")
+		return
+	}
+	
+	
+	column_list, err := dms.Data.DeleteColumninRegistry(name, column_name, id)
+
+	if err != nil{
+		http.Error(w, "Unexpected Error Occurred while deleting the column" + err.Error(), http.StatusInternalServerError)
+		log.Error("Unexpected Error Occurred while deleting the column" + err.Error())
+		return
+	}
+
+	bytes, err := json.Marshal(column_list)
+
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
+		return
+	}
+
+	w.Write(bytes)
+}
 
 
 

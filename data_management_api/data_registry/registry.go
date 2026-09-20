@@ -123,6 +123,50 @@ func (r *DataRegistry) Delete(name string, csv_id int) error{
 }
 
 
+// This function deletes a single specifc column from the Data
+func (r *DataRegistry) DeleteColumninRegistry(name, column_name string, csv_id int64) (*GenericSliceOutput, error){
+
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+
+	found := false
+	var column_list *GenericSliceOutput = &GenericSliceOutput{}
+	log.Info("Deleting Specifc Column in the Dataframe")
+	
+	id, exists := r.SessionInfo[name]
+	if exists == false{
+		return column_list, errors.New("Session Info not Found")
+	}
+
+	registry, exists := r.SessionData[id]
+	if !exists || registry == nil{
+		return column_list, errors.New("Registry Not Found for session")
+	}
+
+	for i, reg := range(registry.Registry){
+		if reg.ID == int(csv_id){
+			found = true
+			
+			list, err := registry.Registry[i].Data.DeleteColumn(column_name)
+			
+			if err != nil{
+				return column_list ,errors.New(err.Error())
+			}
+
+			column_list.Items = list
+			column_list.Count = len(list)
+		}
+	}
+	
+	if !found{
+		return column_list, errors.New("CSV not found in the Data")
+	}
+
+	return column_list, nil
+
+}
+
+
 // This function fills the Null Values in the specified Columns
 func (r *DataRegistry) FillNulls(csv_id int, name, column_name, replacement string) error{
 
@@ -141,9 +185,9 @@ func (r *DataRegistry) FillNulls(csv_id int, name, column_name, replacement stri
 		return errors.New("Registry Not Found for session")
 	}
 
-	for _, csv := range(registry.Registry){
+	for i, csv := range(registry.Registry){
 		if csv.ID == csv_id{
-			err := csv.Data.FillNA(column_name, replacement)
+			err := registry.Registry[i].Data.FillNA(column_name, replacement)
 			if err !=  nil{
 				return errors.New(err.Error())
 			}
@@ -215,17 +259,19 @@ func (r *DataRegistry) GetStats(name string, csv_name string) (utils.DataFrameSt
 
 	registry, exists := r.SessionData[id]
 
+	
 	if !exists{
 		return selected_csv.Data.GetStats(), errors.New("Session Data not Found")
-		}
-
+	}
+	
 	for _, csv := range(registry.Registry){
-		if csv.Data.FileName == strings.TrimSpace(strings.ToLower(csv_name)){
+		if csv.Data.FileName == strings.TrimSpace(csv_name){
 			selected_csv = csv
 			found =  true
 		}
 	}
-
+	fmt.Println("Registry Level: ", selected_csv.Data.ColumnList)
+	
 	if !found{
 		return selected_csv.Data.GetStats(), errors.New("File Not Found")
 	}

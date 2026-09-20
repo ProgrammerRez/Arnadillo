@@ -21,7 +21,7 @@ type NumericalStats struct{
 // This will be the final output of the getStats method
 type DataFrameStats struct{
 	DtypesMatrix		map[string]string		`json:"dtype_matrix"`
-	ColStats			map[string]ColumnStats	`json:"col_stats"`
+	ColStats			map[string]*ColumnStats	`json:"col_stats"`
 	NullsByCol			map[string]int64		`json:"null_matrix"`
 	UniqueValueMatrix 	map[string]int64		`json:"unique_value_matrix"`
 	Dupes 				int64					`json:"dupes"`

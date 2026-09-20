@@ -34,11 +34,11 @@ type CSV struct{
 
 // Now the loading mechanism
 
-func LoadCSV(file_path string) (CSV, error){
+func LoadCSV(file_path string) (*CSV, error){
 
-	// log.SetLevel(log.InfoLevel)
+	log.SetLevel(log.InfoLevel)
 
-	new_csv_object := CSV{}
+	new_csv_object := &CSV{}
 	// First open the file and check for any errors
 	file, err := os.Open(file_path)
 	if err != nil || file == nil{
@@ -60,8 +60,7 @@ func LoadCSV(file_path string) (CSV, error){
 
 	// Now reading the data
 	csv_reader := csv.NewReader(file)
-	
-	
+
 	// Read the header row first
 	column_list, err := csv_reader.Read()
 
@@ -74,11 +73,11 @@ func LoadCSV(file_path string) (CSV, error){
 		log.Error(fmt.Sprintf("unable to read header row: %w", err))
 		return new_csv_object, fmt.Errorf("unable to read header row: %w", err)
 	}
-	
+
 	log.Info("Extracted Column List")
-	
+
+
 	var records [][]string
-	
 	for{
 		record, err := csv_reader.Read()
 		
@@ -96,12 +95,11 @@ func LoadCSV(file_path string) (CSV, error){
 	}
 
 	log.Info("Extracted all Records")
+
 	// Creating the New Object
 	if records != nil{	
-
 		data := records
-
-		new_csv_object = CSV{
+		new_csv_object = &CSV{
 			FileName: file_info.Name(),
 			FilePath: file_path,
 			Data: data,
@@ -109,7 +107,6 @@ func LoadCSV(file_path string) (CSV, error){
 			FileShape: [2]int64{int64(len(data)), int64(len(column_list))}, 
 			FileSize: file_info.Size(),
 		}
-
 	}
 	log.Info("Loaded CSV File: " + new_csv_object.FileName)
 	return new_csv_object, nil
@@ -119,12 +116,9 @@ func LoadCSV(file_path string) (CSV, error){
 // Now Object Methods
 
 // This function will provide with stats such as data type, unique values and null and dupe values for pandas
-func(csv CSV) GetStats() DataFrameStats{
+func(csv *CSV) GetStats() DataFrameStats{
 
-	// log.SetLevel(log.InfoLevel)
-	
-	col_data := make(map[string]ColumnStats)
-	
+	col_data := make(map[string]*ColumnStats)	
 	dtypesMatrix, err := csv.getDTypes()
 	if err != nil{
 		log.Error("Error Extracting Data Types: " + err.Error())
@@ -137,7 +131,7 @@ func(csv CSV) GetStats() DataFrameStats{
 
 
 	for _, col := range(csv.ColumnList){
-		col_data[col] = ColumnStats{
+		col_data[col] = &ColumnStats{
 			UniqueValues: uniqueValueMatrix[col],
 			NullsInCol: NPC[col],
 			DataType: dtypesMatrix[col],
@@ -147,6 +141,7 @@ func(csv CSV) GetStats() DataFrameStats{
 
 	log.Info("Calculations and Assignment Working")
 	log.Info("OKAY NP :)")
+
 	return DataFrameStats{
 		DtypesMatrix: dtypesMatrix,
 		Dupes: int64(dupeCount),
@@ -158,7 +153,7 @@ func(csv CSV) GetStats() DataFrameStats{
 }
 
 // This function allows to dynamically adjust data types when loading the CSV file
-func (csv CSV) getDTypes() (dTypeMatrix map[string]string, err error){
+func (csv *CSV) getDTypes() (dTypeMatrix map[string]string, err error){
 
 	log.Info("Extracting Data Type Info")
 	dTypeMatrix = make(map[string]string)
@@ -173,9 +168,8 @@ func (csv CSV) getDTypes() (dTypeMatrix map[string]string, err error){
 	}
 
 	for i, column := range(csv.Data[0]){
-		
-		col := csv.ColumnList[i]
 
+		col := csv.ColumnList[i]
 		trimmed := strings.TrimSpace(strings.ToLower(column))
 		
 		if _, err := strconv.ParseBool(trimmed); err == nil{
@@ -200,7 +194,7 @@ func (csv CSV) getDTypes() (dTypeMatrix map[string]string, err error){
 
 
 // This function will output the unqiue values for each column
-func (csv CSV) getUniqueValues() (uniqueValues map[string][]string, uniqueValuesCount map[string]int64){
+func (csv *CSV) getUniqueValues() (uniqueValues map[string][]string, uniqueValuesCount map[string]int64){
 	
 	log.Info("Extracting Unique Values")
 	
@@ -208,26 +202,21 @@ func (csv CSV) getUniqueValues() (uniqueValues map[string][]string, uniqueValues
 	uniqueValuesCount = make(map[string]int64)
 	seenValues := make(map[string]map[string]bool)
 
-
 	for _, col := range(csv.ColumnList){
 		uniqueValuesCount[col] = 0
 		uniqueValues[col] = []string{}
 		seenValues[col] = make(map[string]bool)
 	}
 
-
 	for _, row := range(csv.Data){
 		for i, cell := range(row){
 			col_name := csv.ColumnList[i]
-
 			if i > len(csv.ColumnList){
 				break
 			}
-			
 			if seenValues[col_name][cell]{
 				continue
 			}
-			
 			uniqueValues[col_name] = append(uniqueValues[col_name], cell)
 			seenValues[col_name][cell] = true
 			uniqueValuesCount[col_name]++
@@ -240,15 +229,13 @@ func (csv CSV) getUniqueValues() (uniqueValues map[string][]string, uniqueValues
 
 
 // This function will provide null values with respect to the columns
-func (csv CSV) getNulls() (nullCount int32, nullsPerCol map[string]int64) {
+func (csv *CSV) getNulls() (nullCount int32, nullsPerCol map[string]int64) {
 
 	log.Info("Extracting Null Value Info")
 	nullsPerCol = make(map[string]int64)
-
 	for _, col := range(csv.ColumnList){
 		nullsPerCol[col] = 0
 	}
-
 	for _, row := range(csv.Data){
 		for i, cell := range(row){
 			if strings.TrimSpace(cell) == ""{
@@ -257,7 +244,6 @@ func (csv CSV) getNulls() (nullCount int32, nullsPerCol map[string]int64) {
 					nullsPerCol[csv.ColumnList[i]]++
 				}
 			}
-
 		}
 	}
 	log.Info("Completed Extracting Null Value Info")
@@ -265,29 +251,27 @@ func (csv CSV) getNulls() (nullCount int32, nullsPerCol map[string]int64) {
 }
 
 // This function will provide dupe values and their population in the dataset
-func (csv CSV) getDupes() (dupeCount int64) {
+func (csv *CSV) getDupes() (dupeCount int64) {
 
 	log.Info("Started Dupe Info Extraction")
 	seenRows := make(map[string]bool)
-
 	for _, row := range(csv.Data){
 		rowKey := strings.Join(row, "|")
-
 		if seenRows[rowKey]{
 			dupeCount++
 		}else{
 			seenRows[rowKey] = true
 		}
 	}
-
 	log.Info("Completed Dupe Info Extraction")
 	return dupeCount
 }
 
 // This function fills_na of respective columns
-func (csv CSV) FillNA(column_name string, replacement string) error{
+func (csv *CSV) FillNA(column_name string, replacement string) error{
 
 	log.Info("Reached csv_utils")
+
 	// First Let's get the stats
 	stats := csv.GetStats()
 
@@ -300,9 +284,6 @@ func (csv CSV) FillNA(column_name string, replacement string) error{
 		log.Error("No Null Values found in the column. Please Double Check Column Name" + string(stats.NullsByCol[column_name]))
 		return errors.New("No Null Values found in the column. Please Double Check Column Name")
 	}
-
-	fmt.Println(stats.ColStats[column_name].NullsInCol)
-	fmt.Println(stats.NullsByCol[column_name])
 
 	// Get the replacement Value
 	dtype := stats.DtypesMatrix[column_name]
@@ -322,7 +303,7 @@ func (csv CSV) FillNA(column_name string, replacement string) error{
 			return errors.New("No Valid Option Provided for Numerical Substitution")
 		}
 	}
-	
+
 	// Object Substitution
 	if dtype == "string" || dtype == "bool"{
 		if trimmed == "mode"{
@@ -334,7 +315,6 @@ func (csv CSV) FillNA(column_name string, replacement string) error{
 
 	return nil
 }
-
 
 // This function fills the value in the specified column
 func (csv *CSV) fillNa(column_name string, value any) error{
@@ -382,7 +362,7 @@ func (csv *CSV) fillNa(column_name string, value any) error{
 
 
 // This function gets the numerical stats for each column
-func (csv CSV) getNumStats(dtype_matrix map[string]string) (num_stats map[string]*NumericalStats){
+func (csv *CSV) getNumStats(dtype_matrix map[string]string) (num_stats map[string]*NumericalStats){
 
 	// Starting Logging
 	log.Info("Starting Extraction for Numerical Stats")
@@ -403,13 +383,14 @@ func (csv CSV) getNumStats(dtype_matrix map[string]string) (num_stats map[string
 		log.Info(fmt.Sprintf("Getting data for column: %s", col))
 		// Getting Each Row's Data
 		for _, val := range(csv.Data){
-			data = append(data, val[i])
+			if i < len(val){
+				data = append(data, val[i])
+			}
 		}
 
 		log.Info("Column Name: " + col + " is passing through the float loop")
-		
-		if dtype == "int64" || dtype == "float64"{
-		
+
+		if dtype == "int64" || dtype == "float64"{		
 			// Converting to Float Data
 			float_data := ParsingFloats(data)
 
@@ -471,6 +452,7 @@ func ParsingFloats(data []string) []float64{
 	}
 
 	log.Info("Completed Float Parsing")
+
 	return nums
 }
 
@@ -553,6 +535,43 @@ func CalculateModeString(strs []string) (string, error){
 }
 
 
+// Column Editing Operations
+
+// This function deletes a column from the data
+func (csv *CSV) DeleteColumn(name string) ([]string,error){
+	
+	log.Info("Deleting Column from CSV: " + name)
+
+	// column_list := csv.ColumnList
+	targetColIdx := -1
+
+	for i := range csv.ColumnList{
+		if strings.TrimSpace(name) == csv.ColumnList[i]{
+			targetColIdx = i
+			log.Info("Found Column")
+			break
+		}
+	}
+
+	
+	if targetColIdx == -1{
+		log.Error("Column Not Found in the Dataframe")
+		return csv.ColumnList, errors.New("Column Not Found in the Dataframe")
+	}
+	
+	csv.ColumnList = append(csv.ColumnList[:targetColIdx], csv.ColumnList[targetColIdx+1:]...)
+	csv.FileShape[1] = int64(len(csv.ColumnList))
+
+	fmt.Println(csv.ColumnList)
+	for i := range(csv.Data){
+		if targetColIdx < len(csv.Data[i]){
+			csv.Data[i] = append(csv.Data[i][:targetColIdx], csv.Data[i][targetColIdx+1:]...)
+		}
+	}
+
+	return csv.ColumnList, nil
+}
+
 
 // func main(){
 
@@ -587,5 +606,8 @@ func CalculateModeString(strs []string) (string, error){
 	// 	fmt.Println(stat)
 	// }
 
+// 	csv.DeleteColumn("customer_acquisition_cost")
+
+// 	fmt.Println(csv.GetStats().ColStats)
 
 // }	
