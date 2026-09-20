@@ -4,6 +4,7 @@ import (
 	utils "dmapi/csv_utils"
 	log "dmapi/logging"
 	"encoding/json"
+
 	// "fmt"
 	"io"
 	"net/http"
@@ -299,6 +300,49 @@ func (dms *DMService) specificFileDetails(w http.ResponseWriter, r *http.Request
 
 }
 
+// This function will handle the regsitry target setting function
+
+func (dms *DMService) setTarget(w http.ResponseWriter, r *http.Request){
+	name := r.FormValue("name")
+	csv_id := r.FormValue("csv_id")
+	column_name := r.FormValue("column_name")
+
+	
+	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(csv_id) == ""{
+		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
+		log.Error("Session or File does not exist")
+		return
+	}
+
+	id , err := strconv.ParseInt(csv_id, 10, 64)
+	
+	if err != nil{
+		http.Error(w, "Csv ID should be an Integer", http.StatusBadRequest)
+		log.Error("Csv ID should be an Integer")
+		return
+	}
+	
+	if strings.TrimSpace(strings.ToLower(column_name)) == ""{
+		http.Error(w, "Column Name Not Provided", http.StatusBadRequest)
+		log.Error("Column Name Not Provided")
+		return
+	}
+	log.Info("Func Call is Fine")
+	dms.Data.SetTarget(name, column_name, id)
+	specific_dataframe := dms.Data.SessionData[name]
+	log.Info("Registry Call is Fine")
+
+	bytes, err := json.Marshal(specific_dataframe)
+
+	if err != nil{
+		http.Error(w ,"JSON Marshalling went to Shit. Send backup ASAP" + err.Error(), http.StatusInternalServerError)
+		log.Error("JSON Marshalling went to Shit. Send backup ASAP" + err.Error())
+		return
+	}
+
+	w.Write(bytes)
+}
+
 // ----
 
 // Session Handlers
@@ -308,7 +352,7 @@ func (dms *DMService) getSession(w http.ResponseWriter, r *http.Request){
 
 	name := r.FormValue("name")
 
-	if name == ""{
+	if strings.TrimSpace(name) == ""{
 		http.Error(w, "no session name was provided", http.StatusBadRequest)
 		log.Error("no session name was provided")
 		return
@@ -343,7 +387,7 @@ func (dms *DMService) createNewSession(w http.ResponseWriter, r *http.Request){
 
 	name := r.FormValue("name")
 
-	if name == ""{
+	if strings.TrimSpace(name) == ""{
 		http.Error(w, "no session name was provided", http.StatusBadRequest)
 		log.Error("no session name was provided")
 		return
@@ -357,11 +401,73 @@ func (dms *DMService) deleteSpecificSession(w http.ResponseWriter, r *http.Reque
 
 	name := r.FormValue("name")
 
-	if name == ""{
+	if strings.TrimSpace(name) == ""{
 		http.Error(w, "no session name was provided", http.StatusBadRequest)
 		log.Error("no session name was provided")
 		return
 	}
 
 	dms.Data.DeleteSession(name)
+}
+
+// This function will get the ManagedDataObjects stored in the session_data
+func (dms *DMService) getDataObjects(w http.ResponseWriter, r *http.Request){
+
+	name := r.FormValue("name")
+
+	if strings.TrimSpace(name) == ""{
+		http.Error(w, "no session name was provided", http.StatusBadRequest)
+		log.Error("no session name was provided")
+		return
+	}	
+
+	bytes, err := json.Marshal(dms.Data.GetStuff(name))
+
+	if err != nil{
+		http.Error(w, "JSON Shit Happend" + err.Error(), http.StatusInternalServerError)
+		log.Error("JSON Shit Happend" + err.Error())
+		return
+	}
+	w.Write(bytes)
+}
+
+
+// This function exports the file to a local path
+
+func (dms *DMService) exportToFile(w http.ResponseWriter, r *http.Request){
+
+	log.Info("Exporting Data to File")
+
+	name := r.FormValue("name")
+	csv_id := r.FormValue("csv_id")
+	file_path := r.FormValue("file_path")
+
+	
+	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(csv_id) == ""{
+		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
+		log.Error("Session or File does not exist")
+		return
+	}
+
+	id , err := strconv.ParseInt(csv_id, 10, 64)
+	
+	if err != nil{
+		http.Error(w, "Csv ID should be an Integer", http.StatusBadRequest)
+		log.Error("Csv ID should be an Integer")
+		return
+	}
+	
+	if strings.TrimSpace(file_path) == ""{
+		http.Error(w, "Column Name Not Provided", http.StatusBadRequest)
+		log.Error("Column Name Not Provided")
+		return
+	}
+
+	err = dms.Data.ExportToFile(name, file_path, int(id))
+	
+	if err != nil{
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Error(err.Error())
+		return
+	}
 }

@@ -2,7 +2,7 @@ package utils
 // package main
 
 import (
-	"encoding/csv"
+	csv_encoding "encoding/csv"
 	"errors"
 	"fmt"
 	"io"
@@ -23,12 +23,12 @@ import (
 
 // Main CSV Object
 type CSV struct{
-	Data 		[][]string
-	ColumnList 	[]string
-	FileName 	string
-	FilePath  	string
-	FileShape	[2]int64
-	FileSize	int64
+	Data 		[][]string	`json:"data"`
+	ColumnList 	[]string	`json:"column_list"`
+	FileName 	string		`json:"file_name"`
+	FilePath  	string		`json:"file_path"`
+	FileShape	[2]int64	`json:"file_shape"`
+	FileSize	int64		`json:"file_size"`
 }
 
 
@@ -59,7 +59,7 @@ func LoadCSV(file_path string) (*CSV, error){
 	log.Info("Extracted File Info")
 
 	// Now reading the data
-	csv_reader := csv.NewReader(file)
+	csv_reader := csv_encoding.NewReader(file)
 
 	// Read the header row first
 	column_list, err := csv_reader.Read()
@@ -570,6 +570,37 @@ func (csv *CSV) DeleteColumn(name string) ([]string,error){
 	}
 
 	return csv.ColumnList, nil
+}
+
+
+// Export to file function
+
+func (csv *CSV) ExportToFile(file_path string) error{
+
+	file, err := os.Create(file_path)
+
+	if err != nil{
+		log.Error(err.Error())
+		return err
+	}
+
+	defer file.Close()
+
+	writer := csv_encoding.NewWriter(file)
+	defer writer.Flush()
+
+	if err := writer.Write(csv.ColumnList); err != nil{
+		log.Error(err.Error())
+		return err
+	}
+
+	for _, row := range(csv.Data){
+		if err := writer.Write(row); err != nil{
+			log.Error(err.Error())
+			return err
+		}
+	}
+	return nil
 }
 
 

@@ -21,7 +21,7 @@ type DatasetRegistry struct{
 // Third Level Object communicating with csv_utils 
 type ManagedDataObjects struct{
 	TargetCol	string		`json:"target_col"`
-	Data 		utils.CSV	`json:"-"`
+	Data 		utils.CSV	`json:"data"`
 	ID 			int			`json:"id"`
 }
 

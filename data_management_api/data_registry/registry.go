@@ -41,6 +41,19 @@ func (r *DataRegistry) NewSession(session_name string){
 	r.SessionData[session_id] = &DatasetRegistry{}
 }
 
+// Gets the Data Registry from a session
+func (r *DataRegistry) GetStuff(session_name string) *DatasetRegistry{
+
+	r.Mu.RLock()
+	defer r.Mu.RUnlock()
+
+	log.Info("Getting Stuff...")
+
+	id := r.SessionInfo[session_name]
+
+	return r.SessionData[id]
+}
+
 // Deletes Session Data 
 func (r *DataRegistry) DeleteSession(session_name string){
 	r.Mu.Lock()
@@ -166,6 +179,47 @@ func (r *DataRegistry) DeleteColumninRegistry(name, column_name string, csv_id i
 
 }
 
+// This function will export everything to a file
+
+func (r *DataRegistry) ExportToFile(name, file_path string, csv_id int) error{
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+
+	log.Info("Exporting to File")
+
+	found := false
+	log.Info("Deleting Specifc Column in the Dataframe")
+	
+	id, exists := r.SessionInfo[name]
+	if exists == false{
+		return errors.New("Session Info not Found")
+	}
+
+	registry, exists := r.SessionData[id]
+	if !exists || registry == nil{
+		return  errors.New("Registry Not Found for session")
+	}
+
+	for i, reg := range(registry.Registry){
+		if reg.ID == int(csv_id){
+			found = true
+
+			err := registry.Registry[i].Data.ExportToFile(file_path)
+
+			if err != nil{
+				log.Error(err.Error())
+				return err
+			}
+		}
+	}
+
+	if !found{
+		return errors.New("CSV not found in the Data")
+	}
+
+	return nil
+}
+
 
 // This function fills the Null Values in the specified Columns
 func (r *DataRegistry) FillNulls(csv_id int, name, column_name, replacement string) error{
@@ -280,6 +334,46 @@ func (r *DataRegistry) GetStats(name string, csv_name string) (utils.DataFrameSt
 
 	return selected_csv.Data.GetStats(), nil
 
+}
+
+// This function sets Target Variable for a ManagedDataObjects
+func (r *DataRegistry) SetTarget(name, column_name string, csv_id int64, ) error{
+
+	r.Mu.Lock()
+	defer r.Mu.Unlock()
+	
+	log.Info("Setting Target Column")
+
+	found := false
+
+	id, exists := r.SessionInfo[name]
+	if !exists{
+		log.Error("Session Info not Found")
+		return errors.New("Session Info not Found")
+		}
+
+		
+	registry, exists := r.SessionData[id]
+
+	if !exists{
+		log.Error("Session Data not Found")
+		return errors.New("Session Data not Found")
+		}
+
+	for i, csv := range(registry.Registry){
+		if csv.ID == int(csv_id){
+			found = true
+
+			registry.Registry[i].TargetCol = column_name
+		}
+	}
+
+	if !found{
+		log.Error("Column Not Found. Check the name Again")
+		return errors.New("Column Not Found. Check the name Again")
+	}
+
+	return nil
 }
 
 

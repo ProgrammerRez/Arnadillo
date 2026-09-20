@@ -1,0 +1,197 @@
+INFO: 2026/09/20 21:59:05.086870 logger.go:85: Starting the API
+INFO: 2026/09/20 21:59:05.087066 logger.go:85: Creating New Registry
+INFO: 2026/09/20 21:59:05.087128 logger.go:85: Creating New Session: session1
+INFO: 2026/09/20 21:59:05.087217 logger.go:85: New Data Management Service Created
+INFO: 2026/09/20 22:01:14.468325 logger.go:85: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/20 22:01:14.468423 logger.go:85: Extracted File Info
+INFO: 2026/09/20 22:01:14.468487 logger.go:85: Extracted Column List
+ERROR: 2026/09/20 22:01:14.486026 logger.go:99: File is Empty: EOF error
+INFO: 2026/09/20 22:01:14.486210 logger.go:85: Extracted all Records
+INFO: 2026/09/20 22:01:14.486309 logger.go:85: Loaded CSV File: customer_master.csv
+INFO: 2026/09/20 22:01:14.486385 logger.go:85: Adding New Files
+INFO: 2026/09/20 22:01:14.486442 logger.go:85: Creating New Registry
+INFO: 2026/09/20 22:01:14.486508 logger.go:85: Added Files to the Registry
+INFO: 2026/09/20 22:01:17.505142 logger.go:85: Exporting Data to File
+INFO: 2026/09/20 22:01:17.505486 logger.go:85: Exporting to File
+INFO: 2026/09/20 22:01:17.505602 logger.go:85: Deleting Specifc Column in the Dataframe
+ERROR: 2026/09/20 22:01:17.505746 logger.go:99: open /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/output: is a directory
+ERROR: 2026/09/20 22:01:17.505832 logger.go:99: open /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/output: is a directory
+ERROR: 2026/09/20 22:01:17.505905 logger.go:99: open /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/output: is a directory
+INFO: 2026/09/20 22:01:29.196776 logger.go:85: Exporting Data to File
+INFO: 2026/09/20 22:01:29.197093 logger.go:85: Exporting to File
+INFO: 2026/09/20 22:01:29.197197 logger.go:85: Deleting Specifc Column in the Dataframe
+INFO: 2026/09/20 22:02:03.345987 logger.go:85: Getting Stats for a Specific File in the Session
+INFO: 2026/09/20 22:02:03.346190 logger.go:85: Got Specfic Details about the Specific File in the Session
+INFO: 2026/09/20 22:02:03.346319 logger.go:85: Extracting Data Type Info
+INFO: 2026/09/20 22:02:03.346576 logger.go:85: Completing Data Type Extraction
+INFO: 2026/09/20 22:02:03.346659 logger.go:85: Extracting Unique Values
+INFO: 2026/09/20 22:02:03.403322 logger.go:85: Completed Unique Value Extraction
+INFO: 2026/09/20 22:02:03.403637 logger.go:85: Extracting Null Value Info
+INFO: 2026/09/20 22:02:03.406971 logger.go:85: Completed Extracting Null Value Info
+INFO: 2026/09/20 22:02:03.407189 logger.go:85: Started Dupe Info Extraction
+INFO: 2026/09/20 22:02:03.419639 logger.go:85: Completed Dupe Info Extraction
+INFO: 2026/09/20 22:02:03.419808 logger.go:85: Starting Extraction for Numerical Stats
+INFO: 2026/09/20 22:02:03.419947 logger.go:85: Getting data for column: customer_id
+INFO: 2026/09/20 22:02:03.421415 logger.go:85: Column Name: customer_id is passing through the float loop
+INFO: 2026/09/20 22:02:03.421528 logger.go:85: Column Name: customer_id is passing through the string loop
+INFO: 2026/09/20 22:02:03.421592 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.430010 logger.go:85: Completed Numerical Stat Extraction for column: customer_id
+INFO: 2026/09/20 22:02:03.430173 logger.go:85: Getting data for column: customer_name
+INFO: 2026/09/20 22:02:03.431003 logger.go:85: Column Name: customer_name is passing through the float loop
+INFO: 2026/09/20 22:02:03.431133 logger.go:85: Column Name: customer_name is passing through the string loop
+INFO: 2026/09/20 22:02:03.431208 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.435625 logger.go:85: Completed Numerical Stat Extraction for column: customer_name
+INFO: 2026/09/20 22:02:03.435755 logger.go:85: Getting data for column: customer_age
+INFO: 2026/09/20 22:02:03.436820 logger.go:85: Column Name: customer_age is passing through the float loop
+INFO: 2026/09/20 22:02:03.436940 logger.go:85: Parsing Floats
+INFO: 2026/09/20 22:02:03.438539 logger.go:85: Completed Float Parsing
+INFO: 2026/09/20 22:02:03.439718 logger.go:85: Calculating Mean
+INFO: 2026/09/20 22:02:03.439867 logger.go:85: Calculating Median
+INFO: 2026/09/20 22:02:03.441463 logger.go:85: Calculating Numerical Mode
+INFO: 2026/09/20 22:02:03.444615 logger.go:85: Completed Numerical Stat Extraction for column: customer_age
+INFO: 2026/09/20 22:02:03.444911 logger.go:85: Getting data for column: gender
+INFO: 2026/09/20 22:02:03.445724 logger.go:85: Column Name: gender is passing through the float loop
+INFO: 2026/09/20 22:02:03.445821 logger.go:85: Column Name: gender is passing through the string loop
+INFO: 2026/09/20 22:02:03.445872 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.447502 logger.go:85: Completed Numerical Stat Extraction for column: gender
+INFO: 2026/09/20 22:02:03.447608 logger.go:85: Getting data for column: customer_segment
+INFO: 2026/09/20 22:02:03.448247 logger.go:85: Column Name: customer_segment is passing through the float loop
+INFO: 2026/09/20 22:02:03.448357 logger.go:85: Column Name: customer_segment is passing through the string loop
+INFO: 2026/09/20 22:02:03.448422 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.449945 logger.go:85: Completed Numerical Stat Extraction for column: customer_segment
+INFO: 2026/09/20 22:02:03.450016 logger.go:85: Getting data for column: customer_city
+INFO: 2026/09/20 22:02:03.450664 logger.go:85: Column Name: customer_city is passing through the float loop
+INFO: 2026/09/20 22:02:03.450782 logger.go:85: Column Name: customer_city is passing through the string loop
+INFO: 2026/09/20 22:02:03.450840 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.457501 logger.go:85: Completed Numerical Stat Extraction for column: customer_city
+INFO: 2026/09/20 22:02:03.457707 logger.go:85: Getting data for column: customer_state
+INFO: 2026/09/20 22:02:03.459411 logger.go:85: Column Name: customer_state is passing through the float loop
+INFO: 2026/09/20 22:02:03.459579 logger.go:85: Column Name: customer_state is passing through the string loop
+INFO: 2026/09/20 22:02:03.459663 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.461371 logger.go:85: Completed Numerical Stat Extraction for column: customer_state
+INFO: 2026/09/20 22:02:03.461495 logger.go:85: Getting data for column: customer_country
+INFO: 2026/09/20 22:02:03.462266 logger.go:85: Column Name: customer_country is passing through the float loop
+INFO: 2026/09/20 22:02:03.462370 logger.go:85: Column Name: customer_country is passing through the string loop
+INFO: 2026/09/20 22:02:03.462442 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.464962 logger.go:85: Completed Numerical Stat Extraction for column: customer_country
+INFO: 2026/09/20 22:02:03.465053 logger.go:85: Getting data for column: region
+INFO: 2026/09/20 22:02:03.465688 logger.go:85: Column Name: region is passing through the float loop
+INFO: 2026/09/20 22:02:03.465776 logger.go:85: Column Name: region is passing through the string loop
+INFO: 2026/09/20 22:02:03.465852 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:03.467862 logger.go:85: Completed Numerical Stat Extraction for column: region
+INFO: 2026/09/20 22:02:03.467949 logger.go:85: Getting data for column: customer_postal_code
+INFO: 2026/09/20 22:02:03.468800 logger.go:85: Column Name: customer_postal_code is passing through the float loop
+INFO: 2026/09/20 22:02:03.468911 logger.go:85: Parsing Floats
+WARN: 2026/09/20 22:02:03.468998 logger.go:92: Parsing Error Caused at line: 22. Changing to Int Conversion
+ERROR: 2026/09/20 22:02:03.469086 logger.go:99: Integer Conversion didn't work for: %!w(string=)
+INFO: 2026/09/20 22:02:03.469178 logger.go:85: Integer Finally Converted to Float64: 0.00
+WARN: 2026/09/20 22:02:03.471364 logger.go:92: Parsing Error Caused at line: 24998. Changing to Int Conversion
+ERROR: 2026/09/20 22:02:03.471543 logger.go:99: Integer Conversion didn't work for: %!w(string=)
+INFO: 2026/09/20 22:02:03.471743 logger.go:85: Integer Finally Converted to Float64: 0.00
+INFO: 2026/09/20 22:02:03.471993 logger.go:85: Completed Float Parsing
+INFO: 2026/09/20 22:02:03.472096 logger.go:85: Calculating Mean
+INFO: 2026/09/20 22:02:03.472210 logger.go:85: Calculating Median
+INFO: 2026/09/20 22:02:03.475699 logger.go:85: Calculating Numerical Mode
+INFO: 2026/09/20 22:02:03.481176 logger.go:85: Completed Numerical Stat Extraction for column: customer_postal_code
+INFO: 2026/09/20 22:02:03.481362 logger.go:85: Getting data for column: customer_acquisition_cost
+INFO: 2026/09/20 22:02:03.482209 logger.go:85: Column Name: customer_acquisition_cost is passing through the float loop
+INFO: 2026/09/20 22:02:03.482348 logger.go:85: Parsing Floats
+WARN: 2026/09/20 22:02:03.482499 logger.go:92: Parsing Error Caused at line: 22. Changing to Int Conversion
+ERROR: 2026/09/20 22:02:03.482688 logger.go:99: Integer Conversion didn't work for: %!w(string=)
+INFO: 2026/09/20 22:02:03.482782 logger.go:85: Integer Finally Converted to Float64: 0.00
+INFO: 2026/09/20 22:02:03.484379 logger.go:85: Completed Float Parsing
+INFO: 2026/09/20 22:02:03.484471 logger.go:85: Calculating Mean
+INFO: 2026/09/20 22:02:03.484608 logger.go:85: Calculating Median
+INFO: 2026/09/20 22:02:03.487942 logger.go:85: Calculating Numerical Mode
+INFO: 2026/09/20 22:02:03.491345 logger.go:85: Completed Numerical Stat Extraction for column: customer_acquisition_cost
+INFO: 2026/09/20 22:02:03.491450 logger.go:85: Completed Numerical Stat Extraction for all columns
+INFO: 2026/09/20 22:02:03.491541 logger.go:85: Calculations and Assignment Working
+INFO: 2026/09/20 22:02:03.491616 logger.go:85: OKAY NP :)
+INFO: 2026/09/20 22:02:33.281333 logger.go:85: Deleting Specifc Column in the Dataframe
+INFO: 2026/09/20 22:02:33.281611 logger.go:85: Deleting Column from CSV: gender
+INFO: 2026/09/20 22:02:33.281836 logger.go:85: Found Column
+INFO: 2026/09/20 22:02:41.215089 logger.go:85: Getting Stats for a Specific File in the Session
+INFO: 2026/09/20 22:02:41.215297 logger.go:85: Got Specfic Details about the Specific File in the Session
+INFO: 2026/09/20 22:02:41.215436 logger.go:85: Extracting Data Type Info
+INFO: 2026/09/20 22:02:41.215536 logger.go:85: Completing Data Type Extraction
+INFO: 2026/09/20 22:02:41.215657 logger.go:85: Extracting Unique Values
+INFO: 2026/09/20 22:02:41.265208 logger.go:85: Completed Unique Value Extraction
+INFO: 2026/09/20 22:02:41.265648 logger.go:85: Extracting Null Value Info
+INFO: 2026/09/20 22:02:41.268108 logger.go:85: Completed Extracting Null Value Info
+INFO: 2026/09/20 22:02:41.268281 logger.go:85: Started Dupe Info Extraction
+INFO: 2026/09/20 22:02:41.279095 logger.go:85: Completed Dupe Info Extraction
+INFO: 2026/09/20 22:02:41.279306 logger.go:85: Starting Extraction for Numerical Stats
+INFO: 2026/09/20 22:02:41.279440 logger.go:85: Getting data for column: customer_id
+INFO: 2026/09/20 22:02:41.280101 logger.go:85: Column Name: customer_id is passing through the float loop
+INFO: 2026/09/20 22:02:41.280217 logger.go:85: Column Name: customer_id is passing through the string loop
+INFO: 2026/09/20 22:02:41.280293 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:41.286225 logger.go:85: Completed Numerical Stat Extraction for column: customer_id
+INFO: 2026/09/20 22:02:41.287090 logger.go:85: Getting data for column: customer_name
+INFO: 2026/09/20 22:02:41.288734 logger.go:85: Column Name: customer_name is passing through the float loop
+INFO: 2026/09/20 22:02:41.288873 logger.go:85: Column Name: customer_name is passing through the string loop
+INFO: 2026/09/20 22:02:41.288956 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:41.294572 logger.go:85: Completed Numerical Stat Extraction for column: customer_name
+INFO: 2026/09/20 22:02:41.294722 logger.go:85: Getting data for column: customer_age
+INFO: 2026/09/20 22:02:41.295478 logger.go:85: Column Name: customer_age is passing through the float loop
+INFO: 2026/09/20 22:02:41.295589 logger.go:85: Parsing Floats
+INFO: 2026/09/20 22:02:41.297016 logger.go:85: Completed Float Parsing
+INFO: 2026/09/20 22:02:41.297137 logger.go:85: Calculating Mean
+INFO: 2026/09/20 22:02:41.297281 logger.go:85: Calculating Median
+INFO: 2026/09/20 22:02:41.299069 logger.go:85: Calculating Numerical Mode
+INFO: 2026/09/20 22:02:41.301516 logger.go:85: Completed Numerical Stat Extraction for column: customer_age
+INFO: 2026/09/20 22:02:41.301782 logger.go:85: Getting data for column: customer_segment
+INFO: 2026/09/20 22:02:41.308049 logger.go:85: Column Name: customer_segment is passing through the float loop
+INFO: 2026/09/20 22:02:41.308304 logger.go:85: Column Name: customer_segment is passing through the string loop
+INFO: 2026/09/20 22:02:41.308449 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:41.310942 logger.go:85: Completed Numerical Stat Extraction for column: customer_segment
+INFO: 2026/09/20 22:02:41.311278 logger.go:85: Getting data for column: customer_city
+INFO: 2026/09/20 22:02:41.312125 logger.go:85: Column Name: customer_city is passing through the float loop
+INFO: 2026/09/20 22:02:41.312283 logger.go:85: Column Name: customer_city is passing through the string loop
+INFO: 2026/09/20 22:02:41.312378 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:41.318290 logger.go:85: Completed Numerical Stat Extraction for column: customer_city
+INFO: 2026/09/20 22:02:41.318575 logger.go:85: Getting data for column: customer_state
+INFO: 2026/09/20 22:02:41.319600 logger.go:85: Column Name: customer_state is passing through the float loop
+INFO: 2026/09/20 22:02:41.319805 logger.go:85: Column Name: customer_state is passing through the string loop
+INFO: 2026/09/20 22:02:41.319967 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:41.322821 logger.go:85: Completed Numerical Stat Extraction for column: customer_state
+INFO: 2026/09/20 22:02:41.322964 logger.go:85: Getting data for column: customer_country
+INFO: 2026/09/20 22:02:41.323718 logger.go:85: Column Name: customer_country is passing through the float loop
+INFO: 2026/09/20 22:02:41.323837 logger.go:85: Column Name: customer_country is passing through the string loop
+INFO: 2026/09/20 22:02:41.323930 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:41.327762 logger.go:85: Completed Numerical Stat Extraction for column: customer_country
+INFO: 2026/09/20 22:02:41.327884 logger.go:85: Getting data for column: region
+INFO: 2026/09/20 22:02:41.333615 logger.go:85: Column Name: region is passing through the float loop
+INFO: 2026/09/20 22:02:41.333933 logger.go:85: Column Name: region is passing through the string loop
+INFO: 2026/09/20 22:02:41.334092 logger.go:85: Calculating String Mode
+INFO: 2026/09/20 22:02:41.337551 logger.go:85: Completed Numerical Stat Extraction for column: region
+INFO: 2026/09/20 22:02:41.337779 logger.go:85: Getting data for column: customer_postal_code
+INFO: 2026/09/20 22:02:41.338782 logger.go:85: Column Name: customer_postal_code is passing through the float loop
+INFO: 2026/09/20 22:02:41.338948 logger.go:85: Parsing Floats
+WARN: 2026/09/20 22:02:41.339120 logger.go:92: Parsing Error Caused at line: 22. Changing to Int Conversion
+ERROR: 2026/09/20 22:02:41.339220 logger.go:99: Integer Conversion didn't work for: %!w(string=)
+INFO: 2026/09/20 22:02:41.339330 logger.go:85: Integer Finally Converted to Float64: 0.00
+WARN: 2026/09/20 22:02:41.342186 logger.go:92: Parsing Error Caused at line: 24998. Changing to Int Conversion
+ERROR: 2026/09/20 22:02:41.342417 logger.go:99: Integer Conversion didn't work for: %!w(string=)
+INFO: 2026/09/20 22:02:41.342639 logger.go:85: Integer Finally Converted to Float64: 0.00
+INFO: 2026/09/20 22:02:41.342911 logger.go:85: Completed Float Parsing
+INFO: 2026/09/20 22:02:41.343131 logger.go:85: Calculating Mean
+INFO: 2026/09/20 22:02:41.343294 logger.go:85: Calculating Median
+INFO: 2026/09/20 22:02:41.347552 logger.go:85: Calculating Numerical Mode
+INFO: 2026/09/20 22:02:41.354332 logger.go:85: Completed Numerical Stat Extraction for column: customer_postal_code
+INFO: 2026/09/20 22:02:41.354542 logger.go:85: Getting data for column: customer_acquisition_cost
+INFO: 2026/09/20 22:02:41.355520 logger.go:85: Column Name: customer_acquisition_cost is passing through the float loop
+INFO: 2026/09/20 22:02:41.355766 logger.go:85: Parsing Floats
+WARN: 2026/09/20 22:02:41.355936 logger.go:92: Parsing Error Caused at line: 22. Changing to Int Conversion
+ERROR: 2026/09/20 22:02:41.356092 logger.go:99: Integer Conversion didn't work for: %!w(string=)
+INFO: 2026/09/20 22:02:41.356189 logger.go:85: Integer Finally Converted to Float64: 0.00
+INFO: 2026/09/20 22:02:41.358681 logger.go:85: Completed Float Parsing
+INFO: 2026/09/20 22:02:41.358797 logger.go:85: Calculating Mean
+INFO: 2026/09/20 22:02:41.358996 logger.go:85: Calculating Median
+INFO: 2026/09/20 22:02:41.363305 logger.go:85: Calculating Numerical Mode
+INFO: 2026/09/20 22:02:41.367857 logger.go:85: Completed Numerical Stat Extraction for column: customer_acquisition_cost
+INFO: 2026/09/20 22:02:41.368116 logger.go:85: Completed Numerical Stat Extraction for all columns
+INFO: 2026/09/20 22:02:41.368876 logger.go:85: Calculations and Assignment Working
+INFO: 2026/09/20 22:02:41.369017 logger.go:85: OKAY NP :)
+INFO: 2026/09/20 22:02:47.213848 logger.go:85: Exporting Data to File
+INFO: 2026/09/20 22:02:47.214202 logger.go:85: Exporting to File
+INFO: 2026/09/20 22:02:47.214359 logger.go:85: Deleting Specifc Column in the Dataframe

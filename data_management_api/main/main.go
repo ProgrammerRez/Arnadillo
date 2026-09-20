@@ -47,7 +47,9 @@ func main(){
 	mux.HandleFunc("POST /delete_file", dms.deleteFile)
 	mux.HandleFunc("POST /fill_na", dms.fillNulls)
 	mux.HandleFunc("POST /delete_column", dms.deleteColumn)
-	// mux.HandleFunc("GET /out", dms.showEM)
+	mux.HandleFunc("POST /set_target", dms.setTarget)
+	mux.HandleFunc("GET /the_good_stuff", dms.getDataObjects)
+	mux.HandleFunc("GET /AAJA", dms.exportToFile)
 
 	serv := http.Server{
 		Addr: ":8000",
