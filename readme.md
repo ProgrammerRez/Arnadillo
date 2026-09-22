@@ -26,3 +26,5 @@ So I'm guessing this'll be done over the weekend
 ---
 
 **Update from `data_managment_backend` branch**: Starting with an API structure that loads the data and provides info via various endpoints. Using `golang` and `python`
+
+**Update from `model_training_service` branch**: Starting work on the python backed API along with exploring certain design patterns that could potentially be more efficient in training and managing these models.
