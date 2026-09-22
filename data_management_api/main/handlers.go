@@ -170,23 +170,6 @@ func (dms *DMService) fillNulls(w http.ResponseWriter, r *http.Request){
 	}
 }
 
-// Outputs all the statistics provided by the getStats class method
-// func (dms *DMService) outputStats(w http.ResponseWriter, r *http.Request){
-
-// 	// Getting the name for the session
-// 	name := r.FormValue("name")
-
-// 	if name == ""{
-// 		http.Error(w, "name for the session was not provided", http.StatusBadRequest)
-// 	}
-
-// 	bytes, err := json.Marshal(dms.Data.CSVS[0].GetStats())
-// 	if err != nil{
-// 		http.Error(w, err.Error(), http.StatusInternalServerError)
-// 	}
-// 	w.Write(bytes)
-// } 
-
 
 // // This function is a utility for getting a list of available CSV files 
 func (dms *DMService) outputFilesDetails(w http.ResponseWriter, r *http.Request){
@@ -227,7 +210,7 @@ func (dms *DMService) deleteColumn(w http.ResponseWriter, r *http.Request){
 	column_name := r.FormValue("column_name")
 
 	
-	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(strings.ToLower(csv_id)) == ""{
+	if strings.TrimSpace(name) == "" || strings.TrimSpace(csv_id) == ""{
 		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
 		log.Error("Session or File does not exist")
 		return
@@ -241,7 +224,7 @@ func (dms *DMService) deleteColumn(w http.ResponseWriter, r *http.Request){
 		return
 	}
 	
-	if strings.TrimSpace(strings.ToLower(column_name)) == ""{
+	if strings.TrimSpace(column_name) == ""{
 		http.Error(w, "Column Name Not Provided", http.StatusBadRequest)
 		log.Error("Column Name Not Provided")
 		return
@@ -276,7 +259,7 @@ func (dms *DMService) specificFileDetails(w http.ResponseWriter, r *http.Request
 	name := r.FormValue("name")
 	csv_name := r.FormValue("csv_name")
 
-	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(strings.ToLower(csv_name)) == ""{
+	if strings.TrimSpace(name) == "" || strings.TrimSpace(csv_name) == ""{
 		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
 		log.Error("Session or File does not exist")
 		return
@@ -308,7 +291,7 @@ func (dms *DMService) setTarget(w http.ResponseWriter, r *http.Request){
 	column_name := r.FormValue("column_name")
 
 	
-	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(csv_id) == ""{
+	if strings.TrimSpace(name) == "" || strings.TrimSpace(csv_id) == ""{
 		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
 		log.Error("Session or File does not exist")
 		return
@@ -322,7 +305,7 @@ func (dms *DMService) setTarget(w http.ResponseWriter, r *http.Request){
 		return
 	}
 	
-	if strings.TrimSpace(strings.ToLower(column_name)) == ""{
+	if strings.TrimSpace(column_name) == ""{
 		http.Error(w, "Column Name Not Provided", http.StatusBadRequest)
 		log.Error("Column Name Not Provided")
 		return
@@ -443,7 +426,7 @@ func (dms *DMService) exportToFile(w http.ResponseWriter, r *http.Request){
 	file_path := r.FormValue("file_path")
 
 	
-	if strings.TrimSpace(strings.ToLower(name)) == "" || strings.TrimSpace(csv_id) == ""{
+	if strings.TrimSpace(name) == "" || strings.TrimSpace(csv_id) == ""{
 		http.Error(w, "Session or File does not exist", http.StatusBadRequest)
 		log.Error("Session or File does not exist")
 		return

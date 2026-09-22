@@ -37,7 +37,6 @@ func main(){
 	
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /upload", dms.storeUpload)
-	// mux.HandleFunc("GET /stats", dms.outputStats)
 	mux.HandleFunc("GET /files", dms.outputFilesDetails)
 	mux.HandleFunc("GET /session", dms.getSession)
 	mux.HandleFunc("POST /file", dms.specificFileDetails)

@@ -1,5 +1,4 @@
 package utils
-// package main
 
 import (
 	csv_encoding "encoding/csv"
@@ -8,7 +7,6 @@ import (
 	"io"
 	"sort"
 
-	// "fmt"
 	log "dmapi/logging"
 	"os"
 	"strconv"
@@ -170,7 +168,7 @@ func (csv *CSV) getDTypes() (dTypeMatrix map[string]string, err error){
 	for i, column := range(csv.Data[0]){
 
 		col := csv.ColumnList[i]
-		trimmed := strings.TrimSpace(strings.ToLower(column))
+		trimmed := strings.TrimSpace(column)
 		
 		if _, err := strconv.ParseBool(trimmed); err == nil{
 			dTypeMatrix[col] = "bool"
@@ -577,6 +575,8 @@ func (csv *CSV) DeleteColumn(name string) ([]string,error){
 
 func (csv *CSV) ExportToFile(file_path string) error{
 
+	log.Info("Exporting to File")
+
 	file, err := os.Create(file_path)
 
 	if err != nil{
@@ -589,11 +589,13 @@ func (csv *CSV) ExportToFile(file_path string) error{
 	writer := csv_encoding.NewWriter(file)
 	defer writer.Flush()
 
+	log.Info("Writing Columns")
 	if err := writer.Write(csv.ColumnList); err != nil{
 		log.Error(err.Error())
 		return err
 	}
 
+	log.Info("Writing Data Rows")
 	for _, row := range(csv.Data){
 		if err := writer.Write(row); err != nil{
 			log.Error(err.Error())
@@ -602,43 +604,3 @@ func (csv *CSV) ExportToFile(file_path string) error{
 	}
 	return nil
 }
-
-
-// func main(){
-
-// 	csv, err := LoadCSV("/run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/Data/customer_master.csv")
-
-// 	if err != nil{
-// 		fmt.Println(err)
-// 	}
-
-	// fmt.Println(csv)
-
-	// fmt.Println(csv.getNulls())
-	
-	// fmt.Println(csv.Data[0])
-
-	// fmt.Print(csv.FileShape)
-
-	// stats := csv.GetStats()
-
-	// fmt.Println(stats.DtypesMatrix)
-	// fmt.Println(stats.Nulls)
-	// fmt.Println("Nulls by Col: ", stats.NullsByCol)
-	// fmt.Println(stats.Dupes)
-	// fmt.Println(stats.UniqueValueMatrix)
-
-	// csv.FillNA("customer_state", "mode")
-	// fmt.Println(csv.GetStats().ColStats["customer_state"].NumStats.Mode)
-
-	// fmt.Println(csv.getNulls())
-
-	// for _, stat := range(stats.ColStats){	
-	// 	fmt.Println(stat)
-	// }
-
-// 	csv.DeleteColumn("customer_acquisition_cost")
-
-// 	fmt.Println(csv.GetStats().ColStats)
-
-// }	
