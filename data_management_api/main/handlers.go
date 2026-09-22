@@ -396,6 +396,7 @@ func (dms *DMService) deleteSpecificSession(w http.ResponseWriter, r *http.Reque
 // This function will get the ManagedDataObjects stored in the session_data
 func (dms *DMService) getDataObjects(w http.ResponseWriter, r *http.Request){
 
+	log.Info("Getting Data Objects")
 	name := r.FormValue("name")
 
 	if strings.TrimSpace(name) == ""{

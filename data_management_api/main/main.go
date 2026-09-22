@@ -14,8 +14,6 @@ type DMService struct{
 	Data 	registry.DataRegistry
 }
 
-
-
 // Creates new DM Service
 func newDMS(name string) DMService{
 	new_registry := registry.CreateNewRegistry()
@@ -36,19 +34,23 @@ func main(){
 	dms := newDMS("session1")
 	
 	mux := http.NewServeMux()
-	mux.HandleFunc("POST /upload", dms.storeUpload)
-	mux.HandleFunc("GET /files", dms.outputFilesDetails)
-	mux.HandleFunc("GET /session", dms.getSession)
-	mux.HandleFunc("POST /file", dms.specificFileDetails)
-	mux.HandleFunc("GET /sessions", dms.listSessions)
-	mux.HandleFunc("POST /new_session", dms.createNewSession)
-	mux.HandleFunc("POST /delete_session", dms.deleteSpecificSession)
-	mux.HandleFunc("POST /delete_file", dms.deleteFile)
-	mux.HandleFunc("POST /fill_na", dms.fillNulls)
+
+	// Data OPS Endpoints
 	mux.HandleFunc("POST /delete_column", dms.deleteColumn)
+	mux.HandleFunc("POST /file", dms.specificFileDetails)
+	mux.HandleFunc("GET /files", dms.outputFilesDetails)
+	mux.HandleFunc("POST /delete_file", dms.deleteFile)
 	mux.HandleFunc("POST /set_target", dms.setTarget)
-	mux.HandleFunc("GET /the_good_stuff", dms.getDataObjects)
+	mux.HandleFunc("POST /upload", dms.storeUpload)
+	mux.HandleFunc("POST /fill_na", dms.fillNulls)
+	mux.HandleFunc("GET /session", dms.getSession)
 	mux.HandleFunc("GET /AAJA", dms.exportToFile)
+
+	// Session OPS Endpoints
+	mux.HandleFunc("POST /delete_session", dms.deleteSpecificSession)
+	mux.HandleFunc("POST /new_session", dms.createNewSession)
+	mux.HandleFunc("GET /the_good_stuff", dms.getDataObjects)
+	mux.HandleFunc("GET /sessions", dms.listSessions)
 
 	serv := http.Server{
 		Addr: ":8000",
