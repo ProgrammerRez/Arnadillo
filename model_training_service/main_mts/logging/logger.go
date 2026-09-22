@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 )
 
-// Creating Log Levels
-const (
+// Creating Logging Levels
+const(
 	InfoLevel = iota
-	WarnLevel 
+	WarnLevel
 	ErrorLevel
 )
 
@@ -19,10 +19,8 @@ type Logger struct{
 	infoLogger		*log.Logger
 	warnLogger		*log.Logger
 	errorLogger		*log.Logger
-	Level 			int
+	Level			int
 }
-
-// Creating a variable pointing to the struct
 
 var logger *Logger
 
@@ -30,47 +28,51 @@ const LOG_PATH string = "./logs.txt"
 
 
 // Init Function
+
 func Init(){
 
-	// Create the log Output File
+	// Create the Log file
 
 	f, err := CreateLoggingFile(LOG_PATH)
+
 	if err != nil{
 		log.Fatal(err.Error())
 	}
 
 	log.SetOutput(f)
 	flags := log.Ldate | log.Lmicroseconds | log.Lshortfile
+
 	logger = &Logger{
-		Level: InfoLevel,
-		infoLogger: log.New(f, "INFO: ", flags),
-		warnLogger: log.New(f, "WARN: ", flags),
-		errorLogger: log.New(f, "ERROR: ", flags),
+		infoLogger: log.New(f, "INFO: ",flags),
+		warnLogger: log.New(f, "WARN: ",flags),
+		errorLogger: log.New(f, "ERROR: ",flags),
 	}
 }
 
-// Create Logging File
+
+// This function initializes the logging file on the `LOG_PATH`
 func CreateLoggingFile(path string) (*os.File, error){
-	
+
 	dir := filepath.Dir(path)
 
 	if dir != "."{
 		if err := os.MkdirAll(path, os.ModePerm); err != nil{
-			return nil, errors.New("Unable to create Log path")
+			return nil, errors.New("Unable to create log path")
 		}
 	}
 
 	f, err := os.OpenFile(path, os.O_CREATE | os.O_WRONLY | os.O_APPEND, 0666)
-	if err != nil{
-		return nil, errors.New("Unable to create Log file")
-	}
-
+		if err != nil{
+			return nil, errors.New("Unable to create log file")
+		}
+	
 	return f, nil
+
 }
 
 // Logging Functions
 
-// Sets the Level for the logger
+// Set the Level for the Logger
 func SetLevel(level int){
 	if logger != nil{
 		logger.Level = level
