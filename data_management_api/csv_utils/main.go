@@ -350,7 +350,8 @@ func (csv *CSV) fillNa(column_name string, value any) error{
 			if strings.TrimSpace(csv.Data[row][id]) == ""{
 				csv.Data[row][id] = str_value
 			}
-		}
+		} 
+		
 	}
 
 	log.Info("Filled NA value")
