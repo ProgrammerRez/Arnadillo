@@ -1,2 +1,103 @@
-INFO: 2026/09/22 22:52:40.500641 logger.go:85: Started Logging in the model training service
-INFO: 2026/09/22 22:52:40.500775 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/09/30 00:17:37.203505 logger.go:85: Adding New Job
+INFO: 2026/09/30 00:17:37.204324 logger.go:85: Retrieving Data
+INFO: 2026/09/30 00:17:37.499752 logger.go:85: Converted the Data Successfully
+INFO: 2026/09/30 00:17:37.499898 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 00:17:37.499957 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 00:17:37.500016 logger.go:85: Value registry exists
+INFO: 2026/09/30 00:17:37.500071 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 00:17:37.500125 logger.go:85: Value data exists
+INFO: 2026/09/30 00:17:37.500177 logger.go:85: Processed Data Map
+INFO: 2026/09/30 00:17:37.500246 logger.go:85: Value target_col exists
+INFO: 2026/09/30 00:17:37.500321 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 00:17:37.500377 logger.go:85: Value data exists
+INFO: 2026/09/30 00:17:37.508345 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 00:17:37.508583 logger.go:85: Value column_list exists
+INFO: 2026/09/30 00:17:37.508673 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 00:17:37.509313 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 00:17:37.510864 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 00:17:37.510964 logger.go:85: Value data exists
+INFO: 2026/09/30 00:17:37.511030 logger.go:85: Processed Data Map
+INFO: 2026/09/30 00:17:37.511112 logger.go:85: Value target_col exists
+INFO: 2026/09/30 00:17:37.511544 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 00:17:37.511929 logger.go:85: Value data exists
+INFO: 2026/09/30 00:17:37.516551 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 00:17:37.516742 logger.go:85: Value column_list exists
+INFO: 2026/09/30 00:17:37.516805 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 00:17:37.516878 logger.go:85: Processed 1 object(s)
+INFO: 2026/09/30 00:17:37.516952 logger.go:85: Creating New Job..... 
+INFO: 2026/09/30 00:17:37.517018 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/09/30 00:17:40.251800 logger.go:85: Parsed Filter Input
+INFO: 2026/09/30 00:17:40.251988 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/09/30 00:17:40.252209 logger.go:85: List []
+INFO: 2026/09/30 00:18:49.213981 logger.go:85: Parsed Filter Input
+INFO: 2026/09/30 00:18:49.214244 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/09/30 00:18:49.214441 logger.go:85: List []
+INFO: 2026/09/30 00:22:54.959406 logger.go:85: Started Logging in the model training service
+INFO: 2026/09/30 00:22:54.959536 logger.go:85: Creating New Model Training Service
+INFO: 2026/09/30 00:22:54.959603 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 00:22:54.959783 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/09/30 00:23:00.109514 logger.go:85: Adding New Job
+INFO: 2026/09/30 00:23:00.109688 logger.go:85: Retrieving Data
+INFO: 2026/09/30 00:23:00.294825 logger.go:85: Converted the Data Successfully
+INFO: 2026/09/30 00:23:00.295217 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 00:23:00.295482 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 00:23:00.295544 logger.go:85: Value registry exists
+INFO: 2026/09/30 00:23:00.295612 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 00:23:00.295739 logger.go:85: Value data exists
+INFO: 2026/09/30 00:23:00.295880 logger.go:85: Processed Data Map
+INFO: 2026/09/30 00:23:00.295941 logger.go:85: Value target_col exists
+INFO: 2026/09/30 00:23:00.296040 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 00:23:00.296080 logger.go:85: Value data exists
+INFO: 2026/09/30 00:23:00.299224 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 00:23:00.299321 logger.go:85: Value column_list exists
+INFO: 2026/09/30 00:23:00.299424 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 00:23:00.299476 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 00:23:00.299508 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 00:23:00.299544 logger.go:85: Value data exists
+INFO: 2026/09/30 00:23:00.299588 logger.go:85: Processed Data Map
+INFO: 2026/09/30 00:23:00.299627 logger.go:85: Value target_col exists
+INFO: 2026/09/30 00:23:00.299686 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 00:23:00.299799 logger.go:85: Value data exists
+INFO: 2026/09/30 00:23:00.302660 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 00:23:00.302795 logger.go:85: Value column_list exists
+INFO: 2026/09/30 00:23:00.302943 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 00:23:00.303058 logger.go:85: Processed 1 object(s)
+INFO: 2026/09/30 00:23:00.303202 logger.go:85: Creating New Job..... 
+INFO: 2026/09/30 00:23:00.303256 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/09/30 00:23:04.002519 logger.go:85: Parsed Filter Input
+INFO: 2026/09/30 00:23:04.002746 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/09/30 00:23:04.002804 logger.go:85: List []
+INFO: 2026/09/30 00:25:00.456609 logger.go:85: Started Logging in the model training service
+INFO: 2026/09/30 00:25:00.456958 logger.go:85: Creating New Model Training Service
+INFO: 2026/09/30 00:25:00.457053 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 00:25:00.457164 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/09/30 00:25:06.436378 logger.go:85: Adding New Job
+INFO: 2026/09/30 00:25:06.436617 logger.go:85: Retrieving Data
+INFO: 2026/09/30 00:25:06.663914 logger.go:85: Converted the Data Successfully
+INFO: 2026/09/30 00:25:06.664044 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 00:25:06.664163 logger.go:85: Value registry exists
+INFO: 2026/09/30 00:25:06.664238 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 00:25:06.664404 logger.go:85: Value data exists
+INFO: 2026/09/30 00:25:06.664511 logger.go:85: Processed Data Map
+INFO: 2026/09/30 00:25:06.664558 logger.go:85: Value target_col exists
+INFO: 2026/09/30 00:25:06.664590 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 00:25:06.664641 logger.go:85: Value data exists
+INFO: 2026/09/30 00:25:06.667351 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 00:25:06.667488 logger.go:85: Value column_list exists
+INFO: 2026/09/30 00:25:06.667543 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 00:25:06.667603 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 00:25:06.667658 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 00:25:06.667733 logger.go:85: Value data exists
+INFO: 2026/09/30 00:25:06.667780 logger.go:85: Processed Data Map
+INFO: 2026/09/30 00:25:06.667825 logger.go:85: Value target_col exists
+INFO: 2026/09/30 00:25:06.667886 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 00:25:06.667969 logger.go:85: Value data exists
+INFO: 2026/09/30 00:25:06.672511 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 00:25:06.672637 logger.go:85: Value column_list exists
+INFO: 2026/09/30 00:25:06.672741 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 00:25:06.672789 logger.go:85: Processed 1 object(s)
+INFO: 2026/09/30 00:25:06.672855 logger.go:85: Creating New Job..... 
+INFO: 2026/09/30 00:25:06.672933 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/09/30 00:25:08.546008 logger.go:85: Parsed Filter Input
+INFO: 2026/09/30 00:25:08.546280 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/09/30 00:25:08.546562 logger.go:85: List [0x30480b633110]

@@ -1,5 +1,9 @@
 package jobs
 
+import "sync"
+
+// package main
+
 // Creating Job Status Constants
 const(
 	JobQeued = "queued"
@@ -9,28 +13,38 @@ const(
 	JobFinished	= "fininshed"
 )
 
+// Creating JobQueue Object
+type JobQeueu struct{
+	HighPrioroty	[]*Job			`json:"high_priority"`
+	MehPriority 	[]*Job			`json:"meh_priority"`
+	LowPriority		[]*Job			`json:"low_priority"`
+	NextID			int				`json:"next_id"`
+	Mu				sync.RWMutex	`json:"mutex: Dont touch"`
+}
 
 // Creating Main Job Request
 type Job struct{
-	Status 				string				`json:"job_status"`
-	DataParams			DataParameters		`json:"data_params"`
-	TrainingParams 		TrainingParameters	`json:"training_params"`
-	EvalParams			map[string]string	`json:"eval_params"`
-	DoOverParams		map[string]string	`json:"do_over_params"`
-	ID					int					`json:"id"`
+	Status 				string					`json:"job_status"`
+	DataParams			DataParameters			`json:"data_params"`
+	TrainingParams 		TrainingParameters		`json:"training_params"`
+	EvalParams			EvaluationParameters	`json:"eval_params"`
+	DoOverParams		DoOverParameters		`json:"do_over_params"`
+	ID					int						`json:"id"`
 }
 
 
 // Data Prameters Struct (Would be a carry over from the data management service)
 type DataParameters struct{
-	NumericalColumns 	[]string	`json:"num_cols"`		// Storing for Preprocessing Pipeline
-	CategoricalColumns	[]string	`json:"cat_cols"`		// Storing for Preprocessing Pipeline
+	NumericalColumns 	[]string			`json:"num_cols"`		// Storing for Preprocessing Pipeline
+	CategoricalColumns	[]string			`json:"cat_cols"`		// Storing for Preprocessing Pipeline
 	// Actual Data to be Trained on
-	ColumnList			[]string	`json:"column_list"`
-	Data 				[][]string	`json:"row_data"`
-	TargetLabel			string		`json:"target_label"`	// Column that's the target variable
-	ID					int			`json:"id"`				// csv_id of the object from `/session` endpoint in the endpoint
-	TestSplit			float32		`json:"test_split"`		// The ratio of test to train data
+	ColumnList			[]string			`json:"column_list"`
+	Data 				[][]string			`json:"data"`
+	TargetLabel			string				`json:"target_col"`	// Column that's the target variable
+	NumericalOperations	map[string]string	`json:"num_ops"`		//The operations for preprocessing numerical data in the preprocessing pipeline
+	ObjectOperations	map[string]string	`json:"cat_ops"`		//The operations for preprocessing categorical data in the preprocessing pipeline
+	ID					int					`json:"id"`				// `csv_id` of the object from `/session` endpoint in the endpoint
+	TestSplit			float32				`json:"test_split"`		// The ratio of test to train data
 }
 
 // Training Parameters Struct for the Model Training

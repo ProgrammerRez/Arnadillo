@@ -1,0 +1,336 @@
+INFO: 2026/09/30 00:10:42.420165 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 00:10:42.420401 logger.go:85: Getting Jobs with filter: 0
+INFO: 2026/09/30 00:10:42.420470 logger.go:85: List [0x39b99bf76410]
+INFO: 2026/09/30 00:10:42.420534 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/09/30 00:10:42.420572 logger.go:85: List [0x39b99bf764e0]
+INFO: 2026/09/30 00:10:42.420632 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/09/30 00:10:42.420730 logger.go:85: List [0x39b99bf765b0]
+INFO: 2026/09/30 00:10:42.420791 logger.go:85: Getting Jobs with filter: 99
+ERROR: 2026/09/30 00:10:42.420843 logger.go:99: Please provide proper filters
+INFO: 2026/09/30 00:10:42.420930 logger.go:85: Planted Error Occured
+INFO: 2026/09/30 20:36:04.491509 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.491968 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:36:04.492073 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:36:04.492173 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:04.492272 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:36:04.492312 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:36:04.492349 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:36:04.492383 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:04.492420 logger.go:85: Proccessed Row Data
+ERROR: 2026/09/30 20:36:04.492473 logger.go:99: Value: column_list doesn't exist in object map[columns:[col1 col2] data:[[row1_col1 row1_col2] [row2_col1 row2, col2]]]
+INFO: 2026/09/30 20:36:04.492580 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.492680 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:36:04.492748 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:36:04.492824 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:04.492875 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:36:04.492918 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:36:04.492984 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:36:04.493030 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:04.493077 logger.go:85: Proccessed Row Data
+ERROR: 2026/09/30 20:36:04.493155 logger.go:99: Value: column_list doesn't exist in object map[columns:[col1 col2] data:[[row1_col1 row1_col2] [row2_col1 row2, col2]]]
+INFO: 2026/09/30 20:36:04.493233 logger.go:85: Converting into Data Params Object
+ERROR: 2026/09/30 20:36:04.493279 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/09/30 20:36:04.493335 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.493372 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:04.493432 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:04.493494 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.493539 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:04.493579 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:04.493630 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.493696 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:04.493734 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/09/30 20:36:04.493792 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.493854 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:04.493889 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:04.493953 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.494004 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:04.494038 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:04.494116 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:04.494170 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:04.494204 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:04.494326 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 20:36:04.494419 logger.go:85: Getting Jobs with filter: 0
+INFO: 2026/09/30 20:36:04.494456 logger.go:85: List [0xf87bf3fa680]
+INFO: 2026/09/30 20:36:04.494561 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/09/30 20:36:04.494606 logger.go:85: List [0xf87bf3fa750]
+INFO: 2026/09/30 20:36:04.494688 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/09/30 20:36:04.494744 logger.go:85: List [0xf87bf3fa820]
+INFO: 2026/09/30 20:36:04.494822 logger.go:85: Getting Jobs with filter: 99
+ERROR: 2026/09/30 20:36:04.494881 logger.go:99: Please provide proper filters
+INFO: 2026/09/30 20:36:04.494935 logger.go:85: Planted Error Occured
+INFO: 2026/09/30 20:36:59.281764 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.282003 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:36:59.282104 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:36:59.282215 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:59.282282 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:36:59.282363 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:36:59.282407 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:36:59.282482 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:59.282531 logger.go:85: Proccessed Row Data
+ERROR: 2026/09/30 20:36:59.282591 logger.go:99: Value: column_list doesn't exist in object map[columns:[col1 col2] data:[[row1_col1 row1_col2] [row2_col1 row2, col2]]]
+INFO: 2026/09/30 20:36:59.282754 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.282843 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:36:59.282893 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:36:59.282940 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:59.282994 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:36:59.283075 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:36:59.283119 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:36:59.283165 logger.go:85: Value data exists
+INFO: 2026/09/30 20:36:59.283217 logger.go:85: Proccessed Row Data
+ERROR: 2026/09/30 20:36:59.283351 logger.go:99: Value: column_list doesn't exist in object map[columns:[col1 col2] data:[[row1_col1 row1_col2] [row2_col1 row2, col2]]]
+INFO: 2026/09/30 20:36:59.283473 logger.go:85: Converting into Data Params Object
+ERROR: 2026/09/30 20:36:59.283539 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/09/30 20:36:59.283641 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.283703 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:59.283746 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:59.283848 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.283921 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:59.283986 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:59.284059 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.284108 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:59.284150 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/09/30 20:36:59.284277 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.284363 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:59.284423 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:59.284533 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.284635 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:59.284702 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:36:59.284783 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:36:59.284848 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:36:59.284898 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:37:47.715046 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.715191 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:37:47.715244 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:37:47.715296 logger.go:85: Value data exists
+INFO: 2026/09/30 20:37:47.715340 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:37:47.715427 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:37:47.715470 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:37:47.715514 logger.go:85: Value data exists
+INFO: 2026/09/30 20:37:47.715555 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:37:47.715596 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:37:47.715651 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:37:47.715693 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:37:47.715857 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.715937 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:37:47.716003 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:37:47.716041 logger.go:85: Value data exists
+INFO: 2026/09/30 20:37:47.716119 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:37:47.716165 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:37:47.716209 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:37:47.716279 logger.go:85: Value data exists
+INFO: 2026/09/30 20:37:47.716322 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:37:47.716372 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:37:47.716435 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:37:47.716499 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:37:47.716548 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:37:47.716597 logger.go:85: Value data exists
+INFO: 2026/09/30 20:37:47.716644 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:37:47.716680 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:37:47.716713 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:37:47.716762 logger.go:85: Value data exists
+INFO: 2026/09/30 20:37:47.716799 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:37:47.716874 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:37:47.716910 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:37:47.716974 logger.go:85: Processed 1 object(s)
+INFO: 2026/09/30 20:37:47.717102 logger.go:85: Converting into Data Params Object
+ERROR: 2026/09/30 20:37:47.717175 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/09/30 20:37:47.717235 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.717276 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:37:47.717314 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:37:47.717383 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.717439 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:37:47.717477 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:37:47.717573 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.717631 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:37:47.717669 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/09/30 20:37:47.717729 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.717771 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:37:47.717817 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:37:47.717887 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.717943 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:37:47.717979 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:37:47.718049 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:37:47.718093 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:37:47.718145 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:39:19.104634 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.104769 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:39:19.104833 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:39:19.104936 logger.go:85: Value data exists
+INFO: 2026/09/30 20:39:19.104991 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:39:19.105054 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:39:19.105100 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:39:19.105196 logger.go:85: Value data exists
+INFO: 2026/09/30 20:39:19.105243 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:39:19.105290 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:39:19.105349 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:39:19.105406 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:39:19.105474 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.105540 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:39:19.105615 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:39:19.105651 logger.go:85: Value data exists
+INFO: 2026/09/30 20:39:19.105688 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:39:19.105725 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:39:19.105762 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:39:19.105799 logger.go:85: Value data exists
+INFO: 2026/09/30 20:39:19.105868 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:39:19.105925 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:39:19.105969 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:39:19.105998 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:39:19.106043 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:39:19.106087 logger.go:85: Value data exists
+INFO: 2026/09/30 20:39:19.106117 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:39:19.106148 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:39:19.106191 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:39:19.106221 logger.go:85: Value data exists
+INFO: 2026/09/30 20:39:19.106272 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:39:19.106301 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:39:19.106358 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:39:19.106402 logger.go:85: Processed 1 object(s)
+INFO: 2026/09/30 20:39:19.106484 logger.go:85: Converting into Data Params Object
+ERROR: 2026/09/30 20:39:19.106564 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/09/30 20:39:19.106634 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.106687 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:39:19.106724 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:39:19.106791 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.106868 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:39:19.106913 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:39:19.106969 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.107006 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:39:19.107062 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/09/30 20:39:19.107120 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.107155 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:39:19.107212 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:39:19.107255 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.107289 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:39:19.107319 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:39:19.107374 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:39:19.107439 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:39:19.107476 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:45.331061 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.331461 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:40:45.331541 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:40:45.331582 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:45.331635 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:40:45.331689 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:40:45.331728 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:40:45.331764 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:45.331863 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:40:45.331920 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:40:45.331974 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:40:45.332036 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:40:45.332103 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.332187 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:40:45.332247 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:40:45.332308 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:45.332363 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:40:45.332423 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:40:45.332481 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:40:45.332536 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:45.332577 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:40:45.332620 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:40:45.332660 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:40:45.332701 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:40:45.332743 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:40:45.332784 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:45.332848 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:40:45.332906 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:40:45.332944 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:40:45.332982 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:45.333025 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:40:45.333068 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:40:45.333108 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:40:45.333150 logger.go:85: Processed 1 object(s)
+INFO: 2026/09/30 20:40:45.333253 logger.go:85: Converting into Data Params Object
+ERROR: 2026/09/30 20:40:45.333343 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/09/30 20:40:45.333397 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.333484 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:45.333534 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:45.333590 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.333648 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:45.333689 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:45.333745 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.333788 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:45.333862 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/09/30 20:40:45.333920 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.333993 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:45.334061 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:45.334112 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.334186 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:45.334227 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:45.334281 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:45.334344 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:45.334385 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:45.334499 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 20:40:45.334589 logger.go:85: Getting Jobs with filter: 0
+INFO: 2026/09/30 20:40:45.334635 logger.go:85: List [0x169660db2680]
+INFO: 2026/09/30 20:40:45.334692 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/09/30 20:40:45.334734 logger.go:85: List [0x169660db2750]
+INFO: 2026/09/30 20:40:45.334822 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/09/30 20:40:45.334895 logger.go:85: List [0x169660db2820]
+INFO: 2026/09/30 20:40:45.334950 logger.go:85: Getting Jobs with filter: 99
+ERROR: 2026/09/30 20:40:45.335024 logger.go:99: Please provide proper filters
+INFO: 2026/09/30 20:40:45.335062 logger.go:85: Planted Error Occured
+INFO: 2026/09/30 20:40:49.309667 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.309838 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:40:49.309940 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:40:49.310021 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:49.310086 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:40:49.310139 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:40:49.310227 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:40:49.310288 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:49.310341 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:40:49.310405 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:40:49.310478 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:40:49.310535 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:40:49.310634 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.310710 logger.go:85: Value registry exists
+INFO: 2026/09/30 20:40:49.310753 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:40:49.310797 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:49.310892 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:40:49.310937 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:40:49.310979 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:40:49.311024 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:49.311096 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:40:49.311139 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:40:49.311181 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:40:49.311239 logger.go:85: Processed 0 object(s)
+INFO: 2026/09/30 20:40:49.311322 logger.go:85: Processed Registry Data
+INFO: 2026/09/30 20:40:49.311364 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:49.311407 logger.go:85: Processed Data Map
+INFO: 2026/09/30 20:40:49.311465 logger.go:85: Value target_col exists
+INFO: 2026/09/30 20:40:49.311520 logger.go:85: Traget Processing Complete
+INFO: 2026/09/30 20:40:49.311560 logger.go:85: Value data exists
+INFO: 2026/09/30 20:40:49.311659 logger.go:85: Proccessed Row Data
+INFO: 2026/09/30 20:40:49.311717 logger.go:85: Value column_list exists
+INFO: 2026/09/30 20:40:49.311758 logger.go:85: Proccessed Column Data
+INFO: 2026/09/30 20:40:49.311802 logger.go:85: Processed 1 object(s)
+INFO: 2026/09/30 20:40:49.311936 logger.go:85: Converting into Data Params Object
+ERROR: 2026/09/30 20:40:49.312001 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/09/30 20:40:49.312087 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.312156 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:49.312214 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:49.312280 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.312352 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:49.312423 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:49.312501 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.312558 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:49.312602 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/09/30 20:40:49.312677 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.312760 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:49.312848 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:49.312971 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.313036 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:49.313085 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:49.313164 logger.go:85: Converting into Data Params Object
+INFO: 2026/09/30 20:40:49.313227 logger.go:85: Value registry exists
+ERROR: 2026/09/30 20:40:49.313285 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/09/30 20:40:49.313457 logger.go:85: Initializing Job Queue
+INFO: 2026/09/30 20:40:49.313567 logger.go:85: Getting Jobs with filter: 0
+INFO: 2026/09/30 20:40:49.313655 logger.go:85: List [0x2218bcfcc680]
+INFO: 2026/09/30 20:40:49.313736 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/09/30 20:40:49.313785 logger.go:85: List [0x2218bcfcc750]
+INFO: 2026/09/30 20:40:49.313915 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/09/30 20:40:49.313977 logger.go:85: List [0x2218bcfcc820]
+INFO: 2026/09/30 20:40:49.314099 logger.go:85: Getting Jobs with filter: 99
+ERROR: 2026/09/30 20:40:49.314176 logger.go:99: Please provide proper filters
+INFO: 2026/09/30 20:40:49.314213 logger.go:85: Planted Error Occured
