@@ -195,3 +195,306 @@ INFO: 2026/09/20 22:02:41.369017 logger.go:85: OKAY NP :)
 INFO: 2026/09/20 22:02:47.213848 logger.go:85: Exporting Data to File
 INFO: 2026/09/20 22:02:47.214202 logger.go:85: Exporting to File
 INFO: 2026/09/20 22:02:47.214359 logger.go:85: Deleting Specifc Column in the Dataframe
+INFO: 2026/09/27 20:14:02.571948 logger.go:83: Starting the API
+INFO: 2026/09/27 20:14:02.577337 logger.go:83: Creating New Registry
+INFO: 2026/09/27 20:14:02.577522 logger.go:83: Creating New Session: session1
+INFO: 2026/09/27 20:14:02.577972 logger.go:83: New Data Management Service Created
+INFO: 2026/09/27 20:14:21.363713 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/27 20:14:21.363854 logger.go:83: Extracted File Info
+INFO: 2026/09/27 20:14:21.363944 logger.go:83: Extracted Column List
+ERROR: 2026/09/27 20:14:21.383431 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/27 20:14:21.383596 logger.go:83: Extracted all Records
+INFO: 2026/09/27 20:14:21.383828 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/27 20:14:21.383948 logger.go:83: Adding New Files
+INFO: 2026/09/27 20:14:21.384043 logger.go:83: Creating New Registry
+INFO: 2026/09/27 20:14:21.384116 logger.go:83: Added Files to the Registry
+INFO: 2026/09/27 20:16:02.474309 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 20:16:02.474735 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 20:19:34.604656 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 20:19:34.605053 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:01:36.206440 logger.go:83: Starting the API
+INFO: 2026/09/27 23:01:36.209912 logger.go:83: Creating New Registry
+INFO: 2026/09/27 23:01:36.210302 logger.go:83: Creating New Session: session1
+INFO: 2026/09/27 23:01:36.210762 logger.go:83: New Data Management Service Created
+INFO: 2026/09/27 23:01:57.234671 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/27 23:01:57.234775 logger.go:83: Extracted File Info
+INFO: 2026/09/27 23:01:57.234847 logger.go:83: Extracted Column List
+ERROR: 2026/09/27 23:01:57.252693 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/27 23:01:57.252828 logger.go:83: Extracted all Records
+INFO: 2026/09/27 23:01:57.252892 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/27 23:01:57.252971 logger.go:83: Adding New Files
+INFO: 2026/09/27 23:01:57.253037 logger.go:83: Creating New Registry
+INFO: 2026/09/27 23:01:57.253096 logger.go:83: Added Files to the Registry
+INFO: 2026/09/27 23:09:39.815998 logger.go:83: Starting the API
+INFO: 2026/09/27 23:09:39.816219 logger.go:83: Creating New Registry
+INFO: 2026/09/27 23:09:39.816307 logger.go:83: Creating New Session: session1
+INFO: 2026/09/27 23:09:39.816417 logger.go:83: New Data Management Service Created
+INFO: 2026/09/27 23:10:05.442679 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:10:05.443215 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:10:13.791467 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/27 23:10:13.797896 logger.go:83: Extracted File Info
+INFO: 2026/09/27 23:10:13.797994 logger.go:83: Extracted Column List
+ERROR: 2026/09/27 23:10:13.816579 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/27 23:10:13.816741 logger.go:83: Extracted all Records
+INFO: 2026/09/27 23:10:13.816814 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/27 23:10:13.816891 logger.go:83: Adding New Files
+INFO: 2026/09/27 23:10:13.816955 logger.go:83: Creating New Registry
+INFO: 2026/09/27 23:10:13.817012 logger.go:83: Added Files to the Registry
+INFO: 2026/09/27 23:10:19.672780 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:10:19.673278 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:13:23.114750 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:13:23.115033 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:14:11.452815 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:14:11.453032 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:15:07.704648 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:15:07.704822 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:16:20.048464 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:16:20.048671 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:18:25.501775 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:18:25.501971 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:19:06.947842 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:19:06.947986 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:19:38.973072 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:19:38.973300 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:19:59.183071 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:19:59.183265 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:20:12.062264 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:20:12.062433 logger.go:83: Getting Stuff...
+INFO: 2026/09/27 23:22:32.438274 logger.go:83: Getting Data Objects
+INFO: 2026/09/27 23:22:32.438624 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:32:12.445789 logger.go:83: Starting the API
+INFO: 2026/09/28 19:32:12.449153 logger.go:83: Creating New Registry
+INFO: 2026/09/28 19:32:12.449378 logger.go:83: Creating New Session: session1
+INFO: 2026/09/28 19:32:12.449553 logger.go:83: New Data Management Service Created
+INFO: 2026/09/28 19:32:15.154287 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:32:15.154404 logger.go:83: Getting Stuff...
+ERROR: 2026/09/28 19:36:06.708760 logger.go:97: No files provided
+INFO: 2026/09/28 19:36:32.410548 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/28 19:36:32.410645 logger.go:83: Extracted File Info
+INFO: 2026/09/28 19:36:32.410707 logger.go:83: Extracted Column List
+ERROR: 2026/09/28 19:36:32.428444 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/28 19:36:32.428567 logger.go:83: Extracted all Records
+INFO: 2026/09/28 19:36:32.428672 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/28 19:36:32.428723 logger.go:83: Adding New Files
+INFO: 2026/09/28 19:36:32.428888 logger.go:83: Creating New Registry
+INFO: 2026/09/28 19:36:32.428935 logger.go:83: Added Files to the Registry
+INFO: 2026/09/28 19:36:39.022286 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:36:39.022540 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:38:04.198089 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:38:04.198263 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:38:19.690461 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:38:19.690631 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:41:23.985980 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:41:23.986218 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:45:16.680888 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:45:16.681088 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:45:26.329849 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:45:26.335266 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:46:44.529117 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:46:44.529399 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:47:50.418240 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:47:50.418614 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:48:14.224328 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:48:14.224530 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:48:23.659652 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:48:23.659845 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:48:32.727767 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:48:32.727930 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:50:12.648092 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:50:12.648327 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:50:24.836230 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:50:24.836472 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:50:26.073429 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:50:26.073728 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:50:26.570327 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:50:26.570564 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:50:26.937711 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:50:26.937847 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 19:53:16.088504 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 19:53:16.088816 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 20:00:53.581976 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 20:00:53.582187 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 20:03:51.518170 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 20:03:51.518379 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 20:07:59.968865 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 20:07:59.969069 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 20:08:26.517330 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 20:08:26.517485 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 20:14:56.530123 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 20:14:56.530299 logger.go:83: Getting Stuff...
+INFO: 2026/09/28 22:53:21.804183 logger.go:83: Starting the API
+INFO: 2026/09/28 22:53:21.807248 logger.go:83: Creating New Registry
+INFO: 2026/09/28 22:53:21.807462 logger.go:83: Creating New Session: session1
+INFO: 2026/09/28 22:53:21.807709 logger.go:83: New Data Management Service Created
+INFO: 2026/09/28 22:53:40.019469 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/28 22:53:40.019556 logger.go:83: Extracted File Info
+INFO: 2026/09/28 22:53:40.019606 logger.go:83: Extracted Column List
+ERROR: 2026/09/28 22:53:40.033524 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/28 22:53:40.033834 logger.go:83: Extracted all Records
+INFO: 2026/09/28 22:53:40.033964 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/28 22:53:40.034069 logger.go:83: Adding New Files
+INFO: 2026/09/28 22:53:40.034112 logger.go:83: Creating New Registry
+INFO: 2026/09/28 22:53:40.034165 logger.go:83: Added Files to the Registry
+INFO: 2026/09/28 22:53:59.262664 logger.go:83: Getting Data Objects
+INFO: 2026/09/28 22:53:59.263009 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:14:35.583325 logger.go:83: Getting Data Objects
+ERROR: 2026/09/29 02:14:35.583549 logger.go:97: no session name was provided
+INFO: 2026/09/29 02:16:17.067012 logger.go:83: Getting Data Objects
+ERROR: 2026/09/29 02:16:17.067827 logger.go:97: no session name was provided
+INFO: 2026/09/29 02:20:16.193786 logger.go:83: Getting Data Objects
+ERROR: 2026/09/29 02:20:16.193959 logger.go:97: no session name was provided
+INFO: 2026/09/29 02:20:59.509351 logger.go:83: Getting Data Objects
+ERROR: 2026/09/29 02:20:59.509529 logger.go:97: no session name was provided
+INFO: 2026/09/29 02:23:13.296200 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:23:13.296365 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:24:13.801748 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:24:13.802369 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:24:54.293914 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:24:54.294056 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:25:29.466003 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:25:29.466240 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:25:50.374071 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:25:50.374503 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:26:39.574359 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:26:39.574562 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:26:51.740707 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:26:51.740828 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:27:11.566342 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:27:11.566527 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:27:36.888738 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:27:36.888902 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:28:59.133785 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:28:59.133989 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:29:14.596180 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:29:14.596379 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:29:16.374815 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:29:16.375031 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:29:17.405323 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:29:17.405484 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 02:29:17.845635 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 02:29:17.845784 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 13:58:49.022364 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 13:58:49.022736 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 13:59:03.214759 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 13:59:03.214878 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:05:53.680584 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:05:53.680840 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:07:30.672618 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:07:30.672818 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:08:42.802155 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:08:42.802515 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:09:26.879468 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:09:26.879627 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:11:12.212559 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:11:12.212765 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:11:19.068940 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:11:19.069081 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:14:35.287710 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:14:35.287871 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 14:14:43.320842 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 14:14:43.321039 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 16:42:20.894436 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 16:42:20.894642 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 16:42:46.468830 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 16:42:46.469063 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 16:44:12.369717 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 16:44:12.370108 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 17:15:08.674592 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/29 17:15:08.674751 logger.go:83: Extracted File Info
+INFO: 2026/09/29 17:15:08.674824 logger.go:83: Extracted Column List
+ERROR: 2026/09/29 17:15:08.693039 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/29 17:15:08.693119 logger.go:83: Extracted all Records
+INFO: 2026/09/29 17:15:08.693236 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/29 17:15:08.693310 logger.go:83: Adding New Files
+INFO: 2026/09/29 17:15:08.693406 logger.go:83: Creating New Registry
+INFO: 2026/09/29 17:15:08.693445 logger.go:83: Added Files to the Registry
+INFO: 2026/09/29 17:15:34.240974 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 17:15:34.241093 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 17:45:41.784255 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 17:45:41.784489 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 17:48:32.665429 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 17:48:32.665619 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 17:51:16.191698 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/29 17:51:16.191876 logger.go:83: Extracted File Info
+INFO: 2026/09/29 17:51:16.191947 logger.go:83: Extracted Column List
+ERROR: 2026/09/29 17:51:16.206739 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/29 17:51:16.206847 logger.go:83: Extracted all Records
+INFO: 2026/09/29 17:51:16.206896 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/29 17:51:16.206981 logger.go:83: Adding New Files
+INFO: 2026/09/29 17:51:16.207048 logger.go:83: Creating New Registry
+INFO: 2026/09/29 17:51:16.207088 logger.go:83: Added Files to the Registry
+INFO: 2026/09/29 17:51:20.674439 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 17:51:20.674867 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 17:52:05.538628 logger.go:83: Starting the API
+INFO: 2026/09/29 17:52:05.538926 logger.go:83: Creating New Registry
+INFO: 2026/09/29 17:52:05.539038 logger.go:83: Creating New Session: session1
+INFO: 2026/09/29 17:52:05.539137 logger.go:83: New Data Management Service Created
+INFO: 2026/09/29 17:52:11.250927 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/29 17:52:11.251103 logger.go:83: Extracted File Info
+INFO: 2026/09/29 17:52:11.251196 logger.go:83: Extracted Column List
+ERROR: 2026/09/29 17:52:11.267068 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/29 17:52:11.267192 logger.go:83: Extracted all Records
+INFO: 2026/09/29 17:52:11.267289 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/29 17:52:11.267384 logger.go:83: Adding New Files
+INFO: 2026/09/29 17:52:11.267459 logger.go:83: Creating New Registry
+INFO: 2026/09/29 17:52:11.267549 logger.go:83: Added Files to the Registry
+INFO: 2026/09/29 17:52:14.450256 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 17:52:14.450583 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 17:52:21.678176 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 17:52:21.678452 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 17:53:11.736334 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 17:53:11.736491 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 18:58:35.778929 logger.go:83: Starting the API
+INFO: 2026/09/29 18:58:35.779068 logger.go:83: Creating New Registry
+INFO: 2026/09/29 18:58:35.779132 logger.go:83: Creating New Session: session1
+INFO: 2026/09/29 18:58:35.779253 logger.go:83: New Data Management Service Created
+INFO: 2026/09/29 18:58:46.555185 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/29 18:58:46.555305 logger.go:83: Extracted File Info
+INFO: 2026/09/29 18:58:46.555397 logger.go:83: Extracted Column List
+ERROR: 2026/09/29 18:58:46.574097 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/29 18:58:46.574178 logger.go:83: Extracted all Records
+INFO: 2026/09/29 18:58:46.574343 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/29 18:58:46.574462 logger.go:83: Adding New Files
+INFO: 2026/09/29 18:58:46.574559 logger.go:83: Creating New Registry
+INFO: 2026/09/29 18:58:46.574675 logger.go:83: Added Files to the Registry
+INFO: 2026/09/29 18:58:50.684971 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 18:58:50.685182 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 18:58:54.089387 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 18:58:54.089486 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:01:11.486153 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:01:11.486459 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:01:55.999453 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:01:55.999658 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:02:22.513564 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:02:22.513766 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:02:53.513120 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:02:53.513308 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:07:32.453177 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:07:32.453431 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:07:50.378938 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:07:50.379182 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:08:27.670780 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:08:27.671514 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:13:47.884889 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:13:47.885123 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 19:15:30.126059 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 19:15:30.126227 logger.go:83: Getting Stuff...
+INFO: 2026/09/29 21:02:36.538462 logger.go:83: Getting Data Objects
+INFO: 2026/09/29 21:02:36.538704 logger.go:83: Getting Stuff...
+INFO: 2026/09/30 00:17:00.119807 logger.go:83: Opened File at path: /run/media/programmerrez/Field Testing/Side-Projects/Arnadillo/data_management_api/.uploads/customer_master.csv
+INFO: 2026/09/30 00:17:00.119939 logger.go:83: Extracted File Info
+INFO: 2026/09/30 00:17:00.120019 logger.go:83: Extracted Column List
+ERROR: 2026/09/30 00:17:00.135151 logger.go:97: File is Empty: EOF error
+INFO: 2026/09/30 00:17:00.135250 logger.go:83: Extracted all Records
+INFO: 2026/09/30 00:17:00.135385 logger.go:83: Loaded CSV File: customer_master.csv
+INFO: 2026/09/30 00:17:00.135458 logger.go:83: Adding New Files
+INFO: 2026/09/30 00:17:00.135564 logger.go:83: Creating New Registry
+INFO: 2026/09/30 00:17:00.135635 logger.go:83: Added Files to the Registry
+INFO: 2026/09/30 00:17:05.426088 logger.go:83: Getting Data Objects
+INFO: 2026/09/30 00:17:05.426244 logger.go:83: Getting Stuff...
+INFO: 2026/09/30 00:17:37.205647 logger.go:83: Getting Data Objects
+INFO: 2026/09/30 00:17:37.208200 logger.go:83: Getting Stuff...
+INFO: 2026/09/30 00:23:00.111581 logger.go:83: Getting Data Objects
+INFO: 2026/09/30 00:23:00.111920 logger.go:83: Getting Stuff...
+INFO: 2026/09/30 00:25:06.438863 logger.go:83: Getting Data Objects
+INFO: 2026/09/30 00:25:06.439116 logger.go:83: Getting Stuff...

@@ -49,7 +49,7 @@ func main(){
 	// Session OPS Endpoints
 	mux.HandleFunc("POST /delete_session", dms.deleteSpecificSession)
 	mux.HandleFunc("POST /new_session", dms.createNewSession)
-	mux.HandleFunc("GET /the_good_stuff", dms.getDataObjects)
+	mux.HandleFunc("POST /the_good_stuff", dms.getDataObjects)
 	mux.HandleFunc("GET /sessions", dms.listSessions)
 
 	serv := http.Server{
