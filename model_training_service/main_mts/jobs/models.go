@@ -63,14 +63,14 @@ type TrainingParameters struct{
 // Creating Evaluation Parameters for the Model Evaluation Part
 type EvaluationParameters struct{
 // This contains mostly tests and data to test and custom parameters for judging model performance
-	ProblemType		string // Aiming for a binary answer of `classification` or `regression`
-	TestsRequired	map[string]float32 // Aiming for a test: minimum_proposed_value relationship like f1_score: 0.9 or 90%
+	ProblemType		string				`json:"problem_type"`	// Aiming for a binary answer of `classification` or `regression`
+	TestsRequired	map[string]float32 	`json:"tests_required"`// Aiming for a test: minimum_proposed_value relationship like f1_score: 0.9 or 90%
 }
 
 // These are the Do Over Parameters for Restarting a failed Job.
 type DoOverParameters struct{
+	FallbackParams	map[string]any	`json:"fallback_params"`	 // In case of not working; will move to fallback parameters provided
 	// This contains mostly parameters judge model performace during and after training to automate training reruns
-	MaxRetries		int  // Maximum Retires When Failing
-	MaximumDeviance	float32 // Maximum Deviance from minimum_proposed_value before switching parametes or retrying training
-	FallbackParams	map[string]any // In case of not working; will move to fallback parameters provided
+	MaxRetries		int  			`json:"max_retries"`	// Maximum Retires When Failing
+	MaximumDeviance	float64 		`json:"max_deviance"`// Maximum Deviance from minimum_proposed_value before switching parametes or retrying training
 }
