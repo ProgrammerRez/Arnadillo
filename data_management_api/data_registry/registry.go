@@ -42,16 +42,21 @@ func (r *DataRegistry) NewSession(session_name string){
 }
 
 // Gets the Data Registry from a session
-func (r *DataRegistry) GetStuff(session_name string) *DatasetRegistry{
+func (r *DataRegistry) GetStuff(session_name string) (*DatasetRegistry, error){
 
 	r.Mu.RLock()
 	defer r.Mu.RUnlock()
 
 	log.Info("Getting Stuff...")
 
-	id := r.SessionInfo[session_name]
+	id, exists := r.SessionInfo[session_name]
 
-	return r.SessionData[id]
+	if !exists{
+		log.Error("Session id does not exist")
+		return nil, errors.New("Session id does not exist")
+	}
+
+	return r.SessionData[id], nil
 }
 
 // Deletes Session Data 

@@ -24,8 +24,8 @@ type JobQeueu struct{
 
 // Creating Main Job Request
 type Job struct{
+	DataParams			[]DataParameters		`json:"data_params"`
 	Status 				string					`json:"job_status"`
-	DataParams			DataParameters			`json:"data_params"`
 	TrainingParams 		TrainingParameters		`json:"training_params"`
 	EvalParams			EvaluationParameters	`json:"eval_params"`
 	DoOverParams		DoOverParameters		`json:"do_over_params"`
@@ -56,16 +56,21 @@ type TrainingParameters struct{
 	// Specific Model Name like `Logistic Regression`, `CNN`, etc.
 	ModelName 		string				`json:"model_name"`
 	// Since every model has specific parameters I'll just use a dictionary of possible parameters
-	ModelParams		map[string]string	`json:"model_params"`
+	ModelParams		map[string]any		`json:"model_params"`
 }
 
 
 // Creating Evaluation Parameters for the Model Evaluation Part
 type EvaluationParameters struct{
 // This contains mostly tests and data to test and custom parameters for judging model performance
+	ProblemType		string // Aiming for a binary answer of `classification` or `regression`
+	TestsRequired	map[string]float32 // Aiming for a test: minimum_proposed_value relationship like f1_score: 0.9 or 90%
 }
 
 // These are the Do Over Parameters for Restarting a failed Job.
 type DoOverParameters struct{
 	// This contains mostly parameters judge model performace during and after training to automate training reruns
+	MaxRetries		int  // Maximum Retires When Failing
+	MaximumDeviance	float32 // Maximum Deviance from minimum_proposed_value before switching parametes or retrying training
+	FallbackParams	map[string]any // In case of not working; will move to fallback parameters provided
 }

@@ -29,6 +29,37 @@ func (mts *ModelTrainingService) addJob(w http.ResponseWriter, r *http.Request){
 	log.Info("Adding New Job")
 
 	name := r.FormValue("name")
+	raw_int := r.FormValue("urgency")
+
+	urgency, err := strconv.ParseInt(raw_int, 10, 32)
+	if err != nil{
+		log.Error("Please provide a proper Urgency Integer")
+		http.Error(w, "Please provide a proper Urgency Integer", http.StatusBadRequest)
+		return
+	}
+
+	// Now Adding the Training Parameters Support
+
+	model_type := r.FormValue("model_type")
+	model_name := r.FormValue("model_name")
+	model_params := r.FormValue("model_params")
+
+	train_data := map[string]any{
+		"model_type": model_type,
+		"model_name": model_name,
+		"model_params": model_params,
+	}
+
+	// Then finally gathering the trainingParameters Data
+	train_params, err := jobs.CreateTrainParamObject(train_data)
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return 
+	}
+	log.Info("Training Parameters Extracted")
+
+	// Getting the Data Parameters
 	raw_data, err := mts.getData(name)
 
 	if err != nil{
@@ -40,11 +71,11 @@ func (mts *ModelTrainingService) addJob(w http.ResponseWriter, r *http.Request){
 	queue := mts.JobsQueue
 	data_params, _ := jobs.CreateDataParamObject(raw_data)
 	queue.CreateNewJob(
-		data_params[0],
-		jobs.TrainingParameters{},
+		data_params,
+		*train_params,
 		jobs.EvaluationParameters{},
 		jobs.DoOverParameters{},
-		1,
+		int(urgency),
 	)
 
 	w.Write([]byte("Worked :>"))
@@ -83,7 +114,6 @@ func (mts *ModelTrainingService) getJobs(w http.ResponseWriter, r *http.Request)
 
 	w.Write(bytes) 
 }
-
 
 // ----------------------------------------------------------------------------------------------
 // These functions are for Data Exchange between both the services

@@ -26,7 +26,7 @@ func InitializeQueue() *JobQeueu{
 
 // Then by Adding Jobs to the Queue
 func (queue *JobQeueu) CreateNewJob(
-	data_params DataParameters,
+	data_params []DataParameters,
 	training_params TrainingParameters,
 	eval_params EvaluationParameters,
 	do_over_params DoOverParameters,

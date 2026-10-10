@@ -1,103 +1,548 @@
-INFO: 2026/09/30 00:17:37.203505 logger.go:85: Adding New Job
-INFO: 2026/09/30 00:17:37.204324 logger.go:85: Retrieving Data
-INFO: 2026/09/30 00:17:37.499752 logger.go:85: Converted the Data Successfully
-INFO: 2026/09/30 00:17:37.499898 logger.go:85: Initializing Job Queue
-INFO: 2026/09/30 00:17:37.499957 logger.go:85: Converting into Data Params Object
-INFO: 2026/09/30 00:17:37.500016 logger.go:85: Value registry exists
-INFO: 2026/09/30 00:17:37.500071 logger.go:85: Processed Registry Data
-INFO: 2026/09/30 00:17:37.500125 logger.go:85: Value data exists
-INFO: 2026/09/30 00:17:37.500177 logger.go:85: Processed Data Map
-INFO: 2026/09/30 00:17:37.500246 logger.go:85: Value target_col exists
-INFO: 2026/09/30 00:17:37.500321 logger.go:85: Traget Processing Complete
-INFO: 2026/09/30 00:17:37.500377 logger.go:85: Value data exists
-INFO: 2026/09/30 00:17:37.508345 logger.go:85: Proccessed Row Data
-INFO: 2026/09/30 00:17:37.508583 logger.go:85: Value column_list exists
-INFO: 2026/09/30 00:17:37.508673 logger.go:85: Proccessed Column Data
-INFO: 2026/09/30 00:17:37.509313 logger.go:85: Processed 0 object(s)
-INFO: 2026/09/30 00:17:37.510864 logger.go:85: Processed Registry Data
-INFO: 2026/09/30 00:17:37.510964 logger.go:85: Value data exists
-INFO: 2026/09/30 00:17:37.511030 logger.go:85: Processed Data Map
-INFO: 2026/09/30 00:17:37.511112 logger.go:85: Value target_col exists
-INFO: 2026/09/30 00:17:37.511544 logger.go:85: Traget Processing Complete
-INFO: 2026/09/30 00:17:37.511929 logger.go:85: Value data exists
-INFO: 2026/09/30 00:17:37.516551 logger.go:85: Proccessed Row Data
-INFO: 2026/09/30 00:17:37.516742 logger.go:85: Value column_list exists
-INFO: 2026/09/30 00:17:37.516805 logger.go:85: Proccessed Column Data
-INFO: 2026/09/30 00:17:37.516878 logger.go:85: Processed 1 object(s)
-INFO: 2026/09/30 00:17:37.516952 logger.go:85: Creating New Job..... 
-INFO: 2026/09/30 00:17:37.517018 logger.go:85: Queueing Job at Meh Priority
-INFO: 2026/09/30 00:17:40.251800 logger.go:85: Parsed Filter Input
-INFO: 2026/09/30 00:17:40.251988 logger.go:85: Getting Jobs with filter: 2
-INFO: 2026/09/30 00:17:40.252209 logger.go:85: List []
-INFO: 2026/09/30 00:18:49.213981 logger.go:85: Parsed Filter Input
-INFO: 2026/09/30 00:18:49.214244 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/09/30 00:18:49.214441 logger.go:85: List []
-INFO: 2026/09/30 00:22:54.959406 logger.go:85: Started Logging in the model training service
-INFO: 2026/09/30 00:22:54.959536 logger.go:85: Creating New Model Training Service
-INFO: 2026/09/30 00:22:54.959603 logger.go:85: Initializing Job Queue
-INFO: 2026/09/30 00:22:54.959783 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/09/30 00:23:00.109514 logger.go:85: Adding New Job
-INFO: 2026/09/30 00:23:00.109688 logger.go:85: Retrieving Data
-INFO: 2026/09/30 00:23:00.294825 logger.go:85: Converted the Data Successfully
-INFO: 2026/09/30 00:23:00.295217 logger.go:85: Initializing Job Queue
-INFO: 2026/09/30 00:23:00.295482 logger.go:85: Converting into Data Params Object
-INFO: 2026/09/30 00:23:00.295544 logger.go:85: Value registry exists
-INFO: 2026/09/30 00:23:00.295612 logger.go:85: Processed Registry Data
-INFO: 2026/09/30 00:23:00.295739 logger.go:85: Value data exists
-INFO: 2026/09/30 00:23:00.295880 logger.go:85: Processed Data Map
-INFO: 2026/09/30 00:23:00.295941 logger.go:85: Value target_col exists
-INFO: 2026/09/30 00:23:00.296040 logger.go:85: Traget Processing Complete
-INFO: 2026/09/30 00:23:00.296080 logger.go:85: Value data exists
-INFO: 2026/09/30 00:23:00.299224 logger.go:85: Proccessed Row Data
-INFO: 2026/09/30 00:23:00.299321 logger.go:85: Value column_list exists
-INFO: 2026/09/30 00:23:00.299424 logger.go:85: Proccessed Column Data
-INFO: 2026/09/30 00:23:00.299476 logger.go:85: Processed 0 object(s)
-INFO: 2026/09/30 00:23:00.299508 logger.go:85: Processed Registry Data
-INFO: 2026/09/30 00:23:00.299544 logger.go:85: Value data exists
-INFO: 2026/09/30 00:23:00.299588 logger.go:85: Processed Data Map
-INFO: 2026/09/30 00:23:00.299627 logger.go:85: Value target_col exists
-INFO: 2026/09/30 00:23:00.299686 logger.go:85: Traget Processing Complete
-INFO: 2026/09/30 00:23:00.299799 logger.go:85: Value data exists
-INFO: 2026/09/30 00:23:00.302660 logger.go:85: Proccessed Row Data
-INFO: 2026/09/30 00:23:00.302795 logger.go:85: Value column_list exists
-INFO: 2026/09/30 00:23:00.302943 logger.go:85: Proccessed Column Data
-INFO: 2026/09/30 00:23:00.303058 logger.go:85: Processed 1 object(s)
-INFO: 2026/09/30 00:23:00.303202 logger.go:85: Creating New Job..... 
-INFO: 2026/09/30 00:23:00.303256 logger.go:85: Queueing Job at Meh Priority
-INFO: 2026/09/30 00:23:04.002519 logger.go:85: Parsed Filter Input
-INFO: 2026/09/30 00:23:04.002746 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/09/30 00:23:04.002804 logger.go:85: List []
-INFO: 2026/09/30 00:25:00.456609 logger.go:85: Started Logging in the model training service
-INFO: 2026/09/30 00:25:00.456958 logger.go:85: Creating New Model Training Service
-INFO: 2026/09/30 00:25:00.457053 logger.go:85: Initializing Job Queue
-INFO: 2026/09/30 00:25:00.457164 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/09/30 00:25:06.436378 logger.go:85: Adding New Job
-INFO: 2026/09/30 00:25:06.436617 logger.go:85: Retrieving Data
-INFO: 2026/09/30 00:25:06.663914 logger.go:85: Converted the Data Successfully
-INFO: 2026/09/30 00:25:06.664044 logger.go:85: Converting into Data Params Object
-INFO: 2026/09/30 00:25:06.664163 logger.go:85: Value registry exists
-INFO: 2026/09/30 00:25:06.664238 logger.go:85: Processed Registry Data
-INFO: 2026/09/30 00:25:06.664404 logger.go:85: Value data exists
-INFO: 2026/09/30 00:25:06.664511 logger.go:85: Processed Data Map
-INFO: 2026/09/30 00:25:06.664558 logger.go:85: Value target_col exists
-INFO: 2026/09/30 00:25:06.664590 logger.go:85: Traget Processing Complete
-INFO: 2026/09/30 00:25:06.664641 logger.go:85: Value data exists
-INFO: 2026/09/30 00:25:06.667351 logger.go:85: Proccessed Row Data
-INFO: 2026/09/30 00:25:06.667488 logger.go:85: Value column_list exists
-INFO: 2026/09/30 00:25:06.667543 logger.go:85: Proccessed Column Data
-INFO: 2026/09/30 00:25:06.667603 logger.go:85: Processed 0 object(s)
-INFO: 2026/09/30 00:25:06.667658 logger.go:85: Processed Registry Data
-INFO: 2026/09/30 00:25:06.667733 logger.go:85: Value data exists
-INFO: 2026/09/30 00:25:06.667780 logger.go:85: Processed Data Map
-INFO: 2026/09/30 00:25:06.667825 logger.go:85: Value target_col exists
-INFO: 2026/09/30 00:25:06.667886 logger.go:85: Traget Processing Complete
-INFO: 2026/09/30 00:25:06.667969 logger.go:85: Value data exists
-INFO: 2026/09/30 00:25:06.672511 logger.go:85: Proccessed Row Data
-INFO: 2026/09/30 00:25:06.672637 logger.go:85: Value column_list exists
-INFO: 2026/09/30 00:25:06.672741 logger.go:85: Proccessed Column Data
-INFO: 2026/09/30 00:25:06.672789 logger.go:85: Processed 1 object(s)
-INFO: 2026/09/30 00:25:06.672855 logger.go:85: Creating New Job..... 
-INFO: 2026/09/30 00:25:06.672933 logger.go:85: Queueing Job at Meh Priority
-INFO: 2026/09/30 00:25:08.546008 logger.go:85: Parsed Filter Input
-INFO: 2026/09/30 00:25:08.546280 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/09/30 00:25:08.546562 logger.go:85: List [0x30480b633110]
+INFO: 2026/10/06 16:55:41.502554 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 16:55:41.502727 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 16:55:41.502811 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 16:55:41.504010 logger.go:85: Adding New Job
+INFO: 2026/10/06 16:55:41.504213 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 16:55:41.504356 logger.go:85: Value model_type exists
+INFO: 2026/10/06 16:55:41.504415 logger.go:85: Value model_name exists
+INFO: 2026/10/06 16:55:41.504454 logger.go:85: Value model_params exists
+INFO: 2026/10/06 16:55:41.504499 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 16:55:41.504558 logger.go:85: Retrieving Data
+INFO: 2026/10/06 16:55:41.504940 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 16:55:41.505031 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 16:55:41.505081 logger.go:85: Value registry exists
+ERROR: 2026/10/06 16:55:41.505128 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 16:55:41.505177 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 16:55:41.505221 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 16:55:41.505405 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/06 17:01:44.798185 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:01:44.798308 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:01:44.798391 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:01:44.799891 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:01:44.800038 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:01:44.800174 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:01:44.800300 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:01:44.800359 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:01:44.800497 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:01:44.800587 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:01:44.801622 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:01:44.801714 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:01:44.801760 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:01:44.801798 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:01:44.801834 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:01:44.801871 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:01:44.802039 logger.go:99: invalid character 'W' looking for beginning of value
+ERROR: 2026/10/06 17:01:44.802111 logger.go:99: Incoming Data is Unparseable
+INFO: 2026/10/06 17:02:39.463377 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:02:39.463542 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:02:39.463599 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:02:39.465275 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:02:39.465518 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:02:39.465585 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:02:39.465629 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:02:39.465671 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:02:39.465723 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:02:39.465771 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:02:39.466339 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:02:39.466419 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:02:39.466488 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:02:39.466539 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:02:39.466591 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:02:39.466632 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:02:39.466881 logger.go:99: invalid character 'W' looking for beginning of value
+ERROR: 2026/10/06 17:02:39.466943 logger.go:99: Incoming Data is Unparseable
+INFO: 2026/10/06 17:02:48.932455 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:02:48.932809 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:02:48.932884 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:02:48.934850 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:02:48.935013 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:02:48.935085 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:02:48.935174 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:02:48.935264 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:02:48.935408 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:02:48.935491 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:02:48.936051 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:02:48.936176 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:02:48.936305 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:02:48.936544 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:02:48.936614 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:02:48.936656 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:02:48.936879 logger.go:99: invalid character 'W' looking for beginning of value
+ERROR: 2026/10/06 17:02:48.936974 logger.go:99: Incoming Data is Unparseable
+INFO: 2026/10/06 17:03:33.661675 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:03:33.661824 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:03:33.661871 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:03:33.663359 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:03:33.663486 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:03:33.663554 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:03:33.663613 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:03:33.663652 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:03:33.663697 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:03:33.663732 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:03:33.664186 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:03:33.664240 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:03:33.664280 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:03:33.664344 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:03:33.664381 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:03:33.664415 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:03:33.664605 logger.go:99: invalid character 'W' looking for beginning of value
+ERROR: 2026/10/06 17:03:33.664659 logger.go:99: Incoming Data is Unparseable
+INFO: 2026/10/06 17:08:23.973895 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:08:23.974253 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:08:23.974389 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:08:23.975922 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:08:23.976039 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:08:23.976134 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:08:23.976195 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:08:23.976238 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:08:23.976294 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:08:23.976340 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:08:23.977142 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:08:23.977244 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:08:23.977366 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:08:23.977408 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:08:23.977446 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:08:23.977481 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:08:23.977622 logger.go:99: invalid character 'W' looking for beginning of value
+ERROR: 2026/10/06 17:08:23.977678 logger.go:99: Incoming Data is Unparseable
+INFO: 2026/10/06 17:08:33.467402 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:08:33.467602 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:08:33.467688 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:08:33.469169 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:08:33.469296 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:08:33.469347 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:08:33.469406 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:08:33.469449 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:08:33.469578 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:08:33.469613 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:08:33.469947 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:08:33.470008 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:08:33.470067 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:08:33.470109 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:08:33.470160 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:08:33.470198 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:08:33.470358 logger.go:99: invalid character 'W' looking for beginning of value
+ERROR: 2026/10/06 17:08:33.470432 logger.go:99: Incoming Data is Unparseable
+INFO: 2026/10/06 17:12:32.098582 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:12:32.098741 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:12:32.098828 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:12:32.100466 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:12:32.100595 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:12:32.100703 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:12:32.100785 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:12:32.100832 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:12:32.100917 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:12:32.100966 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:12:32.101998 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:12:32.102059 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:12:32.102124 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:12:32.102170 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:12:32.102221 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:12:32.102298 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:12:32.102558 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/06 17:12:45.521536 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/06 17:12:45.521781 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/06 17:12:45.521835 logger.go:85: Initializing Job Queue
+INFO: 2026/10/06 17:12:45.521954 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/06 17:12:48.086403 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:12:48.086532 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:12:48.086678 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:12:48.088480 logger.go:85: Adding New Job
+ERROR: 2026/10/06 17:12:48.088726 logger.go:99: strconv.ParseInt: parsing "": invalid syntax
+ERROR: 2026/10/06 17:12:48.088974 logger.go:99: invalid character 's' looking for beginning of value
+INFO: 2026/10/06 17:15:37.107753 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/06 17:15:37.107932 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/06 17:15:37.108045 logger.go:85: Initializing Job Queue
+INFO: 2026/10/06 17:15:37.108167 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/06 17:15:39.751430 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:15:39.751565 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:15:39.751657 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:15:39.753661 logger.go:85: Adding New Job
+ERROR: 2026/10/06 17:15:39.753877 logger.go:99: Please provide a proper Urgency Integer
+ERROR: 2026/10/06 17:15:39.754079 logger.go:99: invalid character 'P' looking for beginning of value
+INFO: 2026/10/06 17:15:57.649806 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:15:57.649941 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:15:57.649983 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:15:57.651284 logger.go:85: Adding New Job
+ERROR: 2026/10/06 17:15:57.651430 logger.go:99: Please provide a proper Urgency Integer
+ERROR: 2026/10/06 17:15:57.651579 logger.go:99: invalid character 'P' looking for beginning of value
+INFO: 2026/10/06 17:15:59.131662 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:15:59.131822 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:15:59.131870 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:15:59.133258 logger.go:85: Adding New Job
+ERROR: 2026/10/06 17:15:59.133382 logger.go:99: Please provide a proper Urgency Integer
+ERROR: 2026/10/06 17:15:59.133547 logger.go:99: invalid character 'P' looking for beginning of value
+INFO: 2026/10/06 17:19:17.222387 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:19:17.222608 logger.go:85: Retrieving Test Data
+INFO: 2026/10/06 17:19:17.222767 logger.go:85: Starting POST Request on Endpoint /data_params
+INFO: 2026/10/06 17:19:17.224291 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:19:17.224457 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:19:17.224520 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:19:17.224573 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:19:17.224653 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:19:17.224728 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:19:17.224780 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:19:17.226404 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:19:17.226453 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:19:17.226491 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:19:17.226528 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:19:17.226565 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:19:17.226602 logger.go:85: Queueing Job at Meh Priority
+ERROR: 2026/10/06 17:19:17.226763 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/06 17:49:54.127907 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/06 17:54:00.106265 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:54:00.106409 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:54:00.106594 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:54:00.106663 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:54:00.106729 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:54:00.106770 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:54:00.106802 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:54:00.107457 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:54:00.107506 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:54:00.107550 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:54:00.107590 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:54:00.107631 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:54:00.107674 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/06 17:55:50.077448 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/06 17:55:50.077555 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/06 17:55:50.077624 logger.go:85: Initializing Job Queue
+INFO: 2026/10/06 17:55:50.077684 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/06 17:56:15.329899 logger.go:85: Adding New Job
+INFO: 2026/10/06 17:56:15.330018 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 17:56:15.330127 logger.go:85: Value model_type exists
+INFO: 2026/10/06 17:56:15.330182 logger.go:85: Value model_name exists
+INFO: 2026/10/06 17:56:15.330309 logger.go:85: Value model_params exists
+INFO: 2026/10/06 17:56:15.330375 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 17:56:15.330427 logger.go:85: Retrieving Data
+INFO: 2026/10/06 17:56:15.332108 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 17:56:15.332183 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 17:56:15.332250 logger.go:85: Value registry exists
+ERROR: 2026/10/06 17:56:15.332334 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 17:56:15.332406 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 17:56:15.332514 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/06 18:00:40.830682 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/06 18:00:40.830869 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/06 18:00:40.830935 logger.go:85: Initializing Job Queue
+INFO: 2026/10/06 18:00:40.831025 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/06 18:00:44.625744 logger.go:85: Adding New Job
+INFO: 2026/10/06 18:00:44.625876 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/06 18:00:44.625924 logger.go:85: Value model_type exists
+INFO: 2026/10/06 18:00:44.625976 logger.go:85: Value model_name exists
+INFO: 2026/10/06 18:00:44.626037 logger.go:85: Value model_params exists
+INFO: 2026/10/06 18:00:44.626195 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/06 18:00:44.626287 logger.go:85: Retrieving Data
+INFO: 2026/10/06 18:00:44.627793 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/06 18:00:44.627851 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/06 18:00:44.627904 logger.go:85: Value registry exists
+ERROR: 2026/10/06 18:00:44.627959 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/06 18:00:44.628013 logger.go:85: Creating New Job..... 
+INFO: 2026/10/06 18:00:44.628058 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/06 18:00:44.628563 logger.go:85: Parsed Filter Input
+INFO: 2026/10/06 18:00:44.628617 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/06 18:00:44.628670 logger.go:85: List [0x363f31f301b0]
+INFO: 2026/10/09 12:11:37.175466 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/09 12:11:37.179387 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/09 12:11:37.179729 logger.go:85: Initializing Job Queue
+INFO: 2026/10/09 12:11:37.182573 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/09 12:12:51.990986 logger.go:85: Adding New Job
+INFO: 2026/10/09 12:12:51.991162 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/09 12:12:51.991253 logger.go:85: Value model_type exists
+INFO: 2026/10/09 12:12:51.991346 logger.go:85: Value model_name exists
+INFO: 2026/10/09 12:12:51.991423 logger.go:85: Value model_params exists
+INFO: 2026/10/09 12:12:51.992510 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/09 12:12:51.992619 logger.go:85: Retrieving Data
+INFO: 2026/10/09 12:12:51.996930 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/09 12:12:51.997114 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/09 12:12:51.997174 logger.go:85: Value registry exists
+ERROR: 2026/10/09 12:12:51.997226 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/09 12:12:51.997276 logger.go:85: Creating New Job..... 
+INFO: 2026/10/09 12:12:51.997337 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/09 12:12:51.998160 logger.go:85: Parsed Filter Input
+INFO: 2026/10/09 12:12:51.998234 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/09 12:12:51.998305 logger.go:85: List [0xe648cc021b0]
+INFO: 2026/10/09 12:14:47.644620 logger.go:85: Adding New Job
+INFO: 2026/10/09 12:14:47.645090 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/09 12:14:47.645308 logger.go:85: Value model_type exists
+INFO: 2026/10/09 12:14:47.645483 logger.go:85: Value model_name exists
+INFO: 2026/10/09 12:14:47.645716 logger.go:85: Value model_params exists
+INFO: 2026/10/09 12:14:47.646465 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/09 12:14:47.646678 logger.go:85: Retrieving Data
+INFO: 2026/10/09 12:14:47.649029 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/09 12:14:47.649241 logger.go:85: Converting into Data Params Object
+ERROR: 2026/10/09 12:14:47.649880 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/10/09 12:14:47.650111 logger.go:85: Creating New Job..... 
+INFO: 2026/10/09 12:14:47.650280 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/09 12:14:47.652145 logger.go:85: Parsed Filter Input
+INFO: 2026/10/09 12:14:47.652421 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/09 12:14:47.652579 logger.go:85: List [0xe648cc021b0 0xe648cab8900]
+INFO: 2026/10/09 12:15:38.973165 logger.go:85: Adding New Job
+INFO: 2026/10/09 12:15:38.973453 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/09 12:15:38.973660 logger.go:85: Value model_type exists
+INFO: 2026/10/09 12:15:38.973767 logger.go:85: Value model_name exists
+INFO: 2026/10/09 12:15:38.974022 logger.go:85: Value model_params exists
+INFO: 2026/10/09 12:15:38.974128 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/09 12:15:38.974215 logger.go:85: Retrieving Data
+INFO: 2026/10/09 12:15:39.223693 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/09 12:15:39.224258 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/09 12:15:39.224604 logger.go:85: Value registry exists
+INFO: 2026/10/09 12:15:39.224915 logger.go:85: Processed Registry Data
+INFO: 2026/10/09 12:15:39.225091 logger.go:85: Value data exists
+INFO: 2026/10/09 12:15:39.225241 logger.go:85: Processed Data Map
+INFO: 2026/10/09 12:15:39.225484 logger.go:85: Value target_col exists
+INFO: 2026/10/09 12:15:39.225765 logger.go:85: Traget Processing Complete
+INFO: 2026/10/09 12:15:39.226020 logger.go:85: Value data exists
+INFO: 2026/10/09 12:15:39.233709 logger.go:85: Proccessed Row Data
+INFO: 2026/10/09 12:15:39.233978 logger.go:85: Value column_list exists
+INFO: 2026/10/09 12:15:39.234257 logger.go:85: Proccessed Column Data
+INFO: 2026/10/09 12:15:39.234585 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/09 12:15:39.234848 logger.go:85: Creating New Job..... 
+INFO: 2026/10/09 12:15:39.235110 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/09 12:15:39.237344 logger.go:85: Parsed Filter Input
+INFO: 2026/10/09 12:15:39.237607 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/09 12:15:39.237855 logger.go:85: List [0xe648cc021b0 0xe648cab8900 0xe648cc02240]
+INFO: 2026/10/09 12:17:00.478386 logger.go:85: Adding New Job
+INFO: 2026/10/09 12:17:00.478778 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/09 12:17:00.479012 logger.go:85: Value model_type exists
+INFO: 2026/10/09 12:17:00.479225 logger.go:85: Value model_name exists
+INFO: 2026/10/09 12:17:00.479447 logger.go:85: Value model_params exists
+INFO: 2026/10/09 12:17:00.479649 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/09 12:17:00.479827 logger.go:85: Retrieving Data
+INFO: 2026/10/09 12:17:00.481095 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/09 12:17:00.481307 logger.go:85: Converting into Data Params Object
+ERROR: 2026/10/09 12:17:00.481503 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/10/09 12:17:00.481748 logger.go:85: Creating New Job..... 
+INFO: 2026/10/09 12:17:00.481899 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/09 12:17:00.483829 logger.go:85: Parsed Filter Input
+INFO: 2026/10/09 12:17:00.484072 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/09 12:17:00.484230 logger.go:85: List [0xe648cc021b0 0xe648cab8900 0xe648cc02240 0xe648cab8360]
+INFO: 2026/10/09 12:18:33.530826 logger.go:85: Adding New Job
+INFO: 2026/10/09 12:18:33.530963 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/09 12:18:33.531028 logger.go:85: Value model_type exists
+INFO: 2026/10/09 12:18:33.531143 logger.go:85: Value model_name exists
+INFO: 2026/10/09 12:18:33.531195 logger.go:85: Value model_params exists
+INFO: 2026/10/09 12:18:33.531262 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/09 12:18:33.531375 logger.go:85: Retrieving Data
+INFO: 2026/10/09 12:18:33.532230 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/09 12:18:33.532298 logger.go:85: Converting into Data Params Object
+ERROR: 2026/10/09 12:18:33.532372 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/10/09 12:18:33.532425 logger.go:85: Creating New Job..... 
+INFO: 2026/10/09 12:18:33.532481 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/09 12:18:33.533061 logger.go:85: Parsed Filter Input
+INFO: 2026/10/09 12:18:33.533129 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/09 12:18:33.533187 logger.go:85: List [0xe648cc021b0 0xe648cab8900 0xe648cc02240 0xe648cab8360 0xe648cc02510]
+INFO: 2026/10/09 12:18:52.867822 logger.go:85: Adding New Job
+INFO: 2026/10/09 12:18:52.867980 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/09 12:18:52.868061 logger.go:85: Value model_type exists
+INFO: 2026/10/09 12:18:52.868130 logger.go:85: Value model_name exists
+INFO: 2026/10/09 12:18:52.868190 logger.go:85: Value model_params exists
+INFO: 2026/10/09 12:18:52.868264 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/09 12:18:52.868339 logger.go:85: Retrieving Data
+ERROR: 2026/10/09 12:18:52.868412 logger.go:99: Session Name was not Provided
+ERROR: 2026/10/09 12:18:52.868475 logger.go:99: Session Name was not Provided
+INFO: 2026/10/09 12:18:52.869170 logger.go:85: Parsed Filter Input
+INFO: 2026/10/09 12:18:52.869236 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/09 12:18:52.869302 logger.go:85: List [0xe648cc021b0 0xe648cab8900 0xe648cc02240 0xe648cab8360 0xe648cc02510]
+INFO: 2026/10/10 15:33:19.797473 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/10 15:33:19.801032 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/10 15:33:19.801253 logger.go:85: Initializing Job Queue
+INFO: 2026/10/10 15:33:19.804122 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/10 15:34:23.183843 logger.go:85: Adding New Job
+INFO: 2026/10/10 15:34:23.183997 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 15:34:23.184084 logger.go:85: Value model_type exists
+INFO: 2026/10/10 15:34:23.184155 logger.go:85: Value model_name exists
+INFO: 2026/10/10 15:34:23.184218 logger.go:85: Value model_params exists
+INFO: 2026/10/10 15:34:23.185309 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 15:34:23.185386 logger.go:85: Retrieving Data
+ERROR: 2026/10/10 15:34:23.185453 logger.go:99: Session Name was not Provided
+ERROR: 2026/10/10 15:34:23.185526 logger.go:99: Session Name was not Provided
+INFO: 2026/10/10 15:34:23.186249 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 15:34:23.186317 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 15:34:23.186377 logger.go:85: List []
+INFO: 2026/10/10 15:35:48.172651 logger.go:85: Adding New Job
+INFO: 2026/10/10 15:35:48.172809 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 15:35:48.172871 logger.go:85: Value model_type exists
+INFO: 2026/10/10 15:35:48.172923 logger.go:85: Value model_name exists
+INFO: 2026/10/10 15:35:48.172972 logger.go:85: Value model_params exists
+INFO: 2026/10/10 15:35:48.173031 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 15:35:48.173077 logger.go:85: Retrieving Data
+ERROR: 2026/10/10 15:35:48.176413 logger.go:99: invalid character 'S' looking for beginning of value
+ERROR: 2026/10/10 15:35:48.176482 logger.go:99: invalid character 'S' looking for beginning of value
+INFO: 2026/10/10 15:35:48.177211 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 15:35:48.177280 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 15:35:48.177330 logger.go:85: List []
+INFO: 2026/10/10 15:37:31.564825 logger.go:85: Adding New Job
+INFO: 2026/10/10 15:37:31.565041 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 15:37:31.565152 logger.go:85: Value model_type exists
+INFO: 2026/10/10 15:37:31.565214 logger.go:85: Value model_name exists
+INFO: 2026/10/10 15:37:31.565265 logger.go:85: Value model_params exists
+INFO: 2026/10/10 15:37:31.565374 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 15:37:31.565425 logger.go:85: Retrieving Data
+INFO: 2026/10/10 15:37:31.566331 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 15:37:31.566404 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 15:37:31.566460 logger.go:85: Value registry exists
+ERROR: 2026/10/10 15:37:31.566520 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 15:37:31.566571 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 15:37:31.566620 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 15:37:31.567195 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 15:37:31.567308 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 15:37:31.567367 logger.go:85: List [0x24c844b805a0]
+INFO: 2026/10/10 15:43:47.627059 logger.go:85: Adding New Job
+INFO: 2026/10/10 15:43:47.627252 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 15:43:47.627347 logger.go:85: Value model_type exists
+INFO: 2026/10/10 15:43:47.627422 logger.go:85: Value model_name exists
+INFO: 2026/10/10 15:43:47.627487 logger.go:85: Value model_params exists
+INFO: 2026/10/10 15:43:47.627587 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 15:43:47.627657 logger.go:85: Retrieving Data
+INFO: 2026/10/10 15:43:47.628701 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 15:43:47.628780 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 15:43:47.628848 logger.go:85: Value registry exists
+ERROR: 2026/10/10 15:43:47.628911 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 15:43:47.628985 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 15:43:47.629052 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 15:43:47.629828 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 15:43:47.629966 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 15:43:47.630040 logger.go:85: List [0x24c844b805a0 0x24c844a3e6c0]
+INFO: 2026/10/10 15:44:29.214647 logger.go:85: Adding New Job
+INFO: 2026/10/10 15:44:29.214836 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 15:44:29.214925 logger.go:85: Value model_type exists
+INFO: 2026/10/10 15:44:29.215012 logger.go:85: Value model_name exists
+INFO: 2026/10/10 15:44:29.215101 logger.go:85: Value model_params exists
+INFO: 2026/10/10 15:44:29.215190 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 15:44:29.215275 logger.go:85: Retrieving Data
+INFO: 2026/10/10 15:44:29.215927 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 15:44:29.216096 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 15:44:29.216179 logger.go:85: Value registry exists
+ERROR: 2026/10/10 15:44:29.216241 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 15:44:29.216314 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 15:44:29.216384 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 15:44:29.217233 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 15:44:29.217328 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 15:44:29.217415 logger.go:85: List [0x24c844b805a0 0x24c844a3e6c0 0x24c8449c0630]
+INFO: 2026/10/10 15:45:51.657489 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/10 15:45:51.657977 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/10 15:45:51.658227 logger.go:85: Initializing Job Queue
+INFO: 2026/10/10 15:45:51.658553 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/10 15:45:55.046643 logger.go:85: Adding New Job
+INFO: 2026/10/10 15:45:55.046901 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 15:45:55.047040 logger.go:85: Value model_type exists
+INFO: 2026/10/10 15:45:55.047118 logger.go:85: Value model_name exists
+INFO: 2026/10/10 15:45:55.047188 logger.go:85: Value model_params exists
+INFO: 2026/10/10 15:45:55.047277 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 15:45:55.047340 logger.go:85: Retrieving Data
+ERROR: 2026/10/10 15:45:55.049141 logger.go:99: Post "http://localhost:8000/the_good_stuff": dial tcp [::1]:8000: connect: connection refused
+ERROR: 2026/10/10 15:45:55.049286 logger.go:99: Post "http://localhost:8000/the_good_stuff": dial tcp [::1]:8000: connect: connection refused
+INFO: 2026/10/10 15:45:55.055379 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 15:45:55.055579 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 15:45:55.055807 logger.go:85: List []
+INFO: 2026/10/10 15:46:05.360158 logger.go:85: Adding New Job
+INFO: 2026/10/10 15:46:05.360581 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 15:46:05.360816 logger.go:85: Value model_type exists
+INFO: 2026/10/10 15:46:05.361017 logger.go:85: Value model_name exists
+INFO: 2026/10/10 15:46:05.361204 logger.go:85: Value model_params exists
+INFO: 2026/10/10 15:46:05.361408 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 15:46:05.361619 logger.go:85: Retrieving Data
+INFO: 2026/10/10 15:46:05.364909 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 15:46:05.365129 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 15:46:05.365295 logger.go:85: Value registry exists
+ERROR: 2026/10/10 15:46:05.365470 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 15:46:05.365702 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 15:46:05.365869 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 15:46:05.367445 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 15:46:05.367680 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 15:46:05.367881 logger.go:85: List [0x2d76108c0750]
+INFO: 2026/10/10 16:09:54.813245 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/10 16:09:54.813664 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/10 16:09:54.813875 logger.go:85: Initializing Job Queue
+INFO: 2026/10/10 16:09:54.814103 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/10 16:10:55.374435 logger.go:85: Adding New Job
+INFO: 2026/10/10 16:10:55.374579 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 16:10:55.374642 logger.go:85: Value model_type exists
+INFO: 2026/10/10 16:10:55.374698 logger.go:85: Value model_name exists
+INFO: 2026/10/10 16:10:55.374748 logger.go:85: Value model_params exists
+INFO: 2026/10/10 16:10:55.374813 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 16:10:55.374858 logger.go:85: Retrieving Data
+INFO: 2026/10/10 16:10:55.376457 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 16:10:55.376531 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 16:10:55.376585 logger.go:85: Value registry exists
+ERROR: 2026/10/10 16:10:55.376688 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 16:10:55.376791 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 16:10:55.376838 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 16:10:55.377411 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 16:10:55.377474 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 16:10:55.377545 logger.go:85: List [0x33e60b286630]
+INFO: 2026/10/10 16:11:44.797974 logger.go:85: Adding New Job
+INFO: 2026/10/10 16:11:44.798210 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 16:11:44.798309 logger.go:85: Value model_type exists
+INFO: 2026/10/10 16:11:44.798403 logger.go:85: Value model_name exists
+INFO: 2026/10/10 16:11:44.798476 logger.go:85: Value model_params exists
+INFO: 2026/10/10 16:11:44.798579 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 16:11:44.798652 logger.go:85: Retrieving Data
+INFO: 2026/10/10 16:11:44.799354 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 16:11:44.799496 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 16:11:44.799636 logger.go:85: Value registry exists
+ERROR: 2026/10/10 16:11:44.799705 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 16:11:44.799773 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 16:11:44.799859 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 16:11:44.800889 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 16:11:44.800980 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 16:11:44.801054 logger.go:85: List [0x33e60b286630 0x33e60b286bd0]
+INFO: 2026/10/10 16:11:52.304640 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/10 16:11:52.305104 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/10 16:11:52.305288 logger.go:85: Initializing Job Queue
+INFO: 2026/10/10 16:11:52.305600 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/10 16:11:55.376028 logger.go:85: Adding New Job
+INFO: 2026/10/10 16:11:55.376220 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 16:11:55.376333 logger.go:85: Value model_type exists
+INFO: 2026/10/10 16:11:55.376425 logger.go:85: Value model_name exists
+INFO: 2026/10/10 16:11:55.376517 logger.go:85: Value model_params exists
+INFO: 2026/10/10 16:11:55.376631 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 16:11:55.376716 logger.go:85: Retrieving Data
+INFO: 2026/10/10 16:11:55.379077 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 16:11:55.379171 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 16:11:55.379249 logger.go:85: Value registry exists
+ERROR: 2026/10/10 16:11:55.379323 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 16:11:55.379401 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 16:11:55.379473 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 16:11:55.380540 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 16:11:55.380641 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 16:11:55.380724 logger.go:85: List [0x2eb7f4812090]
+INFO: 2026/10/10 16:13:15.615903 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/10 16:13:15.616294 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/10 16:13:15.616483 logger.go:85: Initializing Job Queue
+INFO: 2026/10/10 16:13:15.616818 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/10 16:13:18.824302 logger.go:85: Adding New Job
+INFO: 2026/10/10 16:13:18.824538 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 16:13:18.824707 logger.go:85: Value model_type exists
+INFO: 2026/10/10 16:13:18.824813 logger.go:85: Value model_name exists
+INFO: 2026/10/10 16:13:18.824911 logger.go:85: Value model_params exists
+INFO: 2026/10/10 16:13:18.825030 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 16:13:18.825125 logger.go:85: Retrieving Data
+INFO: 2026/10/10 16:13:18.827544 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 16:13:18.827650 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 16:13:18.827728 logger.go:85: Value registry exists
+ERROR: 2026/10/10 16:13:18.827798 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 16:13:18.827860 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 16:13:18.827919 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 16:13:18.829042 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 16:13:18.829162 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 16:13:18.829234 logger.go:85: List [0x2605406821b0]
+INFO: 2026/10/10 16:19:44.776347 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/10 16:19:44.776922 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/10 16:19:44.777200 logger.go:85: Initializing Job Queue
+INFO: 2026/10/10 16:19:44.777444 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/10 16:19:48.403918 logger.go:85: Adding New Job
+INFO: 2026/10/10 16:19:48.404397 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/10 16:19:48.404695 logger.go:85: Value model_type exists
+INFO: 2026/10/10 16:19:48.405034 logger.go:85: Value model_name exists
+INFO: 2026/10/10 16:19:48.405205 logger.go:85: Value model_params exists
+INFO: 2026/10/10 16:19:48.405397 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/10 16:19:48.405637 logger.go:85: Retrieving Data
+INFO: 2026/10/10 16:19:48.410281 logger.go:85: Converted the Data Successfully
+INFO: 2026/10/10 16:19:48.410557 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/10 16:19:48.410764 logger.go:85: Value registry exists
+ERROR: 2026/10/10 16:19:48.410927 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/10 16:19:48.411104 logger.go:85: Creating New Job..... 
+INFO: 2026/10/10 16:19:48.411275 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/10 16:19:48.412942 logger.go:85: Parsed Filter Input
+INFO: 2026/10/10 16:19:48.413166 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/10 16:19:48.413384 logger.go:85: List [0x301aa24e8750]

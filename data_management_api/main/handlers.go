@@ -405,7 +405,15 @@ func (dms *DMService) getDataObjects(w http.ResponseWriter, r *http.Request){
 		return
 	}	
 
-	bytes, err := json.Marshal(dms.Data.GetStuff(name))
+	data, err := dms.Data.GetStuff(name)
+
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	bytes, err := json.Marshal(data)
 
 	if err != nil{
 		http.Error(w, "JSON Shit Happend" + err.Error(), http.StatusInternalServerError)
