@@ -148,6 +148,18 @@ func TestGetEndpoint(t *testing.T){
 		"model_params": map[string]any{
 			"limit": 1000,
 		},
+		"problem_type": "regression",
+		"tests_required": map[string]float64{
+			"r2_score": 0.98,
+			"r2_scor": 0.98,
+			"r2_sco": 0.98,
+		},
+		"max_retries": 3,
+		"max_deviance": 0.5,
+		"fallback_params": map[string]any{
+			"jobs": -1.0,
+		},
+
 	}
 
 	// Working Job Result
@@ -163,8 +175,21 @@ func TestGetEndpoint(t *testing.T){
 					"limit":1000.0, 
 				},
 			},
-			DoOverParams: jobs.DoOverParameters{},
-			EvalParams: jobs.EvaluationParameters{},
+			EvalParams: jobs.EvaluationParameters{
+				ProblemType: "regression",
+				TestsRequired: map[string]float64{
+					"r2_score": 0.98,
+					"r2_scor": 0.98,
+					"r2_sco": 0.98,				
+				},
+			},
+			DoOverParams: jobs.DoOverParameters{
+				FallbackParams: map[string]any{
+					"jobs": -1.0,
+				},
+				MaxRetries: 3,
+				MaximumDeviance: 0.5,
+			},
 		},
 	}
 

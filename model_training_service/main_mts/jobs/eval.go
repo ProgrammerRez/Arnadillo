@@ -1,6 +1,7 @@
 package jobs
 
 import (
+	"fmt"
 	"errors"
 	log "mts/logging"
 	"strings"
@@ -33,9 +34,9 @@ func CreateEvalParamObjects(params map[string]any) (*EvaluationParameters, error
 		return nil, err
 	}
 
-	tests_required, ok := raw_type.(map[string]float32)
+	tests_required, ok := raw_type.(map[string]float64)
 	if !ok || len(tests_required) == 0{
-		log.Error("Required Tests is Empty or Invalid Type")
+		log.Error(fmt.Sprintf("Required Tests is Empty or Invalid Type. Length: %d", len(tests_required)))
 		return nil, errors.New("Required Tests is Empty or Invalid Type")
 	}
 

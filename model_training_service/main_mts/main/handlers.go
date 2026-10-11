@@ -44,13 +44,75 @@ func (mts *ModelTrainingService) addJob(w http.ResponseWriter, r *http.Request){
 	model_name := r.FormValue("model_name")
 	model_params := r.FormValue("model_params")
 
+	// Unmarshalling the model_params map
+	var model_params_map map[string]any
+	if err := json.Unmarshal([]byte(model_params), &model_params_map); err != nil{
+		log.Error("Model Params is Invalid Type")
+		http.Error(w, "Model Params is Invalid Type", http.StatusBadRequest)
+		return
+	}
+
 	train_data := map[string]any{
 		"model_type": model_type,
 		"model_name": model_name,
-		"model_params": model_params,
+		"model_params": model_params_map,
 	}
 
-	// Then finally gathering the trainingParameters Data
+	// Now Adding the Evaluation Parameters Support
+
+	problem_type := r.FormValue("problem_type")
+	tests_required := r.FormValue("tests_required")
+	
+
+	var tests_required_map map[string]float64
+	if err := json.Unmarshal([]byte(tests_required), &tests_required_map); err != nil{
+		log.Error("Invalid Type for Required Tests")
+		http.Error(w, "Invalid Type for Required Tests", http.StatusBadRequest)
+		return
+	}
+	
+
+	eval_data := map[string]any{
+		"problem_type": problem_type,
+		"tests_required": tests_required_map,
+	}
+
+	// Now Adding Do Over Parameters Support
+
+	fallback_params := r.FormValue("fallback_params")
+	max_retries := r.FormValue("max_retries")
+	max_deviance := r.FormValue("max_deviance")
+
+	// Converting to valid numerical types
+	max_retries_int, err := strconv.ParseInt(max_retries, 10, 64)
+	if err != nil{
+		log.Error("Unable to Parse Max Retries")
+		http.Error(w, "Unable to Parse Max Retries", http.StatusBadRequest)
+		return
+	}
+
+	max_deviance_float, err := strconv.ParseFloat(max_deviance, 64)
+	if err != nil{
+		log.Error("Unable to Parse Max Deviance")
+		http.Error(w, "Unable to Parse Max Deviance", http.StatusBadRequest)
+		return
+	}
+
+
+	var fallback_params_map	map[string]any
+	if err := json.Unmarshal([]byte(fallback_params), &fallback_params_map); err != nil{
+		log.Error("Invalid Type for Fallback Params")
+		http.Error(w, "Invalid Type for Fallback Params", http.StatusBadRequest)
+		return
+	}
+
+	do_over_data := map[string]any{
+		"fallback_params": fallback_params_map,
+		"max_retries": max_retries_int,
+		"max_deviance": max_deviance_float,
+	}
+
+	// Then finally gathering all the Parameters Data
 	train_params, err := jobs.CreateTrainParamObject(train_data)
 	if err != nil{
 		log.Error(err.Error())
@@ -58,6 +120,20 @@ func (mts *ModelTrainingService) addJob(w http.ResponseWriter, r *http.Request){
 		return 
 	}
 	log.Info("Training Parameters Extracted")
+
+	eval_params, err := jobs.CreateEvalParamObjects(eval_data)
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	do_over_params, err := jobs.CreateDoOverParamObjects(do_over_data)
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
 
 	// Getting the Data Parameters
 	raw_data, err := mts.getData(name)
@@ -73,8 +149,8 @@ func (mts *ModelTrainingService) addJob(w http.ResponseWriter, r *http.Request){
 	queue.CreateNewJob(
 		data_params,
 		*train_params,
-		jobs.EvaluationParameters{},
-		jobs.DoOverParameters{},
+		*eval_params,
+		*do_over_params,
 		int(urgency),
 	)
 

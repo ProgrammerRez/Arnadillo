@@ -19,7 +19,7 @@ func CreateDoOverParamObjects(params map[string]any) (*DoOverParameters, error){
 		return nil, err
 	}
 
-	max_retries, ok := raw_type.(int)
+	max_retries, ok := raw_type.(int64)
 	if !ok{
 		log.Error("Max Retries is Empty or Invalid Type")
 		return nil, errors.New("Max Retries is Empty or Invalid Type")

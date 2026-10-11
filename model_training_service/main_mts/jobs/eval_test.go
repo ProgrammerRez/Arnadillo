@@ -16,14 +16,14 @@ func TestCreateEvalParamObjects(t *testing.T) {
 
 	working_struct := map[string]any{
 		"problem_type": "regression",
-		"tests_required": map[string]float32{
+		"tests_required": map[string]float64{
 			"r2_score": 0.98,
 		},
 	}
 
 	working_result := &EvaluationParameters{
 		ProblemType: "regression",
-		TestsRequired: map[string]float32{
+		TestsRequired: map[string]float64{
 			"r2_score": 0.98,
 		},
 	}
