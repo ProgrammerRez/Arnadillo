@@ -1,0 +1,9 @@
+System Resources Management - 2026-10-13 00:02:01,690 - resource_management - ERROR - Unable to load Environment Varaiables: module 'os' has no attribute 'getennv'
+System Resources Management - 2026-10-13 00:02:01,690 - resource_management - INFO - Loaded Environment Variables
+System Resources Management - 2026-10-13 00:02:01,703 - resource_management - INFO - Retrieved GPU Info
+System Resources Management - 2026-10-13 00:02:01,703 - resource_management - INFO - Initialized the System Resource Manager
+2026-10-13 00:02:01,704 - main - INFO - Started Logging
+System Resources Management - 2026-10-13 00:02:50,969 - resource_management - INFO - Loaded Environment Variables
+System Resources Management - 2026-10-13 00:02:50,983 - resource_management - INFO - Retrieved GPU Info
+System Resources Management - 2026-10-13 00:02:50,983 - resource_management - INFO - Initialized the System Resource Manager
+2026-10-13 00:02:50,983 - main - INFO - Started Logging

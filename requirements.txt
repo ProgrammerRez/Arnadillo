@@ -1,0 +1,9 @@
+fastapi
+python-dotenv
+psutil
+numpy 
+pandas
+tensorflow
+scikit-learn
+gputil
+pydantic

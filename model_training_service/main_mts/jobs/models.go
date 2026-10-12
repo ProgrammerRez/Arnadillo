@@ -40,7 +40,7 @@ type DataParameters struct{
 	// Actual Data to be Trained on
 	ColumnList			[]string			`json:"column_list"`
 	Data 				[][]string			`json:"data"`
-	TargetLabel			string				`json:"target_col"`	// Column that's the target variable
+	TargetLabel			string				`json:"target_col"`		// Column that's the target variable
 	NumericalOperations	map[string]string	`json:"num_ops"`		//The operations for preprocessing numerical data in the preprocessing pipeline
 	ObjectOperations	map[string]string	`json:"cat_ops"`		//The operations for preprocessing categorical data in the preprocessing pipeline
 	ID					int					`json:"id"`				// `csv_id` of the object from `/session` endpoint in the endpoint
