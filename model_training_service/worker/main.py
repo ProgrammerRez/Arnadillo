@@ -1,13 +1,10 @@
-import requests
+import resource_management as rm
 
-url = "http://localhost:8000/the_good_stuff"
-payload = {
-    "name": "session1"
-}
-
-if __name__ == '__main__':
-    req = requests.post(url, payload)
-
-    req.raise_for_status()
-    
-    print(req.content)
+if __name__ == "__main__":
+    obj = rm.SystemResourcesManager(
+        max_ram = 90.0,
+        max_cpu = 90.0,
+        max_gpu = 90.0,
+        selected_gpu = 0,
+        job_timeout = 30
+    )

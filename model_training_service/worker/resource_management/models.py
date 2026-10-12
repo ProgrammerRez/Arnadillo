@@ -1,0 +1,13 @@
+from time import time
+from pydantic import BaseModel
+from typing import Tuple, Dict, Any, Optional
+
+# This model is used to describe a Job
+class Job(BaseModel):
+    StartTime: time.time = time.time()
+    EstimatedResources: Dict[str, Any]
+    DataParameters: Optional[Dict[str, Any]] = None
+    TrainingParameters: Optional[Dict[str, Any]] = None
+    EvalParameters: Optional[Dict[str, Any]] = None
+    DoOverParameters: Optional[Dict[str, Any]] = None
+
