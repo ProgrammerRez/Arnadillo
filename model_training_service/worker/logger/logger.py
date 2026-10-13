@@ -1,8 +1,9 @@
-from dotenv import load_dotenv
-import logging.config
+import json  # noqa: EXE002
 import logging
-import json
+import logging.config
 import os
+
+from dotenv import load_dotenv
 
 # Loading Environment Variables
 load_dotenv(".env")
@@ -13,11 +14,12 @@ try:
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         config = json.load(f)
         logging.config.dictConfig(config)
-except json.JSONDecodeError as e:
+except json.JSONDecodeError:
     print("[ERROR]: Logging is disabled due to config issues")
 
 # Setting Up the logger objects for importing
 main_logger: logging.Logger = logging.getLogger("main")
 rm_logger: logging.Logger = logging.getLogger("resource_management")
+test_logger: logging.Logger = logging.getLogger("test_suite")
 
 

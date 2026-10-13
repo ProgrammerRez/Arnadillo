@@ -5,26 +5,29 @@
 4. Says yes or no to incoming jobs
 5. So more or less of a dynamic decision system
 
-'''
+'''  # noqa: EXE002
 
-from .models import Job
+from datetime import datetime
 import asyncio
+import os
 import time
+from typing import Any
+
 import GPUtil
 import psutil
-from typing import Optional, Any, Dict, Tuple, List
 from dotenv import load_dotenv
 from logger import rm_logger as log
-import os
+
+from models import Job
 
 load_dotenv(".env")
 
 # Loading the ENV VARS
 try:
-    SAFE_JOBS = int(os.getenv("SAFE_JOBS", 1))
-    MAX_JOBS = int(os.getenv("MAX_JOBS", 3))
-    SAFE_GPU_LIMIT = float(os.getenv("SAFE_GPU_LIMIT", 400.0))
-except Exception as e:
+    SAFE_JOBS = int(os.getenv("SAFE_JOBS", 1))  # noqa: PLW1508
+    MAX_JOBS = int(os.getenv("MAX_JOBS", 3))  # noqa: PLW1508
+    SAFE_GPU_LIMIT = float(os.getenv("SAFE_GPU_LIMIT", 400.0))  # noqa: PLW1508
+except Exception as e:  # noqa: BLE001
     log.error(f"Unable to load Environment Varaiables: {e}")
 
 log.info("Loaded Environment Variables")
@@ -45,23 +48,23 @@ class SystemResourcesManager:
         # Managing GPU's
         self.available_gpus = GPUtil.getGPUs()
         self.stats: dict[Any, dict[str, Any]] = self.gpu_stats()
-        self.selected_gpu: Optional[int] = self.stats[selected_gpu] 
+        self.selected_gpu: int | None = self.stats[selected_gpu] 
 
         # Job Timeout Limit
         self.job_timeout = job_timeout
 
         # Telemettery for `stuck` jobs
-        self.active_jobs: List[Job] = {}
+        self.active_jobs: dict[int, dict[str, Any]] = {}
         self.lock = asyncio.Lock()
 
         # Background Task Handling
-        self._monitor_task: Optional[asyncio.Task] = None 
+        self._monitor_task: asyncio.Task | None = None 
 
         log.info("Initialized the System Resource Manager")
 
-    def gpu_stats(self) -> dict[Any, dict[str, Any]]:
+    def gpu_stats(self) -> dict[int, dict[str, Any]]:
         """This function skims the available gpu list and provides details based on the gpu"""
-        stats: dict[Any, dict[str, Any]] = {}
+        stats: dict[int, dict[str, Any]] = {}
         for gpu in self.available_gpus:
             stats[gpu.id] = {
                 "name": gpu.name,
@@ -76,7 +79,7 @@ class SystemResourcesManager:
 
     async def start (self) -> None:
         """Starts the background cleaning task"""
-        self._monitor_task = asyncio.create_task(self._background_monitoring_loop)
+        self._monitor_task = asyncio.create_task(self._background_monitoring_loop())
         log.info("[ResourceManager] Started background monitoring and cleanup loop.")
 
     async def stop (self) -> None:
@@ -87,7 +90,7 @@ class SystemResourcesManager:
                 await self._monitor_task
             except asyncio.CancelledError:
                 log.info("[Resource Manager] Stopped background loop")
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001
                 log.error(f"Unexpected Error Occurred when closing background loop: {e}")
 
     # This is the background monitoring loop
@@ -103,17 +106,20 @@ class SystemResourcesManager:
                 self.current_gpu_percent: float = self.selected_gpu["utilization"]
 
                 async with self.lock:
-                    current_time: float = time.time()
-                    stuck_jobs: list[str] = []
-                    for job_id, meta in self.active_jobs.items():
-                        elapsed_time = current_time - meta["start_time"]
-                        if elapsed_time > self.job_timeout:
-                            stuck_jobs.append(job_id)
-                
-                    for job_id in stuck_jobs:
-                        log.info(f"[Resource Manager] Warning: Job ID {job_id} exceeded")
-                        del self.active_jobs[job_id]
-            except Exception as e:
+                    current_time: datetime = datetime.now()
+                    stuck_jobs: list[int] = []
+                    for id, job in self.active_jobs.items():
+                        start_time: datetime = job.get("StartTime")
+                        if start_time:
+                            elapsed_time: float = (current_time - start_time).total_seconds()
+                            if elapsed_time > self.job_timeout:
+                                stuck_jobs.append(id)
+                        else:
+                            log.error(f"No Start Time Added for job id: {id}")
+                    for id in stuck_jobs:
+                        log.info(f"[Resource Manager] Warning: Job ID {id} exceeded")
+                        del self.active_jobs[id]
+            except Exception as e:  # noqa: BLE001
                 log.error(f"[Resource Manager] Error in Monitor loop: {e}")
 
             await asyncio.sleep(3.0)        
@@ -128,8 +134,11 @@ class SystemResourcesManager:
             log.error("Empty Training Parameters Provided")
             return None
 
-        model_type: dict[str, Any] | str = training_params.get("mdoel_type", "traditional")
+        model_type: dict[str, Any] | str = training_params.get("model_type", "traditional")
         model_params: dict[str, Any] = training_params.get("model_params", {})
+
+        if model_params == {}:
+            log.warning("No Training Parameters Provided for a Finetuned Pipeline")
 
         estimated_ram_mb = 20.0
         estimated_vram_mb = 20.0
@@ -142,15 +151,17 @@ class SystemResourcesManager:
             n_estimators = model_params.get("n_estimators", 10)
 
             estimated_ram_mb = 200.0 + (limit + 0.005) + (n_estimators * 5.0)
-            estimated_cpu_load = min(85.0, 20.0 + (max_iter * 0.2) + (n_estimators * 1.5))
+            estimated_cpu_load: float = min(85.0, 20.0 + (max_iter * 0.2) + (n_estimators * 1.5))
 
         elif model_type == "deep":
             # Using Deep Learning Factors like architecture layers, neuorns and batch sizes
             layers = model_params.get("layers", []) 
-            total_neurons += [layer[1] for layer in layers]
+            total_neurons = 0
+            for layer in layers:
+                total_neurons += layer[1]
             batch_size = model_params.get("batch_size", 32)
 
-            estimated_ram_mb = 800.0 + (total_neurons * 2.5)
+            estimated_ram_mb: float | Any = 800.0 + (total_neurons * 2.5)
             estimated_vram_mb = 500.0 + (total_neurons * batch_size * 0.2)
             estimated_cpu_load = 50.0
 
@@ -162,16 +173,17 @@ class SystemResourcesManager:
 
 
     # This function accepts a Job
-    async def can_accpet_job(self, job: Job) -> Tuple[bool, str]:
+    async def can_accpet_job(self, job: Job) -> tuple[bool, str]:
 
         log.info("Checking for available system resources")
 
         # Just doing a check and hoping it doesn't mess up any test or create bugs
-        training_params: dict[str, Any] | None = job.TrainingParameters
+        training_params: dict[str, Any] = job.TrainingParameters
 
-        if training_params == None:
+        if len(training_params) == 0:
             log.error("Empty Training Parameters Provided")
-            return None
+            return False, "Empty Training Parameters Provided"
+
 
         # Check Avaialable Resources
         if self.current_ram_percent >= self.max_ram:
@@ -186,8 +198,9 @@ class SystemResourcesManager:
             log.error(f"GPU utilization is too High: {self.current_gpu_percent}")
             return False, f"GPU utilization is too High: {self.current_gpu_percent}"
 
+    
         # Estimate for Resources Required
-        estimate: dict[str, float | Any] | None = self.estimate_job_resources(training_params)
+        estimate: dict[str, float | Any] | None = self.estimate_job_resources(job)
 
         async with self.lock:
             activte_count: int = len(self.active_jobs)
@@ -205,15 +218,23 @@ class SystemResourcesManager:
         return True, "Approved"
     
     # Registers a job into the active tracking
-    async def register_job_start(self, job_id: int) -> None:
+    async def register_job_start(self, job_id: int, job: Job) -> None:
         log.info("Registering for Job Start")
         try:
             async with self.lock:
-                for job in self.active_jobs:
-                    if job.ID == job_id:
-                        job.StartTime = time.time()
-                        job.EstimatedResources = self.estimate_job_resources(job.TrainingParameters)
-        except Exception as e:
+
+                estimate: dict[str, float | Any] | None = self.estimate_job_resources(job)
+                
+                self.active_jobs[job_id] = {
+                    "ID": job_id,
+                    "StartTime": datetime.now(),
+                    "EstimatedResources": estimate,
+                    "DataParameters": job.DataParameters,
+                    "Training_Parameters": job.TrainingParameters,
+                    "EvalParameters": job.EvalParameters,
+                    "DoOverParameters": job.DoOverParameters
+                }
+        except Exception as e:  # noqa: BLE001
             log.error(f"Unexpected error occurred when starting job: {e}")
         
         finally:
@@ -222,14 +243,14 @@ class SystemResourcesManager:
     
     # Registers Job Completion and Removes the job from active tracking
     async def register_job_completion(self, job_id :int) -> None:
-        log.Info("Completing / Cancelling Job")
+        log.info("Completing / Cancelling Job")
         try:
             async with self.lock:
-                if str(job_id) in self.active_jobs:
-                    for job in self.active_jobs: 
-                        if job.ID == job_id:
-                            del self.active_jobs[job]
-        except Exception as e:
+                if job_id in self.active_jobs.keys():
+                    for id, _ in self.active_jobs.items(): 
+                        if id == job_id:
+                            del self.active_jobs[id]
+        except Exception as e:  # noqa: BLE001
             log.error(f"Unexpected Error Occurred when stopping job: {e}")
         finally:
             log.info("Job Stopped Successfully")

@@ -6,7 +6,12 @@
         },
 
         "resource_management_format": {
-            "format": "System Resources Management - %(asctime)s - %(name)s - %(levelname)s - %(message)s"}
+            "format": "System Resources Management - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        },
+
+        "test_suite":{
+            "format": "Test Suite - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        }
     },
     "handlers": {
         "console": {
@@ -22,6 +27,12 @@
             "class": "logging.FileHandler",
             "filename": "logs.txt",
             "formatter": "resource_management_format"
+        },
+
+        "test_suite_file": {
+            "class": "logging.FileHandler",
+            "filename": "test_logs.txt",
+            "formatter": "resource_management_format"
         }
     },
     "loggers": {
@@ -34,6 +45,12 @@
             "level": "INFO",
             "handlers": ["resource_management_file"],
             "propagate": true
+        },
+
+        "test_suite": {
+            "level": "INFO",
+            "handlers": ["test_suite_file"],
+            "propagate": false
         }
     }
 }

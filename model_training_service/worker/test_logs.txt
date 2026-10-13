@@ -1,0 +1,3 @@
+System Resources Management - 2026-10-13 16:36:21,680 - test_suite - INFO - Setting up the test cases and the main object instance
+System Resources Management - 2026-10-13 16:36:21,693 - test_suite - INFO - Estimation stats function has been tested: {'estimated_ram_mb': 1250.005, 'estimated_vram_mb': 20.0, 'estimated_cpu_load': 85.0}
+System Resources Management - 2026-10-13 16:36:21,693 - test_suite - INFO - GPU stats function has been tested: {0: {'name': 'NVIDIA GeForce GTX 960M', 'utilization': 0.0, 'memory_usage': 4.0, 'total_memory': 2004.0, 'temp': 46.0}}
