@@ -44,7 +44,7 @@ type DataParameters struct{
 	NumericalOperations	map[string]string	`json:"num_ops"`		//The operations for preprocessing numerical data in the preprocessing pipeline
 	ObjectOperations	map[string]string	`json:"cat_ops"`		//The operations for preprocessing categorical data in the preprocessing pipeline
 	ID					int					`json:"id"`				// `csv_id` of the object from `/session` endpoint in the endpoint
-	TestSplit			float32				`json:"test_split"`		// The ratio of test to train data
+	TestSplit			float64				`json:"test_split"`		// The ratio of test to train data
 }
 
 // Training Parameters Struct for the Model Training

@@ -9,7 +9,11 @@
             "format": "System Resources Management - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
         },
 
-        "test_suite":{
+        "data_preprocessor_format": {
+            "format": "Data Preprocessing Pipeline - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        },
+
+        "test_suite_format":{
             "format": "Test Suite - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
         }
     },
@@ -28,11 +32,15 @@
             "filename": "logs.txt",
             "formatter": "resource_management_format"
         },
-
+        "data_preprocessor_file":{
+            "class": "logging.FileHandler",
+            "filename": "logs.txt",
+            "formatter": "data_preprocessor_format"
+        },
         "test_suite_file": {
             "class": "logging.FileHandler",
             "filename": "test_logs.txt",
-            "formatter": "resource_management_format"
+            "formatter": "test_suite_format"
         }
     },
     "loggers": {
@@ -46,7 +54,11 @@
             "handlers": ["resource_management_file"],
             "propagate": true
         },
-
+        "data_preprocessor":{
+            "level": "INFO",
+            "handlers": ["data_preprocessor_file"],
+            "propagate":true
+        },
         "test_suite": {
             "level": "INFO",
             "handlers": ["test_suite_file"],

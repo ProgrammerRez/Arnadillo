@@ -335,3 +335,19 @@ System Resources Management - 2026-10-16 19:48:39,755 - resource_management - IN
 System Resources Management - 2026-10-16 19:48:39,756 - resource_management - INFO - Completing / Cancelling Job
 System Resources Management - 2026-10-16 19:48:39,756 - resource_management - ERROR - Unexpected Error Occurred when stopping job: dictionary changed size during iteration
 System Resources Management - 2026-10-16 19:48:39,757 - resource_management - INFO - Job Stopped Successfully
+System Resources Management - 2026-10-16 20:19:07,180 - resource_management - INFO - Loaded Environment Variables
+System Resources Management - 2026-10-16 20:19:07,196 - resource_management - INFO - Retrieved GPU Info
+System Resources Management - 2026-10-16 20:19:07,197 - resource_management - INFO - Initialized the System Resource Manager
+System Resources Management - 2026-10-16 20:19:07,200 - resource_management - INFO - [ResourceManager] Started background monitoring and cleanup loop.
+System Resources Management - 2026-10-16 20:19:07,200 - resource_management - INFO - Checking for available system resources
+System Resources Management - 2026-10-16 20:19:07,200 - resource_management - INFO - Job Approved
+System Resources Management - 2026-10-16 20:19:07,200 - resource_management - INFO - Registering for Job Start
+System Resources Management - 2026-10-16 20:19:07,200 - resource_management - INFO - Job Registered
+System Resources Management - 2026-10-16 20:19:07,201 - resource_management - INFO - [Resource Manager] Warning: Job ID 1 exceeded
+System Resources Management - 2026-10-16 20:19:11,204 - resource_management - INFO - [Resource Manager] Stopped background loop
+System Resources Management - 2026-10-16 20:19:11,212 - resource_management - INFO - Retrieved GPU Info
+System Resources Management - 2026-10-16 20:19:11,214 - resource_management - INFO - Registering for Job Start
+System Resources Management - 2026-10-16 20:19:11,215 - resource_management - INFO - Job Registered
+System Resources Management - 2026-10-16 20:19:11,215 - resource_management - INFO - Completing / Cancelling Job
+System Resources Management - 2026-10-16 20:19:11,215 - resource_management - ERROR - Unexpected Error Occurred when stopping job: dictionary changed size during iteration
+System Resources Management - 2026-10-16 20:19:11,215 - resource_management - INFO - Job Stopped Successfully

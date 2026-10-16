@@ -12,3 +12,16 @@ class Job(BaseModel):
     EvalParameters: Optional[Dict[str, Any]] = None
     DoOverParameters: Optional[Dict[str, Any]] = None
 
+# This Model is for the Data Parameters
+class DataParams(BaseModel):
+    NumericalColumns:    Optional[list[str]] = None
+    CategoricalColumns: Optional[list[str]] = None
+    TargetLabel: Optional[str] = None
+    ColumnList: Optional[list[str]] = None
+    Data: Optional[list[list[str]]] = None
+    NumericalOperations: Optional[Dict[str, str]] = None
+    CategoricalOperations: Optional[Dict[str, str]] = None
+    ID: int
+    TestSplit: float
+
+

@@ -1,5 +1,5 @@
-System Resources Management - 2026-10-16 19:48:35,718 - test_suite - INFO - Setting up the test cases and the main object instance
-System Resources Management - 2026-10-16 19:48:39,738 - test_suite - INFO - Background Loop Testing Successful
-System Resources Management - 2026-10-16 19:48:39,743 - test_suite - INFO - Estimation stats function has been tested: {'estimated_ram_mb': 1250.005, 'estimated_vram_mb': 20.0, 'estimated_cpu_load': 85.0}
-System Resources Management - 2026-10-16 19:48:39,750 - test_suite - INFO - GPU stats function has been tested: {0: {'name': 'NVIDIA GeForce GTX 960M', 'utilization': 0.0, 'memory_usage': 4.0, 'total_memory': 2004.0, 'temp': 48.0}}
-System Resources Management - 2026-10-16 19:48:39,757 - test_suite - INFO - Job Start and Completion Testing Successfully Completed
+Test Suite - 2026-10-16 20:19:07,183 - test_suite - INFO - Setting up the test cases and the main object instance
+Test Suite - 2026-10-16 20:19:11,205 - test_suite - INFO - Background Loop Testing Successful
+Test Suite - 2026-10-16 20:19:11,210 - test_suite - INFO - Estimation stats function has been tested: {'estimated_ram_mb': 1250.005, 'estimated_vram_mb': 20.0, 'estimated_cpu_load': 85.0}
+Test Suite - 2026-10-16 20:19:11,212 - test_suite - INFO - GPU stats function has been tested: {0: {'name': 'NVIDIA GeForce GTX 960M', 'utilization': 0.0, 'memory_usage': 4.0, 'total_memory': 2004.0, 'temp': 45.0}}
+Test Suite - 2026-10-16 20:19:11,215 - test_suite - INFO - Job Start and Completion Testing Successfully Completed

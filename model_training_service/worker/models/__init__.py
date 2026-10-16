@@ -1,1 +1,1 @@
-from .models import Job
+from .models import Job, DataParams
