@@ -47,8 +47,13 @@ class SystemResourcesManager:
 
         # Managing GPU's
         self.available_gpus = GPUtil.getGPUs()
-        self.stats: dict[Any, dict[str, Any]] = self.gpu_stats()
+        self.stats: dict[int, dict[str, Any]] = self.gpu_stats()
         self.selected_gpu: int | None = self.stats[selected_gpu] 
+
+        # Gathering Usage Data
+        self.current_ram_percent: float = psutil.virtual_memory().percent
+        self.current_cpu_percent: float = psutil.cpu_percent(interval=None)
+        self.current_gpu_percent: float = self.selected_gpu["utilization"] if len(self.available_gpus) > 0 else 0.0
 
         # Job Timeout Limit
         self.job_timeout = job_timeout
@@ -99,12 +104,11 @@ class SystemResourcesManager:
         1. Monitors System Resources at Regular Intervals
         2. Cleans Stuck Jobs
         """
+        self.current_ram_percent: float = psutil.virtual_memory().percent
+        self.current_cpu_percent: float = psutil.cpu_percent(interval=None)
+        self.current_gpu_percent: float = self.selected_gpu["utilization"] if len(self.available_gpus) > 0 else 0.0
         while True:
             try:
-                self.current_ram_percent: float = psutil.virtual_memory().percent
-                self.current_cpu_percent: float = psutil.cpu_percent(interval=None)
-                self.current_gpu_percent: float = self.selected_gpu["utilization"]
-
                 async with self.lock:
                     current_time: datetime = datetime.now()
                     stuck_jobs: list[int] = []
@@ -183,7 +187,6 @@ class SystemResourcesManager:
         if len(training_params) == 0:
             log.error("Empty Training Parameters Provided")
             return False, "Empty Training Parameters Provided"
-
 
         # Check Avaialable Resources
         if self.current_ram_percent >= self.max_ram:
