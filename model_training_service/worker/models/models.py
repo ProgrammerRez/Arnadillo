@@ -19,8 +19,8 @@ class DataParams(BaseModel):
     TargetLabel: Optional[str] = None
     ColumnList: Optional[list[str]] = None
     Data: Optional[list[list[str]]] = None
-    NumericalOperations: Optional[Dict[str, str]] = None
-    CategoricalOperations: Optional[Dict[str, str]] = None
+    NumericalOperations: Optional[list[str]] = None
+    CategoricalOperations: Optional[Dict[str, list[str]]] = None
     ID: int
     TestSplit: float
 
