@@ -102,10 +102,13 @@ func (q *JobQeueu) GetJobs(filter int) ([]*Job, error) {
 // This function finds the very specific job requested
 func (q *JobQeueu) FindJob(id int, filter int) (*Job, error) {
 
+	// Mutex Locking
+	q.Mu.Lock()
+	defer q.Mu.Unlock()
+
 	log.Info(fmt.Sprintf("Finding Job with id: %d and filter %d", id, filter))
 	// First Decide the filter level
 	var level []*Job
-	var searched_job *Job
 	switch filter {
 	case 0:
 		level = q.LowPriority
@@ -120,11 +123,10 @@ func (q *JobQeueu) FindJob(id int, filter int) (*Job, error) {
 	// Then filter out the Job Pointer
 	for _, job := range level {
 		if job.ID == id {
-			searched_job = job
-		} else {
-			log.Error("Job Not Found")
-			return nil, errors.New("Job Not Found")
+			return job, nil
 		}
 	}
-	return searched_job, nil
+
+	log.Error(fmt.Sprintf("Job with ID %d not found", id))
+	return nil, fmt.Errorf("Job with ID %d not found", id)
 }

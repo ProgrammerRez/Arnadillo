@@ -211,7 +211,7 @@ func (mts *ModelTrainingService) setDataOps(w http.ResponseWriter, r *http.Reque
 
 	num_ops_values := r.FormValue("num_ops")
 	cat_ops_values := r.FormValue("cat_ops")
-
+	
 	// Checking for Null Values
 	if strings.TrimSpace(num_ops_values) == ""{
 		log.Error("Numerical Ops is Empty")
@@ -219,11 +219,13 @@ func (mts *ModelTrainingService) setDataOps(w http.ResponseWriter, r *http.Reque
 		return
 	}
 
+
 	if strings.TrimSpace(cat_ops_values) == ""{
 		log.Error("Categorical Ops is Empty")
 		http.Error(w, "Categorical Ops is Empty", http.StatusBadRequest)
 		return
 	}
+
 
 	if strings.TrimSpace(id) == ""{
 		log.Error("ID is Empty")
@@ -261,6 +263,7 @@ func (mts *ModelTrainingService) setDataOps(w http.ResponseWriter, r *http.Reque
 	if err != nil{
 		log.Error("Unable to parse file_id")
 		http.Error(w, "Unable to parse file_id", http.StatusBadRequest)
+		return
 	}
 
 	var num_ops []string
@@ -288,11 +291,24 @@ func (mts *ModelTrainingService) setDataOps(w http.ResponseWriter, r *http.Reque
 		return
 	}
 
+	fileIdx := int(file_id_int)
+	if fileIdx < 0  || fileIdx >= len(job_pointer.DataParams){
+		log.Error("File ID or index out of range")
+		http.Error(w, "File ID or index out of range", http.StatusInternalServerError)
+		return
+	}
+
 	// Now Setting the Ops
-	job_pointer.DataParams[int(file_id_int)].SetOps(num_ops, cat_ops)
+	err = job_pointer.DataParams[int(file_id_int)].SetOps(num_ops, cat_ops);
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 
-	log.Error("Hopefully Job Data Ops are Set as Operation was completed Successfully")
+	log.Info("Hopefully Job Data Ops are Set as Operation was completed Successfully")
 
+	w.Write([]byte("Worked :>"))
 }
 
 

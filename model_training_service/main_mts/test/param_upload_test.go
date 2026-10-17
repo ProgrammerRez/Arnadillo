@@ -169,16 +169,89 @@ func TestGetEndpoint(t *testing.T){
 	}
 
 	// // Set Ops Tests
-	// set_ops_test := map[string]any{
-	// 	"id": 1,
-	// 	"file_id": 0,
-	// 	"filter": 1,
-	// 	"num_ops_values": []string{"standard_scaler"},
-	// 	"cat_ops_values": map[string][]string{
-	// 		"col1": []string{"label_encoding"},
-	// 		"col2": []string{"one_hot_encoding"},
-	// 	},
-	// }
+	set_ops_test := map[string]any{
+		"id": 1,
+		"file_id": 0,
+		"filter": 1,
+		"num_ops": []string{"standard_scaler"},
+		"cat_ops": map[string][]string{
+			"col1": []string{"label_encoding"},
+			"col2": []string{"one_hot_encoding"},
+		},
+	}
+
+	ops_result_struct := []jobs.Job{
+		{
+			Status: "queued",
+			ID: 1,
+			DataParams: []jobs.DataParameters{
+				{
+					Data: [][]string{
+							{"row1_col1", "row1_col2"},
+							{"row2_col1", "row2_col2"},
+							},
+					ColumnList: []string{"col1", "col2"},
+					TargetLabel: "target",
+					NumericalOperations: []string{"standard_scaler"},
+					ObjectOperations: map[string][]string{
+						"col1": []string{"label_encoding"},
+						"col2": []string{"one_hot_encoding"},
+					},
+				},	
+			},
+			TrainingParams: jobs.TrainingParameters{
+				ModelType: "traditional",
+				ModelName: "LogisticRegression",
+				ModelParams: map[string]any{
+					"limit":1000.0, 
+				},
+			},
+			EvalParams: jobs.EvaluationParameters{
+				ProblemType: "regression",
+				TestsRequired: map[string]float64{
+					"r2_score": 0.98,
+					"r2_scor": 0.98,
+					"r2_sco": 0.98,				
+				},
+			},
+			DoOverParams: jobs.DoOverParameters{
+				FallbackParams: map[string]any{
+					"jobs": -1.0,
+				},
+				MaxRetries: 3,
+				MaximumDeviance: 0.5,
+			},
+		},
+
+		{
+			Status: "queued",
+			ID: 2,
+			DataParams: nil,
+			TrainingParams: jobs.TrainingParameters{
+				ModelType: "traditional",
+				ModelName: "LogisticRegression",
+				ModelParams: map[string]any{
+					"limit":1000.0, 
+				},
+			},
+			EvalParams: jobs.EvaluationParameters{
+				ProblemType: "regression",
+				TestsRequired: map[string]float64{
+					"r2_score": 0.98,
+					"r2_scor": 0.98,
+					"r2_sco": 0.98,				
+				},
+			},
+			DoOverParams: jobs.DoOverParameters{
+				FallbackParams: map[string]any{
+					"jobs": -1.0,
+				},
+				MaxRetries: 3,
+				MaximumDeviance: 0.5,
+			},
+		},
+	}
+
 
 	// Creating Test Scenarios
 
@@ -207,6 +280,24 @@ func TestGetEndpoint(t *testing.T){
 			RequestType: "POST",
 			Input: get_jobs_filter,
 			ExpectedOutput: working_result_slice,
+			ExpectedError: false,
+		},
+
+		{
+			Name: "Set Ops Struct",
+			Endpoint: "/set_ops",
+			RequestType: "POST",
+			Input: set_ops_test,
+			ExpectedOutput: "Worked :>",
+			ExpectedError: false,
+		},
+
+		{
+			Name: "Get Job Struct",
+			Endpoint: "/get_jobs",
+			RequestType: "POST",
+			Input: get_jobs_filter,
+			ExpectedOutput: ops_result_struct,
 			ExpectedError: false,
 		},
 	}

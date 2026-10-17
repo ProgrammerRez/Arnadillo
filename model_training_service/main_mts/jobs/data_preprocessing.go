@@ -131,6 +131,10 @@ func (dp *DataParameters) SetOps(num_ops []string, cat_ops map[string][]string) 
 	// Simply appending the numerical operations
 	dp.NumericalOperations = append(dp.NumericalOperations, num_ops...)
 	
+	// Initializng the map to avoid nil map pointer error
+	if dp.ObjectOperations == nil {
+        dp.ObjectOperations = make(map[string][]string)
+    }
 	// Appending to existing Operations
 	for col, ops := range cat_ops{
 		if !slices.Contains(dp.ColumnList, col){

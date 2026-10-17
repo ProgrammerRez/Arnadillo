@@ -233,3 +233,209 @@ INFO: 2026/10/18 00:55:45.629865 logger.go:85: Starting POST Request on Endpoint
 ERROR: 2026/10/18 00:55:45.632719 logger.go:99: invalid character 'W' looking for beginning of value
 INFO: 2026/10/18 00:55:45.632807 logger.go:85: Retrieving Test Data
 INFO: 2026/10/18 00:55:45.632877 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:05:05.750697 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:05:05.750873 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:05:05.750956 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:05:05.754609 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:05:05.754727 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:05:05.754788 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:05:05.758035 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:05:05.758133 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:05:05.758181 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:05:05.758995 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:05:05.759066 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:05:05.759409 logger.go:99: invalid character 'N' looking for beginning of value
+ERROR: 2026/10/18 01:05:05.759466 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:05:05.759558 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:05:05.759617 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:05:05.760105 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:08:05.174828 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:08:05.175004 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:08:05.175081 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:08:05.178343 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:08:05.178460 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:08:05.178518 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:08:05.181588 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:08:05.181831 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:08:05.181933 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:08:05.182972 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:08:05.183056 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:08:05.183503 logger.go:99: invalid character 'u' looking for beginning of value
+ERROR: 2026/10/18 01:08:05.183564 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:08:05.183760 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:08:05.183842 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:08:05.184419 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:09:43.271189 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:09:43.271418 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:09:43.271461 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:09:43.274525 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:09:43.274653 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:09:43.274733 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:09:43.278068 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:09:43.278196 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:09:43.278258 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:09:43.279221 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:09:43.279302 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:09:43.279750 logger.go:99: invalid character 'N' looking for beginning of value
+ERROR: 2026/10/18 01:09:43.279802 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:09:43.279892 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:09:43.279934 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:09:43.280515 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:10:13.510358 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:10:13.510539 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:13.510598 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:10:13.514438 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:10:13.514666 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:13.514728 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:10:13.519192 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:10:13.519344 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:13.519395 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:10:13.520440 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:13.520507 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:10:13.521121 logger.go:99: invalid character 'N' looking for beginning of value
+ERROR: 2026/10/18 01:10:13.521192 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:10:13.521321 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:13.521379 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:10:13.522097 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:10:49.413748 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:10:49.413988 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:49.414062 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:10:49.417626 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:10:49.417781 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:49.417839 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:10:49.421705 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:10:49.421880 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:49.421957 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:10:49.423045 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:49.423125 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:10:49.423797 logger.go:99: invalid character 'J' looking for beginning of value
+ERROR: 2026/10/18 01:10:49.423879 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:10:49.424046 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:10:49.424118 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:10:49.424755 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:16:13.966483 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:16:13.966630 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:13.966698 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:16:13.969814 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:16:13.969945 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:13.969999 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:16:13.973444 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:16:13.973588 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:13.973655 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:16:13.974690 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:13.974798 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:16:13.975661 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+ERROR: 2026/10/18 01:16:13.975734 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+INFO: 2026/10/18 01:16:13.975857 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:13.975915 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:16:13.977297 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:16:54.185741 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:16:54.186043 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:54.186164 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:16:54.190323 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:16:54.190463 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:54.190516 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:16:54.194316 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:16:54.194474 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:54.194534 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:16:54.195601 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:54.195712 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:16:54.196433 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+ERROR: 2026/10/18 01:16:54.196492 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+INFO: 2026/10/18 01:16:54.196582 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:16:54.196631 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:16:54.197629 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:18:48.181934 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:18:48.182122 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:18:48.182188 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:18:48.185451 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:18:48.185565 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:18:48.185631 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:18:48.188464 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:18:48.188594 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:18:48.188650 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:18:48.189449 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:18:48.189505 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:18:48.190073 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+ERROR: 2026/10/18 01:18:48.190167 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+INFO: 2026/10/18 01:18:48.190267 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:18:48.190306 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:18:48.191269 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:19:30.145293 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:19:30.145508 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:19:30.145566 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:19:30.149529 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:19:30.149664 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:19:30.149730 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:19:30.152694 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:19:30.152792 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:19:30.152880 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:19:30.153865 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:19:30.153927 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:19:30.154567 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+ERROR: 2026/10/18 01:19:30.154645 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+INFO: 2026/10/18 01:19:30.154746 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:19:30.154802 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:19:30.155764 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:23:48.307018 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:23:48.307232 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:23:48.307276 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:23:48.310518 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:23:48.310639 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:23:48.310699 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:23:48.314038 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:23:48.314236 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:23:48.314302 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:23:48.315769 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:23:48.316007 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:23:48.317318 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+ERROR: 2026/10/18 01:23:48.317636 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+INFO: 2026/10/18 01:23:48.318111 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:23:48.318210 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:23:48.319594 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:24:48.282812 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:24:48.283033 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:24:48.283125 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:24:48.287150 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:24:48.287249 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:24:48.287294 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:24:48.289220 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:24:48.289316 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:24:48.289372 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:24:48.290187 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:24:48.290391 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:24:48.290451 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:24:48.291350 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+ERROR: 2026/10/18 01:24:48.291405 logger.go:99: Post "http://localhost:8001/set_ops": EOF
+INFO: 2026/10/18 01:24:48.291536 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:24:48.291598 logger.go:85: Starting POST Request on Endpoint /get_jobs
+ERROR: 2026/10/18 01:24:48.292690 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:27:48.409797 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:27:48.410024 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:27:48.410089 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:27:48.413678 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:27:48.413798 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:27:48.413856 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:27:48.416877 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:27:48.417015 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:27:48.417075 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:27:48.418074 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:27:48.418180 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:27:48.419053 logger.go:99: unexpected end of JSON input
+ERROR: 2026/10/18 01:27:48.419146 logger.go:99: Result Mismatch
+INFO: 2026/10/18 01:27:48.419272 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:27:48.419334 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:30:20.509332 logger.go:85: Testing the Add Job Handler
+INFO: 2026/10/18 01:30:20.509494 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:30:20.509559 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:30:20.512919 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:30:20.513035 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:30:20.513089 logger.go:85: Starting POST Request on Endpoint /data_params
+ERROR: 2026/10/18 01:30:20.515993 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:30:20.516102 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:30:20.516154 logger.go:85: Starting POST Request on Endpoint /get_jobs
+INFO: 2026/10/18 01:30:20.517030 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:30:20.517092 logger.go:85: Starting POST Request on Endpoint /set_ops
+ERROR: 2026/10/18 01:30:20.517737 logger.go:99: invalid character 'W' looking for beginning of value
+INFO: 2026/10/18 01:30:20.517830 logger.go:85: Retrieving Test Data
+INFO: 2026/10/18 01:30:20.517884 logger.go:85: Starting POST Request on Endpoint /get_jobs
