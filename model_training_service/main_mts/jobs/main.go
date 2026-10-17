@@ -15,11 +15,11 @@ import (
 // 4. Just Making sure user understands everything
 
 // Let's start by initializing the Job Queue
-func InitializeQueue() *JobQeueu{
+func InitializeQueue() *JobQeueu {
 	log.Info("Initializing Job Queue")
 	return &JobQeueu{
-		LowPriority: []*Job{},
-		MehPriority: []*Job{},
+		LowPriority:  []*Job{},
+		MehPriority:  []*Job{},
 		HighPrioroty: []*Job{},
 	}
 }
@@ -31,59 +31,59 @@ func (queue *JobQeueu) CreateNewJob(
 	eval_params EvaluationParameters,
 	do_over_params DoOverParameters,
 	urgency int,
-	) error {
+) error {
 
-		// 	Locking Mutex to avoid race conditions
-		queue.Mu.Lock()
-		defer queue.Mu.Unlock()
+	// 	Locking Mutex to avoid race conditions
+	queue.Mu.Lock()
+	defer queue.Mu.Unlock()
 
-		log.Info("Creating New Job..... ")
+	log.Info("Creating New Job..... ")
 
-		job := &Job{
-			DataParams: data_params,
-			TrainingParams: training_params,
-			EvalParams: eval_params,
-			DoOverParams: do_over_params,
-			Status: JobQeued,
-		}
-		
-		// Increment for next job addition
-		queue.NextID++
-
-		// Set the id for the job (should be unique)
-		job.ID = queue.NextID
-
-		// Urgency Switch Logic
-		switch urgency {
-		case 0:
-			queue.LowPriority = append(queue.LowPriority, job)
-			log.Info("Queueing Job at Low Priority")
-		case 1:
-			queue.MehPriority = append(queue.MehPriority, job)
-			log.Info("Queueing Job at Meh Priority")
-		case 2:
-			queue.HighPrioroty = append(queue.HighPrioroty, job)
-			log.Info("Queueing Job at High Priority")
-		default:
-			log.Error("Unable to Assign Severity Level. Falling back to Meh Priority")
-			queue.MehPriority = append(queue.MehPriority, job)
-			log.Warn("Falling Back to Queueing Job at Meh Priority. No proper level provided")
-			return errors.New("Unable to Assign Severity Level. Falling back to Meh Priority")			
-		}
-
-		return nil
+	job := &Job{
+		DataParams:     data_params,
+		TrainingParams: training_params,
+		EvalParams:     eval_params,
+		DoOverParams:   do_over_params,
+		Status:         JobQeued,
 	}
 
+	// Increment for next job addition
+	queue.NextID++
+
+	// Set the id for the job (should be unique)
+	job.ID = queue.NextID
+
+	// Urgency Switch Logic
+	switch urgency {
+	case 0:
+		queue.LowPriority = append(queue.LowPriority, job)
+		log.Info("Queueing Job at Low Priority")
+	case 1:
+		queue.MehPriority = append(queue.MehPriority, job)
+		log.Info("Queueing Job at Meh Priority")
+	case 2:
+		queue.HighPrioroty = append(queue.HighPrioroty, job)
+		log.Info("Queueing Job at High Priority")
+	default:
+		log.Error("Unable to Assign Severity Level. Falling back to Meh Priority")
+		queue.MehPriority = append(queue.MehPriority, job)
+		log.Warn("Falling Back to Queueing Job at Meh Priority. No proper level provided")
+		return errors.New("Unable to Assign Severity Level. Falling back to Meh Priority")
+	}
+
+	return nil
+}
+
 // This function returns the job list based on set filter level
-func (q *JobQeueu) GetJobs(filter int32) ([]*Job, error){
+func (q *JobQeueu) GetJobs(filter int) ([]*Job, error) {
 	q.Mu.Lock()
 	defer q.Mu.Unlock()
-	
+
 	log.Info(fmt.Sprintf("Getting Jobs with filter: %d", filter))
-	
+
 	list := []*Job{}
 
-	switch filter{
+	switch filter {
 	case 0:
 		log.Info(fmt.Sprintf("List %v", q.LowPriority))
 		return q.LowPriority, nil
@@ -97,4 +97,34 @@ func (q *JobQeueu) GetJobs(filter int32) ([]*Job, error){
 		log.Error("Please provide proper filters")
 		return list, errors.New("Please provide proper filters")
 	}
+}
+
+// This function finds the very specific job requested
+func (q *JobQeueu) FindJob(id int, filter int) (*Job, error) {
+
+	log.Info(fmt.Sprintf("Finding Job with id: %d and filter %d", id, filter))
+	// First Decide the filter level
+	var level []*Job
+	var searched_job *Job
+	switch filter {
+	case 0:
+		level = q.LowPriority
+	case 1:
+		level = q.MehPriority
+	case 2:
+		level = q.HighPrioroty
+	default:
+		log.Error("Please Provide a Proper Filter")
+		return nil, errors.New("Please Provide a Proper Filter")
+	}
+	// Then filter out the Job Pointer
+	for _, job := range level {
+		if job.ID == id {
+			searched_job = job
+		} else {
+			log.Error("Job Not Found")
+			return nil, errors.New("Job Not Found")
+		}
+	}
+	return searched_job, nil
 }

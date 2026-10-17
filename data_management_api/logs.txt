@@ -46,3 +46,91 @@ INFO: 2026/10/11 13:14:12.856000 logger.go:83: Getting Data Objects
 INFO: 2026/10/11 13:14:12.856181 logger.go:83: Getting Stuff...
 INFO: 2026/10/11 13:14:45.743411 logger.go:83: Getting Data Objects
 INFO: 2026/10/11 13:14:45.743654 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 16:19:01.104428 logger.go:83: Starting the API
+INFO: 2026/10/17 16:19:01.109478 logger.go:83: Creating New Registry
+INFO: 2026/10/17 16:19:01.109535 logger.go:83: Creating New Session: session1
+INFO: 2026/10/17 16:19:01.109779 logger.go:83: New Data Management Service Created
+INFO: 2026/10/17 16:20:18.900211 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 16:20:18.900319 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 19:28:29.899955 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 19:28:29.900226 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 19:29:36.728736 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 19:29:36.729232 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 19:38:30.633326 logger.go:83: Starting the API
+INFO: 2026/10/17 19:38:30.633777 logger.go:83: Creating New Registry
+INFO: 2026/10/17 19:38:30.634099 logger.go:83: Creating New Session: session1
+INFO: 2026/10/17 19:38:30.634375 logger.go:83: New Data Management Service Created
+INFO: 2026/10/17 19:38:34.201330 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 19:38:34.201512 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 20:24:25.614037 logger.go:83: Starting the API
+INFO: 2026/10/17 20:24:25.614474 logger.go:83: Creating New Registry
+INFO: 2026/10/17 20:24:25.614789 logger.go:83: Creating New Session: session1
+INFO: 2026/10/17 20:24:25.615260 logger.go:83: New Data Management Service Created
+INFO: 2026/10/17 20:24:32.398150 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 20:24:32.398362 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 22:22:08.294201 logger.go:83: Starting the API
+INFO: 2026/10/17 22:22:08.294787 logger.go:83: Creating New Registry
+INFO: 2026/10/17 22:22:08.295070 logger.go:83: Creating New Session: session1
+INFO: 2026/10/17 22:22:08.295426 logger.go:83: New Data Management Service Created
+INFO: 2026/10/17 22:22:13.828073 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 22:22:13.828207 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 22:25:26.491544 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 22:25:26.491750 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 22:25:46.091277 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 22:25:46.091543 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 22:27:36.950178 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 22:27:36.950406 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 22:27:51.851659 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 22:27:51.851845 logger.go:83: Getting Stuff...
+INFO: 2026/10/17 22:31:11.789138 logger.go:83: Starting the API
+INFO: 2026/10/17 22:31:11.789543 logger.go:83: Creating New Registry
+INFO: 2026/10/17 22:31:11.789779 logger.go:83: Creating New Session: session1
+INFO: 2026/10/17 22:31:11.790163 logger.go:83: New Data Management Service Created
+INFO: 2026/10/17 23:56:37.195372 logger.go:83: Starting the API
+INFO: 2026/10/17 23:56:37.195498 logger.go:83: Creating New Registry
+INFO: 2026/10/17 23:56:37.195539 logger.go:83: Creating New Session: session1
+INFO: 2026/10/17 23:56:37.195616 logger.go:83: New Data Management Service Created
+INFO: 2026/10/17 23:56:45.931822 logger.go:83: Getting Data Objects
+INFO: 2026/10/17 23:56:45.932029 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:12:24.411271 logger.go:83: Starting the API
+INFO: 2026/10/18 00:12:24.411466 logger.go:83: Creating New Registry
+INFO: 2026/10/18 00:12:24.411508 logger.go:83: Creating New Session: session1
+INFO: 2026/10/18 00:12:24.411595 logger.go:83: New Data Management Service Created
+INFO: 2026/10/18 00:12:30.557305 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:12:30.557450 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:13:21.894789 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:13:21.894906 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:35:48.245779 logger.go:83: Starting the API
+INFO: 2026/10/18 00:35:48.245952 logger.go:83: Creating New Registry
+INFO: 2026/10/18 00:35:48.246067 logger.go:83: Creating New Session: session1
+INFO: 2026/10/18 00:35:48.246147 logger.go:83: New Data Management Service Created
+INFO: 2026/10/18 00:35:53.266560 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:35:53.266684 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:38:47.282801 logger.go:83: Starting the API
+INFO: 2026/10/18 00:38:47.282959 logger.go:83: Creating New Registry
+INFO: 2026/10/18 00:38:47.283062 logger.go:83: Creating New Session: session1
+INFO: 2026/10/18 00:38:47.283145 logger.go:83: New Data Management Service Created
+INFO: 2026/10/18 00:38:51.630479 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:38:51.630603 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:41:18.500114 logger.go:83: Starting the API
+INFO: 2026/10/18 00:41:18.500332 logger.go:83: Creating New Registry
+INFO: 2026/10/18 00:41:18.500385 logger.go:83: Creating New Session: session1
+INFO: 2026/10/18 00:41:18.500475 logger.go:83: New Data Management Service Created
+INFO: 2026/10/18 00:41:24.279506 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:41:24.279653 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:44:22.827645 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:44:22.827838 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:48:25.611602 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:48:25.611884 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:49:15.598632 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:49:15.598786 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:50:08.149480 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:50:08.149611 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:51:53.902443 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:51:53.902583 logger.go:83: Getting Stuff...
+INFO: 2026/10/18 00:55:40.827472 logger.go:83: Starting the API
+INFO: 2026/10/18 00:55:40.827656 logger.go:83: Creating New Registry
+INFO: 2026/10/18 00:55:40.827718 logger.go:83: Creating New Session: session1
+INFO: 2026/10/18 00:55:40.827825 logger.go:83: New Data Management Service Created
+INFO: 2026/10/18 00:55:45.631466 logger.go:83: Getting Data Objects
+INFO: 2026/10/18 00:55:45.631589 logger.go:83: Getting Stuff...

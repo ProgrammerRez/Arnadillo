@@ -1,131 +1,14 @@
-package main
+package main_test
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
-	"io"
 	"mts/jobs"
 	log "mts/logging"
 	"reflect"
 	"testing"
-
-	// "mts/jobs"
-	"net/http"
-	"net/url"
-	"strings"
+	"mts/utils"
 )
-
-// Struct for Testing
-type TestingStuct struct{
-	name 			string
-	endpoint 		string
-	requestType		string
-	expectedOutput	any
-	input 			map[string]any
-	expectedError	bool
-}
-
-const ENDPOINT_TEMPLATE string = "http://localhost:8001"
-
-// This function is for a POST request to any endpoint pointed
-func GetEndpoint(endpoint, request_type string, data map[string]any) (any, error){
-	
-	// Starting logging
-	log.SetLevel(log.InfoLevel)
-	log.Info("Retrieving Test Data")
-
-	// Checking Endpoint 
-	if strings.TrimSpace(endpoint) == ""{
-		log.Error("No Endpoint was Provided for Testing")
-		return nil, errors.New("No Endpoint was Provided for Testing")
-	}
-
-	final_url := ENDPOINT_TEMPLATE + endpoint
-
-	
-	// Checking and Routing for Request Type
-	if strings.TrimSpace(request_type) == ""{
-		log.Error("No Request Type Provided")
-		return  nil, errors.New("No Request Type Provided")
-	}
-	
-	switch request_type{
-	case "GET":
-		log.Info(fmt.Sprintf("Starting GET Request on Endpoint %s", endpoint))
-		resp, err := http.Get(final_url)
-		if err != nil{
-			log.Error(err.Error())
-			return nil, errors.New(err.Error())
-		}
-		defer resp.Body.Close()
-		
-		var incomingData map[string]any
-		body, err := io.ReadAll(resp.Body)
-		
-		if err != nil{
-			log.Error(err.Error())
-			return nil, errors.New(err.Error())
-		}
-		
-		err = json.Unmarshal(body, &incomingData)
-		if err != nil{
-			log.Error(err.Error())
-			return string(body), nil
-		}
-		return incomingData, nil
-		
-	case "POST":
-		log.Info(fmt.Sprintf("Starting POST Request on Endpoint %s", endpoint))
-		// Now Creating the form
-		if len(data) == 0{
-			log.Error("No Data Parameters Provided")
-			return nil, errors.New("No Data Parameters Provided")
-		}
-		form := url.Values{}
-
-		for key, val := range data{
-			switch v := val.(type){
-			case string:
-				form.Add(key, v)
-			default:
-				// Then Add as JSON string
-				data, err := json.Marshal(v)
-				if err != nil{
-					log.Error(fmt.Sprintf("Unable to Marshal data %v", v))
-					return nil, fmt.Errorf("Unable to Marshal data %v", v)
-				}
-				form.Add(key, string(data))
-			}
-		}
-		resp, err := http.PostForm(final_url, form)
-		if err != nil{
-			log.Error(err.Error())
-			return nil, errors.New(err.Error())
-		}
-		defer resp.Body.Close()
-
-		var incomingData any
-		body, err := io.ReadAll(resp.Body)
-		
-		if err != nil{
-			log.Error(err.Error())
-			return nil, errors.New(err.Error())
-		}
-
-		err = json.Unmarshal(body, &incomingData)
-		if err != nil{
-			log.Error(err.Error())
-			return string(body), nil
-		}
-
-		return incomingData, nil
-
-	default: 
-		log.Error("Method Not Supported")
-		return nil, errors.New("Method Not Supported")
-	}
-}
 
 
 // This function is for testing the Add Job Handler
@@ -139,34 +22,122 @@ func TestGetEndpoint(t *testing.T){
 
 	// Generating Valid Tests First
 
+	validDataMap := map[string]any{
+		"data": []any{
+			[]any{"row1_col1", "row1_col2"},
+			[]any{"row2_col1", "row2_col2"},
+		},
+		"column_list": []any{"col1", "col2"},
+	}
+
+	validRegistryMap := map[string]any{
+		"registry": []any{map[string]any{
+			"data": validDataMap,
+			"target_col": "target",
+			},
+		},
+	}
+
 	// Creating Working Struct
 	working_struct := map[string]any{
 		"name": "session1",
 		"urgency": 1,
-		"model_type": "traditional",
-		"model_name": "LogisticRegression",
-		"model_params": map[string]any{
-			"limit": 1000,
+		"data_params": validRegistryMap,
+		"train_params": map[string]any{
+			"model_type": "traditional",
+			"model_name": "LogisticRegression",
+			"model_params": map[string]any{
+				"limit": 1000,
+			},
 		},
-		"problem_type": "regression",
-		"tests_required": map[string]float64{
-			"r2_score": 0.98,
-			"r2_scor": 0.98,
-			"r2_sco": 0.98,
+		"eval_params": map[string]any{
+			"problem_type": "regression",
+			"tests_required": map[string]float64{
+				"r2_score": 0.98,
+				"r2_scor": 0.98,
+				"r2_sco": 0.98,
+			},
 		},
-		"max_retries": 3,
-		"max_deviance": 0.5,
-		"fallback_params": map[string]any{
-			"jobs": -1.0,
-		},
-
+		"do_over_params": map[string]any{		
+			"max_retries": 3,
+			"max_deviance": 0.5,
+			"fallback_params": map[string]any{
+				"jobs": -1.0,
+			},
+		}, 
 	}
+
+	api_struct := map[string]any{
+		"name": "session1",
+		"urgency": 1,
+		"data_params": map[string]any{},
+		"train_params": map[string]any{
+			"model_type": "traditional",
+			"model_name": "LogisticRegression",
+			"model_params": map[string]any{
+				"limit": 1000,
+			},
+		},
+		"eval_params": map[string]any{
+			"problem_type": "regression",
+			"tests_required": map[string]float64{
+				"r2_score": 0.98,
+				"r2_scor": 0.98,
+				"r2_sco": 0.98,
+			},
+		},
+		"do_over_params": map[string]any{		
+			"max_retries": 3,
+			"max_deviance": 0.5,
+			"fallback_params": map[string]any{
+				"jobs": -1.0,
+			},
+		}, 
+	}
+
 
 	// Working Job Result
 	working_result_slice := []jobs.Job{
 		{
 			Status: "queued",
 			ID: 1,
+			DataParams: []jobs.DataParameters{
+				{
+					Data: [][]string{
+							{"row1_col1", "row1_col2"},
+							{"row2_col1", "row2_col2"},
+							},
+					ColumnList: []string{"col1", "col2"},
+					TargetLabel: "target",
+				},	
+			},
+			TrainingParams: jobs.TrainingParameters{
+				ModelType: "traditional",
+				ModelName: "LogisticRegression",
+				ModelParams: map[string]any{
+					"limit":1000.0, 
+				},
+			},
+			EvalParams: jobs.EvaluationParameters{
+				ProblemType: "regression",
+				TestsRequired: map[string]float64{
+					"r2_score": 0.98,
+					"r2_scor": 0.98,
+					"r2_sco": 0.98,				
+				},
+			},
+			DoOverParams: jobs.DoOverParameters{
+				FallbackParams: map[string]any{
+					"jobs": -1.0,
+				},
+				MaxRetries: 3,
+				MaximumDeviance: 0.5,
+			},
+		},
+
+		{
+			Status: "queued",
+			ID: 2,
 			DataParams: nil,
 			TrainingParams: jobs.TrainingParameters{
 				ModelType: "traditional",
@@ -197,25 +168,46 @@ func TestGetEndpoint(t *testing.T){
 		"filter": 1,
 	}
 
+	// // Set Ops Tests
+	// set_ops_test := map[string]any{
+	// 	"id": 1,
+	// 	"file_id": 0,
+	// 	"filter": 1,
+	// 	"num_ops_values": []string{"standard_scaler"},
+	// 	"cat_ops_values": map[string][]string{
+	// 		"col1": []string{"label_encoding"},
+	// 		"col2": []string{"one_hot_encoding"},
+	// 	},
+	// }
+
 	// Creating Test Scenarios
 
-	tests := []TestingStuct{
+	tests := []utils.TestingStuct{
 		{
-			name: "Add Job Struct",
-			endpoint: "/data_params",
-			requestType: "POST",
-			input: working_struct,
-			expectedOutput: "Worked :>",
-			expectedError: false,
+			Name: "Add Job Struct",
+			Endpoint: "/data_params",
+			RequestType: "POST",
+			Input: working_struct,
+			ExpectedOutput: "Worked :>",
+			ExpectedError: false,
 		},
 
 		{
-			name: "Get Job Struct",
-			endpoint: "/get_jobs",
-			requestType: "POST",
-			input: get_jobs_filter,
-			expectedOutput: working_result_slice,
-			expectedError: false,
+			Name: "API Switch Job Struct",
+			Endpoint: "/data_params",
+			RequestType: "POST",
+			Input: api_struct,
+			ExpectedOutput: "Worked :>",
+			ExpectedError: false,
+		},
+
+		{
+			Name: "Get Job Struct",
+			Endpoint: "/get_jobs",
+			RequestType: "POST",
+			Input: get_jobs_filter,
+			ExpectedOutput: working_result_slice,
+			ExpectedError: false,
 		},
 	}
 
@@ -225,14 +217,14 @@ func TestGetEndpoint(t *testing.T){
 
 
 // This function runs all the provided tests
-func runTests(t *testing.T, tests []TestingStuct){
+func runTests(t *testing.T, tests []utils.TestingStuct){
 	for _, test :=  range(tests){
-		t.Run(test.name, func(t *testing.T) {
+		t.Run(test.Name, func(t *testing.T) {
 	
 			// Run the command
-			data, err := GetEndpoint(test.endpoint, test.requestType, test.input)
+			data, err := utils.GetEndpoint(test.Endpoint, test.RequestType, test.Input)
 
-			if test.expectedError{
+			if test.ExpectedError{
 				if err == nil{
 					log.Error("Error was expected but didn't occur")
 					t.Fatalf("Error was expected but didn't occur")
@@ -245,14 +237,14 @@ func runTests(t *testing.T, tests []TestingStuct){
 				t.Fatalf("Unexpected Error Occurred: %v", err)
 			}
 
-			if test.expectedOutput != nil{
+			if test.ExpectedOutput != nil{
 				json_bytes, err := json.Marshal(data)
 				if err != nil{
 					log.Error(err.Error())
 					t.Fatalf("%s", fmt.Sprintf("%v",err.Error()))
 					return
 				}
-				target_type := reflect.TypeOf(test.expectedOutput)
+				target_type := reflect.TypeOf(test.ExpectedOutput)
 				val := reflect.New(target_type)
 
 				if json.Unmarshal(json_bytes, val.Interface()) == nil{
@@ -260,9 +252,9 @@ func runTests(t *testing.T, tests []TestingStuct){
 				}
 			}
 
-			if !reflect.DeepEqual(data, test.expectedOutput){
+			if !reflect.DeepEqual(data, test.ExpectedOutput){
 				log.Error("Result Mismatch")
-				t.Fatalf("Result Mismatch: Wanted: %v, Got: %v", test.expectedOutput, data)
+				t.Fatalf("Result Mismatch: Wanted: %v, Got: %v", test.ExpectedOutput, data)
 			}
 		})
 	}

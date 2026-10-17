@@ -3,12 +3,13 @@ package main
 import (
 	"encoding/json"
 	"errors"
-	"strconv"
+	"fmt"
 	"io"
 	jobs "mts/jobs"
 	log "mts/logging"
 	"net/http"
 	"net/url"
+	"strconv"
 	"strings"
 )
 
@@ -31,89 +32,101 @@ func (mts *ModelTrainingService) addJob(w http.ResponseWriter, r *http.Request){
 	name := r.FormValue("name")
 	raw_int := r.FormValue("urgency")
 
-	urgency, err := strconv.ParseInt(raw_int, 10, 32)
+	urgency, err := strconv.ParseInt(raw_int, 10, 64)
 	if err != nil{
 		log.Error("Please provide a proper Urgency Integer")
 		http.Error(w, "Please provide a proper Urgency Integer", http.StatusBadRequest)
 		return
 	}
 
-	// Now Adding the Training Parameters Support
+	// Creating a Helper Function to Avoid a Messy Function
+	parseJsonForm := func(form_key string, target any) error{
+		val := r.FormValue(form_key)
+		if strings.TrimSpace(val) == ""{
+			log.Error(fmt.Sprintf("Form Value: %s can't be found in form", form_key))
+			return fmt.Errorf("Form Value: %s can't be found in form", form_key)
+		}
+		return json.Unmarshal([]byte(val), target)
+	}
 
-	model_type := r.FormValue("model_type")
-	model_name := r.FormValue("model_name")
-	model_params := r.FormValue("model_params")
+	// Creating all the necessary variables 
+	var dataParamsMap, trainParamsMap, evalParamsMap, doOverParamsMap map[string]any
 
-	// Unmarshalling the model_params map
-	var model_params_map map[string]any
-	if err := json.Unmarshal([]byte(model_params), &model_params_map); err != nil{
-		log.Error("Model Params is Invalid Type")
-		http.Error(w, "Model Params is Invalid Type", http.StatusBadRequest)
+
+	// Then Unpacking all the parameters
+	if err := parseJsonForm("data_params", &dataParamsMap); err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+	}
+
+	if err := parseJsonForm("train_params", &trainParamsMap); err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	train_data := map[string]any{
-		"model_type": model_type,
-		"model_name": model_name,
-		"model_params": model_params_map,
-	}
-
-	// Now Adding the Evaluation Parameters Support
-
-	problem_type := r.FormValue("problem_type")
-	tests_required := r.FormValue("tests_required")
-	
-
-	var tests_required_map map[string]float64
-	if err := json.Unmarshal([]byte(tests_required), &tests_required_map); err != nil{
-		log.Error("Invalid Type for Required Tests")
-		http.Error(w, "Invalid Type for Required Tests", http.StatusBadRequest)
-		return
-	}
-	
-
-	eval_data := map[string]any{
-		"problem_type": problem_type,
-		"tests_required": tests_required_map,
-	}
-
-	// Now Adding Do Over Parameters Support
-
-	fallback_params := r.FormValue("fallback_params")
-	max_retries := r.FormValue("max_retries")
-	max_deviance := r.FormValue("max_deviance")
-
-	// Converting to valid numerical types
-	max_retries_int, err := strconv.ParseInt(max_retries, 10, 64)
-	if err != nil{
-		log.Error("Unable to Parse Max Retries")
-		http.Error(w, "Unable to Parse Max Retries", http.StatusBadRequest)
+	if err := parseJsonForm("eval_params", &evalParamsMap); err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	max_deviance_float, err := strconv.ParseFloat(max_deviance, 64)
-	if err != nil{
-		log.Error("Unable to Parse Max Deviance")
-		http.Error(w, "Unable to Parse Max Deviance", http.StatusBadRequest)
+	if err := parseJsonForm("do_over_params", &doOverParamsMap); err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
-	}
-
-
-	var fallback_params_map	map[string]any
-	if err := json.Unmarshal([]byte(fallback_params), &fallback_params_map); err != nil{
-		log.Error("Invalid Type for Fallback Params")
-		http.Error(w, "Invalid Type for Fallback Params", http.StatusBadRequest)
-		return
-	}
-
-	do_over_data := map[string]any{
-		"fallback_params": fallback_params_map,
-		"max_retries": max_retries_int,
-		"max_deviance": max_deviance_float,
 	}
 
 	// Then finally gathering all the Parameters Data
-	train_params, err := jobs.CreateTrainParamObject(train_data)
+	
+	
+	// 1. Resolve Data Parameters Issue First
+	var final_data_params []jobs.DataParameters
+	
+	data_params_value := r.FormValue("data_params")
+
+	if (
+		len(dataParamsMap) == 0 || 
+		strings.TrimSpace(data_params_value) == "" || 
+		strings.TrimSpace(data_params_value) == "{}" ||
+		strings.TrimSpace(data_params_value) == "[]"){
+
+		log.Warn("Data Params is unavailable in form data. Routing to DMS API")
+		// First the dms condition
+		dmsData, err := mts.getData(name)
+		if err != nil{
+			log.Error(err.Error())
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+
+		// Registry Existence Condition
+		registry, _ := dmsData["registry"]
+		if registry != nil{	
+			final_data_params, err = jobs.CreateDataParamObject(dmsData)
+			if err != nil{
+				log.Error(err.Error())
+				http.Error(w, err.Error(), http.StatusBadRequest)
+				return
+			}
+		}else{
+			log.Warn("API Output is Nill, so returning nil")
+			final_data_params = nil
+		}
+	}else{
+		// Then the normal condition
+		final_data_params, err = jobs.CreateDataParamObject(dataParamsMap)
+		if err != nil{
+			log.Error(err.Error())
+			http.Error(w, err.Error(), http.StatusBadRequest)
+			return
+		}
+	}
+
+	log.Info("Data Parameters Extracted")
+
+	
+	final_train_params, err := jobs.CreateTrainParamObject(trainParamsMap)
 	if err != nil{
 		log.Error(err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
@@ -121,36 +134,30 @@ func (mts *ModelTrainingService) addJob(w http.ResponseWriter, r *http.Request){
 	}
 	log.Info("Training Parameters Extracted")
 
-	eval_params, err := jobs.CreateEvalParamObjects(eval_data)
+
+	final_eval_params, err := jobs.CreateEvalParamObjects(evalParamsMap)
 	if err != nil{
 		log.Error(err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	do_over_params, err := jobs.CreateDoOverParamObjects(do_over_data)
+	log.Info("Eval Params Extracted")
+
+	final_do_over_params, err := jobs.CreateDoOverParamObjects(doOverParamsMap)
 	if err != nil{
 		log.Error(err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	// Getting the Data Parameters
-	raw_data, err := mts.getData(name)
+	log.Info("Do Over Params Extracted")
 
-	if err != nil{
-		log.Error(err.Error())
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	log.Info("Converted the Data Successfully")
-	queue := mts.JobsQueue
-	data_params, _ := jobs.CreateDataParamObject(raw_data)
-	queue.CreateNewJob(
-		data_params,
-		*train_params,
-		*eval_params,
-		*do_over_params,
+	mts.JobsQueue.CreateNewJob(
+		final_data_params,
+		*final_train_params,
+		*final_eval_params,
+		*final_do_over_params,
 		int(urgency),
 	)
 
@@ -167,14 +174,14 @@ func (mts *ModelTrainingService) getJobs(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	priority_filter, err := strconv.ParseInt(value, 10, 32)
+	priority_filter, err := strconv.ParseInt(value, 10, 64)
 	if err != nil{
 		log.Error(err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 	}
 	log.Info("Parsed Filter Input")
 
-	list, err := mts.JobsQueue.GetJobs(int32(priority_filter))
+	list, err := mts.JobsQueue.GetJobs(int(priority_filter))
 	if err != nil{
 		log.Error(err.Error())
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -190,6 +197,104 @@ func (mts *ModelTrainingService) getJobs(w http.ResponseWriter, r *http.Request)
 
 	w.Write(bytes) 
 }
+
+// This function will set the data ops for the object
+func (mts *ModelTrainingService) setDataOps(w http.ResponseWriter, r *http.Request){
+
+	log.Info("Setting / Adding Data Ops")
+
+	// Gathering the Arguments 
+
+	id := r.FormValue("id")
+	file_id := r.FormValue("file_id")
+	filter := r.FormValue("filter")
+
+	num_ops_values := r.FormValue("num_ops")
+	cat_ops_values := r.FormValue("cat_ops")
+
+	// Checking for Null Values
+	if strings.TrimSpace(num_ops_values) == ""{
+		log.Error("Numerical Ops is Empty")
+		http.Error(w, "Numerical Ops is Empty", http.StatusBadRequest)
+		return
+	}
+
+	if strings.TrimSpace(cat_ops_values) == ""{
+		log.Error("Categorical Ops is Empty")
+		http.Error(w, "Categorical Ops is Empty", http.StatusBadRequest)
+		return
+	}
+
+	if strings.TrimSpace(id) == ""{
+		log.Error("ID is Empty")
+		http.Error(w, "ID is Empty", http.StatusBadRequest)
+		return
+	}
+
+	if strings.TrimSpace(filter) == ""{
+		log.Error("Filter is Empty")
+		http.Error(w, "Filter is Empty", http.StatusBadRequest)
+		return
+	}
+
+	if strings.TrimSpace(file_id) == ""{
+		log.Error("File ID is Empty")
+		http.Error(w, "File ID is Empty", http.StatusBadRequest)
+		return
+	}
+
+	// Now Unmarshalling and converting the data into suitable types
+
+	id_int, err := strconv.ParseInt(id, 10, 64)
+	if err != nil{
+		log.Error("Unable to parse ID")
+		http.Error(w, "Unable to parse ID", http.StatusBadRequest)
+	}
+
+	filter_int, err := strconv.ParseInt(filter, 10, 64)
+	if err != nil{
+		log.Error("Unable to parse filter")
+		http.Error(w, "Unable to parse filter", http.StatusBadRequest)
+	}
+
+	file_id_int, err := strconv.ParseInt(file_id, 10, 64)
+	if err != nil{
+		log.Error("Unable to parse file_id")
+		http.Error(w, "Unable to parse file_id", http.StatusBadRequest)
+	}
+
+	var num_ops []string
+	var cat_ops map[string][]string
+
+	err = json.Unmarshal([]byte(num_ops_values), &num_ops)
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	err = json.Unmarshal([]byte(cat_ops_values), &cat_ops)
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	// Now Finding the Job
+	job_pointer, err := mts.JobsQueue.FindJob(int(id_int), int(filter_int))
+	if err != nil{
+		log.Error(err.Error())
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	// Now Setting the Ops
+	job_pointer.DataParams[int(file_id_int)].SetOps(num_ops, cat_ops)
+
+	log.Error("Hopefully Job Data Ops are Set as Operation was completed Successfully")
+
+}
+
 
 // ----------------------------------------------------------------------------------------------
 // These functions are for Data Exchange between both the services

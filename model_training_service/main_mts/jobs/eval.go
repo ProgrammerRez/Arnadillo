@@ -1,9 +1,10 @@
 package jobs
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 	log "mts/logging"
+	// "reflect"
 	"strings"
 )
 
@@ -34,10 +35,22 @@ func CreateEvalParamObjects(params map[string]any) (*EvaluationParameters, error
 		return nil, err
 	}
 
-	tests_required, ok := raw_type.(map[string]float64)
-	if !ok || len(tests_required) == 0{
-		log.Error(fmt.Sprintf("Required Tests is Empty or Invalid Type. Length: %d", len(tests_required)))
+	rawMap, ok := raw_type.(map[string]any)
+	if !ok || len(rawMap) == 0{
+		log.Error(fmt.Sprintf("Required Tests is Empty or Invalid Type. Length: %d", len(rawMap)))
 		return nil, errors.New("Required Tests is Empty or Invalid Type")
+	}
+
+	// Works Just needed to add another assertion step for tests_required map
+
+	tests_required := make(map[string]float64)
+	for k, v := range(rawMap){
+		floatval, valid := v.(float64)
+		if !valid{
+			log.Error(fmt.Sprintf("Test Value for key %s is not a valid float", k))
+			return nil, errors.New("Invalid Type for Test Metrics")
+		}
+		tests_required[k] = floatval
 	}
 
 	return &EvaluationParameters{

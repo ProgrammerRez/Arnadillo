@@ -19,10 +19,10 @@ func CreateDoOverParamObjects(params map[string]any) (*DoOverParameters, error){
 		return nil, err
 	}
 
-	max_retries, ok := raw_type.(int64)
+	max_retries, ok := raw_type.(float64)
 	if !ok{
-		log.Error("Max Retries is Empty or Invalid Type")
-		return nil, errors.New("Max Retries is Empty or Invalid Type")
+		log.Error("Max Retries is Invalid Type")
+		return nil, errors.New("Max Retries is Invalid Type")
 	}
 
 	// Then getting the max_deviance
@@ -34,8 +34,8 @@ func CreateDoOverParamObjects(params map[string]any) (*DoOverParameters, error){
 
 	max_deviance, ok := raw_type.(float64)
 	if !ok{
-		log.Error("Max Deviance is Empty or Invalid Type")
-		return nil, errors.New("Max Deviance is Empty or Invalid Type")
+		log.Error("Max Deviance is Invalid Type")
+		return nil, errors.New("Max Deviance is Invalid Type")
 	}
 
 
@@ -47,9 +47,14 @@ func CreateDoOverParamObjects(params map[string]any) (*DoOverParameters, error){
 	}
 
 	fallaback_params, ok := raw_type.(map[string]any)
-	if !ok || len(fallaback_params) == 0{
-		log.Error("Fallback Params is Empty or Invalid Type")
-		return nil, errors.New("Fallback Params Tests is Empty or Invalid Type")
+	if !ok{
+		log.Error("Fallback Params is Invalid Type")
+		return nil, errors.New("Fallback Params Tests is Invalid Type")
+	}
+
+	if len(fallaback_params) == 0{
+		log.Error("Fallback Params is Empty")
+		return nil, errors.New("Fallback Params Tests is Empty")
 	}
 
 	return &DoOverParameters{

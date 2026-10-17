@@ -31,6 +31,7 @@ func main(){
 	// Adding all the endpoints
 	mux.HandleFunc("POST /data_params", new_mts.addJob)
 	mux.HandleFunc("POST /get_jobs", new_mts.getJobs)
+	mux.HandleFunc("POST /set_ops", new_mts.setDataOps)
 
 	log.Info("Model Training Service Started at Port 8001")
 	serve.ListenAndServe()

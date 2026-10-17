@@ -1,235 +1,142 @@
-INFO: 2026/10/10 19:40:34.288573 logger.go:85: Adding New Job
-INFO: 2026/10/10 19:40:34.288780 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/10 19:40:34.288854 logger.go:85: Value model_type exists
-INFO: 2026/10/10 19:40:34.288948 logger.go:85: Value model_name exists
-INFO: 2026/10/10 19:40:34.289010 logger.go:85: Value model_params exists
-INFO: 2026/10/10 19:40:34.289103 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/10 19:40:34.289185 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/10 19:40:34.289240 logger.go:85: Value problem_type exists
-INFO: 2026/10/10 19:40:34.289298 logger.go:85: Value tests_required exists
-ERROR: 2026/10/10 19:40:34.289369 logger.go:99: Required Tests is Empty or Invalid Type
-ERROR: 2026/10/10 19:40:34.289441 logger.go:99: Required Tests is Empty or Invalid Type
-INFO: 2026/10/10 19:40:34.290028 logger.go:85: Parsed Filter Input
-INFO: 2026/10/10 19:40:34.290094 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/10 19:40:34.290155 logger.go:85: List []
-INFO: 2026/10/10 19:42:08.491691 logger.go:85: Adding New Job
-INFO: 2026/10/10 19:42:08.491920 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/10 19:42:08.492091 logger.go:85: Value model_type exists
-INFO: 2026/10/10 19:42:08.492142 logger.go:85: Value model_name exists
-INFO: 2026/10/10 19:42:08.492190 logger.go:85: Value model_params exists
-INFO: 2026/10/10 19:42:08.492267 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/10 19:42:08.492320 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/10 19:42:08.492399 logger.go:85: Value problem_type exists
-INFO: 2026/10/10 19:42:08.492458 logger.go:85: Value tests_required exists
-ERROR: 2026/10/10 19:42:08.492535 logger.go:99: Required Tests is Empty or Invalid Type
-ERROR: 2026/10/10 19:42:08.492592 logger.go:99: Required Tests is Empty or Invalid Type
-INFO: 2026/10/10 19:42:08.493620 logger.go:85: Parsed Filter Input
-INFO: 2026/10/10 19:42:08.493712 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/10 19:42:08.493811 logger.go:85: List []
-INFO: 2026/10/10 19:44:03.344720 logger.go:85: Adding New Job
-INFO: 2026/10/10 19:44:03.345094 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/10 19:44:03.345221 logger.go:85: Value model_type exists
-INFO: 2026/10/10 19:44:03.345312 logger.go:85: Value model_name exists
-INFO: 2026/10/10 19:44:03.345396 logger.go:85: Value model_params exists
-INFO: 2026/10/10 19:44:03.345487 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/10 19:44:03.345591 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/10 19:44:03.345663 logger.go:85: Value problem_type exists
-INFO: 2026/10/10 19:44:03.345733 logger.go:85: Value tests_required exists
-ERROR: 2026/10/10 19:44:03.345800 logger.go:99: Required Tests is Empty or Invalid Type
-ERROR: 2026/10/10 19:44:03.345881 logger.go:99: Required Tests is Empty or Invalid Type
-INFO: 2026/10/10 19:44:03.346745 logger.go:85: Parsed Filter Input
-INFO: 2026/10/10 19:44:03.346824 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/10 19:44:03.346889 logger.go:85: List []
-INFO: 2026/10/11 12:25:50.959932 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 12:25:50.960119 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 12:25:50.960169 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 12:25:50.960320 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 12:25:54.528156 logger.go:85: Adding New Job
-ERROR: 2026/10/11 12:25:54.528328 logger.go:99: Invalid Type for Required Tests
-INFO: 2026/10/11 12:25:54.529003 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 12:25:54.529090 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 12:25:54.529165 logger.go:85: List []
-INFO: 2026/10/11 12:56:59.033737 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 12:56:59.034027 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 12:56:59.034138 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 12:56:59.034317 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 12:57:02.344186 logger.go:85: Adding New Job
-INFO: 2026/10/11 12:57:02.344750 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 12:57:02.345090 logger.go:85: Value model_type exists
-INFO: 2026/10/11 12:57:02.345374 logger.go:85: Value model_name exists
-INFO: 2026/10/11 12:57:02.345539 logger.go:85: Value model_params exists
-INFO: 2026/10/11 12:57:02.345651 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 12:57:02.345761 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 12:57:02.345870 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 12:57:02.345978 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 12:57:02.346090 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 12:57:02.346203 logger.go:85: Value max_retries exists
-ERROR: 2026/10/11 12:57:02.346313 logger.go:99: Max Retries is Empty or Invalid Type
-ERROR: 2026/10/11 12:57:02.346449 logger.go:99: Max Retries is Empty or Invalid Type
-INFO: 2026/10/11 12:57:02.348273 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 12:57:02.348513 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 12:57:02.348710 logger.go:85: List []
-INFO: 2026/10/11 12:58:31.501802 logger.go:85: Adding New Job
-INFO: 2026/10/11 12:58:31.502283 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 12:58:31.502545 logger.go:85: Value model_type exists
-INFO: 2026/10/11 12:58:31.502789 logger.go:85: Value model_name exists
-INFO: 2026/10/11 12:58:31.502938 logger.go:85: Value model_params exists
-INFO: 2026/10/11 12:58:31.503076 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 12:58:31.503199 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 12:58:31.503325 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 12:58:31.503462 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 12:58:31.503676 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 12:58:31.503805 logger.go:85: Value max_retries exists
-ERROR: 2026/10/11 12:58:31.503922 logger.go:99: Max Retries is Empty or Invalid Type
-ERROR: 2026/10/11 12:58:31.504049 logger.go:99: Max Retries is Empty or Invalid Type
-INFO: 2026/10/11 12:58:31.505726 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 12:58:31.506003 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 12:58:31.506162 logger.go:85: List []
-INFO: 2026/10/11 12:58:36.565264 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 12:58:36.565486 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 12:58:36.565560 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 12:58:36.565692 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 12:58:39.966023 logger.go:85: Adding New Job
-INFO: 2026/10/11 12:58:39.966549 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 12:58:39.966854 logger.go:85: Value model_type exists
-INFO: 2026/10/11 12:58:39.967117 logger.go:85: Value model_name exists
-INFO: 2026/10/11 12:58:39.967315 logger.go:85: Value model_params exists
-INFO: 2026/10/11 12:58:39.967490 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 12:58:39.967646 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 12:58:39.967780 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 12:58:39.967921 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 12:58:39.968053 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 12:58:39.968193 logger.go:85: Value max_retries exists
-ERROR: 2026/10/11 12:58:39.968322 logger.go:99: Max Retries is Empty or Invalid Type
-ERROR: 2026/10/11 12:58:39.968474 logger.go:99: Max Retries is Empty or Invalid Type
-INFO: 2026/10/11 12:58:39.975740 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 12:58:39.976024 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 12:58:39.976261 logger.go:85: List []
-INFO: 2026/10/11 13:08:27.848789 logger.go:85: Adding New Job
-INFO: 2026/10/11 13:08:27.849086 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 13:08:27.849172 logger.go:85: Value model_type exists
-INFO: 2026/10/11 13:08:27.849301 logger.go:85: Value model_name exists
-INFO: 2026/10/11 13:08:27.849366 logger.go:85: Value model_params exists
-INFO: 2026/10/11 13:08:27.849421 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 13:08:27.849487 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 13:08:27.849547 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 13:08:27.849604 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 13:08:27.849662 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 13:08:27.849718 logger.go:85: Value max_retries exists
-ERROR: 2026/10/11 13:08:27.849769 logger.go:99: Max Retries is Empty or Invalid Type
-ERROR: 2026/10/11 13:08:27.849829 logger.go:99: Max Retries is Empty or Invalid Type
-INFO: 2026/10/11 13:08:27.850498 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 13:08:27.850572 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 13:08:27.850639 logger.go:85: List []
-INFO: 2026/10/11 13:08:38.346113 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 13:08:38.346304 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 13:08:38.346465 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 13:08:38.346587 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 13:08:41.183742 logger.go:85: Adding New Job
-INFO: 2026/10/11 13:08:41.184330 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 13:08:41.184539 logger.go:85: Value model_type exists
-INFO: 2026/10/11 13:08:41.184692 logger.go:85: Value model_name exists
-INFO: 2026/10/11 13:08:41.184864 logger.go:85: Value model_params exists
-INFO: 2026/10/11 13:08:41.185021 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 13:08:41.185148 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 13:08:41.185292 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 13:08:41.185431 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 13:08:41.185550 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 13:08:41.185678 logger.go:85: Value max_retries exists
-INFO: 2026/10/11 13:08:41.185808 logger.go:85: Value max_deviance exists
-INFO: 2026/10/11 13:08:41.185925 logger.go:85: Value fallback_params exists
-INFO: 2026/10/11 13:08:41.186052 logger.go:85: Retrieving Data
-INFO: 2026/10/11 13:08:41.198375 logger.go:85: Converted the Data Successfully
-INFO: 2026/10/11 13:08:41.198790 logger.go:85: Converting into Data Params Object
-INFO: 2026/10/11 13:08:41.199123 logger.go:85: Value registry exists
-ERROR: 2026/10/11 13:08:41.199396 logger.go:99: Regitry is not an array / slice / is empty
-INFO: 2026/10/11 13:08:41.199627 logger.go:85: Creating New Job..... 
-INFO: 2026/10/11 13:08:41.199785 logger.go:85: Queueing Job at Meh Priority
-INFO: 2026/10/11 13:08:41.201613 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 13:08:41.201858 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 13:08:41.202065 logger.go:85: List [0x1bf64e7941b0]
-INFO: 2026/10/11 13:12:17.468943 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 13:12:17.469430 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 13:12:17.469656 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 13:12:17.469882 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 13:12:20.419978 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 13:12:20.420398 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 13:12:20.420572 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 13:12:20.420800 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 13:12:26.864684 logger.go:85: Adding New Job
-INFO: 2026/10/11 13:12:26.864948 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 13:12:26.865057 logger.go:85: Value model_type exists
-INFO: 2026/10/11 13:12:26.865139 logger.go:85: Value model_name exists
-INFO: 2026/10/11 13:12:26.865210 logger.go:85: Value model_params exists
-INFO: 2026/10/11 13:12:26.865298 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 13:12:26.865428 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 13:12:26.865489 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 13:12:26.865549 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 13:12:26.865607 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 13:12:26.865665 logger.go:85: Value max_retries exists
-INFO: 2026/10/11 13:12:26.865724 logger.go:85: Value max_deviance exists
-INFO: 2026/10/11 13:12:26.865782 logger.go:85: Value fallback_params exists
-INFO: 2026/10/11 13:12:26.865838 logger.go:85: Retrieving Data
-INFO: 2026/10/11 13:12:26.868492 logger.go:85: Converted the Data Successfully
-INFO: 2026/10/11 13:12:26.868627 logger.go:85: Converting into Data Params Object
-INFO: 2026/10/11 13:12:26.868732 logger.go:85: Value registry exists
-ERROR: 2026/10/11 13:12:26.868827 logger.go:99: Regitry is not an array / slice / is empty
-INFO: 2026/10/11 13:12:26.868922 logger.go:85: Creating New Job..... 
-INFO: 2026/10/11 13:12:26.869019 logger.go:85: Queueing Job at Meh Priority
-INFO: 2026/10/11 13:12:26.870050 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 13:12:26.870155 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 13:12:26.870248 logger.go:85: List [0x3e24e360a1b0]
-INFO: 2026/10/11 13:14:09.145325 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 13:14:09.145724 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 13:14:09.145929 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 13:14:09.146223 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 13:14:12.852650 logger.go:85: Adding New Job
-INFO: 2026/10/11 13:14:12.852986 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 13:14:12.853096 logger.go:85: Value model_type exists
-INFO: 2026/10/11 13:14:12.853186 logger.go:85: Value model_name exists
-INFO: 2026/10/11 13:14:12.853288 logger.go:85: Value model_params exists
-INFO: 2026/10/11 13:14:12.853368 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 13:14:12.853449 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 13:14:12.853532 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 13:14:12.853611 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 13:14:12.853687 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 13:14:12.853764 logger.go:85: Value max_retries exists
-INFO: 2026/10/11 13:14:12.853846 logger.go:85: Value max_deviance exists
-INFO: 2026/10/11 13:14:12.853921 logger.go:85: Value fallback_params exists
-INFO: 2026/10/11 13:14:12.854001 logger.go:85: Retrieving Data
-INFO: 2026/10/11 13:14:12.856493 logger.go:85: Converted the Data Successfully
-INFO: 2026/10/11 13:14:12.856601 logger.go:85: Converting into Data Params Object
-INFO: 2026/10/11 13:14:12.856697 logger.go:85: Value registry exists
-ERROR: 2026/10/11 13:14:12.856791 logger.go:99: Regitry is not an array / slice / is empty
-INFO: 2026/10/11 13:14:12.856879 logger.go:85: Creating New Job..... 
-INFO: 2026/10/11 13:14:12.856967 logger.go:85: Queueing Job at Meh Priority
-INFO: 2026/10/11 13:14:12.858098 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 13:14:12.858218 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 13:14:12.858328 logger.go:85: List [0x37f56ce481b0]
-INFO: 2026/10/11 13:14:42.196255 logger.go:85: Started Logging in the model training service
-INFO: 2026/10/11 13:14:42.196841 logger.go:85: Creating New Model Training Service
-INFO: 2026/10/11 13:14:42.197096 logger.go:85: Initializing Job Queue
-INFO: 2026/10/11 13:14:42.197371 logger.go:85: Model Training Service Started at Port 8001
-INFO: 2026/10/11 13:14:45.739502 logger.go:85: Adding New Job
-INFO: 2026/10/11 13:14:45.739838 logger.go:85: Extracting Training Parameters
-INFO: 2026/10/11 13:14:45.740021 logger.go:85: Value model_type exists
-INFO: 2026/10/11 13:14:45.740108 logger.go:85: Value model_name exists
-INFO: 2026/10/11 13:14:45.740188 logger.go:85: Value model_params exists
-INFO: 2026/10/11 13:14:45.740261 logger.go:85: Training Parameters Extracted
-INFO: 2026/10/11 13:14:45.740424 logger.go:85: Creating the Evaluation Parametres
-INFO: 2026/10/11 13:14:45.740502 logger.go:85: Value problem_type exists
-INFO: 2026/10/11 13:14:45.740570 logger.go:85: Value tests_required exists
-INFO: 2026/10/11 13:14:45.740640 logger.go:85: Creating the Do Over Parametres
-INFO: 2026/10/11 13:14:45.740712 logger.go:85: Value max_retries exists
-INFO: 2026/10/11 13:14:45.740780 logger.go:85: Value max_deviance exists
-INFO: 2026/10/11 13:14:45.740853 logger.go:85: Value fallback_params exists
-INFO: 2026/10/11 13:14:45.740923 logger.go:85: Retrieving Data
-INFO: 2026/10/11 13:14:45.744058 logger.go:85: Converted the Data Successfully
-INFO: 2026/10/11 13:14:45.744162 logger.go:85: Converting into Data Params Object
-INFO: 2026/10/11 13:14:45.744233 logger.go:85: Value registry exists
-ERROR: 2026/10/11 13:14:45.744323 logger.go:99: Regitry is not an array / slice / is empty
-INFO: 2026/10/11 13:14:45.744395 logger.go:85: Creating New Job..... 
-INFO: 2026/10/11 13:14:45.744460 logger.go:85: Queueing Job at Meh Priority
-INFO: 2026/10/11 13:14:45.745430 logger.go:85: Parsed Filter Input
-INFO: 2026/10/11 13:14:45.745553 logger.go:85: Getting Jobs with filter: 1
-INFO: 2026/10/11 13:14:45.745673 logger.go:85: List [0x2bb614f801b0]
+INFO: 2026/10/18 00:41:20.781079 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/18 00:41:20.781323 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/18 00:41:20.781368 logger.go:85: Initializing Job Queue
+INFO: 2026/10/18 00:41:20.781469 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/18 00:41:24.277655 logger.go:85: Adding New Job
+WARN: 2026/10/18 00:41:24.277924 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/18 00:41:24.278022 logger.go:85: Retrieving Data
+INFO: 2026/10/18 00:41:24.279945 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/18 00:41:24.280042 logger.go:85: Value registry exists
+ERROR: 2026/10/18 00:41:24.280094 logger.go:99: Regitry is not an array / slice / is empty
+ERROR: 2026/10/18 00:41:24.280144 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/18 00:41:24.280912 logger.go:85: Parsed Filter Input
+INFO: 2026/10/18 00:41:24.280997 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/18 00:41:24.281067 logger.go:85: List []
+INFO: 2026/10/18 00:44:21.094323 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/18 00:44:21.094487 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/18 00:44:21.094546 logger.go:85: Initializing Job Queue
+INFO: 2026/10/18 00:44:21.094673 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/18 00:44:22.825586 logger.go:85: Adding New Job
+WARN: 2026/10/18 00:44:22.825909 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/18 00:44:22.825995 logger.go:85: Retrieving Data
+INFO: 2026/10/18 00:44:22.828043 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/18 00:44:22.828120 logger.go:85: Value registry exists
+ERROR: 2026/10/18 00:44:22.828167 logger.go:99: Regitry is not an array / slice / is empty
+ERROR: 2026/10/18 00:44:22.828208 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/18 00:44:22.829035 logger.go:85: Parsed Filter Input
+INFO: 2026/10/18 00:44:22.829123 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/18 00:44:22.829174 logger.go:85: List []
+INFO: 2026/10/18 00:49:14.070216 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/18 00:49:14.070421 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/18 00:49:14.070476 logger.go:85: Initializing Job Queue
+INFO: 2026/10/18 00:49:14.070592 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/18 00:49:15.596941 logger.go:85: Adding New Job
+WARN: 2026/10/18 00:49:15.597163 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/18 00:49:15.597255 logger.go:85: Retrieving Data
+INFO: 2026/10/18 00:49:15.598974 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/18 00:49:15.599050 logger.go:85: Value registry exists
+ERROR: 2026/10/18 00:49:15.599105 logger.go:99: Regitry is not an array / slice / is empty
+ERROR: 2026/10/18 00:49:15.599155 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/18 00:49:15.599897 logger.go:85: Parsed Filter Input
+INFO: 2026/10/18 00:49:15.599968 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/18 00:49:15.600020 logger.go:85: List []
+INFO: 2026/10/18 00:50:06.646063 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/18 00:50:06.646274 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/18 00:50:06.646333 logger.go:85: Initializing Job Queue
+INFO: 2026/10/18 00:50:06.646451 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/18 00:50:08.147725 logger.go:85: Adding New Job
+WARN: 2026/10/18 00:50:08.148046 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/18 00:50:08.148212 logger.go:85: Retrieving Data
+INFO: 2026/10/18 00:50:08.149791 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/18 00:50:08.149847 logger.go:85: Value registry exists
+ERROR: 2026/10/18 00:50:08.149896 logger.go:99: Regitry is not an array / slice / is empty
+ERROR: 2026/10/18 00:50:08.149984 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/18 00:50:08.150591 logger.go:85: Parsed Filter Input
+INFO: 2026/10/18 00:50:08.150666 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/18 00:50:08.150728 logger.go:85: List []
+INFO: 2026/10/18 00:51:52.400439 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/18 00:51:52.400610 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/18 00:51:52.400711 logger.go:85: Initializing Job Queue
+INFO: 2026/10/18 00:51:52.400814 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/18 00:51:53.900982 logger.go:85: Adding New Job
+WARN: 2026/10/18 00:51:53.901134 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/18 00:51:53.901195 logger.go:85: Retrieving Data
+WARN: 2026/10/18 00:51:53.902811 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/18 00:51:53.902877 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/18 00:51:53.902951 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/18 00:51:53.903025 logger.go:85: Value model_type exists
+INFO: 2026/10/18 00:51:53.903066 logger.go:85: Value model_name exists
+INFO: 2026/10/18 00:51:53.903102 logger.go:85: Value model_params exists
+INFO: 2026/10/18 00:51:53.903140 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/18 00:51:53.903177 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/18 00:51:53.903214 logger.go:85: Value problem_type exists
+INFO: 2026/10/18 00:51:53.903250 logger.go:85: Value tests_required exists
+INFO: 2026/10/18 00:51:53.903283 logger.go:85: Eval Params Extracted
+INFO: 2026/10/18 00:51:53.903317 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/18 00:51:53.903350 logger.go:85: Value max_retries exists
+INFO: 2026/10/18 00:51:53.903383 logger.go:85: Value max_deviance exists
+INFO: 2026/10/18 00:51:53.903416 logger.go:85: Value fallback_params exists
+INFO: 2026/10/18 00:51:53.903449 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/18 00:51:53.903482 logger.go:85: Creating New Job..... 
+INFO: 2026/10/18 00:51:53.903516 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/18 00:51:53.904102 logger.go:85: Parsed Filter Input
+INFO: 2026/10/18 00:51:53.904171 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/18 00:51:53.904234 logger.go:85: List [0x295ad6d141b0]
+INFO: 2026/10/18 00:55:43.456884 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/18 00:55:43.457289 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/18 00:55:43.457389 logger.go:85: Initializing Job Queue
+INFO: 2026/10/18 00:55:43.457469 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/18 00:55:45.627867 logger.go:85: Adding New Job
+INFO: 2026/10/18 00:55:45.628042 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/18 00:55:45.628109 logger.go:85: Value registry exists
+INFO: 2026/10/18 00:55:45.628164 logger.go:85: Processed Registry Data
+INFO: 2026/10/18 00:55:45.628218 logger.go:85: Value data exists
+INFO: 2026/10/18 00:55:45.628272 logger.go:85: Processed Data Map
+INFO: 2026/10/18 00:55:45.628327 logger.go:85: Value target_col exists
+INFO: 2026/10/18 00:55:45.628390 logger.go:85: Traget Processing Complete
+INFO: 2026/10/18 00:55:45.628454 logger.go:85: Value data exists
+INFO: 2026/10/18 00:55:45.628516 logger.go:85: Proccessed Row Data
+INFO: 2026/10/18 00:55:45.628586 logger.go:85: Value column_list exists
+INFO: 2026/10/18 00:55:45.628651 logger.go:85: Proccessed Column Data
+INFO: 2026/10/18 00:55:45.628714 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/18 00:55:45.628775 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/18 00:55:45.628837 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/18 00:55:45.628900 logger.go:85: Value model_type exists
+INFO: 2026/10/18 00:55:45.628962 logger.go:85: Value model_name exists
+INFO: 2026/10/18 00:55:45.629024 logger.go:85: Value model_params exists
+INFO: 2026/10/18 00:55:45.629090 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/18 00:55:45.629188 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/18 00:55:45.629227 logger.go:85: Value problem_type exists
+INFO: 2026/10/18 00:55:45.629264 logger.go:85: Value tests_required exists
+INFO: 2026/10/18 00:55:45.629300 logger.go:85: Eval Params Extracted
+INFO: 2026/10/18 00:55:45.629334 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/18 00:55:45.629368 logger.go:85: Value max_retries exists
+INFO: 2026/10/18 00:55:45.629402 logger.go:85: Value max_deviance exists
+INFO: 2026/10/18 00:55:45.629449 logger.go:85: Value fallback_params exists
+INFO: 2026/10/18 00:55:45.629483 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/18 00:55:45.629519 logger.go:85: Creating New Job..... 
+INFO: 2026/10/18 00:55:45.629555 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/18 00:55:45.630006 logger.go:85: Adding New Job
+WARN: 2026/10/18 00:55:45.630101 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/18 00:55:45.630158 logger.go:85: Retrieving Data
+WARN: 2026/10/18 00:55:45.631879 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/18 00:55:45.631940 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/18 00:55:45.631984 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/18 00:55:45.632028 logger.go:85: Value model_type exists
+INFO: 2026/10/18 00:55:45.632072 logger.go:85: Value model_name exists
+INFO: 2026/10/18 00:55:45.632114 logger.go:85: Value model_params exists
+INFO: 2026/10/18 00:55:45.632156 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/18 00:55:45.632196 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/18 00:55:45.632235 logger.go:85: Value problem_type exists
+INFO: 2026/10/18 00:55:45.632276 logger.go:85: Value tests_required exists
+INFO: 2026/10/18 00:55:45.632315 logger.go:85: Eval Params Extracted
+INFO: 2026/10/18 00:55:45.632354 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/18 00:55:45.632394 logger.go:85: Value max_retries exists
+INFO: 2026/10/18 00:55:45.632436 logger.go:85: Value max_deviance exists
+INFO: 2026/10/18 00:55:45.632474 logger.go:85: Value fallback_params exists
+INFO: 2026/10/18 00:55:45.632517 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/18 00:55:45.632557 logger.go:85: Creating New Job..... 
+INFO: 2026/10/18 00:55:45.632603 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/18 00:55:45.633064 logger.go:85: Parsed Filter Input
+INFO: 2026/10/18 00:55:45.633132 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/18 00:55:45.633179 logger.go:85: List [0x2ba1037765a0 0x2ba103776c60]

@@ -27,7 +27,7 @@ func TestGetJobs(t *testing.T) {
 	// Creating the test struct
 	test_struct := []struct{
 		name 			string
-		filter 			int32
+		filter 			int
 		expectedJobs	[]*Job
 		expectedError	bool
 	}{

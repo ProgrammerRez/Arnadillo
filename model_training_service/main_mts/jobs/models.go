@@ -40,8 +40,8 @@ type DataParameters struct{
 	// Actual Data to be Trained on
 	ColumnList			[]string			`json:"column_list"`
 	Data 				[][]string			`json:"data"`
-	TargetLabel			string				`json:"target_col"`		// Column that's the target variable
 	NumericalOperations	[]string			`json:"num_ops"`		//The operations for preprocessing numerical data in the preprocessing pipeline
+	TargetLabel			string				`json:"target_col"`		// Column that's the target variable
 	ObjectOperations	map[string][]string	`json:"cat_ops"`		//The operations for preprocessing categorical data in the preprocessing pipeline
 	ID					int					`json:"id"`				// `csv_id` of the object from `/session` endpoint in the endpoint
 	TestSplit			float64				`json:"test_split"`		// The ratio of test to train data
@@ -71,6 +71,6 @@ type EvaluationParameters struct{
 type DoOverParameters struct{
 	FallbackParams	map[string]any	`json:"fallback_params"`	 // In case of not working; will move to fallback parameters provided
 	// This contains mostly parameters judge model performace during and after training to automate training reruns
-	MaxRetries		int64  			`json:"max_retries"`	// Maximum Retires When Failing
+	MaxRetries		float64  		`json:"max_retries"`	// Maximum Retires When Failing
 	MaximumDeviance	float64 		`json:"max_deviance"`// Maximum Deviance from minimum_proposed_value before switching parametes or retrying training
 }

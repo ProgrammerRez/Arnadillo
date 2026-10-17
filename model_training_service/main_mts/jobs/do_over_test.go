@@ -15,18 +15,18 @@ func TestCreateDoOverParamObjects(t *testing.T) {
 	// Creating a working struct
 
 	working_struct := map[string]any{
-		"max_retries": 3,
+		"max_retries": 3.0,
 		"max_deviance": 0.5,
 		"fallback_params": map[string]any{
-			"jobs": -1,
+			"jobs": -1.0,
 		},
 	}
 
 	working_result := &DoOverParameters{
-		MaxRetries: 3,
-		MaximumDeviance: 0.5,
+		MaxRetries: float64(3.0),
+		MaximumDeviance: float64(.5),
 		FallbackParams: map[string]any{
-			"jobs": -1,
+			"jobs": -1.0,
 		},
 	}
 
@@ -55,7 +55,7 @@ func TestCreateDoOverParamObjects(t *testing.T) {
 		{
 			name: "Max Retries is Invalid Type",
 			input: map[string]any{
-				"max_retries": 1.0,
+				"max_retries": 1,
 			},
 			expectedOutput: nil,
 			expectedError: true,
@@ -64,7 +64,7 @@ func TestCreateDoOverParamObjects(t *testing.T) {
 				{
 			name: "Max Deviance is Empty",
 			input: map[string]any{
-				"max_retries": 1,
+				"max_retries": 1.0,
 			},
 			expectedOutput: nil,
 			expectedError: true,
@@ -73,7 +73,7 @@ func TestCreateDoOverParamObjects(t *testing.T) {
 		{
 			name: "Max Deviance is Invalid Type",
 			input: map[string]any{
-				"max_retries": 1,
+				"max_retries": 1.0,
 				"max_deviance": 0.5,
 			},
 			expectedOutput: nil,
@@ -83,7 +83,7 @@ func TestCreateDoOverParamObjects(t *testing.T) {
 		{
 			name: "Fallback params is Empty",
 			input: map[string]any{
-				"max_retries": 1,
+				"max_retries": 1.0,
 				"max_deviance": 0.5,
 				"fallback_params": map[string]any{},
 			},
@@ -94,7 +94,7 @@ func TestCreateDoOverParamObjects(t *testing.T) {
 		{
 			name: "Fallback params is Invalid Type",
 			input: map[string]any{
-				"max_retries": 1,
+				"max_retries": 1.0,
 				"max_deviance": 0.5,
 				"fallback_params": map[string]float32{},
 			},

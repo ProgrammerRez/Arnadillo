@@ -1,6 +1,7 @@
 package jobs
 
 import (
+	"encoding/json"
 	log "mts/logging"
 	"reflect"
 	"testing"
@@ -158,6 +159,121 @@ func TestCreateDataParamObject(t *testing.T) {
 
 			if !reflect.DeepEqual(result, test.expectedOutput){
 				t.Fatalf("Output Mistmatched. Wanted: %v, Got: %v", test.expectedOutput, result)
+			}
+		})
+	}
+}
+
+
+// This function tests the Set Ops function
+func TestSetOpsFunc(t *testing.T) {
+
+	// Start the logging first
+	log.Init()
+	log.SetLevel(log.InfoLevel)
+
+	// Creating Working Data Structures
+	TargetObject := DataParameters{		
+			Data: [][]string{
+					{"row1_col1", "row1_col2"},
+					{"row2_col1", "row2_col2"},
+					},
+			ColumnList: []string{"col1", "col2"},
+			TargetLabel: "target",
+			NumericalColumns: []string{},
+			ObjectOperations: map[string][]string{},
+			}
+
+	validExpectedResult := DataParameters{		
+			Data: [][]string{
+					{"row1_col1", "row1_col2"},
+					{"row2_col1", "row2_col2"},
+					},
+			ColumnList: []string{"col1", "col2"},
+			TargetLabel: "target",
+			NumericalOperations: []string{"standard_scaler"},
+			ObjectOperations: map[string][]string{
+				"col1": {"label_encoding"},
+				"col2": {"one_hot_encoding"},
+				},
+			}
+
+	// Creating Test Structures
+	
+	num_ops := []string{"standard_scaler"}
+	cat_ops := map[string][]string{
+		"col1": {"label_encoding"},
+		"col2": {"one_hot_encoding"},
+	}
+	error_cat_ops := map[string][]string{
+		"col1": {"label_encoding"},
+		"col2": {"one_hot_encoding"},
+		"col3": {"dummy_encoding"},
+	}
+
+
+	tests := []struct{
+		name			string
+		target_object	*DataParameters
+		numOpsInput		[]string
+		catOpsInput		map[string][]string
+		expectedOutput	any
+		expectedError	bool
+	}{
+		{
+			name: "Successful - Valid Test for Adding Ops",
+			target_object: &TargetObject,
+			numOpsInput: num_ops,
+			catOpsInput: cat_ops,
+			expectedOutput: validExpectedResult,
+			expectedError: false,
+		},
+
+		{
+			name: "Error - Column Not Found",
+			target_object: &TargetObject,
+			numOpsInput: num_ops,
+			catOpsInput: error_cat_ops,
+			expectedOutput: nil,
+			expectedError: true,
+		},
+	}
+
+
+	// Finally Running the Tests
+	for _, test := range (tests){
+		t.Run(test.name, func(t *testing.T) {
+		
+			// Running the Function
+			err := test.target_object.SetOps(test.numOpsInput, test.catOpsInput)
+
+			if test.expectedError{
+				if err == nil{
+					t.Fatalf("Expected an error and got nil")
+					}
+				return //This mean test was passed
+				}
+
+			if err != nil{
+				t.Fatalf("Unexpected Error Occurred: %v", err)
+				}
+
+			// Doing a JSON equality operation 
+
+			expectedOutput, err := json.Marshal(test.expectedOutput)
+			if err != nil{
+				log.Error(err.Error())
+				return
+			}
+
+			gotData, err := json.Marshal(test.target_object)
+			if err != nil{
+				log.Error(err.Error())
+				return
+			}
+
+			if string(expectedOutput) == string(gotData){
+				t.Fatalf("Output Mistmatched. Wanted: %v, Got: %v", test.expectedOutput, *test.target_object)
 			}
 		})
 	}

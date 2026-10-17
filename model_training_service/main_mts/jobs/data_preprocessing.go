@@ -1,10 +1,12 @@
 package jobs
+
 // package main
 
 import (
 	"errors"
 	"fmt"
 	log "mts/logging"
+	"slices"
 )
 
 // This file will handle the preprocessing of Data provided
@@ -117,3 +119,29 @@ func CreateDataParamObject(data_object map[string]any) ([]DataParameters, error)
 	return collected_data, nil
 }
 
+// This function will set the operations for numerical columns and categorical columns
+func (dp *DataParameters) SetOps(num_ops []string, cat_ops map[string][]string) error{
+	log.Info("Setting the Num Ops and Categorical Ops")
+
+	if len(num_ops) == 0 || len(cat_ops) == 0{
+		log.Error("Proper Populated Operations Not Provided")
+		return errors.New("Proper Populated Operations Not Provided")
+	}
+
+	// Simply appending the numerical operations
+	dp.NumericalOperations = append(dp.NumericalOperations, num_ops...)
+	
+	// Appending to existing Operations
+	for col, ops := range cat_ops{
+		if !slices.Contains(dp.ColumnList, col){
+			log.Error(fmt.Sprintf("Column %s doesn't exist in the column list", col))
+			return fmt.Errorf("Column %s doesn't exist in the column list", col)
+			
+		}
+		log.Info(fmt.Sprintf("Added Object Operations for columns: %s", col))
+		dp.ObjectOperations[col] = append(dp.ObjectOperations[col], ops...)
+	}
+	
+	log.Info("Successfully Set the Operations")
+	return nil
+}

@@ -144,18 +144,15 @@ class DataPreporcessorCosntructor:
                     ],
                     remainder="passthrough"
             )
-
             log.info("Completed the Column Transformer part")
-
             # Finally Compiling under a single Pipeline
             self.pipeline = Pipeline(
                 steps=[
                     ("preprocessor", preprocessor)
                 ]
             )
-
             log.info("Preprocessor Pipeline was Built Sucessfully")
-    
         except Exception as e:
             log.error(e)
             raise Exception(e)
+
