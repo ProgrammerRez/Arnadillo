@@ -411,7 +411,7 @@ func (dms *DMService) getDataObjects(w http.ResponseWriter, r *http.Request){
 		log.Error(err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
-	}
+	}	
 
 	bytes, err := json.Marshal(data)
 

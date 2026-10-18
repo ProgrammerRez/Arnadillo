@@ -1,62 +1,65 @@
+from sklearn.preprocessing import FunctionTransformer
 from typing import Any
-from pandas.core.frame import DataFrame
 from sklearn.base import BaseEstimator
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder
+from sklearn.preprocessing import StandardScaler, OneHotEncoder, OrdinalEncoder
 from collections.abc import Callable
 from logger import dp_logger as log
 from models import DataParams
 import pandas as pd
 
 # Operation Dictionaries
-NUM_OPS_REGISTRY: dict[str, Callable[pd.DataFrame, pd.DataFrame]] = {}
+NUM_OPS_REGISTRY: dict[str, Callable[[pd.DataFrame], pd.DataFrame]] = {}
 CAT_OPS_REGISTRY: dict[str, Callable[[pd.DataFrame, str], pd.DataFrame]] = {}
 
 # Operation Decorator functions
 def regitser_num_op(name: str):
-    def decorator(func: Callable[pd.DataFrame, pd.DataFrame]):
+    def decorator(func: Callable[[pd.DataFrame], pd.DataFrame]):
         NUM_OPS_REGISTRY[name] = func
         return func
     return decorator
 
 def register_cat_op(name: str) :
-    def decorator(func: Callable[[pd.DataFrame, str], pd.DataFrame])
+    def decorator(func: Callable[[pd.DataFrame, str], pd.DataFrame]):
         CAT_OPS_REGISTRY[name] = func
         return func
     return decorator
 
 # Creating the functions
-@register_num_op("standard_scaler")
-def standard_scaler(df: pd.Dataframe)-> pd.DataFrame:
-    scaler: BaseEstimator = StandardScaler().set_output("pandas")
+@regitser_num_op("standard_scaler")
+def standard_scaler(df: pd.DataFrame)-> pd.DataFrame:
+    scaler: BaseEstimator = StandardScaler().set_output(transform="pandas")
     return scaler.fit_transform(df)
 
 @register_cat_op("label_encoding")
 def label_encoding(df: pd.DataFrame, col: str) -> pd.DataFrame:
-    df[col] = LabelEncoder().fit_transform(df[col])
+    # Checking if data provied is a pd.Seriece by ColumnTransformer
+    encoder = OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)
+    df[col] = encoder.fit_transform(df[[col]])
     return df
 
 @register_cat_op("one_hot_encoding")
 def one_hot_encoding(df: pd.DataFrame, col: str) -> pd.DataFrame:
+    # Checking if data provied is a pd.Seriece by ColumnTransformer
     one = OneHotEncoder(sparse_output=False, handle_unknown="ignore")
-    encoded_data = one.fit_transform(df[col])
+    encoded_data = one.fit_transform(df[[col]])
     encoded_df = pd.DataFrame(
         data = encoded_data,
-        columns= one.get_feature_names_out(col)
+        columns= one.get_feature_names_out([col]),
+        index=df.index
     )
-    final_df: DataFrame = pd.concat([df, encoded_df], axis=1).drop([col], axis=1)
+    final_df: pd.DataFrame = pd.concat([df.drop([col], axis=1), encoded_df], axis=1)
     return final_df
 
 @register_cat_op("dummy_encoding")
 def dummy_encoding(df: pd.DataFrame, col: str) -> pd.DataFrame:
-    dummies: DataFrame = pd.get_dummies(
+    dummies: pd.DataFrame = pd.get_dummies(
         df,
         [col],
         drop_first=True
     )
     return dummies
-
 
 # This object will be the main construct for the data preprocessing pipeline
 class DataPreporcessorCosntructor:
@@ -73,7 +76,16 @@ class DataPreporcessorCosntructor:
             if not self.params.ColumnList or not self.params.Data:
                 log.error("No Column or Row Data found in the data object")
                 raise ValueError("No Column or Row Data found in the data object")
-            
+
+            # Checking for Numerical and Categorical Column Distribution
+            if not self.params.NumericalColumns:
+                log.error("Numerical Columns Not Found")
+                raise ValueError("Numerical Columns Not Found")
+
+            if not self.params.CategoricalColumns:
+                log.error("Categorical Columns Not Found")
+                raise ValueError("Categorical Columns Not Found")
+
             self.df = pd.DataFrame(data=self.params.Data, columns=self.params.ColumnList)
             log.info(f"Loaded dataframe with shape: {self.df.shape}")
 
@@ -100,49 +112,50 @@ class DataPreporcessorCosntructor:
         """This function will build the sklearn pipeline for the job"""
         
         try:
-
             # Makes sure data is loaded
             if self.df is None:
                 self.load_data()
-
             log.info("Starting Pipeline Build")
+            transformers_list = []
 
             # Parsing Numerical Steps
-            num_steps: list[[str, Callable[pd.DataFrame, pd.DataFrame]]] = []
-
+            num_steps: list[[str, Callable[[pd.DataFrame], pd.DataFrame]]] = []
             for ops in self.params.NumericalOperations:
                 if ops in NUM_OPS_REGISTRY:
-                    num_steps.append((ops, NUM_OPS_REGISTRY[ops]))
+                    num_steps.append((ops, FunctionTransformer(NUM_OPS_REGISTRY[ops])))
                     log.info(f"Added Step in num_steps: {ops}")
                 else:
                     log.warning(f"Step doesn't exist in registry: {ops}")
             
             log.info("Completed Numerical Steps Building")
 
+            if num_steps and self.params.NumericalColumns and self.params.NumericalOperations:
+                transformers_list.append(("num_ops", Pipeline(steps=num_steps), self.params.NumericalColumns))
+
+            if len(num_steps) == 0:
+                log.warning("Numerical Steps is Empty")
+
             # Parsing Categorical Steps
-            cat_steps: list[[str, Callable[[pd.DataFrame, str], pd.DataFrame]]] = []
-            for col, ops_list in self.params.CategoricalColumns.items():
-                ops: list[Any] | Any = ops_list if isinstance(ops, list) else [ops_list]
+            for col, ops_list in self.params.CategoricalOperations.items():
+                cat_col_steps: list[[str, Callable[[pd.DataFrame], pd.DataFrame]]] = []
+                ops: list[Any] | Any = ops_list if isinstance(ops_list, list) else [ops_list]
                 for op in ops:
                     if op in CAT_OPS_REGISTRY:
-                        cat_steps.append((op, CAT_OPS_REGISTRY[op]))
+                        cat_col_steps.append((op ,FunctionTransformer(
+                                                kw_args={"col":col},
+                                                func=CAT_OPS_REGISTRY[op])))
                         log.info(f"Added Step in cat_steps: {op}")
                     else:
                         log.warning(f"Step doesn't exist in registry: {op}")
+                if cat_col_steps:
+                    transformers_list.append((f"cat_{col}", Pipeline(steps=cat_col_steps), [col]))
             
             log.info("Completed Categorical Steps Building")
 
-            # Creating Numerical and Categorical Pipelines
-            num_pipeline = Pipeline(steps=num_steps)
-            cat_pipeline = Pipeline(steps=cat_steps)
-
             # Adding them under a single column transformer
             preprocessor = ColumnTransformer(
-                transformers=[
-                    ("num_ops", num_pipeline, self.params.NumericalColumns), 
-                    ("cat_ops", cat_pipeline, self.params.CategoricalColumns),
-                    ],
-                    remainder="passthrough"
+                transformers = transformers_list,
+                remainder="passthrough"
             )
             log.info("Completed the Column Transformer part")
             # Finally Compiling under a single Pipeline

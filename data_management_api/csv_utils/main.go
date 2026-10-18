@@ -68,7 +68,7 @@ func LoadCSV(file_path string) (*CSV, error){
 		return new_csv_object, errors.New("File is Empty" + err.Error())
 	}
 	if err != nil{
-		log.Error(fmt.Sprintf("unable to read header row: %w", err))
+		log.Error(fmt.Sprintf("unable to read header row: %v", err))
 		return new_csv_object, fmt.Errorf("unable to read header row: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func LoadCSV(file_path string) (*CSV, error){
 		}
 
 		if err != nil{
-			log.Error(fmt.Sprintf("error reading row %d: %w", len(record)+2, err))
+			log.Error(fmt.Sprintf("error reading row %d: %v", len(record)+2, err))
 			return new_csv_object, fmt.Errorf("error reading row %d: %w", len(record)+2, err)
 		}
 
@@ -441,7 +441,7 @@ func ParsingFloats(data []string) []float64{
 			
 			num_int, err := strconv.ParseInt(val, 10, 64)
 			if err != nil{
-				log.Error(fmt.Sprintf("Integer Conversion didn't work for: %w", val))
+				log.Error(fmt.Sprintf("Integer Conversion didn't work for: %v", val))
 				}
 			num = float64(num_int)
 			

@@ -24,17 +24,17 @@
         },
         "file": {
             "class": "logging.FileHandler",
-            "filename": "logs.txt",
+            "filename": "default_logs.txt",
             "formatter": "default"
         },
         "resource_management_file": {
             "class": "logging.FileHandler",
-            "filename": "logs.txt",
+            "filename": "resource_logs.txt",
             "formatter": "resource_management_format"
         },
         "data_preprocessor_file":{
             "class": "logging.FileHandler",
-            "filename": "logs.txt",
+            "filename": "data_logs.txt",
             "formatter": "data_preprocessor_format"
         },
         "test_suite_file": {
