@@ -1,1 +1,1 @@
-from .logger import main_logger, rm_logger, test_logger, dp_logger
+from .logger import main_logger, rm_logger, test_logger, dp_logger, training_logger

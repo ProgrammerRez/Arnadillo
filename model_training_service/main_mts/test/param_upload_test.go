@@ -45,7 +45,7 @@ func TestGetEndpoint(t *testing.T){
 		"data_params": validRegistryMap,
 		"train_params": map[string]any{
 			"model_type": "traditional",
-			"model_name": "LogisticRegression",
+			"model_name": []any{"LogisticRegression"},
 			"model_params": map[string]any{
 				"limit": 1000,
 			},
@@ -73,7 +73,7 @@ func TestGetEndpoint(t *testing.T){
 		"data_params": map[string]any{},
 		"train_params": map[string]any{
 			"model_type": "traditional",
-			"model_name": "LogisticRegression",
+			"model_name": []any{"LogisticRegression"},
 			"model_params": map[string]any{
 				"limit": 1000,
 			},
@@ -113,7 +113,7 @@ func TestGetEndpoint(t *testing.T){
 			},
 			TrainingParams: jobs.TrainingParameters{
 				ModelType: "traditional",
-				ModelName: "LogisticRegression",
+				ModelName: []string{"LogisticRegression"},
 				ModelParams: map[string]any{
 					"limit":1000.0, 
 				},
@@ -141,7 +141,7 @@ func TestGetEndpoint(t *testing.T){
 			DataParams: nil,
 			TrainingParams: jobs.TrainingParameters{
 				ModelType: "traditional",
-				ModelName: "LogisticRegression",
+				ModelName: []string{"LogisticRegression"},
 				ModelParams: map[string]any{
 					"limit":1000.0, 
 				},
@@ -201,7 +201,7 @@ func TestGetEndpoint(t *testing.T){
 			},
 			TrainingParams: jobs.TrainingParameters{
 				ModelType: "traditional",
-				ModelName: "LogisticRegression",
+				ModelName: []string{"LogisticRegression"},
 				ModelParams: map[string]any{
 					"limit":1000.0, 
 				},
@@ -229,7 +229,7 @@ func TestGetEndpoint(t *testing.T){
 			DataParams: nil,
 			TrainingParams: jobs.TrainingParameters{
 				ModelType: "traditional",
-				ModelName: "LogisticRegression",
+				ModelName: []string{"LogisticRegression"},
 				ModelParams: map[string]any{
 					"limit":1000.0, 
 				},

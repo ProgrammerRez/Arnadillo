@@ -18,10 +18,16 @@ class DataParams(BaseModel):
     CategoricalColumns: Optional[list[str]] = None
     TargetLabel: Optional[str] = None
     ColumnList: Optional[list[str]] = None
-    Data: Optional[list[list[str]]] = None
+    Data: Optional[list[list[Any]]] = None
     NumericalOperations: Optional[list[str]] = None
     CategoricalOperations: Optional[Dict[str, list[str]]] = None
     ID: int
     TestSplit: float
 
 
+# This model is for the Training Parameters
+class TrainingParameters(BaseModel):
+    ModelType: Optional[str] = None
+    # If deep it's going to be just one, while many for traditional
+    ModelName: Optional[list[str]] = None
+    ModelParams: Optional[Dict[str, Any]] = None

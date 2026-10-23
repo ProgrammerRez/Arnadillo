@@ -36,10 +36,23 @@ func CreateTrainParamObject(params map[string]any) (*TrainingParameters, error){
 		return nil, err
 	}
 
-	model_name, ok := raw_name.(string)
-	if !ok || strings.TrimSpace(model_name) == ""{
+
+	// Validating the type by any assertion
+	model_name, ok := raw_name.([]any)
+	if !ok || len(model_name) == 0{
 		log.Error("Model Name is Empty or Invalid Type")
 		return nil, errors.New("Model Name is Empty or Invalid Type")
+	}
+
+	var modelNames []string
+	for _, val := range(model_name){
+		strVal, valid := val.(string)
+		if !valid{
+			log.Error("Provided Model Names isn't a string")
+			return nil, errors.New("Provided Model Names isn't a string")
+		}
+
+		modelNames = append(modelNames, strVal)
 	}
 
 
@@ -79,7 +92,7 @@ func CreateTrainParamObject(params map[string]any) (*TrainingParameters, error){
 
 	return &TrainingParameters{
 		ModelType: model_type,
-		ModelName: model_name,
+		ModelName: modelNames,
 		ModelParams: model_params,
 	}, nil
 }

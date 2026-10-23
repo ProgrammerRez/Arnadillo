@@ -118,23 +118,6 @@ class DataPreporcessorCosntructor:
             log.info("Starting Pipeline Build")
             transformers_list = []
 
-            # Parsing Numerical Steps
-            num_steps: list[[str, Callable[[pd.DataFrame], pd.DataFrame]]] = []
-            for ops in self.params.NumericalOperations:
-                if ops in NUM_OPS_REGISTRY:
-                    num_steps.append((ops, FunctionTransformer(NUM_OPS_REGISTRY[ops])))
-                    log.info(f"Added Step in num_steps: {ops}")
-                else:
-                    log.warning(f"Step doesn't exist in registry: {ops}")
-            
-            log.info("Completed Numerical Steps Building")
-
-            if num_steps and self.params.NumericalColumns and self.params.NumericalOperations:
-                transformers_list.append(("num_ops", Pipeline(steps=num_steps), self.params.NumericalColumns))
-
-            if len(num_steps) == 0:
-                log.warning("Numerical Steps is Empty")
-
             # Parsing Categorical Steps
             for col, ops_list in self.params.CategoricalOperations.items():
                 cat_col_steps: list[[str, Callable[[pd.DataFrame], pd.DataFrame]]] = []
@@ -158,6 +141,31 @@ class DataPreporcessorCosntructor:
                 remainder="passthrough"
             )
             log.info("Completed the Column Transformer part")
+
+            # Parsing Numerical Steps
+            num_steps: list[[str, Callable[[pd.DataFrame], pd.DataFrame]]] = []
+            for ops in self.params.NumericalOperations:
+                if ops in NUM_OPS_REGISTRY:
+                    num_steps.append((ops, FunctionTransformer(NUM_OPS_REGISTRY[ops])))
+                    log.info(f"Added Step in num_steps: {ops}")
+                else:
+                    log.warning(f"Step doesn't exist in registry: {ops}")
+            
+            log.info("Completed Numerical Steps Building")
+
+            num_cols = []
+            for col in self.params.NumericalColumns:
+                if col != self.params.TargetLabel:
+                    num_cols.append(col)
+            
+            log.info(f"Debugging to make sure that target didn't get preprocessed: {num_cols}")
+
+            if num_steps and self.params.NumericalColumns and self.params.NumericalOperations:
+                transformers_list.append(("num_ops", Pipeline(steps=num_steps), num_cols))
+
+            if len(num_steps) == 0:
+                log.warning("Numerical Steps is Empty")
+
             # Finally Compiling under a single Pipeline
             self.pipeline = Pipeline(
                 steps=[

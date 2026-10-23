@@ -21,6 +21,7 @@ except json.JSONDecodeError:
 main_logger: logging.Logger = logging.getLogger("main")
 rm_logger: logging.Logger = logging.getLogger("resource_management")
 dp_logger: logging.Logger = logging.getLogger("data_preprocessor_file")
+training_logger: logging.Logger = logging.getLogger("model_training_pipeline")
 test_logger: logging.Logger = logging.getLogger("test_suite")
 
 

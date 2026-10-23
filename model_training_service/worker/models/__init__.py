@@ -1,1 +1,1 @@
-from .models import Job, DataParams
+from .models import Job, DataParams, TrainingParameters

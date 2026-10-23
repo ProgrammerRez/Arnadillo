@@ -49,12 +49,11 @@ type DataParameters struct{
 
 // Training Parameters Struct for the Model Training
 type TrainingParameters struct{
-
+	// Specific Model Name like `Logistic Regression`, `CNN`, etc.
+	ModelName 		[]string				`json:"model_name"`
 	// These parameters would decide between different classes and models of neural networks and traditional alogirithms.
 	// Would be `traditional`, `deep`, `XGBoost/Catboost`
 	ModelType		string				`json:"model_type"`
-	// Specific Model Name like `Logistic Regression`, `CNN`, etc.
-	ModelName 		string				`json:"model_name"`
 	// Since every model has specific parameters I'll just use a dictionary of possible parameters
 	ModelParams		map[string]any		`json:"model_params"`
 }

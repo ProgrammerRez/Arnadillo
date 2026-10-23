@@ -149,3 +149,479 @@ INFO: 2026/10/17 22:31:24.408607 logger.go:85: Value model_type exists
 INFO: 2026/10/17 22:31:24.408744 logger.go:85: Value model_name exists
 INFO: 2026/10/17 22:31:24.408874 logger.go:85: Value model_params exists
 ERROR: 2026/10/17 22:31:24.409000 logger.go:99: Model Params is Empty or of Invalid Type
+INFO: 2026/10/23 01:19:41.934999 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.935603 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:19:41.935680 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:19:41.935729 logger.go:85: Value data exists
+INFO: 2026/10/23 01:19:41.935784 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:19:41.935853 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:19:41.935914 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:19:41.935973 logger.go:85: Value data exists
+INFO: 2026/10/23 01:19:41.936096 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:19:41.936166 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:19:41.936222 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:19:41.936286 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:19:41.936406 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.936464 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:19:41.936516 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:19:41.936562 logger.go:85: Value data exists
+INFO: 2026/10/23 01:19:41.936607 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:19:41.936661 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:19:41.936712 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:19:41.936761 logger.go:85: Value data exists
+INFO: 2026/10/23 01:19:41.936808 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:19:41.936857 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:19:41.936904 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:19:41.936957 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:19:41.937003 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:19:41.937052 logger.go:85: Value data exists
+INFO: 2026/10/23 01:19:41.937099 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:19:41.937151 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:19:41.937196 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:19:41.937255 logger.go:85: Value data exists
+INFO: 2026/10/23 01:19:41.937324 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:19:41.937370 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:19:41.937415 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:19:41.937462 logger.go:85: Processed 2 object(s)
+INFO: 2026/10/23 01:19:41.937584 logger.go:85: Converting into Data Params Object
+ERROR: 2026/10/23 01:19:41.937667 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/10/23 01:19:41.937774 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.937866 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:19:41.937933 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:19:41.938047 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.938122 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:19:41.938199 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:19:41.938322 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.938398 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:19:41.938476 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/10/23 01:19:41.938585 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.938643 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:19:41.938698 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:19:41.938773 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.938823 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:19:41.938871 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:19:41.938940 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:19:41.938986 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:19:41.939036 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:19:41.939176 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 01:19:41.939225 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 01:19:41.939285 logger.go:85: Added Object Operations for columns: col2
+INFO: 2026/10/23 01:19:41.939329 logger.go:85: Successfully Set the Operations
+INFO: 2026/10/23 01:19:41.939479 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 01:19:41.939557 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 01:19:41.939619 logger.go:85: Added Object Operations for columns: col2
+ERROR: 2026/10/23 01:19:41.939677 logger.go:99: Column col3 doesn't exist in the column list
+INFO: 2026/10/23 01:19:41.939927 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:19:41.939997 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:19:41.940058 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:19:41.940111 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 01:19:41.940193 logger.go:85: Creating the Do Over Parametres
+ERROR: 2026/10/23 01:19:41.940392 logger.go:99: Value: max_retries doesn't exist in object map[]
+ERROR: 2026/10/23 01:19:41.940462 logger.go:99: Value: max_retries doesn't exist in object map[]
+INFO: 2026/10/23 01:19:41.940530 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:19:41.940583 logger.go:85: Value max_retries exists
+ERROR: 2026/10/23 01:19:41.940627 logger.go:99: Max Retries is Invalid Type
+INFO: 2026/10/23 01:19:41.940698 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:19:41.940779 logger.go:85: Value max_retries exists
+ERROR: 2026/10/23 01:19:41.940875 logger.go:99: Value: max_deviance doesn't exist in object map[max_retries:%!s(float64=1)]
+ERROR: 2026/10/23 01:19:41.940945 logger.go:99: Value: max_deviance doesn't exist in object map[max_retries:%!s(float64=1)]
+INFO: 2026/10/23 01:19:41.941035 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:19:41.941134 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:19:41.941194 logger.go:85: Value max_deviance exists
+ERROR: 2026/10/23 01:19:41.941282 logger.go:99: Value: fallback_params doesn't exist in object map[max_deviance:%!s(float64=0.5) max_retries:%!s(float64=1)]
+ERROR: 2026/10/23 01:19:41.941343 logger.go:99: Value: fallback_params doesn't exist in object map[max_deviance:%!s(float64=0.5) max_retries:%!s(float64=1)]
+INFO: 2026/10/23 01:19:41.941424 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:19:41.941490 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:19:41.941544 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:19:41.941594 logger.go:85: Value fallback_params exists
+ERROR: 2026/10/23 01:19:41.941647 logger.go:99: Fallback Params is Empty
+INFO: 2026/10/23 01:19:41.941718 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:19:41.941773 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:19:41.941827 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:19:41.941874 logger.go:85: Value fallback_params exists
+ERROR: 2026/10/23 01:19:41.941922 logger.go:99: Fallback Params is Invalid Type
+INFO: 2026/10/23 01:19:41.942084 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:19:41.942145 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:19:41.942194 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 01:19:41.942261 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 01:19:41.942308 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 01:19:41.942403 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:19:41.942481 logger.go:85: Value problem_type exists
+ERROR: 2026/10/23 01:19:41.942547 logger.go:99: Problem Type is Empty or Invalid Type
+INFO: 2026/10/23 01:19:41.942621 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:19:41.942678 logger.go:85: Value problem_type exists
+ERROR: 2026/10/23 01:19:41.942733 logger.go:99: Problem Type is Empty or Invalid Type
+INFO: 2026/10/23 01:19:41.942809 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:19:41.942866 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:19:41.942917 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 01:19:41.942971 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+INFO: 2026/10/23 01:19:41.943042 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:19:41.943098 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:19:41.943145 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 01:19:41.943197 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+INFO: 2026/10/23 01:19:41.943407 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 01:19:41.943525 logger.go:85: Getting Jobs with filter: 0
+INFO: 2026/10/23 01:19:41.943679 logger.go:85: List [0x163493612120]
+INFO: 2026/10/23 01:19:41.943814 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:19:41.943861 logger.go:85: List [0x1634936121b0]
+INFO: 2026/10/23 01:19:41.943917 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/10/23 01:19:41.943956 logger.go:85: List [0x163493612240]
+INFO: 2026/10/23 01:19:41.944040 logger.go:85: Getting Jobs with filter: 99
+ERROR: 2026/10/23 01:19:41.944098 logger.go:99: Please provide proper filters
+INFO: 2026/10/23 01:19:41.944147 logger.go:85: Planted Error Occured
+INFO: 2026/10/23 01:19:41.944302 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.944373 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:19:41.944416 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:19:41.944461 logger.go:85: Value model_params exists
+INFO: 2026/10/23 01:19:41.944535 logger.go:85: Extracting Training Parameters
+ERROR: 2026/10/23 01:19:41.944597 logger.go:99: Value: model_type doesn't exist in object map[]
+ERROR: 2026/10/23 01:19:41.944645 logger.go:99: Value: model_type doesn't exist in object map[]
+INFO: 2026/10/23 01:19:41.944705 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.944765 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:19:41.944809 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:19:41.944878 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.944933 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:19:41.944976 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:19:41.945037 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.945088 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:19:41.945137 logger.go:99: Value: model_name doesn't exist in object map[model_type:model_type]
+ERROR: 2026/10/23 01:19:41.945196 logger.go:99: Value: model_name doesn't exist in object map[model_type:model_type]
+INFO: 2026/10/23 01:19:41.945270 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.945324 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:19:41.945371 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:19:41.945411 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:19:41.945473 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.945521 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:19:41.945578 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:19:41.945652 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:19:41.945773 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.945878 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:19:41.946000 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:19:41.946084 logger.go:99: Value: model_params doesn't exist in object map[model_name:[model_name] model_type:model_type]
+ERROR: 2026/10/23 01:19:41.946143 logger.go:99: Value: model_params doesn't exist in object map[model_name:[model_name] model_type:model_type]
+INFO: 2026/10/23 01:19:41.946236 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.946295 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:19:41.946341 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:19:41.946391 logger.go:85: Value model_params exists
+ERROR: 2026/10/23 01:19:41.946449 logger.go:99: Unexpected type for model_params []interface {}
+INFO: 2026/10/23 01:19:41.946525 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:19:41.946619 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:19:41.946686 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:19:41.946745 logger.go:85: Value model_params exists
+ERROR: 2026/10/23 01:19:41.946792 logger.go:99: Model Params is Empty or of Invalid Type
+INFO: 2026/10/23 01:23:35.047195 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.047423 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:23:35.047473 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:23:35.047522 logger.go:85: Value data exists
+INFO: 2026/10/23 01:23:35.047570 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:23:35.047620 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:23:35.047666 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:23:35.047714 logger.go:85: Value data exists
+INFO: 2026/10/23 01:23:35.047766 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:23:35.047813 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:23:35.047860 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:23:35.047911 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:23:35.048000 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.048080 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:23:35.048165 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:23:35.048225 logger.go:85: Value data exists
+INFO: 2026/10/23 01:23:35.048289 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:23:35.048345 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:23:35.048390 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:23:35.048436 logger.go:85: Value data exists
+INFO: 2026/10/23 01:23:35.048481 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:23:35.048526 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:23:35.048574 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:23:35.048623 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:23:35.048671 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:23:35.048721 logger.go:85: Value data exists
+INFO: 2026/10/23 01:23:35.048775 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:23:35.048827 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:23:35.048868 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:23:35.048911 logger.go:85: Value data exists
+INFO: 2026/10/23 01:23:35.048978 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:23:35.049021 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:23:35.049064 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:23:35.049104 logger.go:85: Processed 2 object(s)
+INFO: 2026/10/23 01:23:35.049223 logger.go:85: Converting into Data Params Object
+ERROR: 2026/10/23 01:23:35.049283 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/10/23 01:23:35.049361 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.049407 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:23:35.049450 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:23:35.049514 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.049562 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:23:35.049671 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:23:35.049797 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.049894 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:23:35.049978 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/10/23 01:23:35.050091 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.050141 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:23:35.050191 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:23:35.050280 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.050339 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:23:35.050388 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:23:35.050461 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:23:35.050512 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:23:35.050557 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:23:35.050733 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 01:23:35.050778 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 01:23:35.050872 logger.go:85: Added Object Operations for columns: col2
+INFO: 2026/10/23 01:23:35.050931 logger.go:85: Successfully Set the Operations
+INFO: 2026/10/23 01:23:35.051095 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 01:23:35.051140 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 01:23:35.051184 logger.go:85: Added Object Operations for columns: col2
+ERROR: 2026/10/23 01:23:35.051231 logger.go:99: Column col3 doesn't exist in the column list
+INFO: 2026/10/23 01:23:35.051412 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:23:35.051466 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:23:35.051504 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:23:35.051540 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 01:23:35.051601 logger.go:85: Creating the Do Over Parametres
+ERROR: 2026/10/23 01:23:35.051649 logger.go:99: Value: max_retries doesn't exist in object map[]
+ERROR: 2026/10/23 01:23:35.051688 logger.go:99: Value: max_retries doesn't exist in object map[]
+INFO: 2026/10/23 01:23:35.051742 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:23:35.051783 logger.go:85: Value max_retries exists
+ERROR: 2026/10/23 01:23:35.051819 logger.go:99: Max Retries is Invalid Type
+INFO: 2026/10/23 01:23:35.051867 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:23:35.051905 logger.go:85: Value max_retries exists
+ERROR: 2026/10/23 01:23:35.051964 logger.go:99: Value: max_deviance doesn't exist in object map[max_retries:%!s(float64=1)]
+ERROR: 2026/10/23 01:23:35.052003 logger.go:99: Value: max_deviance doesn't exist in object map[max_retries:%!s(float64=1)]
+INFO: 2026/10/23 01:23:35.052058 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:23:35.052098 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:23:35.052133 logger.go:85: Value max_deviance exists
+ERROR: 2026/10/23 01:23:35.052179 logger.go:99: Value: fallback_params doesn't exist in object map[max_deviance:%!s(float64=0.5) max_retries:%!s(float64=1)]
+ERROR: 2026/10/23 01:23:35.052219 logger.go:99: Value: fallback_params doesn't exist in object map[max_deviance:%!s(float64=0.5) max_retries:%!s(float64=1)]
+INFO: 2026/10/23 01:23:35.052276 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:23:35.052319 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:23:35.052353 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:23:35.052387 logger.go:85: Value fallback_params exists
+ERROR: 2026/10/23 01:23:35.052421 logger.go:99: Fallback Params is Empty
+INFO: 2026/10/23 01:23:35.052465 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:23:35.052505 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:23:35.052542 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:23:35.052575 logger.go:85: Value fallback_params exists
+ERROR: 2026/10/23 01:23:35.052611 logger.go:99: Fallback Params is Invalid Type
+INFO: 2026/10/23 01:23:35.052706 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:23:35.052746 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:23:35.052783 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 01:23:35.052830 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:23:35.052873 logger.go:85: Value problem_type exists
+ERROR: 2026/10/23 01:23:35.052909 logger.go:99: Problem Type is Empty or Invalid Type
+INFO: 2026/10/23 01:23:35.052956 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:23:35.052996 logger.go:85: Value problem_type exists
+ERROR: 2026/10/23 01:23:35.053030 logger.go:99: Problem Type is Empty or Invalid Type
+INFO: 2026/10/23 01:23:35.053076 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:23:35.053117 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:23:35.053153 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 01:23:35.053189 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+INFO: 2026/10/23 01:23:35.053251 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:23:35.053352 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:23:35.053390 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 01:23:35.053424 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+INFO: 2026/10/23 01:23:35.053503 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 01:23:35.053562 logger.go:85: Getting Jobs with filter: 0
+INFO: 2026/10/23 01:23:35.053601 logger.go:85: List [0x358550f14120]
+INFO: 2026/10/23 01:23:35.053651 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:23:35.053686 logger.go:85: List [0x358550f141b0]
+INFO: 2026/10/23 01:23:35.053736 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/10/23 01:23:35.053774 logger.go:85: List [0x358550f14240]
+INFO: 2026/10/23 01:23:35.053822 logger.go:85: Getting Jobs with filter: 99
+ERROR: 2026/10/23 01:23:35.053856 logger.go:99: Please provide proper filters
+INFO: 2026/10/23 01:23:35.053892 logger.go:85: Planted Error Occured
+INFO: 2026/10/23 01:23:35.054006 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.054049 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:23:35.054086 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:23:35.054120 logger.go:85: Value model_params exists
+INFO: 2026/10/23 01:23:35.054174 logger.go:85: Extracting Training Parameters
+ERROR: 2026/10/23 01:23:35.054214 logger.go:99: Value: model_type doesn't exist in object map[]
+ERROR: 2026/10/23 01:23:35.054262 logger.go:99: Value: model_type doesn't exist in object map[]
+INFO: 2026/10/23 01:23:35.054310 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.054349 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:23:35.054385 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:23:35.054433 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.054472 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:23:35.054507 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:23:35.054556 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.054595 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:23:35.054631 logger.go:99: Value: model_name doesn't exist in object map[model_type:model_type]
+ERROR: 2026/10/23 01:23:35.054676 logger.go:99: Value: model_name doesn't exist in object map[model_type:model_type]
+INFO: 2026/10/23 01:23:35.054723 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.054762 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:23:35.054798 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:23:35.054833 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:23:35.054878 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.054935 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:23:35.054968 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:23:35.055002 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:23:35.055049 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.055086 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:23:35.055121 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:23:35.055165 logger.go:99: Value: model_params doesn't exist in object map[model_name:[model_name] model_type:model_type]
+ERROR: 2026/10/23 01:23:35.055203 logger.go:99: Value: model_params doesn't exist in object map[model_name:[model_name] model_type:model_type]
+INFO: 2026/10/23 01:23:35.055257 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.055303 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:23:35.055339 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:23:35.055375 logger.go:85: Value model_params exists
+ERROR: 2026/10/23 01:23:35.055416 logger.go:99: Unexpected type for model_params []interface {}
+INFO: 2026/10/23 01:23:35.055472 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:23:35.055511 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:23:35.055574 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:23:35.055608 logger.go:85: Value model_params exists
+ERROR: 2026/10/23 01:23:35.055642 logger.go:99: Model Params is Empty or of Invalid Type
+INFO: 2026/10/23 01:24:22.418546 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.418802 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:24:22.418871 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:24:22.418922 logger.go:85: Value data exists
+INFO: 2026/10/23 01:24:22.418968 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:24:22.419013 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:24:22.419057 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:24:22.419102 logger.go:85: Value data exists
+INFO: 2026/10/23 01:24:22.419146 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:24:22.419190 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:24:22.419235 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:24:22.419296 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:24:22.419385 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.419466 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:24:22.419537 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:24:22.419610 logger.go:85: Value data exists
+INFO: 2026/10/23 01:24:22.419669 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:24:22.419726 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:24:22.419780 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:24:22.419835 logger.go:85: Value data exists
+INFO: 2026/10/23 01:24:22.419889 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:24:22.419944 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:24:22.419997 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:24:22.420052 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:24:22.420107 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:24:22.420163 logger.go:85: Value data exists
+INFO: 2026/10/23 01:24:22.420216 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:24:22.420280 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:24:22.420334 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:24:22.420390 logger.go:85: Value data exists
+INFO: 2026/10/23 01:24:22.420449 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:24:22.420506 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:24:22.420560 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:24:22.420614 logger.go:85: Processed 2 object(s)
+INFO: 2026/10/23 01:24:22.420731 logger.go:85: Converting into Data Params Object
+ERROR: 2026/10/23 01:24:22.420792 logger.go:99: Value: registry doesn't exist in object map[]
+INFO: 2026/10/23 01:24:22.420874 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.420932 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:24:22.420988 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:24:22.421069 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.421128 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:24:22.421184 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:24:22.421269 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.421328 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:24:22.421383 logger.go:99: Regisrty Data isn't a map
+INFO: 2026/10/23 01:24:22.421460 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.421516 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:24:22.421571 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:24:22.421646 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.421702 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:24:22.421757 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:24:22.421838 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:24:22.421905 logger.go:85: Value registry exists
+ERROR: 2026/10/23 01:24:22.422005 logger.go:99: Regitry is not an array / slice / is empty
+INFO: 2026/10/23 01:24:22.422179 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 01:24:22.422237 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 01:24:22.422296 logger.go:85: Added Object Operations for columns: col2
+INFO: 2026/10/23 01:24:22.422342 logger.go:85: Successfully Set the Operations
+INFO: 2026/10/23 01:24:22.422492 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 01:24:22.422550 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 01:24:22.422599 logger.go:85: Added Object Operations for columns: col2
+ERROR: 2026/10/23 01:24:22.422643 logger.go:99: Column col3 doesn't exist in the column list
+INFO: 2026/10/23 01:24:22.422787 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:24:22.422846 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:24:22.422893 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:24:22.422937 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 01:24:22.423004 logger.go:85: Creating the Do Over Parametres
+ERROR: 2026/10/23 01:24:22.423082 logger.go:99: Value: max_retries doesn't exist in object map[]
+ERROR: 2026/10/23 01:24:22.423138 logger.go:99: Value: max_retries doesn't exist in object map[]
+INFO: 2026/10/23 01:24:22.423211 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:24:22.423274 logger.go:85: Value max_retries exists
+ERROR: 2026/10/23 01:24:22.423332 logger.go:99: Max Retries is Invalid Type
+INFO: 2026/10/23 01:24:22.423400 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:24:22.423456 logger.go:85: Value max_retries exists
+ERROR: 2026/10/23 01:24:22.423527 logger.go:99: Value: max_deviance doesn't exist in object map[max_retries:%!s(float64=1)]
+ERROR: 2026/10/23 01:24:22.423577 logger.go:99: Value: max_deviance doesn't exist in object map[max_retries:%!s(float64=1)]
+INFO: 2026/10/23 01:24:22.423648 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:24:22.423694 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:24:22.423740 logger.go:85: Value max_deviance exists
+ERROR: 2026/10/23 01:24:22.423805 logger.go:99: Value: fallback_params doesn't exist in object map[max_deviance:%!s(float64=0.5) max_retries:%!s(float64=1)]
+ERROR: 2026/10/23 01:24:22.423856 logger.go:99: Value: fallback_params doesn't exist in object map[max_deviance:%!s(float64=0.5) max_retries:%!s(float64=1)]
+INFO: 2026/10/23 01:24:22.423925 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:24:22.423977 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:24:22.424021 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:24:22.424066 logger.go:85: Value fallback_params exists
+ERROR: 2026/10/23 01:24:22.424110 logger.go:99: Fallback Params is Empty
+INFO: 2026/10/23 01:24:22.424166 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 01:24:22.424213 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 01:24:22.424267 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 01:24:22.424313 logger.go:85: Value fallback_params exists
+ERROR: 2026/10/23 01:24:22.424356 logger.go:99: Fallback Params is Invalid Type
+INFO: 2026/10/23 01:24:22.424493 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:24:22.424545 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:24:22.424590 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 01:24:22.424658 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:24:22.424704 logger.go:85: Value problem_type exists
+ERROR: 2026/10/23 01:24:22.424749 logger.go:99: Problem Type is Empty or Invalid Type
+INFO: 2026/10/23 01:24:22.424804 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:24:22.424854 logger.go:85: Value problem_type exists
+ERROR: 2026/10/23 01:24:22.424897 logger.go:99: Problem Type is Empty or Invalid Type
+INFO: 2026/10/23 01:24:22.424954 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:24:22.425051 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:24:22.425100 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 01:24:22.425148 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+INFO: 2026/10/23 01:24:22.425204 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 01:24:22.425270 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 01:24:22.425315 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 01:24:22.425358 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+INFO: 2026/10/23 01:24:22.425454 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 01:24:22.425525 logger.go:85: Getting Jobs with filter: 0
+INFO: 2026/10/23 01:24:22.425580 logger.go:85: List [0x1cdc14c94120]
+INFO: 2026/10/23 01:24:22.425655 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:24:22.425731 logger.go:85: List [0x1cdc14c941b0]
+INFO: 2026/10/23 01:24:22.425814 logger.go:85: Getting Jobs with filter: 2
+INFO: 2026/10/23 01:24:22.425879 logger.go:85: List [0x1cdc14c94240]
+INFO: 2026/10/23 01:24:22.425957 logger.go:85: Getting Jobs with filter: 99
+ERROR: 2026/10/23 01:24:22.426019 logger.go:99: Please provide proper filters
+INFO: 2026/10/23 01:24:22.426079 logger.go:85: Planted Error Occured
+INFO: 2026/10/23 01:24:22.426288 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.426367 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:24:22.426431 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:24:22.426477 logger.go:85: Value model_params exists
+INFO: 2026/10/23 01:24:22.426551 logger.go:85: Extracting Training Parameters
+ERROR: 2026/10/23 01:24:22.426629 logger.go:99: Value: model_type doesn't exist in object map[]
+ERROR: 2026/10/23 01:24:22.426683 logger.go:99: Value: model_type doesn't exist in object map[]
+INFO: 2026/10/23 01:24:22.426751 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.426802 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:24:22.426848 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:24:22.426915 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.426966 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:24:22.427012 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:24:22.427092 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.427145 logger.go:85: Value model_type exists
+ERROR: 2026/10/23 01:24:22.427196 logger.go:99: Value: model_name doesn't exist in object map[model_type:model_type]
+ERROR: 2026/10/23 01:24:22.427294 logger.go:99: Value: model_name doesn't exist in object map[model_type:model_type]
+INFO: 2026/10/23 01:24:22.427390 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.427476 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:24:22.427526 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:24:22.427571 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:24:22.427640 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.427697 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:24:22.427746 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:24:22.427790 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:24:22.427856 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.427923 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:24:22.427979 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:24:22.428053 logger.go:99: Value: model_params doesn't exist in object map[model_name:[model_name] model_type:model_type]
+ERROR: 2026/10/23 01:24:22.428129 logger.go:99: Value: model_params doesn't exist in object map[model_name:[model_name] model_type:model_type]
+INFO: 2026/10/23 01:24:22.428219 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.428294 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:24:22.428348 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:24:22.428404 logger.go:85: Value model_params exists
+ERROR: 2026/10/23 01:24:22.428517 logger.go:99: Unexpected type for model_params []interface {}
+INFO: 2026/10/23 01:24:22.428587 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:24:22.428646 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:24:22.428698 logger.go:85: Value model_name exists
+INFO: 2026/10/23 01:24:22.428752 logger.go:85: Value model_params exists
+ERROR: 2026/10/23 01:24:22.428804 logger.go:99: Model Params is Empty or of Invalid Type

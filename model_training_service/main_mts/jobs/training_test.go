@@ -14,7 +14,7 @@ func TestCreateTrainParamObject(t *testing.T){
 	// Creating Working Struct
 	working_struct := map[string]any{
 		"model_type": "traditional",
-		"model_name": "LogisticRegression",
+		"model_name": []string{"LogisticRegression"},
 		"model_params": map[string]any{
 			"limit": 1000,
 		},
@@ -22,7 +22,7 @@ func TestCreateTrainParamObject(t *testing.T){
 	// Creating Working Output
 	working_output := &TrainingParameters{
 		ModelType: "traditional",
-		ModelName: "LogisticRegression",
+		ModelName: []string{"LogisticRegression"},
 		ModelParams: map[string]any{
 			"limit": 1000,
 		},
@@ -99,7 +99,7 @@ func TestCreateTrainParamObject(t *testing.T){
 			name: "Error - Model Params Don't Exist",
 			input: map[string]any{
 				"model_type": "model_type",
-				"model_name": "model_name",
+				"model_name": []string{"model_name"},
 			},
 			expectedOutput: nil,
 			expectedError: true,
@@ -109,7 +109,7 @@ func TestCreateTrainParamObject(t *testing.T){
 			name: "Error - Model Params Invalid Type",
 			input: map[string]any{
 				"model_type": "model_type",
-				"model_name": "model_name",
+				"model_name": []string{"model_name"},
 				"model_params": []any{"stuff"},
 			},
 			expectedOutput: nil,
@@ -120,7 +120,7 @@ func TestCreateTrainParamObject(t *testing.T){
 			name: "Error - Model Params Empty",
 			input: map[string]any{
 				"model_type": "model_type",
-				"model_name": "model_name",
+				"model_name": []string{"model_name"},
 				"model_params": map[string]any{},
 			},
 			expectedOutput: nil,

@@ -13,6 +13,10 @@
             "format": "Data Preprocessing Pipeline - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
         },
 
+        "training_format": {
+            "format": "Model Training Pipeline - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        },
+
         "test_suite_format":{
             "format": "Test Suite - %(asctime)s - %(name)s - %(levelname)s - %(message)s"
         }
@@ -37,6 +41,11 @@
             "filename": "data_logs.txt",
             "formatter": "data_preprocessor_format"
         },
+        "training_file":{
+            "class": "logging.FileHandler",
+            "filename": "training_logs.txt",
+            "formatter": "training_format"
+        },
         "test_suite_file": {
             "class": "logging.FileHandler",
             "filename": "test_logs.txt",
@@ -58,6 +67,11 @@
             "level": "INFO",
             "handlers": ["data_preprocessor_file"],
             "propagate":true
+        },
+        "model_training_pipeline":{
+            "level": "INFO",
+            "handlers": ["training_file"],
+            "propagate": true
         },
         "test_suite": {
             "level": "INFO",

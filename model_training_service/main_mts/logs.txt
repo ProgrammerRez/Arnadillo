@@ -215,3 +215,583 @@ INFO: 2026/10/18 01:30:20.517624 logger.go:85: Hopefully Job Data Ops are Set as
 INFO: 2026/10/18 01:30:20.518065 logger.go:85: Parsed Filter Input
 INFO: 2026/10/18 01:30:20.518134 logger.go:85: Getting Jobs with filter: 1
 INFO: 2026/10/18 01:30:20.518191 logger.go:85: List [0x17f139705a0 0x17f139941b0]
+INFO: 2026/10/23 01:25:34.217574 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 01:25:34.222894 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 01:25:34.223089 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 01:25:34.223188 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 01:25:45.451429 logger.go:85: Adding New Job
+INFO: 2026/10/23 01:25:45.451619 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:25:45.451679 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:25:45.451730 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:25:45.451780 logger.go:85: Value data exists
+INFO: 2026/10/23 01:25:45.451825 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:25:45.451874 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:25:45.451921 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:25:45.451968 logger.go:85: Value data exists
+INFO: 2026/10/23 01:25:45.452013 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:25:45.452062 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:25:45.452108 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:25:45.452154 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:25:45.452199 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:25:45.452256 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:25:45.452306 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:25:45.452352 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:25:45.452398 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:25:45.452455 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:25:45.453019 logger.go:85: Adding New Job
+WARN: 2026/10/23 01:25:45.453108 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 01:25:45.453156 logger.go:85: Retrieving Data
+WARN: 2026/10/23 01:25:45.454966 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 01:25:45.455043 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:25:45.455106 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:25:45.455169 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:25:45.455256 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:25:45.455310 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:25:45.455361 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:25:45.456193 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:25:45.456288 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:25:45.456373 logger.go:85: List []
+INFO: 2026/10/23 01:25:45.457021 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 01:25:45.457104 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 01:25:45.457147 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 01:25:45.457200 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 01:25:45.457668 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:25:45.457719 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:25:45.457766 logger.go:85: List []
+INFO: 2026/10/23 01:28:24.640496 logger.go:85: Adding New Job
+INFO: 2026/10/23 01:28:24.640663 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:28:24.640734 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:28:24.640788 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:28:24.640844 logger.go:85: Value data exists
+INFO: 2026/10/23 01:28:24.640893 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:28:24.640941 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:28:24.640991 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:28:24.641041 logger.go:85: Value data exists
+INFO: 2026/10/23 01:28:24.641090 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:28:24.641143 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:28:24.641203 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:28:24.641264 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:28:24.641321 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:28:24.641372 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:28:24.641424 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:28:24.641516 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:28:24.641567 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:28:24.641619 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:28:24.642151 logger.go:85: Adding New Job
+WARN: 2026/10/23 01:28:24.642239 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 01:28:24.642296 logger.go:85: Retrieving Data
+WARN: 2026/10/23 01:28:24.642911 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 01:28:24.642962 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:28:24.643002 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:28:24.643042 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:28:24.643080 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:28:24.643115 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:28:24.643150 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:28:24.643600 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:28:24.643691 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:28:24.643799 logger.go:85: List []
+INFO: 2026/10/23 01:28:24.644270 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 01:28:24.644396 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 01:28:24.644444 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 01:28:24.644504 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 01:28:24.644926 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:28:24.644985 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:28:24.645038 logger.go:85: List []
+INFO: 2026/10/23 01:34:26.101088 logger.go:85: Adding New Job
+INFO: 2026/10/23 01:34:26.101235 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:34:26.101315 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:34:26.101372 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:34:26.101419 logger.go:85: Value data exists
+INFO: 2026/10/23 01:34:26.101465 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:34:26.101515 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:34:26.101564 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:34:26.101615 logger.go:85: Value data exists
+INFO: 2026/10/23 01:34:26.101664 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:34:26.101714 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:34:26.101764 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:34:26.101815 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:34:26.101859 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:34:26.101909 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:34:26.101959 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:34:26.102006 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:34:26.102052 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:34:26.102098 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:34:26.102761 logger.go:85: Adding New Job
+WARN: 2026/10/23 01:34:26.102846 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 01:34:26.102893 logger.go:85: Retrieving Data
+WARN: 2026/10/23 01:34:26.104002 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 01:34:26.104080 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:34:26.104179 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:34:26.104229 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:34:26.104286 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:34:26.104334 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:34:26.104378 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:34:26.105043 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:34:26.105119 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:34:26.105177 logger.go:85: List []
+INFO: 2026/10/23 01:34:26.105652 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 01:34:26.105779 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 01:34:26.105828 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 01:34:26.105868 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 01:34:26.106278 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:34:26.106338 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:34:26.106389 logger.go:85: List []
+INFO: 2026/10/23 01:34:33.044124 logger.go:85: Adding New Job
+INFO: 2026/10/23 01:34:33.044292 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 01:34:33.044354 logger.go:85: Value registry exists
+INFO: 2026/10/23 01:34:33.044397 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 01:34:33.044439 logger.go:85: Value data exists
+INFO: 2026/10/23 01:34:33.044475 logger.go:85: Processed Data Map
+INFO: 2026/10/23 01:34:33.044516 logger.go:85: Value target_col exists
+INFO: 2026/10/23 01:34:33.044551 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 01:34:33.044592 logger.go:85: Value data exists
+INFO: 2026/10/23 01:34:33.044631 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 01:34:33.044671 logger.go:85: Value column_list exists
+INFO: 2026/10/23 01:34:33.044705 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 01:34:33.044745 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 01:34:33.044779 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:34:33.044819 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:34:33.044855 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:34:33.044894 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:34:33.044932 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:34:33.044976 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:34:33.045517 logger.go:85: Adding New Job
+WARN: 2026/10/23 01:34:33.045626 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 01:34:33.045674 logger.go:85: Retrieving Data
+WARN: 2026/10/23 01:34:33.046048 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 01:34:33.046106 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 01:34:33.046155 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 01:34:33.046206 logger.go:85: Value model_type exists
+INFO: 2026/10/23 01:34:33.046265 logger.go:85: Value model_name exists
+ERROR: 2026/10/23 01:34:33.046312 logger.go:99: Model Name is Empty or Invalid Type
+ERROR: 2026/10/23 01:34:33.046362 logger.go:99: Model Name is Empty or Invalid Type
+INFO: 2026/10/23 01:34:33.046859 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:34:33.046915 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:34:33.046966 logger.go:85: List []
+INFO: 2026/10/23 01:34:33.047386 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 01:34:33.047449 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 01:34:33.047484 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 01:34:33.047520 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 01:34:33.047940 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 01:34:33.047990 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 01:34:33.048029 logger.go:85: List []
+INFO: 2026/10/23 11:23:12.927523 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:23:12.932745 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:23:12.933071 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:23:12.933394 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:23:18.875702 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:23:18.876127 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:23:18.876342 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:23:18.876657 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:23:20.845385 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:23:20.845939 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:23:20.846467 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:23:20.846938 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:23:42.176895 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:23:42.177401 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:23:42.177538 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:23:42.177776 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:24:14.376232 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:24:14.376611 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:24:14.376962 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:24:14.377361 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:24:23.322173 logger.go:85: Adding New Job
+INFO: 2026/10/23 11:24:23.322478 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 11:24:23.322554 logger.go:85: Value registry exists
+INFO: 2026/10/23 11:24:23.322638 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 11:24:23.322699 logger.go:85: Value data exists
+INFO: 2026/10/23 11:24:23.322758 logger.go:85: Processed Data Map
+INFO: 2026/10/23 11:24:23.322815 logger.go:85: Value target_col exists
+INFO: 2026/10/23 11:24:23.322873 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 11:24:23.322928 logger.go:85: Value data exists
+INFO: 2026/10/23 11:24:23.322983 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 11:24:23.323040 logger.go:85: Value column_list exists
+INFO: 2026/10/23 11:24:23.323096 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 11:24:23.323153 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 11:24:23.323209 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:24:23.323268 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:24:23.323324 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:24:23.323380 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:24:23.323432 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:24:23.323486 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:24:23.323539 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:24:23.323610 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:24:23.323675 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:24:23.323741 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:24:23.323798 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:24:23.324839 logger.go:85: Adding New Job
+WARN: 2026/10/23 11:24:23.324996 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 11:24:23.325088 logger.go:85: Retrieving Data
+WARN: 2026/10/23 11:24:23.327394 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 11:24:23.327482 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:24:23.327547 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:24:23.327629 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:24:23.327692 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:24:23.327754 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:24:23.327810 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:24:23.327867 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:24:23.327926 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:24:23.327982 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:24:23.328042 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:24:23.328102 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:24:23.328888 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:24:23.328977 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:24:23.329041 logger.go:85: List []
+INFO: 2026/10/23 11:24:23.329850 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 11:24:23.330093 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 11:24:23.330179 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 11:24:23.330257 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 11:24:23.330876 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:24:23.330946 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:24:23.331001 logger.go:85: List []
+INFO: 2026/10/23 11:25:23.841309 logger.go:85: Adding New Job
+INFO: 2026/10/23 11:25:23.841654 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 11:25:23.841779 logger.go:85: Value registry exists
+INFO: 2026/10/23 11:25:23.841872 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 11:25:23.841955 logger.go:85: Value data exists
+INFO: 2026/10/23 11:25:23.842041 logger.go:85: Processed Data Map
+INFO: 2026/10/23 11:25:23.842126 logger.go:85: Value target_col exists
+INFO: 2026/10/23 11:25:23.842207 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 11:25:23.842294 logger.go:85: Value data exists
+INFO: 2026/10/23 11:25:23.842379 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 11:25:23.842467 logger.go:85: Value column_list exists
+INFO: 2026/10/23 11:25:23.842555 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 11:25:23.842661 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 11:25:23.842744 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:25:23.842827 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:25:23.842924 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:25:23.843033 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:25:23.843121 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:25:23.843208 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:25:23.843288 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:25:23.843376 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:25:23.843464 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:25:23.843547 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:25:23.843651 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:25:23.844955 logger.go:85: Adding New Job
+WARN: 2026/10/23 11:25:23.845160 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 11:25:23.845278 logger.go:85: Retrieving Data
+WARN: 2026/10/23 11:25:23.846180 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 11:25:23.846291 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:25:23.846377 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:25:23.846464 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:25:23.846556 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:25:23.846654 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:25:23.846732 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:25:23.846809 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:25:23.846888 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:25:23.846962 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:25:23.847041 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:25:23.847120 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:25:23.848447 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:25:23.848581 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:25:23.848694 logger.go:85: List []
+INFO: 2026/10/23 11:25:23.849626 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 11:25:23.849762 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 11:25:23.849863 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 11:25:23.849945 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 11:25:23.850940 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:25:23.851083 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:25:23.851177 logger.go:85: List []
+INFO: 2026/10/23 11:25:30.411625 logger.go:85: Adding New Job
+INFO: 2026/10/23 11:25:30.411981 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 11:25:30.412101 logger.go:85: Value registry exists
+INFO: 2026/10/23 11:25:30.412168 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 11:25:30.412231 logger.go:85: Value data exists
+INFO: 2026/10/23 11:25:30.412303 logger.go:85: Processed Data Map
+INFO: 2026/10/23 11:25:30.412368 logger.go:85: Value target_col exists
+INFO: 2026/10/23 11:25:30.412430 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 11:25:30.412487 logger.go:85: Value data exists
+INFO: 2026/10/23 11:25:30.412550 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 11:25:30.412625 logger.go:85: Value column_list exists
+INFO: 2026/10/23 11:25:30.412683 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 11:25:30.412747 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 11:25:30.412806 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:25:30.412863 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:25:30.412927 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:25:30.412988 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:25:30.413049 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:25:30.413115 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:25:30.413178 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:25:30.413239 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:25:30.413299 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:25:30.413370 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:25:30.413433 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:25:30.414191 logger.go:85: Adding New Job
+WARN: 2026/10/23 11:25:30.414370 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 11:25:30.414459 logger.go:85: Retrieving Data
+WARN: 2026/10/23 11:25:30.415010 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 11:25:30.415103 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:25:30.415177 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:25:30.415250 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:25:30.415322 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:25:30.415400 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:25:30.415468 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:25:30.415537 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:25:30.415619 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:25:30.415690 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:25:30.415761 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:25:30.415832 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:25:30.416600 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:25:30.416682 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:25:30.416739 logger.go:85: List []
+INFO: 2026/10/23 11:25:30.417445 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 11:25:30.417563 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 11:25:30.417687 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 11:25:30.417859 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 11:25:30.418482 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:25:30.418557 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:25:30.418640 logger.go:85: List []
+INFO: 2026/10/23 11:37:47.696057 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:37:47.696244 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:37:47.696300 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:37:47.696388 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:37:49.320719 logger.go:85: Adding New Job
+INFO: 2026/10/23 11:37:49.320955 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 11:37:49.321034 logger.go:85: Value registry exists
+INFO: 2026/10/23 11:37:49.321166 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 11:37:49.321227 logger.go:85: Value data exists
+INFO: 2026/10/23 11:37:49.321289 logger.go:85: Processed Data Map
+INFO: 2026/10/23 11:37:49.321353 logger.go:85: Value target_col exists
+INFO: 2026/10/23 11:37:49.321413 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 11:37:49.321472 logger.go:85: Value data exists
+INFO: 2026/10/23 11:37:49.321533 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 11:37:49.321613 logger.go:85: Value column_list exists
+INFO: 2026/10/23 11:37:49.321670 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 11:37:49.321733 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 11:37:49.321789 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:37:49.321847 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:37:49.321910 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:37:49.321968 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:37:49.322025 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:37:49.322087 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:37:49.322147 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:37:49.322205 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:37:49.322266 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:37:49.322325 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:37:49.322381 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:37:49.323443 logger.go:85: Adding New Job
+WARN: 2026/10/23 11:37:49.323632 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 11:37:49.323713 logger.go:85: Retrieving Data
+WARN: 2026/10/23 11:37:49.326450 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 11:37:49.326554 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:37:49.326638 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:37:49.326703 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:37:49.326764 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:37:49.326826 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:37:49.326883 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:37:49.326938 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:37:49.326996 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:37:49.327052 logger.go:85: Value tests_required exists
+ERROR: 2026/10/23 11:37:49.327120 logger.go:99: Required Tests is Empty or Invalid Type. Length: 0
+ERROR: 2026/10/23 11:37:49.327177 logger.go:99: Required Tests is Empty or Invalid Type
+INFO: 2026/10/23 11:37:49.328014 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:37:49.328151 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:37:49.328231 logger.go:85: List []
+INFO: 2026/10/23 11:37:49.329253 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 11:37:49.329403 logger.go:85: Finding Job with id: 1 and filter 1
+ERROR: 2026/10/23 11:37:49.329482 logger.go:99: Job with ID 1 not found
+ERROR: 2026/10/23 11:37:49.329548 logger.go:99: Job with ID 1 not found
+INFO: 2026/10/23 11:37:49.330288 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:37:49.330387 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:37:49.330463 logger.go:85: List []
+INFO: 2026/10/23 11:39:53.779332 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:39:53.779489 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:39:53.779541 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:39:53.779634 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:39:55.746597 logger.go:85: Adding New Job
+INFO: 2026/10/23 11:39:55.747193 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 11:39:55.747399 logger.go:85: Value registry exists
+INFO: 2026/10/23 11:39:55.747601 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 11:39:55.748029 logger.go:85: Value data exists
+INFO: 2026/10/23 11:39:55.748215 logger.go:85: Processed Data Map
+INFO: 2026/10/23 11:39:55.748354 logger.go:85: Value target_col exists
+INFO: 2026/10/23 11:39:55.748488 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 11:39:55.748671 logger.go:85: Value data exists
+INFO: 2026/10/23 11:39:55.748819 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 11:39:55.748942 logger.go:85: Value column_list exists
+INFO: 2026/10/23 11:39:55.749068 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 11:39:55.749209 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 11:39:55.749336 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:39:55.749468 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:39:55.749631 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:39:55.749752 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:39:55.749881 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:39:55.749995 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:39:55.750116 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:39:55.750267 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:39:55.750406 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 11:39:55.750535 logger.go:85: Eval Params Extracted
+INFO: 2026/10/23 11:39:55.750697 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 11:39:55.750828 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 11:39:55.750975 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 11:39:55.751145 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 11:39:55.751256 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/23 11:39:55.751368 logger.go:85: Creating New Job..... 
+INFO: 2026/10/23 11:39:55.751486 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/23 11:39:55.752968 logger.go:85: Adding New Job
+WARN: 2026/10/23 11:39:55.753256 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 11:39:55.753398 logger.go:85: Retrieving Data
+WARN: 2026/10/23 11:39:55.757971 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 11:39:55.758207 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:39:55.758474 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:39:55.758707 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:39:55.758872 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:39:55.758964 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:39:55.759056 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:39:55.759147 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:39:55.759238 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:39:55.759329 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 11:39:55.759421 logger.go:85: Eval Params Extracted
+INFO: 2026/10/23 11:39:55.759512 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 11:39:55.759637 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 11:39:55.759786 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 11:39:55.759933 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 11:39:55.760087 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/23 11:39:55.760207 logger.go:85: Creating New Job..... 
+INFO: 2026/10/23 11:39:55.760329 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/23 11:39:55.762112 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:39:55.762303 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:39:55.762438 logger.go:85: List [0x252c65eae5a0 0x252c65e141b0]
+INFO: 2026/10/23 11:39:55.764610 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 11:39:55.764958 logger.go:85: Finding Job with id: 1 and filter 1
+INFO: 2026/10/23 11:39:55.765141 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 11:39:55.765342 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 11:39:55.765502 logger.go:85: Added Object Operations for columns: col2
+INFO: 2026/10/23 11:39:55.765786 logger.go:85: Successfully Set the Operations
+INFO: 2026/10/23 11:39:55.765930 logger.go:85: Hopefully Job Data Ops are Set as Operation was completed Successfully
+INFO: 2026/10/23 11:39:55.767559 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:39:55.767804 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:39:55.767979 logger.go:85: List [0x252c65eae5a0 0x252c65e141b0]
+INFO: 2026/10/23 11:40:08.061350 logger.go:85: Adding New Job
+INFO: 2026/10/23 11:40:08.061692 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 11:40:08.061897 logger.go:85: Value registry exists
+INFO: 2026/10/23 11:40:08.062109 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 11:40:08.062223 logger.go:85: Value data exists
+INFO: 2026/10/23 11:40:08.062313 logger.go:85: Processed Data Map
+INFO: 2026/10/23 11:40:08.062411 logger.go:85: Value target_col exists
+INFO: 2026/10/23 11:40:08.062500 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 11:40:08.062627 logger.go:85: Value data exists
+INFO: 2026/10/23 11:40:08.062727 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 11:40:08.062828 logger.go:85: Value column_list exists
+INFO: 2026/10/23 11:40:08.062924 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 11:40:08.063026 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 11:40:08.063127 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:40:08.063225 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:40:08.063317 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:40:08.063407 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:40:08.063518 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:40:08.063683 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:40:08.063826 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:40:08.063959 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:40:08.064050 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 11:40:08.064155 logger.go:85: Eval Params Extracted
+INFO: 2026/10/23 11:40:08.064251 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 11:40:08.064370 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 11:40:08.064465 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 11:40:08.064560 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 11:40:08.064688 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/23 11:40:08.064790 logger.go:85: Creating New Job..... 
+INFO: 2026/10/23 11:40:08.064889 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/23 11:40:08.066338 logger.go:85: Adding New Job
+WARN: 2026/10/23 11:40:08.066592 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 11:40:08.066716 logger.go:85: Retrieving Data
+WARN: 2026/10/23 11:40:08.067570 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 11:40:08.067709 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:40:08.067793 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:40:08.067880 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:40:08.067959 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:40:08.068040 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:40:08.068113 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:40:08.068201 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:40:08.068282 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:40:08.068363 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 11:40:08.068444 logger.go:85: Eval Params Extracted
+INFO: 2026/10/23 11:40:08.068525 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 11:40:08.068629 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 11:40:08.068715 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 11:40:08.068790 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 11:40:08.068869 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/23 11:40:08.068944 logger.go:85: Creating New Job..... 
+INFO: 2026/10/23 11:40:08.069093 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/23 11:40:08.070220 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:40:08.070352 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:40:08.070450 logger.go:85: List [0x252c65eae5a0 0x252c65e141b0 0x252c65eaf050 0x252c65f80120]
+INFO: 2026/10/23 11:40:08.072794 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 11:40:08.072983 logger.go:85: Finding Job with id: 1 and filter 1
+INFO: 2026/10/23 11:40:08.073083 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 11:40:08.073185 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 11:40:08.073274 logger.go:85: Added Object Operations for columns: col2
+INFO: 2026/10/23 11:40:08.073353 logger.go:85: Successfully Set the Operations
+INFO: 2026/10/23 11:40:08.073437 logger.go:85: Hopefully Job Data Ops are Set as Operation was completed Successfully
+INFO: 2026/10/23 11:40:08.074506 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:40:08.074743 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:40:08.074964 logger.go:85: List [0x252c65eae5a0 0x252c65e141b0 0x252c65eaf050 0x252c65f80120]
+INFO: 2026/10/23 11:40:22.367414 logger.go:85: Started Logging in the model training service
+INFO: 2026/10/23 11:40:22.367722 logger.go:85: Creating New Model Training Service
+INFO: 2026/10/23 11:40:22.367829 logger.go:85: Initializing Job Queue
+INFO: 2026/10/23 11:40:22.367983 logger.go:85: Model Training Service Started at Port 8001
+INFO: 2026/10/23 11:40:24.797923 logger.go:85: Adding New Job
+INFO: 2026/10/23 11:40:24.798285 logger.go:85: Converting into Data Params Object
+INFO: 2026/10/23 11:40:24.798376 logger.go:85: Value registry exists
+INFO: 2026/10/23 11:40:24.798449 logger.go:85: Processed Registry Data
+INFO: 2026/10/23 11:40:24.798519 logger.go:85: Value data exists
+INFO: 2026/10/23 11:40:24.798600 logger.go:85: Processed Data Map
+INFO: 2026/10/23 11:40:24.798670 logger.go:85: Value target_col exists
+INFO: 2026/10/23 11:40:24.798729 logger.go:85: Traget Processing Complete
+INFO: 2026/10/23 11:40:24.798793 logger.go:85: Value data exists
+INFO: 2026/10/23 11:40:24.798857 logger.go:85: Proccessed Row Data
+INFO: 2026/10/23 11:40:24.798917 logger.go:85: Value column_list exists
+INFO: 2026/10/23 11:40:24.798978 logger.go:85: Proccessed Column Data
+INFO: 2026/10/23 11:40:24.799044 logger.go:85: Processed 1 object(s)
+INFO: 2026/10/23 11:40:24.799102 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:40:24.799164 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:40:24.799228 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:40:24.799286 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:40:24.799349 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:40:24.799412 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:40:24.799470 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:40:24.799533 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:40:24.799612 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 11:40:24.799674 logger.go:85: Eval Params Extracted
+INFO: 2026/10/23 11:40:24.799736 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 11:40:24.799815 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 11:40:24.799909 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 11:40:24.800000 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 11:40:24.800088 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/23 11:40:24.800167 logger.go:85: Creating New Job..... 
+INFO: 2026/10/23 11:40:24.800256 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/23 11:40:24.801367 logger.go:85: Adding New Job
+WARN: 2026/10/23 11:40:24.801593 logger.go:92: Data Params is unavailable in form data. Routing to DMS API
+INFO: 2026/10/23 11:40:24.801712 logger.go:85: Retrieving Data
+WARN: 2026/10/23 11:40:24.804548 logger.go:92: API Output is Nill, so returning nil
+INFO: 2026/10/23 11:40:24.804666 logger.go:85: Data Parameters Extracted
+INFO: 2026/10/23 11:40:24.804762 logger.go:85: Extracting Training Parameters
+INFO: 2026/10/23 11:40:24.804879 logger.go:85: Value model_type exists
+INFO: 2026/10/23 11:40:24.804962 logger.go:85: Value model_name exists
+INFO: 2026/10/23 11:40:24.805054 logger.go:85: Value model_params exists
+INFO: 2026/10/23 11:40:24.805140 logger.go:85: Training Parameters Extracted
+INFO: 2026/10/23 11:40:24.805227 logger.go:85: Creating the Evaluation Parametres
+INFO: 2026/10/23 11:40:24.805314 logger.go:85: Value problem_type exists
+INFO: 2026/10/23 11:40:24.805400 logger.go:85: Value tests_required exists
+INFO: 2026/10/23 11:40:24.805487 logger.go:85: Eval Params Extracted
+INFO: 2026/10/23 11:40:24.805580 logger.go:85: Creating the Do Over Parametres
+INFO: 2026/10/23 11:40:24.805697 logger.go:85: Value max_retries exists
+INFO: 2026/10/23 11:40:24.805757 logger.go:85: Value max_deviance exists
+INFO: 2026/10/23 11:40:24.805814 logger.go:85: Value fallback_params exists
+INFO: 2026/10/23 11:40:24.805870 logger.go:85: Do Over Params Extracted
+INFO: 2026/10/23 11:40:24.805927 logger.go:85: Creating New Job..... 
+INFO: 2026/10/23 11:40:24.805980 logger.go:85: Queueing Job at Meh Priority
+INFO: 2026/10/23 11:40:24.806792 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:40:24.806939 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:40:24.807066 logger.go:85: List [0x68732a962d0 0x68732a96990]
+INFO: 2026/10/23 11:40:24.808513 logger.go:85: Setting / Adding Data Ops
+INFO: 2026/10/23 11:40:24.808687 logger.go:85: Finding Job with id: 1 and filter 1
+INFO: 2026/10/23 11:40:24.808769 logger.go:85: Setting the Num Ops and Categorical Ops
+INFO: 2026/10/23 11:40:24.808852 logger.go:85: Added Object Operations for columns: col1
+INFO: 2026/10/23 11:40:24.808946 logger.go:85: Added Object Operations for columns: col2
+INFO: 2026/10/23 11:40:24.809040 logger.go:85: Successfully Set the Operations
+INFO: 2026/10/23 11:40:24.809116 logger.go:85: Hopefully Job Data Ops are Set as Operation was completed Successfully
+INFO: 2026/10/23 11:40:24.810271 logger.go:85: Parsed Filter Input
+INFO: 2026/10/23 11:40:24.810383 logger.go:85: Getting Jobs with filter: 1
+INFO: 2026/10/23 11:40:24.810466 logger.go:85: List [0x68732a962d0 0x68732a96990]
