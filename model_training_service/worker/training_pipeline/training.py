@@ -8,7 +8,8 @@ from .training_tools import (
                         DEEP_MODELS_DICT,
                         LAYERS_DICT, 
                         CALLBACKS_DICT,
-                        OPTIMIZERS_DICT
+                        OPTIMIZERS_DICT,
+                        CV_STEPS
                         )
 from models import DataParams, TrainingParameters
 from tensorflow.keras.layers import InputLayer
@@ -195,9 +196,48 @@ class TrainingPipeline:
                 log.error(f"Pipeline withe name: {pipeline_name} is not available")
                 return None
 
+            # Putting a check for cv exists
+            cv_value = pipeline_kwargs.get("cv", 5)
+
+            log.info("Parsing for CV Value")
+
+            if not cv_value:
+                log.warning("CV Configuration not found. Moving with a default 5 value")
+
+            if isinstance(cv_value, int):
+                log.info("Int Instance")
+                cv = cv_value
+            elif hasattr(cv_value, "split"):
+                cv = cv_value
+            elif isinstance(cv_value, dict):
+                log.info("dict_instance")
+                try:
+                    cv_name, cv_params = next(iter(cv_value.items()))
+                except (StopIteration, AttributeError):
+                    log.error("Invalid CV Configuration Structure")
+                    return None
+                
+                cv_class = CV_STEPS.get(cv_name, None)
+                if not cv_class:
+                    log.error(f"{cv_name} not found / registered")
+                    return None
+                
+                cv = cv_class(**cv_params)
+
+            else:
+                log.warning("Unknown Type just falling back")
+                cv = cv_value
+
+                cv_name, cv_params = cv_value.items()[0]
+                cv = cv_name(**cv_params)
+
+            # Finally Popping the value to avoid overwriting
+            pipeline_kwargs.pop("cv", None)
+
             self.pipeline = selected_pipeline(
                 estimator=pipeline,
                 param_grid = params_grid,
+                cv = cv,
                 **pipeline_kwargs
             )
         except Exception as e:

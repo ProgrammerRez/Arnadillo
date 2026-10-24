@@ -1,3 +1,0 @@
-Test Suite - 2026-10-24 17:47:06,653 - test_suite - INFO - All instances Checked for Deep Model
-Test Suite - 2026-10-24 17:47:06,655 - test_suite - INFO - Instance Checked for Traditional Classifier: <class 'sklearn.model_selection._search.GridSearchCV'>
-Test Suite - 2026-10-24 17:47:06,657 - test_suite - INFO - Instance Checked for Traditional Regressor: <class 'sklearn.model_selection._search.GridSearchCV'>

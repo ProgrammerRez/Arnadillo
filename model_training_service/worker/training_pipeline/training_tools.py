@@ -1,4 +1,5 @@
-from ast import Pass
+from sklearn.feature_selection import f_classif
+from sklearn.feature_selection import SelectKBest
 from typing import Any, Dict, Callable
 from sklearn.base import BaseEstimator
 from sklearn.linear_model import LinearRegression, LogisticRegression
@@ -17,6 +18,7 @@ PIPELINE_SELECTION: Dict[str, Any] = {}
 MODELS_DICT_REGRESSOR: Dict[str, Callable[..., BaseEstimator]] = {}
 MODELS_DICT_CLASSIFIER: Dict[str, Callable[..., BaseEstimator]] = {}
 MODIFIERS: Dict[str, Any] = {}
+CV_STEPS: Dict[str, Any] = {}
 
 # Deep Models
 DEEP_MODELS_DICT: Dict[str, Any] = {}
@@ -35,6 +37,12 @@ def regsiter_modifiers(name: str):
     def decorator(modifier: Any):
         MODIFIERS[name] = modifier
         return modifier
+    return decorator
+
+def register_cv_steps(name: str):
+    def decorator(cv: Any):
+        CV_STEPS[name] = cv
+        return cv
     return decorator
 
 def register_model_regressor(name: str):
@@ -98,11 +106,16 @@ def rfc_classify(RandomForestClassifier):
     pass
 
 # Register Modifier
-@regsiter_modifiers("startified_k_fold")
+@regsiter_modifiers("select_k_best")
+def select_k_best(**kwargs):
+    return SelectKBest(score_func=f_classif, **kwargs)
+
+# Register CV Steps
+@register_cv_steps("startified_k_fold")
 def stratify_k_fold(**kwargs):
     return StratifiedKFold(**kwargs)
 
-@regsiter_modifiers("shuffle_split")
+@register_cv_steps("shuffle_split")
 def shuffle_split(**kwargs):
     return ShuffleSplit(**kwargs)
 
@@ -134,8 +147,8 @@ def adam_optimizer(*args, **kwargs):
     return Adam(*args, **kwargs)
 
 @register_optimizer("Nadam")
-def nadam_optimizer(Nadam):
-    pass
+def nadam_optimizer(*args, **kwargs):
+    return Nadam(*args, **kwargs)
 
 # Register Callbacks
 @register_callbacks("model_checkpoint")

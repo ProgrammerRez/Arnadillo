@@ -62,16 +62,19 @@ class TestTrainingPipeline(TestCase):
                 "pipeline_params":{
                     "grid_search":{
                         "scoring": "r2",
-                        "cv": 5, 
+                        "cv": {
+                            "shuffle_split":{
+                                "n_splits": 10,
+                                "test_size": 0.2,
+                                "random_state": 42
+                            }
+                        }, 
                         "refit": True
                     }
                 },
-
                 "modifier_params":{
-                    "shuffle_split":{
-                        "n_splits": 10,
-                        "test_size": 0.2,
-                        "random_state": 42
+                    "select_k_best": {
+                        "k": [10, 20, 5]
                     }
                 }
             }
@@ -96,12 +99,9 @@ class TestTrainingPipeline(TestCase):
                         "refit": True
                     }
                 },
-
                 "modifier_params":{
-                    "shuffle_split":{
-                        "n_splits": 10,
-                        "test_size": 0.2,
-                        "random_state": 42
+                    "select_k_best": {
+                        "k": [10, 20, 5]
                     }
                 }
             }
