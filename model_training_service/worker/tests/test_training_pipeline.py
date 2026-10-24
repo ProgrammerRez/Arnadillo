@@ -187,5 +187,5 @@ class TestTrainingPipeline(TestCase):
     
         except Exception as e:
             log.error(f"Deep Model Constructor Failed: {e}")
-            raise e
+            raise ValueError(e)
         

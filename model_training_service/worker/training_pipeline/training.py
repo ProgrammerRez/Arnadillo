@@ -11,9 +11,11 @@ from .training_tools import (
                         OPTIMIZERS_DICT,
                         CV_STEPS
                         )
+from sklearn.model_selection import train_test_split
 from models import DataParams, TrainingParameters
 from tensorflow.keras.layers import InputLayer
 from sklearn.pipeline import Pipeline
+import pandas as pd
 
 
 # Now creating the main training pipeline class
@@ -370,4 +372,63 @@ class TrainingPipeline:
             
         finally:
             log.info("Completed the Deep Learning Pipeline Compilation")
-            return None
+
+    # This function will start the training of traditional pipeline
+    def _start_traditional_training(self):
+        log.info("Initializing Starting Phase for the training Pipeline")
+        try:
+            # Creating pipeline if not already made
+            if not self.pipeline:
+                self.load_model_and_params()
+
+            # Making it in a dataframe form
+            df: pd.DataFrame = pd.DataFrame(data=self.data.Data, columns=self.data.ColumnList)
+            X: pd.DataFrame = df.drop([self.data.TargetLabel], axis=1)
+            y: pd.Series = df[self.data.TargetLabel]
+    
+            # Splitting the data for train and test
+            X_train, X_test, y_train, y_test = train_test_split(X, y, 
+            test_size=self.data.TestSplit, random_state=42)
+
+            self.pipeline.fit(X_train, y_train)
+
+        except Exception as e:
+            log.error(f"Starting Traditional Training Pipeline Error: {e}")
+            raise ValueError(e)
+        
+        finally:
+            log.info("Started Traditional Training Pipleine")
+
+
+    # This function will start the training of deep model pipelines
+    def _start_deep_training(self): 
+        log.info("Initializing Starting Phase for the training Pipeline")
+        try:
+            # Checking if model is already compiled or not
+            if not self.model:
+                self.load_model_and_params()
+            
+            # Making it in a dataframe form
+            df: pd.DataFrame = pd.DataFrame(data=self.data.Data, columns=self.data.ColumnList)
+            X: pd.DataFrame = df.drop([self.data.TargetLabel], axis=1)
+            y: pd.Series = df[self.data.TargetLabel]
+
+            # Preprocessing Data
+            log.info("Preprocessing data for deep model pipeline")
+            if self.preprocessor:
+                X = self.preprocessor.transform(X)
+            
+            # Splitting the data for train and test
+            X_train, X_test, y_train, y_test = train_test_split(X, y, 
+            test_size=self.data.TestSplit, random_state=42)
+
+            # Then starting the pipeline
+            self.model.fit(**self.training_config, callbacks=self.callbacks if self.callbacks else [])
+
+        
+        except Exception as e:
+            log.error(f"Starting Deep Model Training Pipeline Error: {e}")
+            raise ValueError(e)
+        
+        finally:
+            log.info("Started Deep Model Training Pipeline")
