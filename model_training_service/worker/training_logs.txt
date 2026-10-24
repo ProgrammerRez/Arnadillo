@@ -1,0 +1,179 @@
+Model Training Pipeline - 2026-10-24 16:18:16,548 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 16:18:16,548 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 16:18:16,639 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-24 16:18:16,639 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-24 16:18:16,639 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-24 16:18:16,640 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-24 16:18:16,640 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 16:20:02,264 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 16:20:02,264 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 16:20:02,346 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-24 16:20:02,346 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-24 16:20:02,346 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-24 16:20:02,347 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-24 16:20:02,347 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 16:20:36,175 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 16:20:36,175 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 16:20:36,255 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-24 16:20:36,256 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-24 16:20:36,256 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-24 16:20:36,256 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-24 16:20:36,256 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 16:29:40,956 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 16:29:40,956 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 16:29:40,956 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 16:29:40,956 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 16:29:40,957 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 16:29:40,957 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 16:29:40,957 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 16:29:40,957 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 16:29:40,957 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 16:31:44,533 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 16:31:44,533 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 16:31:44,533 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 16:31:44,533 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 16:31:44,534 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 16:31:44,534 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 16:31:44,534 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 16:31:44,534 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 16:31:44,534 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:23:53,931 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:23:53,931 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:23:53,931 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:23:53,931 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:23:53,932 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:23:53,932 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:23:53,932 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:23:53,932 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:23:53,932 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:24:51,082 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:24:51,082 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:24:51,082 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:24:51,082 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:24:51,083 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:24:51,083 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:24:51,083 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:24:51,083 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:24:51,083 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:25:33,453 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:25:33,454 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:25:33,454 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:25:33,454 - model_training_pipeline - INFO - Added Preprocessor As well
+Model Training Pipeline - 2026-10-24 17:25:33,454 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:25:33,454 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:25:33,455 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:25:33,455 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:25:33,455 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:25:33,455 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:42:35,034 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:42:35,034 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:42:35,034 - model_training_pipeline - ERROR - Unexpected Error Occurred during loading model and params: 'TrainingParameters' object has no attribute 'get'
+Model Training Pipeline - 2026-10-24 17:42:35,035 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:42:35,038 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:42:35,039 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:42:35,039 - model_training_pipeline - ERROR - Unexpected Error Occurred during loading model and params: 'TrainingParameters' object has no attribute 'get'
+Model Training Pipeline - 2026-10-24 17:42:35,039 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:42:35,040 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:42:35,041 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:42:35,041 - model_training_pipeline - ERROR - Unexpected Error Occurred during loading model and params: 'TrainingParameters' object has no attribute 'get'
+Model Training Pipeline - 2026-10-24 17:42:35,041 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:43:04,623 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:43:04,623 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:43:04,703 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-24 17:43:04,703 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-24 17:43:04,704 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-24 17:43:04,704 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-24 17:43:04,704 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:43:04,704 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:43:04,704 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:43:04,705 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:43:04,705 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:43:04,705 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:43:04,705 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:43:04,705 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:43:04,705 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:43:04,705 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:43:04,706 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:43:04,706 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:43:04,706 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:43:04,706 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:43:04,707 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:43:04,707 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:43:04,707 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:43:04,707 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:43:04,707 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:45:13,615 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:45:13,615 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:45:13,696 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-24 17:45:13,697 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-24 17:45:13,697 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-24 17:45:13,697 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-24 17:45:13,697 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:45:13,698 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:45:13,699 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:45:13,699 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:45:13,699 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:45:13,699 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:45:13,699 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:45:13,699 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:45:13,700 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:45:13,700 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:45:13,700 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:45:13,700 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:45:13,701 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:45:13,701 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:45:13,701 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:45:13,701 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:45:13,701 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:45:13,701 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:45:13,701 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:45:38,746 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:45:38,746 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:45:38,822 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-24 17:45:38,823 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-24 17:45:38,823 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-24 17:45:38,823 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-24 17:45:38,823 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:45:38,825 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:45:38,825 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:45:38,825 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:45:38,826 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:45:38,826 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:45:38,826 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:45:38,826 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:45:38,826 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:45:38,826 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:45:38,827 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:45:38,827 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:45:38,827 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:45:38,827 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:45:38,827 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:45:38,828 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:45:38,828 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:45:38,828 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:45:38,828 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:47:06,581 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:47:06,581 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:47:06,652 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-24 17:47:06,653 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-24 17:47:06,653 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-24 17:47:06,653 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-24 17:47:06,653 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:47:06,654 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:47:06,654 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:47:06,654 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:47:06,654 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:47:06,654 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:47:06,654 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:47:06,655 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:47:06,655 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:47:06,655 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-24 17:47:06,655 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-24 17:47:06,656 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-24 17:47:06,656 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-24 17:47:06,656 - model_training_pipeline - INFO - Found Modifier Params for modifier: shuffle_split
+Model Training Pipeline - 2026-10-24 17:47:06,656 - model_training_pipeline - INFO - Added shuffle_split to modifiers
+Model Training Pipeline - 2026-10-24 17:47:06,656 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-24 17:47:06,656 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-24 17:47:06,656 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-24 17:47:06,657 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline

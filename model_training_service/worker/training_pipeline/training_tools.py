@@ -76,8 +76,8 @@ def register_callbacks(name: str):
 
 # Registering the Pipelines
 @register_pipeline("grid_search")
-def grid_search(GridSearchCV):
-    pass
+def grid_search(**kwargs):
+    return GridSearchCV(**kwargs)
 
 # Register Regressor Models
 @register_model_regressor("linear_regression")
@@ -99,39 +99,39 @@ def rfc_classify(RandomForestClassifier):
 
 # Register Modifier
 @regsiter_modifiers("startified_k_fold")
-def stratify_k_fold(StratifiedKFold):
-    pass
+def stratify_k_fold(**kwargs):
+    return StratifiedKFold(**kwargs)
 
-@regsiter_modifiers("shuffle_shift")
-def shuffle_split(ShuffleSplit):
-    pass
+@regsiter_modifiers("shuffle_split")
+def shuffle_split(**kwargs):
+    return ShuffleSplit(**kwargs)
 
 # Register Deep Models
 @register_deep_model("sequential")
-def sequential_model(Sequential):
-    pass
+def sequential_model(*args, **kwargs):
+    return Sequential(*args, **kwargs)
 
 # Register Layers
 @register_layer("flatten")
-def flatten_layer(Flatten):
-    pass
+def flatten_layer(*args, **kwargs):
+    return Flatten(*args, **kwargs)
 
 @register_layer("dense")
-def dense_layer(Dense):
-    pass
+def dense_layer(*args, **kwargs):
+    return Dense(*args, **kwargs)
 
 @register_layer("dropout")
-def dropout_layer(Dropout):
-    pass
+def dropout_layer(*args, **kwargs):
+    return Dropout(*args, **kwargs)
 
 @register_layer("relu")
-def relu_layer(ReLU):
-    pass
+def relu_layer(*args, **kwargs):
+    return ReLU(*args, **kwargs)
 
 # Register Optimizers
 @register_optimizer("Adam")
-def adam_optimizer(Adam):
-    pass
+def adam_optimizer(*args, **kwargs):
+    return Adam(*args, **kwargs)
 
 @register_optimizer("Nadam")
 def nadam_optimizer(Nadam):
@@ -139,10 +139,10 @@ def nadam_optimizer(Nadam):
 
 # Register Callbacks
 @register_callbacks("model_checkpoint")
-def model_check(ModelCheckpoint):
-    pass
+def model_check(*args, **kwargs):
+    return ModelCheckpoint(*args, **kwargs)
 
 @register_callbacks("early_stopping")
-def early_stop(EarlyStopping):
-    pass
+def early_stop(*args, **kwargs):
+    return EarlyStopping(*args, **kwargs)
 

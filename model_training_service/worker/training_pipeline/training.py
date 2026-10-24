@@ -22,14 +22,21 @@ class TrainingPipeline:
         log.info("Initializing Pipeline")
 
         # Setting the class attributes
-        self.data = data_params
-        self.training_params = training_params
+        self.data: DataParams = data_params
+        self.training_params: TrainingParameters = training_params
 
         self.preprocessor = preprocessor
+        
+        # For Traditional Models
         self.pipeline = None
 
+        # For Deep Models
+        self.model = None
+        self.callbacks = None
+        self.training_config = None
+
     
-    def _load_model_and_params(self):
+    def load_model_and_params(self):
 
         try:
             """This function is suppossed to load the model pipeline using provided info and params"""
@@ -37,26 +44,26 @@ class TrainingPipeline:
             log.info("Making and Compiling the Pipeline from Model and Params Info")
             
             # Doing dict empty check
-            model_type = self.training_params.get("model_type", "")
             model_name = self.training_params.get("model_name", "")
+            model_type = self.training_params.get("model_type", "")
             model_params = self.training_params.get("model_params", {})
 
-            if model_type == "":
+            if not model_type:
                 log.error("Model Type is Empty")
                 raise ValueError("Model Type is Empty")
             
-            if model_name == "":
+            if not model_name:
                 log.error("Model Name Empty")
                 raise ValueError("Model Type is Empty")
             
-            if model_params == {}:
+            if not model_params:
                 log.error("Model Params Empty")
                 raise ValueError("Model Params Empty")
             
             type_model = str(model_type).strip().lower()
 
             if  type_model == "regressor" or type_model == "classifier":
-                self._make_traditional_pipeline(model_name, model_params, model_type)
+                self._make_traditional_pipeline(model_name, type_model, model_params)
             elif type_model == "deep":
                 self._make_deep_pipeline(model_name, model_params)
 
@@ -103,18 +110,21 @@ class TrainingPipeline:
             
             # Creating Pipeline Steps to append 
             pipeline_steps = []
-            if hasattr(self, "pipeline") and self.pipeline:
-                pipeline_steps.append(("preprocessor", self.pipeline))
+            if self.preprocessor:
+                pipeline_steps.append(("preprocessor", self.preprocessor))
                 log.info("Added Preprocessor As well")
             
             # Then appending the modifiers
-            for modifier in modifier_config.keys():
+            for modifier, modifier_params in modifier_config.items():
                 selected_modifier = MODIFIERS.get(modifier)
                 if not selected_modifier:
                     log.error(f"Designated modifier doesn't exist: {modifier}")
                     continue 
-                
-                pipeline_steps.append((modifier, selected_modifier()))
+                if isinstance(modifier_params, dict):
+                    pipeline_steps.append((modifier, selected_modifier(**modifier_params)))
+                    log.info(f"Found Modifier Params for modifier: {modifier}")
+                else:
+                    pipeline_steps.append((modifier, selected_modifier()))
                 log.info(f"Added {modifier} to modifiers")
 
 
@@ -156,7 +166,7 @@ class TrainingPipeline:
                 model_config = all_params.get(model, {})
 
                 for param_name, params in model_config.items():
-                    grid[f"model__{param_name}"] = params
+                    params_grid[f"model__{param_name}"] = params
                     
 
                 # Then getting modifier parameters
@@ -164,9 +174,7 @@ class TrainingPipeline:
                 for modifier_name, modifier_params in modifier_config.items():
                     if isinstance(modifier_params, dict):
                         for mod_p_name, mod_p_vals in modifier_params.items():
-                            grid[f"{modifier_name}__{mod_p_name}"] = mod_p_vals
-
-                params_grid.append(grid)
+                            params_grid[f"{modifier_name}__{mod_p_name}"] = mod_p_vals
             
             log.info("Param Grid Completed")
 
@@ -189,7 +197,7 @@ class TrainingPipeline:
 
             self.pipeline = selected_pipeline(
                 estimator=pipeline,
-                params_grid = params_grid,
+                param_grid = params_grid,
                 **pipeline_kwargs
             )
         except Exception as e:
@@ -211,6 +219,11 @@ class TrainingPipeline:
             
             optimizer_config = model_params.get("optimizer_params", {})
             callbacks_config = model_params.get("callback_params", {})
+
+            # Check for None Type Model
+            if not selected_model:
+                log.error(f"{model_name[0]} not found / registered")
+                return None
 
             # Checking for empty layers
             if not layers_config:
@@ -241,35 +254,27 @@ class TrainingPipeline:
             final_layers = []
 
             if input_shape:
-                final_layers.append()
-
-            for layer in layers:
-                selected_layer = LAYERS_DICT.get(layer[1], None)
-
-                if not selected_layer:
-                    log.error(f"Layer Doesn't even exist: {selected_layer}")
-                    return None
-                
-
-                # Appending the first input layer
                 final_layers.append(InputLayer(input_shape=input_shape))
                 
-                for idx, layer_tuple in enumerate(layers_config):
-                    neurons, layer_type, activation = layer_tuple
+            for idx, layer_tuple in enumerate(layers_config):
+                neurons, layer_type, activation = layer_tuple
 
-                    layer_class = LAYERS_DICT.get(layer_type, None)
-                    if not layer_class:
-                        log.error(f"Layer Class doesn't exist: {layer_class}")
-                        return None
-                    
-                    if idx == 0 and hasattr(layer_class, "__init__") and "input_shape" in layer_class.__init__.__code__.co_varnames:
-                        final_layers.append(layer_class(neurons, activation=activation, input_shape=input_shape))
-                    else:
-                        final_layers.append(layer_class(neurons, activation=activation))
-                    
+                layer_class = LAYERS_DICT.get(layer_type, None)
+                if not layer_class:
+                    log.error(f"Layer Class doesn't exist: {layer_class}")
+                    continue
+                
+                if idx == 0 and not input_shape:
+                    final_layers.append(layer_class(neurons, activation=activation, input_shape=input_shape))
+                else:
+                    final_layers.append(layer_class(neurons, activation=activation))
+
 
             # Build the model now
             model_builder = selected_model(final_layers)
+            if not model_builder:
+                log.error("Model Is None Type Here")
+                raise ValueError("Model Is None Type Here")
 
             # Get Compilation Parameters
             loss_fn = compile_conifg.get("loss", None)
@@ -301,11 +306,11 @@ class TrainingPipeline:
             # Now Adding the callbacks
             callbacks_list = []
             for cb_name, cb_params in callbacks_config.items():
-                cb = CALLBACKS_DICT(cb_name, None)
+                cb = CALLBACKS_DICT.get(cb_name, None)
                 if not cb:
                     log.error(f"Callback: {cb_name} not found / registered")
                     continue
-            
+                
                 cb_instance = cb(**cb_params)
                 callbacks_list.append(cb_instance)
 
