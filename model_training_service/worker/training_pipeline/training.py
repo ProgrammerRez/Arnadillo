@@ -16,6 +16,7 @@ from models import DataParams, TrainingParameters
 from tensorflow.keras.layers import InputLayer
 from sklearn.pipeline import Pipeline
 import pandas as pd
+import asyncio
 
 
 # Now creating the main training pipeline class
@@ -138,7 +139,7 @@ class TrainingPipeline:
                 log.error(f"No default model found for name: {model_name[0]}")
                 return None
         
-            pipeline_steps.append(("model", default_model))
+            pipeline_steps.append(("model", default_model()))
         
             # Now Pipeline is Complete
             pipeline = Pipeline(steps=pipeline_steps)
@@ -162,7 +163,7 @@ class TrainingPipeline:
 
                 # Initialzing params_grid
                 params_grid: dict[str, Any] = {
-                    "model": [selected_model]
+                    "model": [selected_model()]
                 }
 
                 # Getting Model Parameters
@@ -374,7 +375,7 @@ class TrainingPipeline:
             log.info("Completed the Deep Learning Pipeline Compilation")
 
     # This function will start the training of traditional pipeline
-    def _start_traditional_training(self):
+    async def _start_traditional_training(self):
         log.info("Initializing Starting Phase for the training Pipeline")
         try:
             # Creating pipeline if not already made
@@ -390,8 +391,9 @@ class TrainingPipeline:
             X_train, X_test, y_train, y_test = train_test_split(X, y, 
             test_size=self.data.TestSplit, random_state=42)
 
-            self.pipeline.fit(X_train, y_train)
+            await asyncio.to_thread(self.pipeline.fit, X_train, y_train)
 
+            return X_test, y_test
         except Exception as e:
             log.error(f"Starting Traditional Training Pipeline Error: {e}")
             raise ValueError(e)
@@ -401,7 +403,7 @@ class TrainingPipeline:
 
 
     # This function will start the training of deep model pipelines
-    def _start_deep_training(self): 
+    async def _start_deep_training(self): 
         log.info("Initializing Starting Phase for the training Pipeline")
         try:
             # Checking if model is already compiled or not
@@ -423,9 +425,14 @@ class TrainingPipeline:
             test_size=self.data.TestSplit, random_state=42)
 
             # Then starting the pipeline
-            self.model.fit(**self.training_config, callbacks=self.callbacks if self.callbacks else [])
 
-        
+            await asyncio.to_thread(self.model_fit,
+                                x=X_train,
+                                y=y_train,
+                                **self.training_config,
+                                callbacks=self.callbacks if self.callbacks else [])
+
+            return X_test, y_test
         except Exception as e:
             log.error(f"Starting Deep Model Training Pipeline Error: {e}")
             raise ValueError(e)

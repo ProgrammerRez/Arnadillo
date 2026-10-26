@@ -5,13 +5,13 @@ from logger import test_logger as log
 from data_pipeline import DataPreporcessorCosntructor
 from training_pipeline import TrainingPipeline
 from sklearn.datasets import load_iris
-from unittest import TestCase
+from unittest import IsolatedAsyncioTestCase
 import pandas as pd
 
 
 # This class will test the training pipeline code
 
-class TestTrainingPipeline(TestCase):
+class TestTrainingPipeline(IsolatedAsyncioTestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -20,12 +20,7 @@ class TestTrainingPipeline(TestCase):
 
         df = pd.DataFrame(data=data.data, columns=data.feature_names)
         df["target"] = data.target
-        df["target_names"] = df["target"].map({
-            "setosa": 0,
-            "virginica": 1,
-            "versicolor": 2
-        })
-        
+        # df["target_names"] = [data.target_names[val] for val in df['target']]
 
         # First Creating the data requirements
         cls.data_params = DataParams(**{
@@ -35,9 +30,7 @@ class TestTrainingPipeline(TestCase):
                 "TargetLabel": "target",
                 "ColumnList": df.columns,
                 "NumericalOperations": ["standard_scaler"],
-                "CategoricalOperations":{
-                    "target_names": ["one_hot_encoding"]
-                },
+                "CategoricalOperations":{},
                 "ID": 1, 
                 "TestSplit": 0.2
             }
@@ -74,7 +67,7 @@ class TestTrainingPipeline(TestCase):
                 },
                 "modifier_params":{
                     "select_k_best": {
-                        "k": [10, 20, 5]
+                        "k": [2, 3, "all"]
                     }
                 }
             }
@@ -101,7 +94,7 @@ class TestTrainingPipeline(TestCase):
                 },
                 "modifier_params":{
                     "select_k_best": {
-                        "k": [10, 20, 5]
+                        "k": [2, 3, "all"]
                     }
                 }
             }
@@ -117,7 +110,7 @@ class TestTrainingPipeline(TestCase):
                 (128, "dense", "relu"),
                 (256, "dense", "relu"),
                 (32, "dense", "relu"),
-                (1, "dense", "sigmoid")
+                (3, "dense", "softmax")
             ],
             "compile_params":{
                 "loss": "sparse_categorical_crossentropy",
@@ -150,24 +143,48 @@ class TestTrainingPipeline(TestCase):
     }
 
     # This function tests the traditional regressor pipeline creation
-    def test_traditional_regressor_pipeline(self):    
+    async def test_traditional_regressor_pipeline(self):    
         try:
-            training_pipeline_instance = TrainingPipeline(self.data_params, self.traditional_training_parameters_regressor, self.preprocessor)
-            training_pipeline_instance.load_model_and_params()
-            self.assertIsInstance(training_pipeline_instance.pipeline, GridSearchCV)
-            log.info(f"Instance Checked for Traditional Regressor: {type(training_pipeline_instance.pipeline)}")
+            self.training_pipeline_instance_regressor = TrainingPipeline(self.data_params, self.traditional_training_parameters_regressor, self.preprocessor)
+            self.training_pipeline_instance_regressor.load_model_and_params()
+            self.assertIsInstance(self.training_pipeline_instance_regressor.pipeline, GridSearchCV)
+            log.info(f"Instance Checked for Traditional Regressor: {type(self.training_pipeline_instance_regressor.pipeline)}")
+
+            # Await the async function for training
+            X_test, y_test = await self.training_pipeline_instance_regressor._start_traditional_training()
+            model_score = self.training_pipeline_instance_regressor.pipeline.score(X_test, y_test)
+
+            # Score assertion
+            if self.assertIsInstance(model_score, float):
+                if self.assertGreaterEqual(model_score, 50.0):
+                    log.info(f"Model Trained Successfully with above avergae score: {model_score}")
+                else:
+                    log.info(f"Model Trained Successfully with less than average score: {model_score}")
+
         except Exception as e:
             log.error(f"Traditional Regressor Constructor Failed: {e}")
             raise e
     
 
     # This function tests the traditional classifier pipeline creation
-    def test_traditional_classifier_pipeline(self):    
+    async def test_traditional_classifier_pipeline(self):    
         try:
-            training_pipeline_instance = TrainingPipeline(self.data_params, self.traditional_training_parameters_classifier, self.preprocessor)
-            training_pipeline_instance.load_model_and_params()
-            self.assertIsInstance(training_pipeline_instance.pipeline, GridSearchCV)
-            log.info(f"Instance Checked for Traditional Classifier: {type(training_pipeline_instance.pipeline)}")
+            self.training_pipeline_instance_classifier = TrainingPipeline(self.data_params, self.traditional_training_parameters_classifier, self.preprocessor)
+            self.training_pipeline_instance_classifier.load_model_and_params()
+            self.assertIsInstance(self.training_pipeline_instance_classifier.pipeline, GridSearchCV)
+            log.info(f"Instance Checked for Traditional Classifier: {type(self.training_pipeline_instance_classifier.pipeline)}")
+            
+            # Await the async function for training
+            X_test, y_test = await self.training_pipeline_instance_classifier._start_traditional_training()
+            model_score = self.training_pipeline_instance_classifier.pipeline.score(X_test, y_test)
+
+            # Score assertion
+            if self.assertIsInstance(model_score, float):
+                if self.assertGreaterEqual(model_score, 0.5):
+                    log.info(f"Model Trained Successfully with above avergae score: {model_score}")
+                else:
+                    log.info(f"Model Trained Successfully with less than average score: {model_score}")
+
         except Exception as e:
             log.error(f"Traditional Classifier Constructor Failed: {e}")
             raise e
@@ -176,12 +193,12 @@ class TestTrainingPipeline(TestCase):
     # This function tests the deep model creation pipeline
     def test_deep_model_pipeline(self):
         try:
-            training_pipeline_instance = TrainingPipeline(self.data_params, self.deep_training_parameters, self.preprocessor)
-            training_pipeline_instance.load_model_and_params()
+            self.training_pipeline_instance_deep = TrainingPipeline(self.data_params, self.deep_training_parameters, self.preprocessor)
+            self.training_pipeline_instance_deep.load_model_and_params()
 
-            self.assertIsNotNone(training_pipeline_instance.model)
-            self.assertIsNotNone(training_pipeline_instance.callbacks)
-            self.assertIsNotNone(training_pipeline_instance.training_config)
+            self.assertIsNotNone(self.training_pipeline_instance_deep.model)
+            self.assertIsNotNone(self.training_pipeline_instance_deep.callbacks)
+            self.assertIsNotNone(self.training_pipeline_instance_deep.training_config)
 
             log.info("All instances Checked for Deep Model")
     

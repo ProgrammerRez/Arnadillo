@@ -1,0 +1,33 @@
+Model Training Pipeline - 2026-10-26 11:33:51,035 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-26 11:33:51,036 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-26 11:33:51,124 - model_training_pipeline - INFO - Loaded Callback with name: early_stopping
+Model Training Pipeline - 2026-10-26 11:33:51,125 - model_training_pipeline - INFO - Loaded Callback with name: model_checkpoint
+Model Training Pipeline - 2026-10-26 11:33:51,125 - model_training_pipeline - INFO - Deep Model Pipeline for sequential successfully built and compiled
+Model Training Pipeline - 2026-10-26 11:33:51,125 - model_training_pipeline - INFO - Completed the Deep Learning Pipeline Compilation
+Model Training Pipeline - 2026-10-26 11:33:51,125 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-26 11:33:51,128 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-26 11:33:51,128 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-26 11:33:51,128 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-26 11:33:51,129 - model_training_pipeline - INFO - Found Modifier Params for modifier: select_k_best
+Model Training Pipeline - 2026-10-26 11:33:51,129 - model_training_pipeline - INFO - Added select_k_best to modifiers
+Model Training Pipeline - 2026-10-26 11:33:51,129 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-26 11:33:51,129 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-26 11:33:51,129 - model_training_pipeline - INFO - Parsing for CV Value
+Model Training Pipeline - 2026-10-26 11:33:51,129 - model_training_pipeline - INFO - Int Instance
+Model Training Pipeline - 2026-10-26 11:33:51,129 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-26 11:33:51,130 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-26 11:33:51,130 - model_training_pipeline - INFO - Initializing Starting Phase for the training Pipeline
+Model Training Pipeline - 2026-10-26 11:35:01,022 - model_training_pipeline - INFO - Started Traditional Training Pipleine
+Model Training Pipeline - 2026-10-26 11:35:01,033 - model_training_pipeline - INFO - Initializing Pipeline
+Model Training Pipeline - 2026-10-26 11:35:01,033 - model_training_pipeline - INFO - Making and Compiling the Pipeline from Model and Params Info
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - Loaded all the Provided Parameters
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - Found Modifier Params for modifier: select_k_best
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - Added select_k_best to modifiers
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - Pipeline Placeholders Set
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - Param Grid Completed
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - Parsing for CV Value
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - dict_instance
+Model Training Pipeline - 2026-10-26 11:35:01,034 - model_training_pipeline - INFO - Traditional Pipeline Compilation Completed
+Model Training Pipeline - 2026-10-26 11:35:01,035 - model_training_pipeline - INFO - Loaded Model and Params into a Pipeline
+Model Training Pipeline - 2026-10-26 11:35:01,035 - model_training_pipeline - INFO - Initializing Starting Phase for the training Pipeline
+Model Training Pipeline - 2026-10-26 11:36:57,447 - model_training_pipeline - INFO - Started Traditional Training Pipleine

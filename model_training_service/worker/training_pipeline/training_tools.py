@@ -89,21 +89,21 @@ def grid_search(**kwargs):
 
 # Register Regressor Models
 @register_model_regressor("linear_regression")
-def lr_regress(LinearRegression):
-    pass
+def lr_regress():
+    return LinearRegression()
 
 @register_model_regressor("rfr")
-def rfr_regress(RandomForestRegressor):
-    pass
+def rfr_regress():
+    return RandomForestRegressor()
 
 # Register Classifer Models
 @register_model_classifier("logistic_regression")
-def log_classify(LogisticRegression):
-    pass
+def log_classify():
+    return LogisticRegression()
 
 @register_model_classifier("rfc")
-def rfc_classify(RandomForestClassifier):
-    pass
+def rfc_classify():
+    return RandomForestClassifier()
 
 # Register Modifier
 @regsiter_modifiers("select_k_best")
