@@ -426,11 +426,11 @@ class TrainingPipeline:
 
             # Then starting the pipeline
 
-            await asyncio.to_thread(self.model_fit,
+            await asyncio.to_thread(self.model.fit,
                                 x=X_train,
                                 y=y_train,
-                                **self.training_config,
-                                callbacks=self.callbacks if self.callbacks else [])
+                                callbacks=self.callbacks if self.callbacks else [],
+                                **self.training_config)
 
             return X_test, y_test
         except Exception as e:

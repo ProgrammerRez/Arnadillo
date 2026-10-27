@@ -12,7 +12,6 @@ const (
 	InfoLevel = iota
 	WarnLevel 
 	ErrorLevel
-)
 
 // Creating the Logger Struct
 type Logger struct{

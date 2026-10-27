@@ -155,12 +155,10 @@ class TestTrainingPipeline(IsolatedAsyncioTestCase):
             model_score = self.training_pipeline_instance_regressor.pipeline.score(X_test, y_test)
 
             # Score assertion
-            if self.assertIsInstance(model_score, float):
-                if self.assertGreaterEqual(model_score, 50.0):
-                    log.info(f"Model Trained Successfully with above avergae score: {model_score}")
-                else:
-                    log.info(f"Model Trained Successfully with less than average score: {model_score}")
-
+            self.assertIsInstance(model_score, float)
+            self.assertGreaterEqual(model_score, 0.5)
+            log.info(f"Model Trained Successfully with score: {model_score}")
+        
         except Exception as e:
             log.error(f"Traditional Regressor Constructor Failed: {e}")
             raise e
@@ -179,11 +177,10 @@ class TestTrainingPipeline(IsolatedAsyncioTestCase):
             model_score = self.training_pipeline_instance_classifier.pipeline.score(X_test, y_test)
 
             # Score assertion
-            if self.assertIsInstance(model_score, float):
-                if self.assertGreaterEqual(model_score, 0.5):
-                    log.info(f"Model Trained Successfully with above avergae score: {model_score}")
-                else:
-                    log.info(f"Model Trained Successfully with less than average score: {model_score}")
+            self.assertIsInstance(model_score, float)
+            
+            self.assertGreaterEqual(model_score, 0.5)
+            log.info(f"Model Trained Successfully with score: {model_score}")
 
         except Exception as e:
             log.error(f"Traditional Classifier Constructor Failed: {e}")
@@ -191,7 +188,7 @@ class TestTrainingPipeline(IsolatedAsyncioTestCase):
     
 
     # This function tests the deep model creation pipeline
-    def test_deep_model_pipeline(self):
+    async def test_deep_model_pipeline(self):
         try:
             self.training_pipeline_instance_deep = TrainingPipeline(self.data_params, self.deep_training_parameters, self.preprocessor)
             self.training_pipeline_instance_deep.load_model_and_params()
@@ -199,6 +196,19 @@ class TestTrainingPipeline(IsolatedAsyncioTestCase):
             self.assertIsNotNone(self.training_pipeline_instance_deep.model)
             self.assertIsNotNone(self.training_pipeline_instance_deep.callbacks)
             self.assertIsNotNone(self.training_pipeline_instance_deep.training_config)
+
+            X_test, y_test = await self.training_pipeline_instance_deep._start_deep_training()
+
+            # Score Assertions
+            # self.assertGreaterEqual(self.training_pipeline_instance_deep.model.score())
+            model_score = self.training_pipeline_instance_deep.model.evaluate(
+                x = X_test,
+                y = y_test,
+                verbose = 1,
+                batch_size = 32
+            )
+
+            log.info(f"Deep Model Trained with score: {model_score}")
 
             log.info("All instances Checked for Deep Model")
     

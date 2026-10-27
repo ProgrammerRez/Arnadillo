@@ -121,8 +121,8 @@ def shuffle_split(**kwargs):
 
 # Register Deep Models
 @register_deep_model("sequential")
-def sequential_model(*args, **kwargs):
-    return Sequential(*args, **kwargs)
+def sequential_model(layers):
+    return Sequential(layers)
 
 # Register Layers
 @register_layer("flatten")
